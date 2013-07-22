@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resume>
+	<bio>
+		<name>Nick Walker</name>
+		<job-title>Developer &amp; Designer</job-title>
+		<email>nick@nickswalker.com</email>
+		<site>nickswalker.com</site>
+		<phone-number>210.764.9399</phone-number>
+		<street-address>San Antonio</street-address>
+		<social>
+			<github>http://github.com/nickswalker</github>
+			<linkedin>http://www.linkedin.com/in/niwalker/</linkedin>
+			<tumblr>http://blog.nickswalker.com</tumblr>
+			<!--
+<google-plus></google-plus>
+			<twitter></twitter>
+			<vimeo></vimeo>
+			<facebook></facebook>
+-->
+		</social>
+	</bio>
+	<section title="objective" type="text">I seek the opportunity to further my experience as a designer and developer by contributing to meaningful projects.</section>
+	<section title="skills" type="list">
+		<item>Adobe Illustrator</item>
+		<item>Adobe Photoshop</item>
+		<item>Adobe After Effects</item>
+		<item>HTML5</item>
+		<item>CSS3</item>
+		<item>PHP &amp;  Laravel</item>
+		<item>Javascipt</item>
+		<item>jQuery</item>
+		<item>Sass</item>
+	</section>
+	<section title="experience" type="jobs">
+	<!--
+<item>
+	      <title>CAHS in the Parking Lot Shirt</title>
+	      <image>images/cahsintheparkinglot2013.png</image>
+	      <subtitle>Print Designer</subtitle>
+	      <date>2013</date>
+	      <text>Designed a front-only shirt for the Communications Arts annual spring picnic fundraiser.</text>
+	    </item>
+	    <item>
+	      <title>Communications Arts Class of 2014 Shirt</title>
+	      <image>images/classshirt2013.png</image>
+	      <subtitle>Print Designer</subtitle>
+	      <date>2013</date>
+	      <text>Designed a front and back shirt sold as a class fundraiser. Over 100 copies were sold.</text>
+	    </item>
+	     <item>
+	      <title>LoadHiker</title>
+	      <link>http://loadhiker.com</link>
+	      <subtitle>Developer</subtitle>
+	      <date>2013</date>
+	      <text>Developed a front and back end interface.</text>
+	    </item>
+	    -->
+	    <item>
+	      <title>CAHS Photography Club Shirt</title>
+	      <image>images/photoclubshirt2013.png</image>
+	      <subtitle>Print Design</subtitle>
+	      <date>2012</date>
+	      <text>Designed a front and back shirt sold by the school photography club as a fundraiser.</text>
+	    </item>
+	    <item>
+	      <title>NISD Magnet Fair Mailings</title>
+	   <image>images/magnetfair2013.jpg</image>
+	      <subtitle>Print Designer</subtitle>
+	      <date>2012</date>
+	      <text>Designed the promotional print material to be mailed to every 8th grader in the district.</text>
+	    </item>
+	   
+	    <item>
+	      <title>Cine V&#233;liz</title>
+	     <subtitle>Contract Front End Engineer</subtitle>
+	      <date>2012-</date>
+	      <text>Helped execute design enhancements.</text>
+	    </item>
+		<item>
+			<title>Communications Arts Freshman Class Shirt</title>
+			<image>images/freshmanshirt2011.png</image>
+			<subtitle>Print Design</subtitle>
+			<date>2011</date>
+			<text>
+				Designed a front and back shirt given to incoming students as a welcome gift.
+				The design was so well recieved that a run of 75 was done the the next year as a fundraiser.
+			</text>
+		</item>
+		<item>
+			<title>NISD Magnet Fair Poster</title>
+			<image>images/magnetfair2012.png</image>
+			<subtitle>Print Design</subtitle>
+			<date>2011</date>
+			<text>Designed a distinctive poster to promote the district's magnet fair. Selected in a competitive process by the principals of the schools involved. Tabloid size copies were distributed to every middle school in the district and an additional letter sized flier was mailed to every 8th grader in the district.</text>
+		</item>
+		<item>
+			<title>Alex Walker Studios</title>
+			<link>http://alexwalkerstudios.com/</link>
+			<subtitle>Web Design/Development</subtitle>
+			<date>2010-</date>
+			<text>Responsible for designing, developing and deploying a modern web portfolio using a custom CMS and cutting edge HTML5 APIs and CSS3 effects.</text>
+		</item>
+		<item>
+			<title>Ines Walker</title>
+			<link>http://ineswalker.com/</link>
+			<subtitle>Identity and Web Design</subtitle>
+			<date>2010-</date>
+			<text>Responsible for creation of unifying identity across print and web media and supplying supporting imagery -including illustrations and photos.</text>
+		</item>
+		<item>
+			<title>South Texas Division, USFA</title>
+			<link>http://southtexasdivision.org/</link>
+			<subtitle>Web Design</subtitle>
+			<date>2009-</date>
+			<text>Responsible for designing a mobile aware web presence and new identity, managing web hosting, representing the organization on social media platforms, updating and developing content, migrating large quantities of legacy information seamlessly into a new interface.</text>
+		</item>
+	</section>
+	<section title="Activities" type="detail-list">
+	<item>
+			<title>Taft Varsity Orchestra</title>
+			<subtitle>President</subtitle>
+			<date>2013-2014</date>
+			<text />
+		</item>
+	<item>
+			<title>National Honor Society</title>
+			<subtitle>Member</subtitle>
+			<date>2012-</date>
+			<text></text>
+	</item>
+	<!--
+<item>
+			<title>Taft High School Library</title>
+			<subtitle>Media Assistant</subtitle>
+			<date>2012-</date>
+			<text>Managed social media, designed an identity, produced many print items.</text>
+		</item>
+-->
+	<item>
+			<title>Class of 2014</title>
+			<subtitle>Communications Officer</subtitle>
+			<date>2012-</date>
+			<text>Responsible for designing promotional materials for fundraisers, guiding shirts through print process.</text>
+		</item>
+	<item>
+			<title>Photography Club</title>
+			<subtitle>President</subtitle>
+			<link>http://fb.me/cahsphotoclub</link>
+			<date>2012-</date>
+			<text>Responsible for leading club meetings, handling fundraisers and coordinating equipment acquisition.</text>
+		</item>
+		<item>
+			<title>Photography Club</title>
+			<subtitle>Webmaster</subtitle>
+			<date>2011-2012</date>
+			<text>Responsible for designing and updating the club's webpage and maintaining its Facebook presence.</text>
+		</item>
+		<item>
+			<title>Taft Varsity Orchestra</title>
+			<subtitle>Librarian</subtitle>
+			<date>2010-2013</date>
+			<text>Responsible for organizing and managing the Taft Orchestra music collection, distributing and tracking large quantities of sheet music and theory books.</text>
+		</item>
+		<item>
+			<title>Orchestra</title>
+			<subtitle>Violinist</subtitle>
+			<date>2006-</date>
+			<text>Started through 5th grade strings program, continued into high school.</text>
+		</item>
+		<item>
+			<title>Fencing</title>
+			<subtitle>Foilist</subtitle>
+			<date>2002-</date>
+			<text>Consistent regional champion, multiple national appearances. B rating in foil. <!-- FOC certified foil referee. --></text>
+		</item>
+	</section>
+	<section title="recognition" type="detail-list">
+		<item>
+			<title>National Merit Scholar Semi-Finalist</title>
+			<subtitle>National Merit Scholarship Corporation</subtitle>
+			<date>2014</date>
+			<text />
+		</item>
+		<item>
+			<title>9th Place Senior Individual Documentary</title>
+			<link>https://vimeo.com/57908212</link>
+			<subtitle>National History Day</subtitle>
+			<date>2013</date>
+			<text />
+		</item>
+		<item>
+			<title>1st Place Senior Individual Documentary</title>
+			<link>https://vimeo.com/57908212</link>
+			<subtitle>Texas History Day</subtitle>
+			<date>2013</date>
+			<text />
+		</item>
+		<item>
+			<title>Outstanding Junior Boy</title>
+			<subtitle>Communications Arts Junior Faculty</subtitle>
+			<date>2012-2013</date>
+			<text />
+		</item>
+		<item>
+			<title>Achievement in English III AP</title>
+			<subtitle>Communications Arts Junior Faculty</subtitle>
+			<date>2012-2013</date>
+			<text />
+		</item>
+		<item>
+			<title>Achievement in US History AP</title>
+			<subtitle>Communications Arts Junior Faculty</subtitle>
+			<date>2012-2013</date>
+			<text />
+		</item>
+		<item>
+			<title>Achievement in Video Production</title>
+			<subtitle>Communications Arts Junior Faculty</subtitle>
+			<date>2012-2013</date>
+			<text />
+		</item>
+		<item>
+			<title>Outstanding Sophomore Boy</title>
+			<subtitle>Communications Arts Sophomore Faculty</subtitle>
+			<date>2011-2012</date>
+			<text />
+		</item>
+		<item>
+			<title>Achievement in English II P-AP</title>
+			<subtitle>Communications Arts Sophomore Faculty</subtitle>
+			<date>2011-2012</date>
+			<text />
+		</item>
+		<item>
+			<title>Gold Medal - Level 1</title>
+			<subtitle>National Spanish Exam</subtitle>
+			<date>2011-2012</date>
+			<text />
+		</item>
+		<item>
+			<title>Best Communicator</title>
+			<subtitle>Communications Arts Freshman Faculty</subtitle>
+			<date>2010-2011</date>
+			<text />
+		</item>
+		<item>
+			<title>Achievement in Principals of I.T.</title>
+			<subtitle>Communications Arts Freshman Faculty</subtitle>
+			<date>2010-2011</date>
+			<text />
+		</item>
+		<item>
+			<title>Achievement in Geometry P-AP</title>
+			<subtitle>Communications Arts Freshman Faculty</subtitle>
+			<date>2010-2011</date>
+			<text />
+		</item>
+	</section>
+	<section title="education" type="detail-list">
+		<!-- <item>
+			<title>University of Texas at Austin</title>
+			<subtitle>Computer Science Major</subtitle>
+    		<text>Courses:</text>
+    	</item> -->
+		<item>
+			<title>Communications Arts High School</title>
+			<subtitle>Distinguished Diploma, June 2014</subtitle>
+			<text>
+				Advanced Placement Courses: World History AP
+				 , US History AP, English III AP<!--, English IV AP, Calculus BC AP, Physics C AP, U.S. Govenment AP, Macroeconomics AP, Computer Science AB AP -->
+				Other Advanced Courses: World Geography Honors, Pre-AP Biology, Pre-AP English, Pre-AP English II, Pre-AP Geometry, Pre-AP Algebra II, Pre-AP Dual Credit Pre-Calculus,
+				Pre-AP Chemistry, Pre-AP Spanish I
+				 , Pre-AP Spanish II<!--, Pre-AP Spanish III  -->
+			</text>
+		</item>
+	</section>
+</resume>

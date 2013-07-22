@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nick Walker</title>
+	<link rel="stylesheet" href="/style.css">
+	<link rel="shortcut icon" href="/media/favicon.png" />
+	<meta name="description" content="Who is Nick Walker? I'm glad you asked. He's a San Antonio web designer, amongst other things. Here's some stuff he's done and how you can contact him." />
+	<meta name="author" content="Nick Walker" />
+	<link rel="author" href="https://plus.google.com/109675278505943174152/"/>
+	<meta charset="UTF-8" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
+	<link href='http://fonts.googleapis.com/css?family=Arvo:700|Merriweather:300italic|Merriweather+Sans:400italic,400,700,700italic' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30066313-1']);
+  _gaq.push(['_setDomainName', 'nickswalker.com']);
+  _gaq.push(['_addIgnoredRef', 'nickswalker.com']);
+  _gaq.push(['_trackPageview']);
+  
+
+  (function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script>
+	$(document).ready(function() {
+			$.ajax({
+				type: "GET",
+				dataType: "jsonp",
+				cache: false,
+				url: "https://api.instagram.com/v1/users/118516/media/recent/?access_token=118516.a103e80.c0bad2397ac149c78fd8c8629718e39a",
+				success: function(data) {
+					for (var i = 0; i < 10; i++) {
+				$("section.instagram").append("<div class='instagram-holder'><a href='" + data.data[i].link +"'><img class='instagram-image' src='" + data.data[i].images.thumbnail.url +"' /></a></div>");   
+					}
+				}
+			});
+
+		});
+	
+</script>
+<script>
+
+		var apiEndpoint = 'http://vimeo.com/api/v2/';
+		var oEmbedEndpoint = 'http://vimeo.com/api/oembed.json'
+		var oEmbedCallback = 'switchVideo';
+		var videosCallback = 'setupGallery';
+		var vimeoUsername = 'nickswalker';
+		var $targetEmbed = $('');
+		var $storedHTML ='';
+		
+		// Get the user's videos
+		$(document).ready(function() {
+		$container = $('.vimeo-videos');
+			$.getScript(apiEndpoint + vimeoUsername + '/videos.json?callback=' + videosCallback);
+		});
+
+		function getVideo(url) {
+			$.getScript(oEmbedEndpoint + '?url=' + url + '&width=854&height=480&title=0&byline=0&portrait=0&color=ffffff&callback=' + oEmbedCallback);
+		}
+
+		function setupGallery(videos) {
+
+			// Set the user's thumbnail and the page title
+			// Load the first video
+			getVideo(videos[0].url);
+
+			// Add the videos to the gallery
+			for (var i = 0; i < videos.length; i++) {
+				var html = '<li class="popup" data-position="'+ i +'"><a href="' + videos[i].url + '"><div class="thumb-container"><img src="' + videos[i].thumbnail_large + '" class="thumb" /></div></a></li>';
+				$('section.vimeo ul').append(html);
+			}
+
+			// Switch to the video when a thumbnail is clicked
+			$('section.vimeo li > a').click(function(event) {
+				$targetEmbed.html( $storedHTML);
+				$targetEmbed = $(this);
+				$('section.vimeo li').removeClass('current');
+				$targetEmbed.parent().addClass('current');
+				event.preventDefault();
+				$container.css('marginLeft', -900 * $targetEmbed.parent().data('position') );
+				getVideo(this.href);
+				return false;
+			});
+
+		}
+
+		function switchVideo(video) {
+			$storedHTML = $targetEmbed.html();
+			$targetEmbed.html(unescape(video.html));
+		}
+
+	</script>
+</head>
+<body>
+<div id="wrapper">
+
+	<section class="question-block half header">
+	<div class="question">
+		<div class="sentence">
+		<h2>Who is</h2>
+		<h1 class="quotes">Nick Walker</h1>
+		<span>?</span>
+		</div>
+	</div>
+	<img class="avatar" src="http://www.gravatar.com/avatar/1787d390b5667bff711720e74fdeb2e3?s=200" />
+	</section>
+	
+	<section class="web-design">
+	<p>He's a San Antonio web designer...</p>
+	<div class="thumbnails">
+		<a class="ines-walker popup" href="http://ineswalker.com"><img src="/media/ines-walker.jpg"/></a>
+	<a class="alex-walker popup" href="http://alexwalkerstudios.com"><img src="/media/alex-walker.jpg"/></a>
+	<a class="sotx popup" href="http://southtexasdivision.org"><img src="/media/sotx.jpg"/></a>
+	</div>
+	</section>
+	<section class="github">
+	<p>...and web developer.</p>
+	<div class="thumbnails two">
+	<a class="neueresume popup" href="http://nickswalker.github.com/neueresume/"><img src="/media/neueresume.svg"/></a>
+	<a class="neuegal popup" href="http://nickswalker.github.com/neuegal/"><img src="/media/neuegal.svg"/></a>
+	</div>
+	</section>
+<!--
+	<section class="crammer">
+		<p>He spends a lot of time writing code to solve his own problems.</p>
+		<a class="crammer popup" href="http://nickswalker.github.com/crammer/"><img src="/media/crammer.svg"/></a>
+	</section>
+-->
+	<section class="cahs-site">
+	<p>He's the kind of guy who mocks up an entire modern version of his school's website. For fun.</p>
+	<a href="http://cahs.nickswalker.com">
+		<img class="popup" src="/media/cahs-site.jpg" />
+	</a>
+	</section>
+	
+<!--
+	<section class="font">
+	<p>He's the kind of guy who makes a font out of his stand partner's handwriting. Just because.</p>
+	<span class="popup ella-script">Ella Script</span>
+	</section>
+-->
+	
+	<section class="wikipedia">
+	<p>He's the kind of guy that gets tired of seeing his high school's poorly written Wikipedia article in the fist page of it's Google results. So he rewrites it.</p>
+	<a href="http://en.wikipedia.org/wiki/Communications_Arts_High_School">
+	<img class="popup inner-shadow" src="/media/stub-to-stud.svg" />
+	</a>
+	</section>
+
+	<section class="vimeo">
+	<p>He moonlights as an animator and filmmaker. Because he <i>can</i>.</p>
+	<ul class="vimeo-videos">
+	</ul>
+	</section>
+	<section class="question-block real">
+	<div class="question">
+		<div class="sentence">
+		<h2>Is this guy</h2>
+		<h1 class="quotes">for real</h1>
+		<span>?</span>
+		</div>
+	</div>
+	<p class="response">Yes. Here's a photo of him with Mickey Mouse.</p>
+	<img class="popup" src="/media/nick-&-mick.png" />
+	</section>
+	
+	<section class="half social dark-text">
+	<p>You can contact or follow him through any of these services:</p>
+	<div class="container">
+		<a href="http://www.linkedin.com/in/niwalker/" class="icon-linkedin linkedin" title="See history."></a>
+		<a href="http://github.com/nickswalker" class="icon-github github" title="See repositories."></a>
+		<a href="http://blog.nickswalker.com" class="icon-tumblr tumblr" title="Read stuff."></a>
+		<!-- 	<a href="http://fb.me/nickswalker" class="icon-facebook facebook" title=""></a> -->
+		<a href="http://instagram.com/nickswalker" class="icon-instagram instagram" title="See photos."></a>
+		
+<!-- 		<a href="http://vimeo.com/nickswalker" class="icon-vimeo vimeo" title="Watch stuff."></a> -->
+	</div>
+	</section>
+	<!--
+<section class="quarter instagram">
+	</section>
+-->
+		<section class="quarter resume">
+		<a class="resume full" href="http://resume.nickswalker.com"> Academic r&#233;sum&#233;? <i>He's got one of those.</i></a>
+	</section>
+
+</div> 
+	</body>
+	</html>
