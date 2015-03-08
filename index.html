@@ -1,195 +1,248 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Nick Walker</title>
-	<link rel="stylesheet" href="/style.css">
-	<link rel="shortcut icon" href="/media/favicon.png" />
-	<meta name="description" content="Who is Nick Walker? I'm glad you asked. He's a San Antonio web designer, amongst other things. Here's some stuff he's done and how you can contact him." />
-	<meta name="author" content="Nick Walker" />
-	<link rel="author" href="https://plus.google.com/109675278505943174152/"/>
-	<meta charset="UTF-8" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
-	<link href='http://fonts.googleapis.com/css?family=Arvo:700|Merriweather:300italic|Merriweather+Sans:400italic,400,700,700italic' rel='stylesheet' type='text/css'>
+    <title>Nick Walker</title>
+    <link rel="stylesheet" href="/media/style.css">
+    <link rel="stylesheet" href="/media/device.css">
+    <link href='http://fonts.googleapis.com/css?family=Arvo:700|Merriweather:300italic|Merriweather+Sans:400italic,400,700,700italic|Permanent+Marker'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css">
+    <link rel="shortcut icon" href="/media/favicon.png"/>
+    <link rel="apple-touch-icon" href="/media/apple-touch-icon.png">
+    <meta name="description"
+          content="Who is Nick Walker? He's a computer science student at UT Austin, amongst other things. Here's some stuff he's done and how you can contact him."/>
+    <meta name="author" content="Nick Walker"/>
+    <link rel="author" href="https://plus.google.com/109675278505943174152/"/>
+    <meta charset="UTF-8"/>
+    <meta name=viewport content="width=device-width, initial-scale=1">
 
-<script type="text/javascript">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-media.js"></script>
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-30066313-1']);
-  _gaq.push(['_setDomainName', 'nickswalker.com']);
-  _gaq.push(['_addIgnoredRef', 'nickswalker.com']);
-  _gaq.push(['_trackPageview']);
-  
-
-  (function() {
-	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-<script>
-	$(document).ready(function() {
-			$.ajax({
-				type: "GET",
-				dataType: "jsonp",
-				cache: false,
-				url: "https://api.instagram.com/v1/users/118516/media/recent/?access_token=118516.a103e80.c0bad2397ac149c78fd8c8629718e39a",
-				success: function(data) {
-					for (var i = 0; i < 10; i++) {
-				$("section.instagram").append("<div class='instagram-holder'><a href='" + data.data[i].link +"'><img class='instagram-image' src='" + data.data[i].images.thumbnail.url +"' /></a></div>");   
-					}
-				}
-			});
-
-		});
-	
-</script>
-<script>
-
-		var apiEndpoint = 'http://vimeo.com/api/v2/';
-		var oEmbedEndpoint = 'http://vimeo.com/api/oembed.json'
-		var oEmbedCallback = 'switchVideo';
-		var videosCallback = 'setupGallery';
-		var vimeoUsername = 'nickswalker';
-		var $targetEmbed = $('');
-		var $storedHTML ='';
-		
-		// Get the user's videos
-		$(document).ready(function() {
-		$container = $('.vimeo-videos');
-			$.getScript(apiEndpoint + vimeoUsername + '/videos.json?callback=' + videosCallback);
-		});
-
-		function getVideo(url) {
-			$.getScript(oEmbedEndpoint + '?url=' + url + '&width=854&height=480&title=0&byline=0&portrait=0&color=ffffff&callback=' + oEmbedCallback);
-		}
-
-		function setupGallery(videos) {
-
-			// Set the user's thumbnail and the page title
-			// Load the first video
-			getVideo(videos[0].url);
-
-			// Add the videos to the gallery
-			for (var i = 0; i < videos.length; i++) {
-				var html = '<li class="popup" data-position="'+ i +'"><a href="' + videos[i].url + '"><div class="thumb-container"><img src="' + videos[i].thumbnail_large + '" class="thumb" /></div></a></li>';
-				$('section.vimeo ul').append(html);
-			}
-
-			// Switch to the video when a thumbnail is clicked
-			$('section.vimeo li > a').click(function(event) {
-				$targetEmbed.html( $storedHTML);
-				$targetEmbed = $(this);
-				$('section.vimeo li').removeClass('current');
-				$targetEmbed.parent().addClass('current');
-				event.preventDefault();
-				$container.css('marginLeft', -900 * $targetEmbed.parent().data('position') );
-				getVideo(this.href);
-				return false;
-			});
-
-		}
-
-		function switchVideo(video) {
-			$storedHTML = $targetEmbed.html();
-			$targetEmbed.html(unescape(video.html));
-		}
-
-	</script>
 </head>
 <body>
+<!--[if lt IE 10]>
+<h1>You're viewing this site from an old browser. It probably looks pretty
+    messed up. You should update.</h1>
+<![endif]-->
 <div id="wrapper">
 
-	<section class="question-block half header">
-	<div class="question">
-		<div class="sentence">
-		<h2>Who is</h2>
-		<h1 class="quotes">Nick Walker</h1>
-		<span>?</span>
-		</div>
-	</div>
-	<img class="avatar" src="http://www.gravatar.com/avatar/1787d390b5667bff711720e74fdeb2e3?s=200" />
-	</section>
-	
-	<section class="web-design">
-	<p>He's a San Antonio web designer...</p>
-	<div class="thumbnails">
-		<a class="ines-walker popup" href="http://ineswalker.com"><img src="/media/ines-walker.jpg"/></a>
-	<a class="alex-walker popup" href="http://alexwalkerstudios.com"><img src="/media/alex-walker.jpg"/></a>
-	<a class="sotx popup" href="http://southtexasdivision.org"><img src="/media/sotx.jpg"/></a>
-	</div>
-	</section>
-	<section class="github">
-	<p>...and web developer.</p>
-	<div class="thumbnails two">
-	<a class="neueresume popup" href="http://nickswalker.github.com/neueresume/"><img src="/media/neueresume.svg"/></a>
-	<a class="neuegal popup" href="http://nickswalker.github.com/neuegal/"><img src="/media/neuegal.svg"/></a>
-	</div>
-	</section>
-<!--
-	<section class="crammer">
-		<p>He spends a lot of time writing code to solve his own problems.</p>
-		<a class="crammer popup" href="http://nickswalker.github.com/crammer/"><img src="/media/crammer.svg"/></a>
-	</section>
--->
-	<section class="cahs-site">
-	<p>He's the kind of guy who mocks up an entire modern version of his school's website. For fun.</p>
-	<a href="http://cahs.nickswalker.com">
-		<img class="popup" src="/media/cahs-site.jpg" />
-	</a>
-	</section>
-	
-<!--
-	<section class="font">
-	<p>He's the kind of guy who makes a font out of his stand partner's handwriting. Just because.</p>
-	<span class="popup ella-script">Ella Script</span>
-	</section>
--->
-	
-	<section class="wikipedia">
-	<p>He's the kind of guy that gets tired of seeing his high school's poorly written Wikipedia article in the fist page of it's Google results. So he rewrites it.</p>
-	<a href="http://en.wikipedia.org/wiki/Communications_Arts_High_School">
-	<img class="popup inner-shadow" src="/media/stub-to-stud.svg" />
-	</a>
-	</section>
+    <section class="question-block header">
+        <div class="question">
+            <div class="sentence">
+                <h2>Who is</h2>
 
-	<section class="vimeo">
-	<p>He moonlights as an animator and filmmaker. Because he <i>can</i>.</p>
-	<ul class="vimeo-videos">
-	</ul>
-	</section>
-	<section class="question-block real">
-	<div class="question">
-		<div class="sentence">
-		<h2>Is this guy</h2>
-		<h1 class="quotes">for real</h1>
-		<span>?</span>
-		</div>
-	</div>
-	<p class="response">Yes. Here's a photo of him with Mickey Mouse.</p>
-	<img class="popup" src="/media/nick-&-mick.png" />
-	</section>
-	
-	<section class="half social dark-text">
-	<p>You can contact or follow him through any of these services:</p>
-	<div class="container">
-		<a href="http://www.linkedin.com/in/niwalker/" class="icon-linkedin linkedin" title="See history."></a>
-		<a href="http://github.com/nickswalker" class="icon-github github" title="See repositories."></a>
-		<a href="http://blog.nickswalker.com" class="icon-tumblr tumblr" title="Read stuff."></a>
-		<!-- 	<a href="http://fb.me/nickswalker" class="icon-facebook facebook" title=""></a> -->
-		<a href="http://instagram.com/nickswalker" class="icon-instagram instagram" title="See photos."></a>
-		
-<!-- 		<a href="http://vimeo.com/nickswalker" class="icon-vimeo vimeo" title="Watch stuff."></a> -->
-	</div>
-	</section>
-	<!--
-<section class="quarter instagram">
-	</section>
--->
-		<section class="quarter resume">
-		<a class="resume full" href="http://resume.nickswalker.com"> Academic r&#233;sum&#233;? <i>He's got one of those.</i></a>
-	</section>
+                <h1 class="quotes">Nick Walker</h1>
+                <span>?</span>
+            </div>
+        </div>
+        <img class="avatar"
+             src="http://www.gravatar.com/avatar/05a17826262b803bdc53a402751c884e?s=360"
+             srcset="http://www.gravatar.com/avatar/05a17826262b803bdc53a402751c884e?s=720 2x"/>
+    </section>
 
-</div> 
-	</body>
-	</html>
+    <section class="projects">
+        <p>He's a computer science student at UT Austin with all sorts of
+            interesting projects.</p>
+
+        <figure class="thumbnails">
+            <a class="popup"
+               href="http://github.com/nickswalker/forecast.io-dashboard-widget/"><img
+                    src="/media/forecastiowidget.svg"/></a>
+            <a class="popup"
+               href="http://github.com/nickswalker/neueresume/"><img
+                    src="/media/neueresume.svg"/></a>
+            <a class="popup" href="http://github.com/nickswalker/neuegal/"><img
+                    src="/media/neuegal.svg"/></a>
+        </figure>
+
+    </section>
+
+    <section class="pulsar">
+        <p>When he can't find a metronome app he likes, he makes one.</p>
+        <figure>
+            <a class="image-link popup" href="http://nickwalker.us/pulsar">
+                <div id= "demo" class="iphone">
+                    <div id="device" class="white">
+                        <img class="screen" src="/media/pulsar-screenshot.png" />
+                    </div>
+                </div>
+            </a>
+        </figure>
+    </section>
+
+        <section class="web-design">
+        <p>He loves exploring cutting edge web technologies and making web
+            sites.</p>
+            <figure>
+                <a class="image-link popup" href="http://alexwalker.co"><img
+                    src="/media/alex-walker.jpg"/></a>
+            </figure>
+
+    </section>
+
+    <!--
+        <section class="ble">
+            <p>When he puts time into solving a problem, he shares his work with others.</p>
+            <a class="ble" href="http://github.com/nickswalker/hm-10-breakout"><img src="/media/ble.png"/></a>
+        </section>
+    -->
+
+    <section class="widget">
+        <p>He's the kind of guy that gets excited when his favorite weather service
+            starts offering an embed. So excited he makes it into an OS X
+            widget.</p>
+            <figure>
+                <a class="image-link popup"
+                href="https://github.com/nickswalker/forecast.io-dashboard-widget"><img
+                src="/media/forecast-widget.png"/></a>
+            </figure>
+    </section>
+
+
+    <section class="wikipedia">
+        <p>He's the kind of guy that gets tired of seeing his high school's
+            poorly written Wikipedia article in the first page of its Google
+            results. So he rewrites it.</p>
+
+        <figure>
+            <a href="http://en.wikipedia.org/wiki/Communications_Arts_High_School"
+               class="image-link popup stub"><img class="inner-shadow"
+                                                  src="/media/stub.svg"/></a>
+            <a href="http://en.wikipedia.org/wiki/Communications_Arts_High_School"
+               class="image-link popup stud"><img class="inner-shadow"
+                                                  src="/media/stud.svg"/></a>
+
+        </figure>
+    </section>
+
+    <section class="vimeo">
+        <p>He moonlights as an animator and filmmaker. Because he <i>can</i>.
+        </p>
+
+        <figure class="vimeo-videos thumbnails">
+        </figure>
+    </section>
+    <section class="question-block real">
+        <div class="question">
+            <div class="sentence">
+                <h2>Is this guy</h2>
+
+                <h1 class="quotes">for real</h1>
+                <span>?</span>
+            </div>
+        </div>
+        <p class="response">Yes. Here's a photo of him with Mickey Mouse.</p>
+        <figure class="polaroid popup">
+            <img src="/media/nick-and-mick.png"
+                 srcset="/media/nick-and-mick-super.png 2x"/>
+            <figcaption>Nick and Mick</figcaption>
+        </figure>
+    </section>
+
+    <section class=" social dark-text">
+        <p>You can contact or follow him through any of these services:</p>
+
+        <div class="container">
+            <a href="http://www.linkedin.com/in/niwalker/"
+               class=" ion-social-linkedin linkedin" title="See history."></a>
+            <a href="http://github.com/nickswalker"
+               class="ion-social-github github" title="See code."> </a>
+            <a href="http://blog.nickwalker.us" class="ion-social-tumblr tumblr"
+               title="Read stuff."> </a>
+            <a href="http://fb.me/nickwalker"
+               class="ion-social-facebook facebook" title="Follow."> </a>
+            <a href="http://instagram.com/nickswalker"
+               class="ion-social-instagram instagram" title="See photos."></a>
+        </div>
+    </section>
+
+    <section class="resume">
+        <a href="http://nickwalker.us/resume/"> Academic r&#233;sum&#233;? <i>He's
+            got one of those.</i></a>
+    </section>
+
+</div>
+<script>
+    var authKey = 'OGYyYjQyZmFiYjgxNzUyMjIzYmVjMmFjNjAxNDdhZDk1Y2NiNzUzMDpkZmQ5NGYxODg3ZDY1MzJhNjkxOTgyYTMwM2Y5MmNlYjVkOTRhMDEx';
+    var token = '7a84c1d6b9e9962f10d0617b2d056a7e'; //Public only
+    var oEmbedEndpoint = 'http://vimeo.com/api/oembed.json';
+    var $targetEmbed = $('');
+    var $activeVideo = $('');
+    var $storedHTML = '';
+
+    function getAlbums(callback) {
+        var url = 'https://api.vimeo.com/albums/2981619/videos'; //Public on website
+        var albumRequest = new XMLHttpRequest();
+        albumRequest.open("GET", url, true);
+        albumRequest.setRequestHeader("Accept", "application/vnd.vimeo.*+json;version=3.2");
+        albumRequest.setRequestHeader("Authorization", "Bearer " + token);
+
+        albumRequest.onload = function (e) {
+            if (albumRequest.readyState === 4) {
+                if (albumRequest.status === 200) {
+                    var json = JSON.parse(albumRequest.responseText);
+
+                    if (json.data[0] != undefined) {
+                        var videos = json.data;
+                        callback(videos);
+                    }
+                }
+            }
+        };
+        albumRequest.send();
+    }
+    function requestUnauthenticatedToken() {
+        var url = 'https://api.vimeo.com/oauth/request_token';
+        var params = 'grant_type=client_credentials&scope=public';
+        var tokenRequest = new XMLHttpRequest();
+        tokenRequest.open("POST", url, false);
+        tokenRequest.setRequestHeader("Authorization", "basic " + authKey);
+        tokenRequest.setRequestHeader("Accept", "application/vnd.vimeo.*+json;version=3.2");
+        tokenRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+        tokenRequest.send(params);
+        console.log(tokenRequest.responseText);
+
+    }
+    function displayVideoGallery(videos) {
+        $('section.vimeo').css('display', 'block');
+        var i = 0;
+        videos.forEach(function (video) {
+            console.log(video);
+            var html = '<a href="http://vimeo.com' + video.uri + '" class="popup"><img src="' + video.pictures.sizes[4].link + '" class="thumb" /></a>';
+            ++i;
+            $('.vimeo-videos').append(html);
+        });
+
+    }
+    $(document).ready(function () {
+        $('.vimeo-videos a').fancybox({
+            padding: 0,
+            openEffect: 'fade',
+            closeEffect: 'fade',
+            prevEffect: 'fade',
+            nextEffect: 'fade',
+            autoSize: true,
+            width: 1600,
+            height: 900,
+            aspectRatio: true,
+            loop: false,
+            closeBtn: false,
+            helpers: {
+                title: null,
+                media: {}
+            }
+        });
+    });
+
+    //requestUnauthenticatedToken();
+    getAlbums(displayVideoGallery);
+
+
+</script>
+
+</body>
+</html>
