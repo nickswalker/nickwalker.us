@@ -35,7 +35,6 @@
         <div class="question">
             <div class="sentence">
                 <h2>Who is</h2>
-
                 <h1 class="quotes">Nick Walker</h1>
                 <span>?</span>
             </div>
@@ -43,28 +42,15 @@
     </section>
 
     <section class="mad">
-        <p>He's a computer science student at UT Austin who spends most of his time contributing to <a href="http://www.cs.utexas.edu/users/mad/" target="new">MAD</a></p>
-        <figure></figure>
-
-    </section>
-
-
-    <section class="projects">
-        <p>He has all sorts of
-            interesting projects.</p>
-
-        <figure class="thumbnails">
-            <a class="popup"
-               href="http://github.com/nickswalker/forecast.io-dashboard-widget/"><img
-                    src="/img/forecastiowidget.svg"/></a>
-            <a class="popup"
-               href="http://github.com/nickswalker/neueresume/"><img
-                    src="/img/neueresume.svg"/></a>
-            <a class="popup" href="http://github.com/nickswalker/neuegal/"><img
-                    src="/img/neuegal.svg"/></a>
+        <p>He's a computer science student at UT Austin who spends most of his time contributing to <a href="http://www.cs.utexas.edu/users/mad/" target="new">MAD</a>.</p>
+        <figure>
+        <a class="popup" href="http://cs.utexas.edu/users/mad/"><img src="/img/mad-logo.svg"></a>
         </figure>
 
     </section>
+
+
+
 
     <section class="pulsar">
         <p>When he can't find a metronome app he likes, he makes one.</p>
@@ -121,6 +107,17 @@
                class="image-link popup stud"><img class="inner-shadow"
                                                   src="/img/stud.svg"/></a>
 
+        </figure>
+    </section>
+
+    <section class="print">
+        <p>He loves print and type.</p>
+        <figure class="thumbnails">
+        <a class="popup" rel="print" href="/img/prints/freshman-class"><img src="/img/prints/freshman-class-2011-thumb.png"/></a>
+        <a class="popup" rel="print" href="/img/prints/freshman-class-2012.png"><img src="/img/prints/freshman-class-2012-thumb.png"/></a>
+        <a class="popup" rel="print" href="/img/prints/polymath.png"><img src="/img/prints/polymath-thumb.png"/></a>
+        <a class="popup" rel="print" href="/img/prints/cahs-in-the-parking-lot.png"><img src="/img/prints/cahs-in-the-parking-lot-thumb.png"/></a>
+        <a class="popup" rel="print" href="/img/prints/magnet-fair-2013.png"><img src="/img/prints/magnet-fair-2013-thumb.png"/></a>
         </figure>
     </section>
 
@@ -225,6 +222,15 @@
 
     }
     $(document).ready(function () {
+        $('.print figure a').fancybox({
+            padding: 0,
+            openEffect: 'fade',
+            closeEffect: 'fade',
+            prevEffect: 'fade',
+            nextEffect: 'fade',
+            loop: false,
+            closeBtn: false,
+        });
         $('.vimeo-videos a').fancybox({
             padding: 0,
             openEffect: 'fade',

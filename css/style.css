@@ -144,7 +144,7 @@ section {
 	position: relative
 }
 
-section a {
+section figure a {
 	display: block;
 	overflow: auto;
 }
@@ -216,6 +216,18 @@ section figure  {
 	position: relative;
 }
 
+/*--- = MAD  */
+.mad {
+    background-color: #ff0505;
+}
+
+.mad img {
+    max-height: 100px;
+        -webkit-filter: drop-shadow(0 0 5px rgba(0,0,0,.2));
+        -moz-filter: drop-shadow(0 0 5px rgba(0,0,0,.2));
+    filter: drop-shadow(0 0 5px rgba(0,0,0,.2));
+}
+
 /*---= Web-design  */
 .web-design {
 	background-color: #7348f1;
@@ -233,7 +245,6 @@ section figure  {
 /*--- = Github  */
 section.projects	{
 	background-color: #FF7503;
-
 }
 
 .projects .thumbnailsa{
@@ -317,6 +328,12 @@ section.projects	{
 .wikipedia .image-link img  {
     	max-height: initial; /* The SVGs resize a little differently than regular images*/
 }
+
+/*--- = Print  */
+.print {
+    background-color: black;
+}
+
 
 /*---= Vimeo  */
 section.vimeo	{
@@ -432,6 +449,7 @@ section ul li	{
 	font-weight: 700;
 	color: #555;
 	text-shadow: 0 1px white;
+	display: block;
 	background-image:
 repeating-linear-gradient(45deg, rgba(0, 191, 255, .3), rgba(0, 191, 255, .3) 1px, transparent 2px, transparent 15px),
 repeating-linear-gradient(-45deg, rgba(0, 191, 255, .3), rgba(0, 191, 255, .3) 1px, transparent 2px, transparent 15px);
