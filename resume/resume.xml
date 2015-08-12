@@ -24,8 +24,6 @@
         <item>Java</item>
         <item>HTML5</item>
         <item>CSS3</item>
-        <item>PHP &amp;    Laravel</item>
-        <item>jQuery</item>
         <item>Adobe Illustrator</item>
         <item>Adobe Photoshop</item>
     </section>
@@ -42,12 +40,12 @@
         </item>
     </section>
     <section title="experience" type="highlight-list">
-        <!--<item>
+        <item>
             <title>USAA</title>
-            <subtitle>Innovation Intern</subtitle>
+            <subtitle>Research Engineer Intern</subtitle>
             <date>'15</date>
-            <text></text>
-        </item>-->
+            <text>Worked alone and with teams to understand and leverage emerging technologies. Designed and developed prototypes and presented them to leaders. Became familiar with research and intellectual property practices.</text>
+        </item>
         <item>
             <title>Pulsar</title>
             <link>http://nickwalker.us/pulsar/</link>
@@ -68,27 +66,6 @@
             <subtitle>Web Developer</subtitle>
             <date>'13-pres.</date>
             <text>Created and maintained an open source weather embed. Took requests and facilitated discussion from multiple contributors using GitHub.</text>
-        </item>
-        <item>
-            <title>NeueResume</title>
-            <link>http://github.com/nickswalker/neueresume</link>
-            <subtitle>Web Developer</subtitle>
-            <date>'12-pres</date>
-            <text>Created, documented and maintained an open-source XML based resume template Composer package.</text>
-        </item>
-        <item>
-            <title>NeueGal</title>
-            <link>http://github.com/nickswalker/neuegal</link>
-            <subtitle>Web Developer</subtitle>
-            <date>'12-pres</date>
-            <text>Created, documented and maintained an open-source, file-system based image gallery Composer package.</text>
-        </item>
-        <item>
-            <title>Alex Walker</title>
-            <link>http://alexwalkerstudios.com/</link>
-            <subtitle>Web Designer, Developer</subtitle>
-            <date>'10-pres.</date>
-            <text>Designed, developed and deployed a modern web portfolio using a custom Laravel CMS and cutting edge CSS technologies.</text>
         </item>
     </section>
     <section title="Activities" type="detail-list">
