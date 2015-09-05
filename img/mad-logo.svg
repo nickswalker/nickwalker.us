@@ -1,30 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 346.7 111" enable-background="new 0 0 346.7 111" xml:space="preserve">
-<g>
-	<polygon display="none" fill="#FFFFFF" points="36.3,73.3 106.3,111 106.3,0 53.1,40.6 0,0 0,111 	"/>
-	<polygon display="none" fill="#FFFFFF" points="173.4,0 106.3,111 143.5,86 240.2,111 	"/>
-	<path display="none" fill="#FFFFFF" d="M346.7,55.5C346.7,33.7,331,0,293.7,0c-22.9,0-53.4,0-53.4,0v40.6l27.7,12.9L240.2,111
-		c0,0,30.5,0,53.4,0C331,111,346.7,77.4,346.7,55.5z"/>
-	<path opacity="0.6" fill="#FFFFFF" d="M280.1,28.2l-12.1,25.2c0,0,62.5,29.1,70,32.6c2.5-4.1,4.4-8.4,5.8-12.7
-		C338.6,69.6,280.1,28.2,280.1,28.2z"/>
-	<path opacity="0.3" fill="#FFFFFF" d="M267.9,53.4L240.2,111c0,0,30.5,0,53.4,0c21.6,0,36-11.3,44.3-25
-		C331.2,82.9,267.9,53.4,267.9,53.4z"/>
-	<polygon opacity="0.6" fill="#FFFFFF" points="240.2,0 293.7,0 280.1,28.2 	"/>
-	<polygon opacity="0.3" fill="#FFFFFF" points="280.1,28.2 267.9,53.4 240.2,40.6 240.2,0 	"/>
-	<polygon opacity="0.3" fill="#FFFFFF" points="217.6,73.3 240.2,111 143.5,86 154.6,78.6 	"/>
-	<polygon opacity="0.6" fill="#FFFFFF" points="201.7,47 217.6,73.3 154.6,78.6 	"/>
-	<polygon opacity="0.3" fill="#FFFFFF" points="143.5,86 106.3,111 124.4,81.1 	"/>
-	<polygon opacity="0.3" fill="#FFFFFF" points="106.3,81.1 106.3,111 36.3,73.3 61.5,47 	"/>
-	<polygon opacity="0.6" fill="#FFFFFF" points="106.3,0 106.3,81.1 61.5,47 	"/>
-	<polygon opacity="0.6" fill="#FFFFFF" points="61.5,47 36.3,73.3 0,53.8 0,0 53.2,40.6 	"/>
-	<polygon opacity="0.3" fill="#FFFFFF" points="36.3,73.3 0,111 0,53.8 	"/>
-	<polygon opacity="0.6" fill="#FFFFFF" points="154.6,78.6 143.5,86 124.4,81.1 	"/>
-	<polygon fill="#FFFFFF" fill-opacity="0.9" points="173.4,0 124.4,81.1 154.6,78.6 201.7,47 	"/>
-	<polyline fill="#FFFFFF" fill-opacity="0.9" points="53.2,40.6 61.5,47 106.3,0 53.1,40.6 	"/>
-	<path fill="#FFFFFF" fill-opacity="0.9" d="M343.7,73.3c2-6.2,3-12.3,3-17.7C346.7,33.7,331,0,293.7,0l-13.6,28.2
-		C280.1,28.2,338.6,69.6,343.7,73.3z"/>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="7.876 -226.137 658.869 211" enable-background="new 7.876 -226.137 658.869 211" xml:space="preserve">
+<g id="bg">
+</g>
+<g id="original">
+</g>
+<g id="final">
+	<g>
+		<path fill="#4D4D4D" d="M565.907-226C522.311-226,464-226,464-226v105.363V-15c0,0,58.311,0,101.907,0
+			c71.002,0,100.838-63.999,100.838-105.5S636.909-226,565.907-226L565.907-226z M605.156-203
+			c10.229,5.32,19.214,12.912,26.708,22.632c15.396,19.97,20.881,43.95,20.881,59.748c0,15.798-5.484,39.787-20.881,59.757
+			c-7.494,9.72-16.479,17.41-26.708,22.731C593.587-32.115,580.382-29,565.907-29h-78.307l88.019-91.5L487.601-212h78.307
+			C580.382-212,593.587-209.017,605.156-203z M478-201.485l77.773,80.849L478-39.788V-201.485z"/>
+		<path fill="#4D4D4D" d="M210-226.137l-101.001,77.049L8-226.137V-15h202V-226.137L210-226.137z M196-107v78H22v-78H196 M22-121
+			v-76.843l86.999,66.365L196-197.843V-121H22z"/>
+		<line fill="#4D4D4D" x1="22" y1="-121" x2="196" y2="-121"/>
+		<polygon fill="#FFFFFF" points="22,-197.843 22,-121 196,-121 196,-197.843 108.999,-131.477 		"/>
+		<path fill="#4D4D4D" d="M337.375-226L209.815-15h254.606L337.375-226L337.375-226z M345.702-29l47.021-77.936L439.649-29H345.702z
+			 M337.352-198.968l47.204,78.434L329.352-29h-94.714L337.352-198.968z"/>
+		<polygon fill="#FFFFFF" points="392.723,-106.936 345.702,-29 439.649,-29 		"/>
+		<polygon fill="#FFFFFF" points="478,-201.485 555.773,-120.637 478,-39.788 		"/>
+	</g>
 </g>
 </svg>

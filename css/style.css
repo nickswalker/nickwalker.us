@@ -218,7 +218,7 @@ section figure  {
 
 /*--- = MAD  */
 .mad {
-    background-color: #ff0505;
+    background-color: #FFBB2B;
 }
 
 .mad img {
@@ -226,6 +226,13 @@ section figure  {
         -webkit-filter: drop-shadow(0 0 5px rgba(0,0,0,.2));
         -moz-filter: drop-shadow(0 0 5px rgba(0,0,0,.2));
     filter: drop-shadow(0 0 5px rgba(0,0,0,.2));
+    max-width: 100%;
+    opacity: .8;
+    transition: .3s;
+}
+
+.mad img:hover {
+    opacity: 1;
 }
 
 /*---= Web-design  */
@@ -235,7 +242,7 @@ section figure  {
 
 /*--- = Pulsar  */
 .pulsar	{
-	background-color: black;
+	background-color: #333;
 }
 
 #device .screen {
