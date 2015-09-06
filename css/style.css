@@ -106,7 +106,6 @@ a img.popup	{
 }
 
 .thumbnails img {
-	width: 100%;
 	max-height: 200px;
 	margin: auto;
 	display: block;
@@ -377,6 +376,7 @@ section ul li	{
 	box-sizing: border-box;
 	float: none; /* Hack: until flexbox is more standard */
 	color: black;
+	max-height: none;
 }
 .polaroid figcaption{
 	font-family: "Noteworthy-bold","Lucida Handwriting","Permanent Marker", cursive;
@@ -390,8 +390,7 @@ section ul li	{
 	max-width: 100%;
 }
 /*---= Social  */
-.social	{
-	padding: 40px 0 10px 0;
+.social	 {
 	font-size: 21px;
 	background: rgba(255,255,255,1);
 }
@@ -532,6 +531,9 @@ footer {
 			display: -webkit-flex;
 		display: flex;
 		margin: 0;
+	}
+	.thumbnails img {
+    	width: 100%;
 	}
 }
 
@@ -675,7 +677,7 @@ footer {
 	.real .polaroid	{
 		position: absolute;
 		bottom: -340px;
-		margin-left: -100px
+		margin-left: -170px
 	}
 	.real:hover .popup {
 		bottom: 0px;

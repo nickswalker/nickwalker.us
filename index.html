@@ -168,52 +168,64 @@
 
 </div>
 <script>
+    // Hash of client ID and client secret. Can only be used to request tokens.
     var authKey = 'OGYyYjQyZmFiYjgxNzUyMjIzYmVjMmFjNjAxNDdhZDk1Y2NiNzUzMDpkZmQ5NGYxODg3ZDY1MzJhNjkxOTgyYTMwM2Y5MmNlYjVkOTRhMDEx';
-    var token = '7a84c1d6b9e9962f10d0617b2d056a7e'; //Public only
     var oEmbedEndpoint = 'http://vimeo.com/api/oembed.json';
     var $targetEmbed = $('');
     var $activeVideo = $('');
     var $storedHTML = '';
 
-    function getAlbums(callback) {
-        var url = 'https://api.vimeo.com/albums/2981619/videos'; //Public on website
-        var albumRequest = new XMLHttpRequest();
-        albumRequest.open("GET", url, true);
-        albumRequest.setRequestHeader("Accept", "application/vnd.vimeo.*+json;version=3.2");
-        albumRequest.setRequestHeader("Authorization", "Bearer " + token);
-
-        albumRequest.onload = function (e) {
-            if (albumRequest.readyState === 4) {
-                if (albumRequest.status === 200) {
-                    var json = JSON.parse(albumRequest.responseText);
-
-                    if (json.data[0] != undefined) {
-                        var videos = json.data;
-                        callback(videos);
-                    }
-                }
-            }
-        };
-        albumRequest.send();
-    }
-    function requestUnauthenticatedToken() {
-        var url = 'https://api.vimeo.com/oauth/request_token';
-        var params = 'grant_type=client_credentials&scope=public';
+    function requestUnauthenticatedToken(callback) {
+        var url = 'https://api.vimeo.com/oauth/authorize/client';
+        var params = 'grant_type=client_credentials';
         var tokenRequest = new XMLHttpRequest();
-        tokenRequest.open("POST", url, false);
+
+        tokenRequest.onreadystatechange = function(){
+            if (tokenRequest.readyState !== 4 || tokenRequest.status !== 200) {
+                return;
+            }
+            var data = JSON.parse(tokenRequest.responseText);
+            callback(data);
+
+        };
+        tokenRequest.open("POST", url, true);
         tokenRequest.setRequestHeader("Authorization", "basic " + authKey);
         tokenRequest.setRequestHeader("Accept", "application/vnd.vimeo.*+json;version=3.2");
         tokenRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
         tokenRequest.send(params);
-        console.log(tokenRequest.responseText);
 
     }
+
+    function tokenReceived(tokenInfo){
+        getAlbums(tokenInfo, displayVideoGallery);
+    }
+
+    function getAlbums(token_info, callback) {
+        var url = 'https://api.vimeo.com/albums/2981619/videos'; //Public on website
+        var albumRequest = new XMLHttpRequest();
+        albumRequest.open("GET", url, true);
+        albumRequest.setRequestHeader("Accept", "application/vnd.vimeo.*+json;version=3.2");
+        albumRequest.setRequestHeader("Authorization", "Bearer " + token_info.access_token);
+
+        albumRequest.onload = function (e) {
+            if (albumRequest.readyState !== 4 || albumRequest.status !== 200) {
+                return;
+            }
+            var data = JSON.parse(albumRequest.responseText);
+            // Check that there are actually videos in the response
+            if (data.data[0] != undefined) {
+                var videos = data.data;
+                callback(videos);
+            }
+        };
+        albumRequest.send();
+    }
+
     function displayVideoGallery(videos) {
         $('section.vimeo').css('display', 'block');
         var i = 0;
         videos.forEach(function (video) {
-            console.log(video);
             var html = '<a href="http://vimeo.com' + video.uri + '" class="popup"><img src="' + video.pictures.sizes[4].link + '" class="thumb" /></a>';
             ++i;
             $('.vimeo-videos').append(html);
@@ -247,12 +259,9 @@
                 media: {}
             }
         });
+
+        requestUnauthenticatedToken(tokenReceived);
     });
-
-    //requestUnauthenticatedToken();
-    getAlbums(displayVideoGallery);
-
-
 </script>
 
 </body>
