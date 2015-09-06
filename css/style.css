@@ -103,12 +103,15 @@ a img.popup	{
 	margin-bottom: 12px;
 	display: block;
 	box-shadow: 0 0 3px rgba(0,0,0,.4);
+	overflow: hidden;
+	max-height: 200px;
 }
 
 .thumbnails img {
-	max-height: 200px;
 	margin: auto;
 	display: block;
+	width: 100%; /* Take up all the space we can get horizontally. We'll cap the height
+    	of the container and prevent overflow*/
 }
 /*--- = Image Link  */
 
@@ -531,9 +534,6 @@ footer {
 			display: -webkit-flex;
 		display: flex;
 		margin: 0;
-	}
-	.thumbnails img {
-    	width: 100%;
 	}
 }
 
