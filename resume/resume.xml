@@ -21,9 +21,9 @@
     </bio>
     <section title="skills" type="list">
         <item>Swift</item>
+        <item>Python</item>
         <item>Java</item>
-        <item>HTML5</item>
-        <item>CSS3</item>
+        <item>HTML &amp; CSS</item>
         <item>Adobe Illustrator</item>
         <item>Adobe Photoshop</item>
     </section>
@@ -31,12 +31,12 @@
         <item>
             <title>The University of Texas at Austin</title>
             <subtitle>B.S.A. Honors, Computer Science, May 2018 (expected)</subtitle>
-            <text>Polymathic Scholar. Classes: Data Structures Honors, Discrete Math Honors, Autonomous Intelligent Robotics, Computer Architecture.</text>
+            <text>Polymathic Scholar. Classes: Data Structures Honors, Discrete Math Honors, Autonomous Intelligent Robotics I &amp; II, Computer Architecture, Operating Systems Honors, Embedded Systems.</text>
         </item>
         <item>
             <title>Communications Arts High School</title>
             <subtitle>Distinguished Diploma, June 2014</subtitle>
-            <text>Salutatorian, GPA 102.42.</text>
+            <text>Salutatorian</text>
         </item>
     </section>
     <section title="experience" type="highlight-list">
@@ -45,6 +45,13 @@
             <subtitle>Research Engineer Intern</subtitle>
             <date>'15</date>
             <text>Worked alone and with teams to understand and leverage emerging technologies. Designed and developed prototypes and presented them to leaders. Became familiar with research and intellectual property practices.</text>
+        </item>
+        <item>
+            <title>MAD</title>
+            <link>http://www.cs.utexas.edu/users/mad/</link>
+            <subtitle>Tech Director and iOS Instructor</subtitle>
+            <date>'15-pres</date>
+            <text>Taught intro iOS workshops. Led efforts to revitalize departmental iOS app and redesigned the deployment process for its backend.</text>
         </item>
         <item>
             <title>Pulsar</title>
@@ -75,7 +82,7 @@
             <text></text>
         </item>
         <item>
-            <title>United States Fencing Association Foilist</title>
+            <title>Foilist</title>
             <date>'03-pres.</date>
             <text>Multiple national appearances. B rating in foil. Fenced with UT Fencing club during college. <!--SWIFA --></text>
         </item>
