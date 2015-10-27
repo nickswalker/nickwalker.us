@@ -49,9 +49,6 @@
 
     </section>
 
-
-
-
     <section class="pulsar">
         <p>When he can't find a metronome app he likes, he makes one.</p>
         <figure>
@@ -174,6 +171,7 @@
     var $targetEmbed = $('');
     var $activeVideo = $('');
     var $storedHTML = '';
+    var token = '58796c6b035a88dc64b584c02ca56e48';
 
     function requestUnauthenticatedToken(callback) {
         var url = 'https://api.vimeo.com/oauth/authorize/client';
@@ -260,7 +258,8 @@
             }
         });
 
-        requestUnauthenticatedToken(tokenReceived);
+        //requestUnauthenticatedToken(tokenReceived);
+        tokenReceived({access_token: token});
     });
 </script>
 
