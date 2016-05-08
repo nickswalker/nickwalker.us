@@ -2,7 +2,7 @@
 //Bootstrap - Move this code to wherever you want the resume to display on your server
 // This is the barest implementation to get the package off the ground
 
-require 'vendor/autoload.php'; //Don't try to make these paths absolute (begin with a /) unless you know what you're doing.
+require '../vendor/autoload.php'; //Don't try to make these paths absolute (begin with a /) unless you know what you're doing.
 
 $resumePathFromRoot = realpath('resume.xml');
 									
