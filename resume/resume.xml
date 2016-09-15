@@ -44,7 +44,7 @@
             <title>Building Wide Intelligence research group</title>
             <subtitle>Undergraduate Researcher</subtitle>
             <date>'15 - pres.</date>
-            <text>Worked with other undergraduates and faculty mentors. Implemented novel transfer learning for reinforcement learning agents in the Block Dude domain. Coauthored a submission to AAAI.</text>
+            <text>Worked with other undergraduates and faculty mentors. Implemented novel transfer learning method for reinforcement learning agents in the Block Dude domain. Coauthored a submission to AAAI.</text>
         </item>
         <item>
             <title>USAA</title>
@@ -77,13 +77,13 @@
             <title>Forecast.io Dashboard Widget</title>
             <link>http://github.com/nickswalker/forecast.io-dashboard-widget</link>
             <subtitle>Web Developer</subtitle>
-            <date>'13-pres.</date>
+            <date>'13</date>
             <text>Created and maintained an open source weather embed. Took requests and facilitated discussion from multiple contributors using GitHub.</text>
         </item>
     </section>
     <section title="Activities" type="detail-list">
         <item>
-            <title>Freshman Research Initiative Peer Mentor, Autonomous Intelligent Robotics stream</title>
+            <title>Autonomous Intelligent Robotics research stream Peer Mentor</title>
             <date>'15-pres.</date>
             <text></text>
         </item>
