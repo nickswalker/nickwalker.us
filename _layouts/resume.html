@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="format-detection" content="telephone=no">
+    {% include base_meta.html %}
+    {% include fonts.html %}
+
+    <link rel="stylesheet" href="{{ '/assets/css/resume.css' | relative_url }}">
+
+
+</head>
+<body>
+<div id="container">
+    <header itemscope itemtype="http://schema.org/Person">
+        <div class="plate">
+            <h1 itemprop="name">{{site.first_last_name}}</h1>
+            <h2 itemprop="jobTitle">{{ site.data.resume.job_title}}</h2>
+        </div>
+        <div class="right-plate">
+            <div class="contact-info">
+                <h3 id="print"><button onClick="window.print()">Print</button></h3>
+                <h3><a itemprop="url" href="http://{{site.data.resume.homepage_url}}>">{{site.data.resume.homepage_url}}</a></h3>
+                <h3><a itemprop="email" href="mailto:{{site.data.resume.email}}">{{site.data.resume.email}}</a></h3>
+                {% if site.data.resume.phone %}
+                    <h3 itemprop="telephone">{{site.data.resume.phone}}</h3>
+                {% endif %}
+                {% if site.data.resume.address %}
+                    <h4 itemprop="address" class="address">{{site.data.resume.address}}</h4>
+                {% endif %}
+            </div>
+            <ul id="social">
+                {% for item in site.data.resume.social%}
+                    {% assign key = item[0] %}
+                    {% assign value = item[1] %}
+                    {% if value != '' %}
+                        <li><a href="{{value}}" class="ion-social-{{key}}"></a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </header>
+
+    {% include resume/list.html title="skills" items=site.data.resume.skills %}
+    {% include resume/highlight_list.html title="education" items=site.data.resume.education %}
+    {% include resume/highlight_list.html title="experience" items=site.data.resume.experience %}
+    {% include resume/detail_list.html title="activities" items=site.data.resume.activities %}
+
+
+    <footer>
+        <p>{{site.first_last_name}} &mdash; <a itemprop="email" href="mailto:{{site.email}}">{{site.email}}</a></p>
+    </footer>
+
+</div>
+</body>
+</html>

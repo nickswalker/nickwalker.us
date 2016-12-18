@@ -1,2 +1,3 @@
 # nickwalker.us
-Personal portfolio website
+
+My portfolio website. Built with Jekyll.

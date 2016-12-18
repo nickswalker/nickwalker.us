@@ -1,0 +1,54 @@
+---
+job_title: Developer
+homepage_url: "nickwalker.us"
+email: "nick@nickwalker.us"
+address: "Austin, TX"
+
+social:
+    linkedin: "https://linkedin.com/in/niwalker"
+    github: "https://github.com/nickswalker"
+skills:
+    - Swift
+    - Python
+    - Java
+    - "HTML, CSS, Typescript"
+education:
+      - college:
+        title: The University of Texas at Austin
+        subtitle: "B.S.A. Honors, Computer Science"
+        description: "Polymathic Scholar (Interdisciplinary Honors). Bridging Disciplines Program, Digital Media and Arts certificate. Classes: Reinforcement Learning, Autonomous Intelligent Robotics I & II, Operating Systems Honors, Embedded Systems, Computer Graphics."
+
+experience:
+  - bwi:
+    title: Building Wide Intelligence research group
+    subtitle: Undergraduate Researcher
+    date: "'15 - pres."
+    description: "Worked with other undergraduates and faculty mentors. Implemented novel transfer learning method for reinforcement learning agents in the Block Dude domain."
+
+
+  - usaa:
+    title: USAA
+    subtitle: Research Engineer Intern
+    date: "Summer '15, '16"
+    description: "Worked alone and with teams in areas of natural language and brain computer interface. Designed and developed prototypes and presented them to leaders. Co-inventor on two provisional patent applications."
+
+activities:
+  - air:
+    title: Autonomous Intelligent Robotics research stream Peer Mentor
+    date: "'15-pres."
+    description:
+
+  - mad:
+    title: MADLabs
+    date: "'15-pres."
+    description:
+
+  - fencing:
+    title: Foilist
+    date: "'03-pres."
+    description: Multiple national appearances. B rating in foil.
+
+  - music:
+    title: Violinist
+    date: "'03-pres."
+    description: Played with Engineering Chamber Orchestra in college.

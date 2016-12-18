@@ -1,0 +1,15 @@
+{% capture content %}
+    {% for item in include.items %}
+        <article>
+            <hgroup>
+                <h2 >{{item.title}}</h2><a class="ion-link" href="{{item.link}}"><i class="ion-image" href="{{ImagePath}}"></i></a>
+                <h3>{{item.subtitle}}</h3>
+                <h4>{{item.date}}</h4>
+            </hgroup>
+            <p>{{item.description}}</p>
+        </article>
+    {% endfor %}
+
+{% endcapture %}
+
+{% include resume/section.html title=include.title content=content section_type="highlight-list" %}

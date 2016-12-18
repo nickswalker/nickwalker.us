@@ -1,0 +1,28 @@
+---
+---
+@charset "utf-8";
+
+@import "research-portfolio-variables";
+
+// Our variables
+$base-font-family: "Merriweather Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$display-font-family: "Arvo";
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     24px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      $light-green-color;
+
+// Width of the content area
+$content-width:    900px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+// Import partials from the `research-portfolio` theme.
+@import "research-portfolio";

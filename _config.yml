@@ -1,0 +1,46 @@
+title: Nick Walker
+first_last_name: Nick Walker
+email: nick@nickwalker.us
+description: > # this means to ignore newlines until "baseurl:"
+  Computer science student at UT Austin with broad interests.
+baseurl: "" # Subpath, in my case, root
+url: "https://nickwalker.us" # includes protocol
+google_analytics: ""
+
+twitter_username: nickwalker.us
+github_username:  nickswalker
+linkedin_username: niwalker
+google_plus_profile_url: https://plus.google.com/109675278505943174152/
+gravatar_url: https://www.gravatar.com/avatar/05a17826262b803bdc53a402751c884e
+
+
+# Custom collections
+collections:
+  projects:
+    output: true
+  papers:
+    output: true
+
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+      featured: false
+      has_article: true
+  - scope:
+      path: ""
+      type: papers
+    values:
+      layout: paper
+
+# Build settings
+markdown: kramdown
+# theme: research-portfolio
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
