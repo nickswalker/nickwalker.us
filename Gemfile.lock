@@ -21,6 +21,8 @@ GEM
       jekyll (~> 3.3)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
+    jekyll-sitemap (0.12.0)
+      jekyll (~> 3.3)
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
     kramdown (1.13.1)
@@ -45,6 +47,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (= 3.3.1)
   jekyll-feed (~> 0.6)
+  jekyll-sitemap
 
 RUBY VERSION
    ruby 2.0.0p648

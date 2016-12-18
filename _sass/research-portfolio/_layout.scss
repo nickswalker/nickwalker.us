@@ -22,6 +22,7 @@
   float: left;
 
   -webkit-text-decoration: none;
+  text-decoration: none;
   &:visited {
     color: inherit;
   }
@@ -102,6 +103,7 @@
  */
 footer,
 footer p {
+  font-weight: 300;
   color: $grey-color-mid-light;
 }
 .site-footer {

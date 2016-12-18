@@ -41,6 +41,7 @@ markdown: kramdown
 # theme: research-portfolio
 gems:
   - jekyll-feed
+  - jekyll-sitemap
 exclude:
   - Gemfile
   - Gemfile.lock
