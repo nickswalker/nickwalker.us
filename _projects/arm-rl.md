@@ -5,7 +5,7 @@ categories: ios
 short_description: "RL agents for arm control"
 link: something
 github_repo_url: "https://github.com/nickswalker/ArduinoRL"
-block_color: "#4e7f9e"
+block_color: "#4994c3"
 block_image: "/assets/projects/arm-rl/banner.jpg"
 featured: true
 has_article: false

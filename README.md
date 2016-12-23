@@ -9,7 +9,11 @@ My portfolio website. Built with [Jekyll](https://jekyllrb.com), based off of [M
 
 ## Develpoment
 
-Make sure you have Ruby and Jekyll installed. Clone down the repo and run
+Make sure you have Ruby and [Bundler](http://bundler.io/) installed. Clone down the repo and run
+
+    bundle install
+
+to install gem dependencies. Then
 
     bundle exec jekyll serve
 

@@ -5,7 +5,7 @@ categories: ios
 short_description: "Interactive paper marbling simulation"
 link: something
 github_repo_url: "https://github.com/nickswalker/paper-marbling-js"
-block_color: "#4e7f9e"
+block_color: "#ffc700"
 block_image: "/assets/projects/marbling/banner.jpg"
 featured: true
 has_article: false
