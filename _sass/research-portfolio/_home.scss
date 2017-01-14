@@ -29,9 +29,11 @@
     display: block;
     background-color: $grey-color-light;
     background-image: radial-gradient(at center, rgba(255, 255, 255, 0) 20%, rgba(0, 0, 0, .1) 100%),
-                    linear-gradient(308deg, transparent, transparentize($grey-color-dark, 0.9)), -webkit-image-set(url("/assets/img/noise.png") 1x, url("/assets/img/noise-super.png") 2x);
+    linear-gradient(308deg, transparent, transparentize($grey-color-dark, 0.9)), url(asset_path('noise.png'));
     background-image: radial-gradient(at center, rgba(255, 255, 255, 0) 20%, rgba(0, 0, 0, .1) 100%),
-    linear-gradient(308deg, transparent, transparentize($grey-color-dark, 0.9)), image-set(url("/assets/img/noise.png") 1x, url("/assets/img/noise-super.png") 2x);
+    linear-gradient(308deg, transparent, transparentize($grey-color-dark, 0.9)), -webkit-image-set(url(asset_path('noise.png')) 1x, url(asset_path('noise-super.png')) 2x);
+    background-image: radial-gradient(at center, rgba(255, 255, 255, 0) 20%, rgba(0, 0, 0, .1) 100%),
+    linear-gradient(308deg, transparent, transparentize($grey-color-dark, 0.9)), image-set(url(asset_path('noise.png')) 1x, url(asset_path('noise-super.png')) 2x);
     filter: saturate(30%) brightness(105%);
     transition: 0.3s;
     color: white;

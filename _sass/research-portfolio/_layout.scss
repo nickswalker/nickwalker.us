@@ -17,7 +17,6 @@
   font-size: 26px;
   font-weight: 900;
   line-height: 56px;
-  letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
 
@@ -31,6 +30,14 @@
     opacity: 0.8;
     text-decoration: none;
   }
+}
+
+.kern-near {
+  letter-spacing: -0.045em;
+}
+
+.kern-close {
+  letter-spacing: -0.090em;
 }
 
 .site-nav {
@@ -229,7 +236,58 @@ footer p {
   font-size: 18px;
 }
 
+.project-images {
+  margin-bottom: 24px;
+}
 
+.project-images a {
+  display: block;
+}
+
+.project-images .hero {
+  width: 100%;
+  min-height: 200px;
+  max-height: 40vh;
+  overflow: hidden;
+}
+
+.quick-links {
+  margin: 0;
+  padding: 0;
+}
+
+.quick-links li {
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.quick-links li i {
+  margin-right: 6px;
+}
+
+.thumbnails {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  min-height: 100px;
+  height: 20vh;
+}
+
+.thumbnails > * {
+  flex: 1 1 auto;
+  height: 100%;
+  overflow: hidden;
+}
+
+article.project img {
+  background-color: #ccc;
+}
+
+.thumbnails img {
+  object-fit: cover;
+  width: 100%;
+}
 
 /**
  * Posts
@@ -277,3 +335,8 @@ footer p {
   }
 }
 
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 1.5dppx) {
+  footer {
+    border-width: 0.5px;
+  }
+}

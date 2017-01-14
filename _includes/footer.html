@@ -5,11 +5,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <a href="{{ '/' | relative_url}}" class="branded-title">
-            {% if site.author %}
-              {{ site.author | escape }}
-            {% else %}
-              {{ site.title | escape }}
-            {% endif %}
+            {% include kerned_name.html %}
         </a>
       </div>
 
@@ -18,8 +14,8 @@
 
             {% if site.linkedin_username %}
             <li>
-              <a href="https://github.com/{{site.linkedin_username}}"
-                title="See history."> <i class="ion-social-linkedin linkedin"></i>{{site.linkedin_username}}</a>
+                <a href="https://linkedin.com/in/{{site.linkedin_username}}"
+                   title="See history."> <i class="ion-social-linkedin linkedin"></i>{{site.linkedin_username}}</a>
             </li>
             {% endif %}
 
