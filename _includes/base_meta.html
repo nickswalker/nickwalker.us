@@ -5,7 +5,7 @@
 <title>{% if page.title %}{{ page.title | escape }} || {{ site.title | escape}}{% else %}{{ site.title | escape }}{% endif %}</title>
 <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 <meta name="author" content="{{site.first_last_name}}"/>
-<meta property="og:image" content="http://nickwalker.us/img/nick-and-mick.png" />
+<meta property="og:image" content="http://nickwalker.us/images/og-banner.png"/>
 <link rel="author" href="{{site.google_plus_profile_url}}"/>
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
