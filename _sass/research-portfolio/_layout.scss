@@ -240,6 +240,16 @@ footer p {
   margin-bottom: 24px;
 }
 
+.project-images img {
+  transition: 0.3s;
+  object-fit: cover;
+  width: 100%;
+}
+
+.project-images img:hover {
+  transform: scale(1.05);
+}
+
 .project-images a {
   display: block;
 }
@@ -284,9 +294,14 @@ article.project img {
   background-color: #ccc;
 }
 
-.thumbnails img {
-  object-fit: cover;
-  width: 100%;
+article header {
+  max-width: 650px;
+  margin: 0 auto 12px auto;
+}
+
+article p {
+  max-width: 650px;
+  margin: 0 auto 12px auto;
 }
 
 /**
