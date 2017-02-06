@@ -1,0 +1,10 @@
+<li>
+    {% if publication.has_article %}
+          <a class="project-link" href="{{ publication.url }}">
+            {% if project.block_image %}
+              <img src="/assets/publications/{{publication.title | slugify}}/{{publication.image}}"/>
+            {% endif %}
+            <h2>{{ project.title | escape }}</h2>
+              <span class="project-description">{{project.short_description}}</span>
+          </a>
+</li>

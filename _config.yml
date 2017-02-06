@@ -5,6 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Computer science student at UT Austin with interests spanning reinforcement learning, interactive machine learning and digital media.
 baseurl: "" # Subpath, in my case, root
 url: "https://nickwalker.us" # includes protocol
+# Using cloudflare to insert this automatically
 google_analytics: ""
 
 # Bio information
@@ -19,7 +20,7 @@ collections:
   projects:
     output: true
     permalink: projects/:title
-  papers:
+  publications:
     output: true
 
 
@@ -33,9 +34,9 @@ defaults:
       has_article: true
   - scope:
       path: ""
-      type: papers
+      type: publications
     values:
-      layout: paper
+      layout: publication
 
 # Build settings
 markdown: kramdown

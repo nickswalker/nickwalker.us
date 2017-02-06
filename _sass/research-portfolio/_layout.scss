@@ -49,9 +49,10 @@
   }
 
   .page-link {
-    color: $text-color;
+    color: inherit;
     line-height: $base-line-height;
-
+    -webkit-text-decoration: none;
+    text-decoration: none;    
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
       margin-right: 20px;
@@ -62,7 +63,6 @@
     position: absolute;
     top: 9px;
     right: $spacing-unit / 2;
-    background-color: $background-color;
     border: 1px solid $grey-color-light;
     border-radius: 5px;
     text-align: right;
@@ -77,7 +77,7 @@
       text-align: center;
 
       > svg path {
-        fill: $grey-color-dark;
+        fill: white;
       }
     }
 
@@ -94,11 +94,13 @@
     .page-link {
       display: block;
       padding: 5px 10px;
+      background-color: white;
+      color: black;
 
       &:not(:last-child) {
         margin-right: 0;
       }
-      margin-left: 20px;
+
     }
   }
 }
@@ -295,13 +297,19 @@ article.project img {
 }
 
 article header {
-  max-width: 650px;
   margin: 0 auto 12px auto;
 }
 
 article p {
-  max-width: 650px;
   margin: 0 auto 12px auto;
+}
+
+article ol, article ul,
+article header, article p, article iframe{
+  margin-left: auto;
+  display: block;
+  margin-right: auto;
+  max-width: 650px;
 }
 
 /**

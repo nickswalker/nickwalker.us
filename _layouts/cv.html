@@ -3,13 +3,16 @@
 <head>
     <meta name="format-detection" content="telephone=no">
     {% include base_meta.html %}
-    {% include resume/fonts.html %}
+    {% include cv/fonts.html %}
 
     <link rel="stylesheet" href="/assets/css/resume.css"/>
 
 
 </head>
 <body>
+<script>
+    window.location = "https://nickwalker.us/assets/cv.pdf";
+</script>
 <div id="container">
     <header itemscope itemtype="http://schema.org/Person">
         <div class="plate">
@@ -40,10 +43,10 @@
         </div>
     </header>
 
-    {% include resume/list.html title="skills" items=site.data.resume.skills %}
-    {% include resume/highlight_list.html title="education" items=site.data.resume.education %}
-    {% include resume/highlight_list.html title="experience" items=site.data.resume.experience %}
-    {% include resume/detail_list.html title="activities" items=site.data.resume.activities %}
+    {% include cv/list.html title="skills" items=site.data.resume.skills %}
+    {% include cv/highlight_list.html title="education" items=site.data.resume.education %}
+    {% include cv/highlight_list.html title="experience" items=site.data.resume.experience %}
+    {% include cv/detail_list.html title="activities" items=site.data.resume.activities %}
 
 
     <footer>

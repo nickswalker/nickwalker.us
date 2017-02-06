@@ -1,5 +1,5 @@
 ---
-job_title: Developer
+job_title: "BSA Computer Science, May 2018"
 homepage_url: "nickwalker.us"
 email: "nick@nickwalker.us"
 address: "Austin, TX"
@@ -22,7 +22,7 @@ experience:
   - bwi:
     title: Building Wide Intelligence research group
     subtitle: Undergraduate Researcher
-    date: "'15 - pres."
+    date: "'15-"
     description: "Worked with other undergraduates and faculty mentors. Implemented novel transfer learning method for reinforcement learning agents in the Block Dude domain."
 
 
@@ -35,20 +35,24 @@ experience:
 activities:
   - air:
     title: Autonomous Intelligent Robotics research stream Peer Mentor
-    date: "'15-pres."
+    date: "'15-"
     description:
 
   - mad:
     title: MADLabs
-    date: "'15-pres."
+    date: "'15-"
     description:
 
   - fencing:
     title: Foilist
-    date: "'03-pres."
+    date: "'03-"
     description: Multiple national appearances. B rating in foil.
 
   - music:
     title: Violinist
-    date: "'03-pres."
+    date: "'03-"
     description: Played with Engineering Chamber Orchestra in college.
+
+publications:
+
+  - 

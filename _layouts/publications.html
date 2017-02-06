@@ -1,0 +1,9 @@
+---
+layout: page
+---
+
+<p>See a <a href="{{ '/bibliography' }}">full bibliography</a>.</p>
+
+{% for publication in site.publications %}
+    {% include publication_block.html publication=publication %}
+{% endfor %}
