@@ -9,7 +9,7 @@ layout: page
     <div class="gallery-wrapper">
         {% for image in gallery.images %}
         <div class="gallery-image-wrapper">
-            <a href="{{ gallery['gallery'] }}/{{ image.name }}">
+            <a href="/photos/{{ gallery['gallery'] }}/{{ image.name }}">
                 <img class="gallery-image" src="/photos/{{ gallery['gallery'] }}/thumbs/{{ image.name }}" class="fancybox"/>
             </a>
         </div>
