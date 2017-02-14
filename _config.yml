@@ -5,8 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Computer science student at UT Austin with interests spanning reinforcement learning, interactive machine learning and digital media.
 baseurl: "" # Subpath, in my case, root
 url: "https://nickwalker.us" # includes protocol
-# Using cloudflare to insert this automatically
-google_analytics: ""
+google_analytics: "UA-30066313-1"
 
 # Bio information
 twitter_username: nickwalker.us
@@ -44,6 +43,19 @@ markdown: kramdown
 gems:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-gallery-generator
 exclude:
   - Gemfile
   - Gemfile.lock
+
+
+gallery:
+  dir: photos               # Path to the gallery
+  symlink: false            # false: copy images into _site. true: create symbolic links (saves disk space)
+  title: "Photos"           # Title for gallery index page
+  title_prefix: "Photos: "  # Title prefix for gallery pages. Gallery title = title_prefix + gallery_name
+  sort_field: "date_time"   # How to sort galleries on the index page.
+                            # Possible values are: title, date_time, best_image
+  thumbnail_size:
+    x: 400                  # max width of thumbnails (in pixels)
+    y: 400                  # max height of thumbnails (in pixels)

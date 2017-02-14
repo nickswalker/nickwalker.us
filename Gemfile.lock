@@ -15,9 +15,10 @@ GEM
       namae (~> 0.7)
     csl-styles (1.0.1.7)
       csl (~> 1.0)
-    ffi (1.9.14)
+    exifr (1.2.5)
+    ffi (1.9.17)
     forwardable-extended (2.6.0)
-    jekyll (3.3.1)
+    jekyll (3.4.0)
       addressable (~> 2.4)
       colorator (~> 1.0)
       jekyll-sass-converter (~> 1.0)
@@ -30,18 +31,21 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-feed (0.8.0)
       jekyll (~> 3.3)
+    jekyll-gallery-generator (1.1.0)
+      exifr (~> 1.2)
+      rmagick (~> 2.12)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
-    jekyll-scholar (5.8.5)
+    jekyll-scholar (5.9.1)
       bibtex-ruby (~> 4.0, >= 4.0.13)
       citeproc-ruby (~> 1.0)
       csl-styles (~> 1.0)
       jekyll (~> 3.0)
-    jekyll-sitemap (0.12.0)
+    jekyll-sitemap (1.0.0)
       jekyll (~> 3.3)
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
-    kramdown (1.13.1)
+    kramdown (1.13.2)
     latex-decode (0.2.2)
       unicode (~> 0.4)
     liquid (3.0.6)
@@ -52,26 +56,28 @@ GEM
     namae (0.11.3)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
-    public_suffix (2.0.4)
+    public_suffix (2.0.5)
     rb-fsevent (0.9.8)
-    rb-inotify (0.9.7)
+    rb-inotify (0.9.8)
       ffi (>= 0.5.0)
+    rmagick (2.16.0)
     rouge (1.11.1)
     safe_yaml (1.0.4)
-    sass (3.4.22)
+    sass (3.4.23)
     unicode (0.4.4.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  jekyll (= 3.3.1)
+  jekyll (= 3.4.0)
   jekyll-feed (~> 0.6)
+  jekyll-gallery-generator
   jekyll-scholar
   jekyll-sitemap
 
 RUBY VERSION
-   ruby 2.3.1p112
+   ruby 2.4.0p0
 
 BUNDLED WITH
-   1.13.6
+   1.14.4

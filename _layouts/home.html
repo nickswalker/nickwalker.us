@@ -12,18 +12,17 @@ layout: default
     <p>{{page.bio | markdownify}}</p>
   </section>
 
-
   <section id="projects">
     <!--<h1 class="page-heading">Projects</h1>-->
     <ul class="project-list">
       {% assign featured_projects = site.projects | where:"featured", true %}
       {% for project in featured_projects %}
-      {% include project_block.html project=project %}
-      {% endfor % }
+        {% include project_block.html project=project %}
+      {% endfor %}
     </ul>
   </section>
 
-  {% assign post_count={site.posts | size} %}
+  {% assign post_count = {site.posts | size} %}
   {% if post_count > 0 %}
   <section id="posts">
     <a class="rss-note" href="{{ '/feed.xml' | relative_url }}">RSS</a>
@@ -40,7 +39,6 @@ layout: default
     </ul>
   </section>
   {% endif %}
-
 
 
 </div>

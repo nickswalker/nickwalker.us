@@ -1,0 +1,19 @@
+---
+layout: page
+---
+
+<p>I mostly shoot individual portraits with natural light or a single strobe. Below are some of my favorite results from the past five years.</p>
+
+{% for gallery in page.galleries %}
+<div class="full-width">
+    <div class="gallery-wrapper">
+        {% for image in gallery.images %}
+        <div class="gallery-image-wrapper">
+            <a href="{{ gallery['gallery'] }}/{{ image.name }}">
+                <img class="gallery-image" src="{{ gallery['gallery'] }}/thumbs/{{ image.name }}" class="fancybox"/>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endfor %}

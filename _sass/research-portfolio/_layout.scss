@@ -231,6 +231,8 @@ footer p {
   font-size: $small-font-size;
   color: $grey-color;
   float: right;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .post-link {
@@ -301,11 +303,11 @@ article header {
 }
 
 article p {
-  margin: 0 auto 12px auto;
+  margin: 0 auto 24px auto;
 }
 
 article ol, article ul,
-article header, article p, article iframe{
+article header, article p, article iframe, article h2, article h3{
   margin-left: auto;
   display: block;
   margin-right: auto;
@@ -317,12 +319,19 @@ article header, article p, article iframe{
  */
 .post-header {
   margin-bottom: $spacing-unit;
+  .post-meta {
+    font-size: $small-font-size;
+    color: $grey-color;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    float: none;
+  }
 }
 
 .post-title {
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 700;
-  letter-spacing: -1px;
   margin-bottom: 0;
 
   @include media-query($on-laptop) {
@@ -333,12 +342,14 @@ article header, article p, article iframe{
 .post-content {
   margin-bottom: $spacing-unit;
 
-  h2 {
-    font-size: 32px;
 
-    @include media-query($on-laptop) {
-      font-size: 28px;
-    }
+
+  h2 {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 48px;
   }
 
   h3 {
