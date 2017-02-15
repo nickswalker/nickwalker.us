@@ -31,6 +31,12 @@ defaults:
       layout: project
       featured: false
       has_article: true
+      custom_js:
+      - "https://code.jquery.com/jquery-3.1.1.min.js"
+      - "/assets/js/jquery.fancybox.min.js"
+      - "/assets/js/initialize-fancybox.js"
+      custom_css:
+      - "/assets/css/jquery.fancybox.min.css"
   - scope:
       path: ""
       type: publications

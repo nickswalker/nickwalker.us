@@ -3,12 +3,16 @@
  */
 .site-header {
   /*border-bottom: 1px solid $grey-color;*/
-  min-height: 56px;
   background-color: $brand-color;
   color: white;
   // Positioning context for the mobile navigation icon
   position: relative;
   margin-bottom: $spacing-unit;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+  }
 }
 
 .site-title {
@@ -16,9 +20,9 @@
   text-transform: uppercase;
   font-size: 26px;
   font-weight: 900;
-  line-height: 56px;
+  line-height: 48px;
   margin-bottom: 0;
-  float: left;
+  flex: 0 0 auto;
 
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -41,8 +45,8 @@
 }
 
 .site-nav {
-  float: right;
-  line-height: 56px;
+  margin-left: auto;
+  line-height: 48px;
 
   .menu-icon {
     display: none;
@@ -60,50 +64,16 @@
   }
 
   @include media-query($on-palm) {
-    position: absolute;
-    top: 9px;
     right: $spacing-unit / 2;
-    border: 1px solid $grey-color-light;
-    border-radius: 5px;
     text-align: right;
 
-    .menu-icon {
-      display: block;
-      float: right;
-      width: 36px;
-      height: 26px;
-      line-height: 0;
-      padding-top: 10px;
-      text-align: center;
-
-      > svg path {
-        fill: white;
-      }
+    .navigation-links {
+      line-height: 24px;
     }
 
-    .trigger {
-      clear: both;
-      display: none;
-    }
-
-    &:hover .trigger {
-      display: block;
-      padding-bottom: 5px;
-    }
-
-    .page-link {
-      display: block;
-      padding: 5px 10px;
-      background-color: white;
-      color: black;
-
-      &:not(:last-child) {
-        margin-right: 0;
-      }
-
-    }
   }
 }
+
 
 
 
@@ -223,7 +193,7 @@ footer p {
   list-style: none;
 
   > li {
-    margin-bottom: $spacing-unit;
+    margin-bottom: $spacing-unit / 2;
   }
 }
 

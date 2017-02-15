@@ -1,5 +1,6 @@
 ---
 layout: default
+test: hi
 ---
 <article class="project">
 
@@ -7,13 +8,14 @@ layout: default
     {% assign project_assets = "/assets/projects/" | append: slug %}
     {% if page.images.size > 0 %}
     <figure class="project-images">
-        <a href="{{ project_assets }}/{{page.images[0]}}" class="hero"><img
+        <a href="{{ project_assets }}/{{page.images[0]}}" data-fancybox="gallery" class="hero"><img
                 src="{{ project_assets }}/{{page.images[0]}}"/></a>
         {% if page.images.size > 1 %}
         <ul class="thumbnails">
 
             {% for image in page.images offset:1 %}
-            <li><a href="{{ project_assets }}/{{image}}"> <img src="{{ project_assets }}/{{image}}"/></a></li>
+            <li><a href="{{ project_assets }}/{{image}}" data-fancybox="gallery"> <img
+                    src="{{ project_assets }}/{{image}}"/></a></li>
             {% endfor %}
         </ul>
         {% endif %}

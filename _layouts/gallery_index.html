@@ -1,16 +1,24 @@
 ---
 layout: page
+custom_js:
+- "https://code.jquery.com/jquery-3.1.1.min.js"
+- "/assets/js/jquery.fancybox.min.js"
+- "/assets/js/initialize-fancybox.js"
+custom_css:
+- "/assets/css/jquery.fancybox.min.css"
 ---
 
-<p>I mostly shoot individual portraits with natural light or a single strobe. Below are some of my favorite results from the past five years.</p>
+<p>I mostly shoot individual portraits, often in colloboration with <a href="https://kassandrasmith.net">Kassandra
+    Smith</a>. Below are some of my favorite results from the past five years.</p>
 
 {% for gallery in page.galleries %}
 <div class="full-width">
     <div class="gallery-wrapper">
         {% for image in gallery.images %}
         <div class="gallery-image-wrapper">
-            <a href="/photos/{{ gallery['gallery'] }}/{{ image.name }}">
-                <img class="gallery-image" src="/photos/{{ gallery['gallery'] }}/thumbs/{{ image.name }}" class="fancybox"/>
+            <a data-fancybox="gallery" data-width="{{image.exif.width}}" data-height="{{image.exif.height}}"
+               data-caption="" href="/photos/{{ gallery['gallery'] }}/{{ image.name }}">
+                <img class="gallery-image" src="/photos/{{ gallery['gallery'] }}/thumbs/{{ image.name }}"/>
             </a>
         </div>
         {% endfor %}
