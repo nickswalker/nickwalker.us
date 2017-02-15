@@ -12,5 +12,6 @@ images:
 block_color: "rgb(45, 187, 74)"
 
 featured: true
+block_image: "banner.jpg"
 
 ---

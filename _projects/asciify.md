@@ -6,6 +6,7 @@ short_description: "Image to ASCII art conversion in Swift"
 link: something
 github_repo_url: "https://github.com/nickswalker/ASCIIfy"
 block_color: "rgb(251, 71, 52)"
+block_image: "banner.jpg"
 featured: true
 has_article: false
 ---
