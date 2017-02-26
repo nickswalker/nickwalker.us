@@ -75,8 +75,6 @@
 }
 
 
-
-
 /**
  * Site footer
  */
@@ -175,7 +173,6 @@ footer p {
 }
 
 
-
 /**
  * Page content
  */
@@ -208,135 +205,6 @@ footer p {
 .post-link {
   display: block;
   font-size: 18px;
-}
-
-.project-images {
-  margin-bottom: 24px;
-}
-
-.project-images img {
-  transition: 0.3s;
-  object-fit: cover;
-  width: 100%;
-}
-
-.project-images img:hover {
-  transform: scale(1.05);
-}
-
-.project-images a {
-  display: block;
-}
-
-.project-images .hero {
-  width: 100%;
-  min-height: 200px;
-  max-height: 40vh;
-  overflow: hidden;
-}
-
-.quick-links {
-  margin: 0;
-  padding: 0;
-}
-
-.quick-links li {
-  display: inline-block;
-  margin-right: 6px;
-}
-
-.quick-links li i {
-  margin-right: 6px;
-}
-
-.thumbnails {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  min-height: 100px;
-  height: 20vh;
-}
-
-.thumbnails > * {
-  flex: 1 1 auto;
-  height: 100%;
-  overflow: hidden;
-}
-
-article.project img {
-  background-color: #ccc;
-}
-
-article header {
-  margin: 0 auto 12px auto;
-}
-
-article p {
-  margin: 0 auto 24px auto;
-}
-
-article ol, article ul,
-article header, article p, article iframe, article h2, article h3{
-  margin-left: auto;
-  display: block;
-  margin-right: auto;
-  max-width: 650px;
-}
-
-/**
- * Posts
- */
-.post-header {
-  margin-bottom: $spacing-unit;
-  .post-meta {
-    font-size: $small-font-size;
-    color: $grey-color;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    float: none;
-  }
-}
-
-.post-title {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 0;
-
-  @include media-query($on-laptop) {
-    font-size: 21px;
-  }
-}
-
-.post-content {
-  margin-bottom: $spacing-unit;
-
-
-
-  h2 {
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    line-height: 48px;
-  }
-
-  h3 {
-    font-size: 26px;
-
-    @include media-query($on-laptop) {
-      font-size: 22px;
-    }
-  }
-
-  h4 {
-    font-size: 20px;
-
-    @include media-query($on-laptop) {
-      font-size: 18px;
-    }
-  }
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 1.5dppx) {

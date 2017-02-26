@@ -1,0 +1,53 @@
+.project-images {
+  margin-bottom: 24px;
+}
+
+.project-images img {
+  transition: 0.3s;
+  object-fit: cover;
+  width: 100%;
+}
+
+.project-images img:hover {
+  transform: scale(1.05);
+}
+
+.project-images a {
+  display: block;
+}
+
+.project-images .hero {
+  width: 100%;
+  min-height: 200px;
+  max-height: 40vh;
+  overflow: hidden;
+}
+
+.quick-links {
+  margin: 0;
+  padding: 0;
+}
+
+.quick-links li {
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.quick-links li i {
+  margin-right: 6px;
+}
+
+.thumbnails {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  min-height: 100px;
+  height: 20vh;
+}
+
+.thumbnails > * {
+  flex: 1 1 auto;
+  height: 100%;
+  overflow: hidden;
+}

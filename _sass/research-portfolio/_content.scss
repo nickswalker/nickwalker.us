@@ -1,0 +1,84 @@
+article.project img {
+  background-color: #ccc;
+}
+
+
+article {
+  ol, ul,
+   header, p, iframe, h1, h2, h3, h4, h5{
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
+    max-width: 650px;
+  }
+
+  header {
+    margin-bottom: $spacing-unit;
+    .post-meta {
+      font-size: $small-font-size;
+      color: $grey-color;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      float: none;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 0;
+
+      @include media-query($on-laptop) {
+        font-size: 21px;
+      }
+    }
+  }
+
+  .article-image {
+    margin-bottom: $spacing-unit;
+    img {
+      margin: 0 auto;
+      margin-bottom: $spacing-unit/2.0;
+      max-height: 75vh;
+    }
+    figcaption {
+      font-size: 14px;
+      color: #333;
+    }
+  }
+
+  .post-content p:first-of-type {
+    //font-size: 21px;
+  }
+  .post-content, .project-content {
+    margin-bottom: $spacing-unit;
+
+    p {
+      margin: 0 auto $spacing-unit auto;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      line-height: 48px;
+    }
+
+    h3 {
+      font-size: 26px;
+
+      @include media-query($on-laptop) {
+        font-size: 22px;
+      }
+    }
+
+    h4 {
+      font-size: 20px;
+
+      @include media-query($on-laptop) {
+        font-size: 18px;
+      }
+    }
+  }
+}
