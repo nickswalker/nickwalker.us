@@ -8,4 +8,5 @@ group :jekyll_plugins do
    gem "jekyll-sitemap"
    gem "jekyll-scholar"
    gem "jekyll-gallery-generator"
+   gem "html-proofer"
 end
