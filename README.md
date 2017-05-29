@@ -1,4 +1,4 @@
-# nickwalker.us
+# nickwalker.us [![Build Status](https://travis-ci.org/nickswalker/nickwalker.us.svg?branch=master)](https://travis-ci.org/nickswalker/nickwalker.us)
 
 My portfolio website. Built with [Jekyll](https://jekyllrb.com), based off of [Minima](https://github.com/jekyll/minima).
 
@@ -7,7 +7,7 @@ My portfolio website. Built with [Jekyll](https://jekyllrb.com), based off of [M
 * YML based résumé
 * Photo gallery
 
-## Develpoment
+## Development
 
 Make sure you have Ruby and [Bundler](http://bundler.io/) installed. Clone down the repo and run
 
