@@ -9,7 +9,7 @@ My portfolio website. Built with [Jekyll](https://jekyllrb.com), based off of [M
 
 ## Development
 
-Make sure you have Ruby and [Bundler](http://bundler.io/) installed. Clone down the repo and run
+Make sure you have Ruby `>=2.3` and [Bundler](http://bundler.io/) installed. Clone down the repo and run
 
     bundle install
 
@@ -17,4 +17,4 @@ to install gem dependencies. Then
 
     bundle exec jekyll serve
 
-to begin testing the site locally.
+to begin testing the site locally. Add `--drafts` and/or `--unpublished` to see WIP projects and posts.

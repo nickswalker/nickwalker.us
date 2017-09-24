@@ -11,6 +11,7 @@ google_analytics: "UA-30066313-1"
 twitter_username: nickwalker.us
 github_username:  nickswalker
 linkedin_username: niwalker
+flickr_username: nickwalker-us
 google_plus_profile_url: https://plus.google.com/109675278505943174152/
 gravatar_url: https://www.gravatar.com/avatar/05a17826262b803bdc53a402751c884e
 
@@ -48,23 +49,10 @@ defaults:
 # Build settings
 markdown: kramdown
 # theme: research-portfolio
-gems:
+plugins:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-gallery-generator
 exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
-
-
-gallery:
-  dir: photos               # Path to the gallery
-  symlink: false            # false: copy images into _site. true: create symbolic links (saves disk space)
-  title: "Photos"           # Title for gallery index page
-  title_prefix: "Photos: "  # Title prefix for gallery pages. Gallery title = title_prefix + gallery_name
-  sort_field: "date_time"   # How to sort galleries on the index page.
-                            # Possible values are: title, date_time, best_image
-  thumbnail_size:
-    x: 400                  # max width of thumbnails (in pixels)
-    y: 400                  # max height of thumbnails (in pixels)

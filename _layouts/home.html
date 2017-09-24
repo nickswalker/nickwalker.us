@@ -23,7 +23,7 @@ layout: default
     </ul>
   </section>
 
-  {% assign post_count = {site.posts | size} %}
+    {% assign post_count = site.posts | size %}
   {% if post_count > 0 %}
   <section id="posts">
     <a class="rss-note" href="{{ '/feed.xml' | relative_url }}">RSS</a>

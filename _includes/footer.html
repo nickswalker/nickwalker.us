@@ -25,6 +25,13 @@
               </li>
             {% endif %}
 
+            {% if site.flickr_username %}
+            <li>
+                <a href="https://flickr.com/photos/{{site.flickr_username}}" title="See Photos."> <i
+                        class="ion-images flickr"></i>{{site.flickr_username}} </a>
+            </li>
+            {% endif %}
+
         </ul>
       </div>
         <div class="footer-col footer-col-3">
