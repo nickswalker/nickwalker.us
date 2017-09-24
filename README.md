@@ -4,8 +4,7 @@ My portfolio website. Built with [Jekyll](https://jekyllrb.com), based off of [M
 
 * Blog posts with syntax highlighted code and rendered LaTex
 * Custom project pages with tailored presentation
-* YML based résumé
-* Photo gallery
+* YML based résumé/CV
 
 ## Development
 
