@@ -17,3 +17,7 @@ to install gem dependencies. Then
     bundle exec jekyll serve
 
 to begin testing the site locally. Add `--drafts` and/or `--unpublished` to see WIP projects and posts.
+
+To run tests
+
+    bundle exec htmlproofer ./_site --only-4xx --check-favicon --check-html --assume-extension --alt-ignore '/.*/' 
