@@ -118,9 +118,15 @@ footer p {
     width: 13px;
   }
   a,
-  a:visited,
-  a:hover {
+  a:visited {
     color: $grey-color-mid-light;
+    -webkit-text-decoration-color: lighten($grey-color-mid-light, 10%);
+    text-decoration-color: lighten($grey-color-mid-light, 10%);
+  }
+  a:hover {
+    color: $grey-color-dark;
+    -webkit-text-decoration-color: lighten($grey-color-dark, 25%);
+    text-decoration-color: lighten($grey-color-dark, 25%);
   }
 }
 
@@ -195,17 +201,8 @@ footer p {
   }
 }
 
-.post-meta {
-  font-size: $small-font-size;
-  color: $grey-color;
+.float-right {
   float: right;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.post-link {
-  display: block;
-  font-size: 18px;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 1.5dppx) {
@@ -213,3 +210,4 @@ footer p {
     border-width: 0.5px;
   }
 }
+

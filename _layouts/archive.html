@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<h1 class="page-heading">Archive</h1>
+
+
+{% for post in site.posts %}
+<span class="post-meta float-right">{{ post.date | date: "%b %-d, %Y" }}</span>
+<h2>
+    <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+</h2>
+
+
+{% endfor %}

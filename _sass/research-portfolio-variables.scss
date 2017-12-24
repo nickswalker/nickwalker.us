@@ -22,7 +22,8 @@ $grey-color-dark:  darken($grey-color, 25%);
 
 $text-color:       #111 !default;
 $background-color: #fdfdfd !default;
-$brand-color:      $blue-color !default;
+$brand-color: $light-green-color !default;
+$text-brand-color: darken($light-green-color, 10%) !default;
 
 // Width of the content area
 $content-width:    900px !default;

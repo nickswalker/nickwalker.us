@@ -1,15 +1,74 @@
+.post-meta {
+  font-size: $small-font-size;
+  color: $grey-color;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.post-link {
+  display: block;
+  font-size: 18px;
+}
+
+.permalink, .permalink:visited {
+  text-decoration: none;
+  color: $grey-color-light;
+  border-bottom: none;
+  display: inline-block;
+  padding: 0px 5px 0 5px;
+}
+
+header:hover .permalink {
+  color: $grey-color-dark;
+  text-decoration: none;
+}
+
+.permalink:hover {
+  background-color: $grey-color-light;
+}
+
+article.full-post {
+  header a {
+    text-decoration: none;
+  }
+  header a:hover {
+    text-decoration: underline;
+  }
+  .permalink {
+    display: none;
+  }
+}
+
+article.in-blog-list {
+  margin-bottom: 3 * $spacing-unit;
+}
+
+article.link-post {
+  header h2 {
+    font-weight: normal;
+  }
+}
+
 article.project img {
   background-color: #ccc;
 }
 
+.restrict-width {
+  max-width: 650px;
+  margin: 0 auto;
+}
 
 article {
+
   ol, ul,
-  header, p, iframe, pre, h1, h2, h3, h4, h5 {
+  header, p, iframe, pre, h1, h2, h3, h4, h5, blockquote {
     margin-left: auto;
     display: block;
     margin-right: auto;
     max-width: 650px;
+  }
+  blockquote {
+    box-sizing: border-box;
   }
 
   header {
@@ -17,13 +76,13 @@ article {
     .post-meta {
       font-size: $small-font-size;
       color: $grey-color;
-      font-weight: bold;
+      font-weight: normal;
       letter-spacing: 2px;
       text-transform: uppercase;
       float: none;
     }
 
-    h1 {
+    h1, h2 {
       font-size: 24px;
       font-weight: 700;
       margin-bottom: 0;
@@ -81,4 +140,5 @@ article {
       }
     }
   }
+
 }

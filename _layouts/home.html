@@ -31,13 +31,13 @@ layout: default
     <ul class="post-list">
       {% for post in site.posts %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <span class="post-meta float-right">{{ post.date | date: "%b %-d, %Y" }}</span>
         <h2>
           {% assign url = post.url | relative_url %}
           {% if post.type == "link" %}
           {% assign url = post.link %}
           {% endif %}
-          <a class="post-link" href="{{ url }}">{{ post.title | escape }}</a>
+          <a class="post-link" href="{{ post.url }}">{{ post.title | escape }}</a>
         </h2>
       </li>
       {% endfor %}

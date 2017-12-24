@@ -1,14 +1,6 @@
 ---
-layout: page
+layout: blog
 title: Blog
-show_in_nav: false
+show_in_nav: true
 permalink: blog
 ---
-
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>

@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<header class="page-heading restrict-width">
+    <h1 class="page-title">{{ page.title | escape }}</h1>
+</header>
+
+{% for post in site.posts %}
+
+{% assign url = post.url | relative_url %}
+{% assign post-type-class = "full-post" %}
+{% if post.type == "link" %}
+{% assign url = post.link %}
+{% assign post-type-class = "link-post" %}
+{% endif %}
+
+<article class="post in-blog-list {{ post-type-class }}">
+    <header class="post-header">
+        <a class="float-right permalink" href="{{ post.url }}" title="Permalink">*</a>
+        <h2>
+            <a class="{% if post.type == 'link' %}post-link{% endif %}" href="{{ url }}">{{ post.title | escape }}</a>
+        </h2>
+        <p class="post-meta">
+            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d,
+                %Y" }}
+            </time>
+            {% if post.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span
+                itemprop="name">{{ post.author }}</span></span>{% endif %}
+        </p>
+    </header>
+
+    <div class="post-content">
+        {{ post.content }}
+    </div>
+</article>
+
+{% endfor %}
+
+<a href="{% link pages/archive.md %}">Archive</a>
