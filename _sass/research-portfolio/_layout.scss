@@ -11,7 +11,10 @@
   .wrapper {
     display: flex;
     align-items: center;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
+    @include media-query($on-tablet) {
+      flex-flow: row wrap;
+    }
   }
 }
 
@@ -75,15 +78,6 @@
     }
   }
 
-  @include media-query($on-palm) {
-    right: $spacing-unit / 2;
-    text-align: right;
-
-    .navigation-links {
-      line-height: 24px;
-    }
-
-  }
 }
 
 
