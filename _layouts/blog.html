@@ -5,7 +5,7 @@ layout: default
 <header class="page-heading restrict-width">
     <h1 class="page-title">{{ page.title | escape }}</h1>
 </header>
-
+<div class="blog-list">
 {% for post in site.posts %}
 
 {% assign url = post.url | relative_url %}
@@ -15,7 +15,7 @@ layout: default
 {% assign post-type-class = "link-post" %}
 {% endif %}
 
-<article class="post in-blog-list {{ post-type-class }}">
+    <article class="post {{ post-type-class }}">
     <header class="post-header">
         <a class="float-right permalink" href="{{ post.url }}" title="Permalink">*</a>
         <h2>
@@ -36,5 +36,5 @@ layout: default
 </article>
 
 {% endfor %}
-
+</div>
 <a href="{% link pages/archive.md %}">Archive</a>

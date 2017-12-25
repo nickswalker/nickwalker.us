@@ -3,6 +3,9 @@
   color: $grey-color;
   letter-spacing: 2px;
   text-transform: uppercase;
+  @include media-query($on-laptop) {
+    float: right;
+  }
 }
 
 .post-link {
@@ -39,7 +42,7 @@ article.full-post {
   }
 }
 
-article.in-blog-list {
+.blog-list article {
   margin-bottom: 3 * $spacing-unit;
 }
 
@@ -83,13 +86,10 @@ article {
     }
 
     h1, h2 {
-      font-size: 24px;
+      font-size: 21px;
       font-weight: 700;
       margin-bottom: 0;
 
-      @include media-query($on-laptop) {
-        font-size: 21px;
-      }
     }
   }
 
@@ -98,6 +98,9 @@ article {
     img {
       margin: 0 auto;
       margin-bottom: $spacing-unit/2.0;
+      width: 100%;
+      object-fit: contain;
+      background-color: $grey-color-light;
       max-height: 75vh;
     }
     figcaption {
@@ -121,24 +124,29 @@ article {
       font-weight: bold;
       text-transform: uppercase;
       letter-spacing: 2px;
-      line-height: 48px;
+      line-height: $spacing-unit;
     }
 
     h3 {
-      font-size: 26px;
-
-      @include media-query($on-laptop) {
-        font-size: 22px;
-      }
+      font-size: 21px;
     }
 
     h4 {
-      font-size: 20px;
-
-      @include media-query($on-laptop) {
-        font-size: 18px;
-      }
+      font-size: 18px;
     }
   }
 
+}
+
+/**
+ * Post list
+ */
+
+.post-list {
+  margin-left: 0;
+  list-style: none;
+
+  > li {
+    margin-bottom: $spacing-unit / 2;
+  }
 }
