@@ -68,11 +68,19 @@
 .quick-links {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  @include media-query($on-tablet) {
+    justify-content: left;
+  }
 }
 
 .quick-links li {
   display: inline-block;
-  margin-right: 6px;
+  margin-right: $spacing-unit / 2;
+  margin-bottom: $spacing-unit / 2;
   border-radius: $spacing-unit / 4;
   background-color: $brand-color;
   color: white;
