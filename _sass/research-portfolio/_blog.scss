@@ -64,7 +64,7 @@ article.project img {
 article {
 
   ol, ul,
-  header, p, iframe, pre, h1, h2, h3, h4, h5, blockquote {
+  header, p, iframe, pre, h1, h2, h3, h4, h5, blockquote, hr {
     margin-left: auto;
     display: block;
     margin-right: auto;
@@ -72,6 +72,14 @@ article {
   }
   blockquote {
     box-sizing: border-box;
+  }
+
+  hr {
+    border: none;
+    height: 1px;
+    background-color: $grey-color;
+    margin: 2 * $spacing-unit auto;
+    width: 40%;
   }
 
   header {
@@ -127,12 +135,9 @@ article {
       line-height: $spacing-unit;
     }
 
-    h3 {
-      font-size: 21px;
-    }
-
-    h4 {
-      font-size: 18px;
+    h3, h4 {
+      font-size: 16px;
+      font-weight: bold;
     }
   }
 
