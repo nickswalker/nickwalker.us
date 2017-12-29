@@ -1,0 +1,161 @@
+.post-meta {
+  font-size: $small-font-size;
+  color: $grey-color;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  @include media-query($on-laptop) {
+    float: right;
+  }
+}
+
+.post-link {
+  display: block;
+  font-size: 18px;
+}
+
+.permalink, .permalink:visited {
+  text-decoration: none;
+  color: $grey-color-light;
+  border-bottom: none;
+  display: inline-block;
+  padding: 0px 5px 0 5px;
+}
+
+header:hover .permalink {
+  color: $grey-color-dark;
+  text-decoration: none;
+}
+
+.permalink:hover {
+  background-color: $grey-color-light;
+}
+
+article.full-post {
+  header a {
+    text-decoration: none;
+  }
+  header a:hover {
+    text-decoration: underline;
+  }
+  .permalink {
+    display: none;
+  }
+}
+
+.blog-list article {
+  margin-bottom: 3 * $spacing-unit;
+}
+
+article.link-post {
+  header h2 {
+    font-weight: normal;
+  }
+}
+
+article.project img {
+  background-color: #ccc;
+}
+
+.restrict-width {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+article {
+
+  ol, ul,
+  header, p, iframe, pre, h1, h2, h3, h4, h5, blockquote, hr {
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
+    max-width: 650px;
+  }
+  blockquote {
+    box-sizing: border-box;
+  }
+
+  hr {
+    border: none;
+    height: 1px;
+    background-color: $grey-color;
+    margin: 2 * $spacing-unit auto;
+    width: 40%;
+  }
+
+  header {
+    margin-bottom: $spacing-unit;
+    .post-meta {
+      font-size: $small-font-size;
+      color: $grey-color;
+      font-weight: normal;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      float: none;
+    }
+
+    h1, h2 {
+      font-size: 21px;
+      font-weight: 700;
+      margin-bottom: 0;
+
+    }
+  }
+
+  .article-image {
+    margin-bottom: $spacing-unit;
+    img {
+      margin: 0 auto;
+      margin-bottom: $spacing-unit/2.0;
+      width: 100%;
+      object-fit: contain;
+      background-color: $grey-color-light;
+      max-height: 75vh;
+    }
+    figcaption {
+      font-size: 14px;
+      color: #333;
+    }
+  }
+
+  .post-content p:first-of-type {
+    //font-size: 21px;
+  }
+  .post-content, .project-content {
+    margin-bottom: $spacing-unit;
+
+    p {
+      margin: 0 auto $spacing-unit auto;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      line-height: $spacing-unit;
+    }
+
+    h3, h4 {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+
+}
+
+/**
+ * Post list
+ */
+
+.post-list {
+  margin-left: 0;
+  list-style: none;
+
+  > li {
+    margin-bottom: $spacing-unit / 2;
+  }
+}
+
+.archive-link li {
+  margin: 0 auto;
+}

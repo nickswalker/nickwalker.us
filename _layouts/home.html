@@ -33,7 +33,11 @@ layout: default
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
         <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          {% assign url = post.url | relative_url %}
+          {% if post.type == "link" %}
+          {% assign url = post.link %}
+          {% endif %}
+          <a class="post-link" href="{{ post.url }}">{{ post.title | escape }}</a>
         </h2>
       </li>
       {% endfor %}

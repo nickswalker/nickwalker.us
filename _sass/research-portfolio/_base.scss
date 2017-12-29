@@ -96,21 +96,23 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: $brand-color;
-  -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
+  color: $text-brand-color;
+  -webkit-text-decoration-color: desaturate(lighten($text-brand-color, 30%), 30%);
+  text-decoration-color: desaturate(lighten($text-brand-color, 30%), 30%);
   transition:.2s;
-  &:visited {
-    color: darken($brand-color, 15%);
-  }
 
   &:hover {
     border-bottom: none;
-    -webkit-text-decoration: underline;
-    text-decoration: underline;
+    -webkit-text-decoration-color: desaturate($text-brand-color, 10%);
+    text-decoration-color: desaturate($text-brand-color, 10%);
   }
 }
 
+p a {
+  &:visited {
+    color: darken($text-brand-color, 5%);
+  }
+}
 
 
 /**
@@ -118,7 +120,7 @@ a {
  */
 blockquote {
   color: $grey-color;
-  border-left: 4px solid $grey-color-light;
+  border-left: 2px solid $grey-color-light;
   padding-left: $spacing-unit / 2;
   font-size: 18px;
   letter-spacing: -1px;
@@ -167,11 +169,11 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width: calc(#{$content-width} - (#{$spacing-unit}));
   margin-right: auto;
   margin-left: auto;
-  padding-right: $spacing-unit;
-  padding-left: $spacing-unit;
+  padding-right: $spacing-unit / 2;
+  padding-left: $spacing-unit / 2;
   @extend %clearfix;
 
   .full-width {
@@ -179,11 +181,6 @@ pre {
     margin-right: calc(-100vw / 2 + 100% / 2);
   }
 
-  @include media-query($on-laptop) {
-    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-    padding-right: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
-  }
 }
 
 
