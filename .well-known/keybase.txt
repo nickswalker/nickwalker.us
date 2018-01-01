@@ -1,0 +1,87 @@
+==================================================================
+https://keybase.io/nickswalker
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://nickwalker.us
+  * I am nickswalker (https://keybase.io/nickswalker) on keybase.
+  * I have a public key with fingerprint A742 8BE7 338A 3847 64BA  9E3F 101B F5D6 8B9A C63C
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101dac99aa2a6c51219882378e47b6e8c7a55dfc61fe6e4369e65aef187af22e21e0a",
+      "fingerprint": "a7428be7338a384764ba9e3f101bf5d68b9ac63c",
+      "host": "keybase.io",
+      "key_id": "101bf5d68b9ac63c",
+      "kid": "0101dac99aa2a6c51219882378e47b6e8c7a55dfc61fe6e4369e65aef187af22e21e0a",
+      "uid": "4401e7dedebaa7532a0cb79165753519",
+      "username": "nickswalker"
+    },
+    "merkle_root": {
+      "ctime": 1514841858,
+      "hash_meta": "e57a35e5a1483cbda3855e5a1038e259655d01cb0e213f61e048f6149bc01d30",
+      "seqno": 1875553
+    },
+    "revoke": {
+      "sig_ids": [
+        "99f4aa23dcb2f41abec9d1683cdb35723ccdceccaef73ec45999b09f3b59b11d0f"
+      ]
+    },
+    "service": {
+      "hostname": "nickwalker.us",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1514841860,
+  "expire_in": 157680000,
+  "prev": "21e6560a9458fdc7a5e738d61d7ec984a0c73c7c2752f79653699c296a4ce488",
+  "seqno": 5,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.76
+Comment: https://keybase.io/crypto
+
+yMPRAnicrVN7UBVVHAYBQ0ygJsSyNHfIyeG1r7OPO4AYE8rV0ApGRep69uxZWC/c
+ve1eXjGgpuiIZRkTBjmC7xzEcnAYpjB5pE2poYkPVKQwi/E1aWhWeOss1dQ0/dn+
+c+bs+X7f9/2+3zmfTggKCAuMnHznzPr6I0mBR7vKigJynLuDyynFUMsoRznlxqML
+LlCx5XO5dZVyUDRDMypEsgwhCwUEGJaRJYnlRAnzoiJgCYkQAFVDAqNhAfOcIGMB
+QKwxkgg1lsUsg2lIxVGa7snDptfUPT5CC0WelRQscpwEOYkXBV6BMuY0oqZoQBUk
+RYZI4BApzDcsu4KYU6CFE3SD/CMb16i9/8D/z76LRul4nmawqGIVKxCKgGMhjRRR
+ZgRANoCRbaCFTQ8sxATt0ZHbKoEFbmxSFXFUITbdBdhlGobPzhf5dBvFAIaXeEYC
+EukRWvmuQuyDpBgDEXIAA0iOOaSoJB8wuqU5CbNAFohtmkEKTSxymkBs8hJZeFlB
+pGWOJlYs/IrHIAqSCADgiAMTFxtubItbeh5JzqIcSyhZ1niSDqcihdV4BioYySoj
+EFFV4YDIcgipCCNEQhE5jHggy7JCyxqnAFlhGJXWqJcqbDGzWEej5Pao/hHBHwkk
+FFnEktc0fAYyCshRvs/ntRx2ML4yr40twYrrTxaXontUclNIRTE2Ld3wkDYI8l+Z
+CXQchUu9uolduo0AoiDR5LN1cDGhJNMTgEBDmQeSptqzJndNUgVGFUmXEk/GJ3JI
+RKwIWE0kmZL5y4iVBcgjzEvS3yECYhPmEUqSnAf6ikxMVXR15gYHBIYFjA0ZY7+g
+gLBxkX+9K/XhiN9Qx67XgnruDa9J6/z+rc35t9Yt3DnZOcu6sGVPZXi6cnHl5hlN
+F2YmurvefCKlqWTk4mV+6oZYrWP+C77AtOrrWw5w+25sWz+jM71hYXLXvhv+uVMH
+r/vP5/6wIHzq4dcXz7rMZdUtWrlrsGX6xI5Njme/iqB2+lOCPsoaWVpVe2Vbyu27
+q3+s6h3f6KzJ2Np2AnxpZg2s+m5j5D4qauhSQ11r89bp7uG+A6VTnEf6e95LFeZI
+CSFrAx2zwz+bNbOv/1x/5bWrKzJevHlf9z1TX/3AU9WVBn3q7M2KqKTt+cfPpfpz
+lt2+VLvjVmVGzN3spkdeLo3R14yrGhlg/Mv37rg6P9JZ61mAxT2X3cMtctrh8PLA
+3szWxYNf76pd3SNNG8oM3d0c3ZTUkuSJOzT8LcN8ePPj7jmnlvb+4u3sPpY8u+mh
+Zr83cdHu/WOXpJ98NXXSB9O8cVnHJvdHH0wFY06GXp346/jsnNMDT0a9OynDsekK
+Xe8PfvRefPehzO2Z0qqCmuC318V7Gw/MDWq/E9Pc5qHNeOWNwdmfNE3IayjfG6WH
+hFVlJ3vnfRF0dnUVeAzFPl1Y/k1I9Lzha+lRzMbY8/60rnoKPv+TtmJ+Q+P+MxUP
+/nw8Jadvc1hf4pQ7dZ+XxNecHnqutc25pSPooBWaG7G8rvFu4/1218LHo/u8J5Ln
+vNPb7nl/Q72xbK065mjJ75iUBNE=
+=XH2y
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/nickswalker
+
+==================================================================

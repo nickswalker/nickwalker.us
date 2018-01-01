@@ -56,3 +56,5 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+include:
+  - .well-known
