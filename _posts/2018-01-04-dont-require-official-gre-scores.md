@@ -26,8 +26,7 @@ From ETS's [guidelines](https://www.ets.org/s/gre/pdf/gre_guide.pdf) on how inst
 Why? 
 
 Universities already accept unofficial transcripts from applicants. They only collect an official copy when a student enrolls. It's 
-kind of wild to think that you don't need verifiable documentation attesting to your institution, degree program, or grades , 
-_but you need official test scores_.
+kind of wild to think that you don't need verifiable documentation attesting to your institution, degree program, or grades, but you need _official test scores_.
 
 Don't require official score reports for applications. It's expensive, it's unnecessary, and its one more thing that can arrive late or not be
 sent or otherwise muck up the admissions timeline. Accept self-reported scores, then gather an official report as a condition of admission.
