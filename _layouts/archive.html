@@ -4,12 +4,27 @@ layout: default
 
 <h1 class="page-heading">Archive</h1>
 
+{% if page.type == "all-by-date" %}
+{% assign posts = site.posts %}
+{% else %}
+{% assign posts = page.posts %}
+{% endif %}
 
-{% for post in site.posts %}
+{% for post in posts %}
+{% assign currentDate = post.date | date: "%Y" %}
+{% if currentDate != myDate %}
+{% unless forloop.first %}</ul>{% endunless %}
+<h2>{{ currentDate }}</h2>
+<ul class="post-list">
+    {% assign myDate = currentDate %}
+    {% endif %}
+
 <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 <h2>
     <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
 </h2>
 
-
+    {% if forloop.last %}</ul>{% endif %}
 {% endfor %}
+
+

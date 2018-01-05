@@ -25,6 +25,15 @@ collections:
   publications:
     output: true
 
+jekyll-archives:
+  enabled: ['year', 'month']
+  layout: 'archive'
+  permalinks:
+    year: '/blog/:year/'
+    month: '/blog/:year/:month/'
+    tag: '/blog/tag/:name/'
+    category: '/blog/category/:name/'
+
 
 defaults:
   - scope:
@@ -52,6 +61,7 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-archives
 exclude:
   - Gemfile
   - Gemfile.lock
