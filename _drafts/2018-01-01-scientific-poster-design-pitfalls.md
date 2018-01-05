@@ -11,7 +11,7 @@ In most of the posters that I've observed, the authors have fumbled one of a sma
 
 ## 4. Heavy Ink Coverage
 
-Large areas of dark color don't print well. This is a byproduct of the way things get rastered for the [CMYK process](https://en.wikipedia.org/wiki/CMYK_color_model) (a rich red might actually take more ink than black). The practical implication is that the poster will take longer to print and longer to dry, and will be vulnerable to the muddiness and artifacts associated with oversaturating the paper.
+Large areas of dark color don't print well. This is a byproduct of the way things get rasterized for the [CMYK process](https://en.wikipedia.org/wiki/CMYK_color_model) (a rich red might actually take more ink than black). The practical implication is that the poster will take longer to print and longer to dry, and will be vulnerable to the muddiness and artifacts associated with oversaturating the paper.
 
 Most templates will start you in the right direction, but you should remain weary of swapping in dark colors or using figures with dark palettes.
 
@@ -25,7 +25,7 @@ Of the things in this list, this probably has the largest direct impact on the q
 
 ## 2. Misusing Branding
 
-Most any institution, whether it's a university or a company, has brand guidelines (sometimes called identity guidelines) which lay out the proper use of its logos and colors. This kind of pedantry isn't just a service to your institution. Branding guidelines enforce good taste, suggesting coherent sets of typefaces and color schemes. Unless you know that you can make better choices, **hew to your institutional branding guideline**s. 
+Most any institution, whether it's a university or a company, has brand guidelines (sometimes called identity guidelines) which lay out the proper use of its logos and colors. This kind of pedantry isn't just a service to your institution. Branding guidelines enforce good taste, suggesting coherent sets of typefaces and color schemes. Unless you know that you can make better choices, **hew to your institution's branding guidelines**. 
 
 ### Using the Wrong Logo
 
