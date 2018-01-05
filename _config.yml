@@ -12,12 +12,12 @@ twitter_username: nickwalker.us
 github_username:  nickswalker
 linkedin_username: niwalker
 flickr_username: nickwalker-us
-google_plus_profile_url: https://plus.google.com/109675278505943174152/
 gravatar_url: https://www.gravatar.com/avatar/05a17826262b803bdc53a402751c884e
 
 permalink: /blog/:year/:month/:title
 
 # Custom collections
+collections_dir: collections
 collections:
   projects:
     output: true
