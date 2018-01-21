@@ -18,6 +18,7 @@
     const init = () => {
         window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
         ga('create', '{{ site.google_analytics }}', 'auto');
+        ga('require', 'outboundLinkTracker');
         ga('set', 'transport', 'beacon');
         ga('set', dimensions.TRACKING_VERSION, TRACKING_VERSION);
         ga('set', dimensions.WINDOW_ID, uuid());
@@ -32,10 +33,11 @@
                 model.set(dimensions.HIT_TYPE, model.get('hitType'), true);
 
                 originalBuildHitTask(model);
-    })
+    });
         ga('send', 'pageview');
     })
     }
     init();
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha256-vOtzmT0JTEyCHHVxkhEDvcjAXpCCxPxRPSRDWNU1k9s=" crossorigin="anonymous"></script>

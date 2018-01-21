@@ -8,7 +8,7 @@ type: blog
 ---
 
 {% include article_image.html img="/assets/images/posts/jivko-spotlight.jpg"
-    caption="<a href='https://www.cs.utexas.edu/~jsinapov/'>Jivko</a> giving the poster spotlight for <i>Automattic Curriculum Graph Generation for Reinforcement Learning Agents</i>."%}
+    caption="<a href='https://www.cs.utexas.edu/~jsinapov/'>Jivko</a> giving the poster spotlight for <i>Automatic Curriculum Graph Generation for Reinforcement Learning Agents</i>."%}
 
 I attended [AAAI-17](http://www.aaai.org/Conferences/AAAI/aaai17.php) in San Fransisco last month, my first academic conference. I went in with only a vague idea of what the week would be like. Every conference is different, but my experience might help you set your expectations and better prepare.
 
@@ -37,11 +37,11 @@ Student abstract posters were mixed in every evening. These were largely from un
 
 ## Other Activities
 
-Each morning and evening, distinguised researchers gave invited talks on their work. These were typically fairly accessible and interesting, and much more polished than the technical session presentations happening.
+Each morning and evening, distinguished researchers gave invited talks on their work. These were typically fairly accessible and interesting, and much more polished than the technical session presentations happening.
 
 There were a number of industry talks, though most of these were just thinly veiled recruiting presentations with little technical value.
 
- The career fair was great because all of the companies there were interested in recruiting people with exactly the attendees' background. This is a little unusual if you're used to general univerisity fairs where the recruiters probably only have a faint idea of whatever your research topic is and little inclination to hear about it.
+ The career fair was great because all of the companies there were interested in recruiting people with exactly the attendees' background. This is a little unusual if you're used to general university fairs where the recruiters probably only have a faint idea of whatever your research topic is and little inclination to hear about it.
 
 The [Innovative Applications of Artificial Intelligence (IAAI)](http://www.aaai.org/Conferences/IAAI/iaai17.php) conference was colocated with AAAI this year, and a standard registration was good for both. There were a lot of sessions where researchers from universities and companies alike showed off impressive practical work.
 

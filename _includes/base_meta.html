@@ -6,12 +6,11 @@
 {% capture url %}{{ page.url | replace:'index.html','' | absolute_url }}{% endcapture %}
 <title>{{ title }}</title>
 <meta name="description" content="{{ description }}">
-<meta name="author" content="{{site.first_last_name}}"/>
-<meta property="og:image" content="https://nickwalker.us/assets/images/og-banner.jpg"/>
+<meta property="og:image" content="https://nickwalker.us/assets/images/og-banner.png"/>
+<meta property="og:type"  content="{% if page.collection == 'posts' or page.collection == 'projects' %}article{% else %}website{% endif%}" />
 <meta property="og:url" content="{{ url }}"/>
 <meta property="og:title" content="{{ title }}"/>
 <meta property="og:description" content="{{ description }}"/>
-<link rel="author" href="{{site.google_plus_profile_url}}"/>
 <link rel="canonical" href="{{ url }}">
 <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}"
       href="{{ '/feed.xml' | relative_url }}">
