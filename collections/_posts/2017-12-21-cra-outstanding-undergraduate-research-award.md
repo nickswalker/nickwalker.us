@@ -14,4 +14,4 @@ link: https://cra.org/about/awards/outstanding-undergraduate-researcher-award/20
 Good year for UTCS. Departments each get to nominate four students. Three 
 of us received honorable mentions and the fourth won the award.
 
-Past UTCS recipients include [Yuqian Jiang](https://www.cs.utexas.edu/~jyq777/) (HM 2016) and [Franziska Roesner](https://www.franziroesner.com) (Finalist 2008).
+Past UTCS recipients include [Yuqian Jiang](https://www.linkedin.com/in/yuqian-jiang-131b4971/) (HM 2016) and [Franziska Roesner](https://www.franziroesner.com) (Finalist 2008).
