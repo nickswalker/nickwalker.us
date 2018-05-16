@@ -2,7 +2,7 @@
 layout: post
 title:  "The Transistor: Humanity's Amplifier"
 date:   2013-06-24 17:29:02 -0700
-categories: project
+categories: project blog
 published: true
 type: link
 link: https://notevenpast.org/transistor-humanitys-amplifier/

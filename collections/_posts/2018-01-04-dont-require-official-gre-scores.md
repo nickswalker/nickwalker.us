@@ -2,7 +2,7 @@
 layout: post
 title:  "Don't Require Official GRE Scores"
 date:   2018-1-04 20:19:02 -0700
-categories: opinion
+categories: opinion blog
 published: true
 type: blog
 ---
