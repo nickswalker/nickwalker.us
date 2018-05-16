@@ -16,7 +16,7 @@ I attended [AAAI-17](http://www.aaai.org/Conferences/AAAI/aaai17.php) in San Fra
 
 The first two days were wholly dedicated to four-hour, lecture-style "tutorials." Each was led by two or three researchers who had signficant experience with some subtopic, like logic programming or optimization. There was a good range of topics, and I appreciated the chance to get exposed to ideas from across the field. You could ask questions at any time, and the presenters were prepared and enthusiastic. Unfortunately attendance was pretty light, likely because they were scheduled against a number of industry-sponsored events. Also, I imagine late students or established researchers grow jaded to the value of sitting in classes for a weekend.
 
-In particular, I enjoyed [Interactive Machine Learning](http://interactiveml.net) and [Paper of the Future](http://scientificpaperofthefuture.org/training-materials). Both covered topics that aren't accessible via coursework at UT.
+In particular, I enjoyed [Interactive Machine Learning](http://interactiveml.net) and [Paper of the Future](http://scientificpaperofthefuture.org/materials.html). Both covered topics that aren't accessible via coursework at UT.
 
 ## Technical Sessions
 
