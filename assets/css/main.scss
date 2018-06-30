@@ -5,14 +5,19 @@
 @import "research-portfolio-variables";
 
 // Our variables
-$base-font-family: "Merriweather Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$display-font-family: "Arvo", "Rockwell", 'Georgia', serif;;
-$base-font-size:   16px;
+$base-font-family: "Elena", "Georgia", serif;
+$display-font-family: "Elena", 'Georgia', serif;;
+$base-font-size:   18px;
 $base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$base-line-height: 1.4;
 
-$spacing-unit:     24px;
+$small-font-size:  $base-font-size * 0.875;
+
+
+$post-content-font-family: "Elena", "Georgia";
+$post-content-font-size: 18px;
+
+$spacing-unit:     25px;
 
 $text-color:       #111;
 $background-color: #fdfdfd;
@@ -26,4 +31,57 @@ $on-laptop:        800px;
 
 // Import partials from the `research-portfolio` theme.
 @import "research-portfolio";
-@import "gallery"
+@import "gallery";
+
+/* Custom Fonts */
+@font-face {
+  font-family: 'Elena';
+  font-weight: normal;
+  font-style: normal;
+  src:url('/assets/fonts/ElenaWebBasicRegular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Elena';
+  font-weight: normal;
+  font-style: italic;
+  src: url('/assets/fonts/ElenaWebBasicRegularItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Elena';
+  font-weight: bold;
+  font-style: normal;
+  src: url('/assets/fonts/ElenaWebBasicBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Elena';
+  font-weight: bold;
+  font-style: italic;
+  src: url('/assets/fonts/ElenaWebBasicBoldItalic.woff2') format('woff2');
+}
+
+
+/* Header customizations */
+
+.site-title {
+  font-family: $display-font-family;
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: 0;
+  @include media-query($on-laptop) {
+    margin-left: 0;
+    font-size: 24px;
+    line-height: $spacing-unit * 2;
+  }
+
+  &:visited {
+    color: inherit;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    text-decoration: none;
+  }
+}

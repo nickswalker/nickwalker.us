@@ -86,14 +86,14 @@
       }
     }
     h2 {
-      font-size: 18px;
-      font-weight: 600;
+      font-size: 1.125rem;
+      //font-weight: 600;
       margin: 0;
       padding: 0;
       position: relative;
     }
     .project-description {
-      font-size: 14px;
+      font-size: $small-font-size;
       opacity: 0.8;
     }
   }
@@ -102,4 +102,8 @@
 .rss-note {
   float: right;
   color: $grey-color-mid-light;
+}
+
+.home .post-link {
+  font-size: 1.125rem;
 }

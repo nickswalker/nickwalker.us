@@ -20,7 +20,6 @@
 
 .site-title {
   font-family: $display-font-family;
-  text-transform: uppercase;
   font-size: 21px;
   font-weight: 900;
   line-height: $spacing-unit * 1.5;
@@ -44,14 +43,6 @@
     opacity: 0.8;
     text-decoration: none;
   }
-}
-
-.kern-near {
-  letter-spacing: -0.045em;
-}
-
-.kern-close {
-  letter-spacing: -0.090em;
 }
 
 .site-nav {
@@ -90,7 +81,7 @@
 
 .page-heading {
   font-weight: 600;
-  font-size: 21px;
+  font-size: 1.25rem;
 }
 
 
@@ -143,7 +134,7 @@ footer {
 }
 
 .footer-heading {
-  font-size: 18px;
+  font-size: 1rem;
   margin-bottom: $spacing-unit / 2;
 }
 

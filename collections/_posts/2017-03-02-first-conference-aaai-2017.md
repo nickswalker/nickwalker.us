@@ -8,7 +8,7 @@ type: blog
 ---
 
 {% include article_image.html img="/assets/images/posts/jivko-spotlight.jpg"
-    caption="<a href='https://www.cs.utexas.edu/~jsinapov/'>Jivko</a> giving the poster spotlight for <i>Automatic Curriculum Graph Generation for Reinforcement Learning Agents</i>."%}
+    caption="[Jivko](https://www.cs.utexas.edu/~jsinapov/) giving the poster spotlight for _Automatic Curriculum Graph Generation for Reinforcement Learning Agents_."%}
 
 I attended [AAAI-17](http://www.aaai.org/Conferences/AAAI/aaai17.php) in San Fransisco last month, my first academic conference. I went in with only a vague idea of what the week would be like. Every conference is different, but my experience might help you set your expectations and better prepare.
 
@@ -25,7 +25,7 @@ The meat of the conference was the technical sessions. AAAI has tracks for just 
 ## Posters
 
 {% include article_image.html img="/assets/images/posts/aaai-poster.jpg"
-    caption="Me, Rishi and Jivko in front of our poster. Thanks for the photo, <a href='http://eecs.csuohio.edu/~szhang/'>Shiqi</a>."%}
+    caption="Me, Rishi and Jivko in front of our poster. Thanks for the photo, [Shiqi](http://eecs.csuohio.edu/~szhang/)."%}
 
 The format changes from year to year, but this year all papers were assigned to either a talk (to occur in a technical session) or a poster. Every day, fifty or so posters were set up in a ballroom, available for viewing starting at six in the evening. The organizers arranged to have dinner (and amazing desserts) served, so these showings had a lot of traffic. Some people were in browse-only mode, reading titles and abstracts, maybe taking a photo of a poster with their phone. Others would ask for a walkthrough, interjecting with questions or comments. These usually lasted five to ten minutes.
 
