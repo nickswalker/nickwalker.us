@@ -13,8 +13,27 @@ layout: default
     {{page.bio | markdownify}}
   </section>
 
+  {% assign post_count = site.posts | size %}
+  {% if post_count > 0 %}
+  <section id="posts">
+    <a class="rss-note" href="{{ '/feed.xml' | relative_url }}">RSS</a>
+    <h1 class="page-heading">News</h1>
+    <ul class="post-list">
+      {% for post in site.categories.news limit:3 %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <h2>
+          <a class="post-link" href="{{ post.url }}">{{ post.title | escape }}</a>
+        </h2>
+      </li>
+      {% endfor %}
+    </ul>
+
+  </section>
+  {% endif %}
+
   <section id="projects">
-    <!--<h1 class="page-heading">Projects</h1>-->
+    <h1 class="page-heading">Projects</h1>
     <ul class="project-list">
       {% assign featured_projects = site.projects | where:"featured", true %}
       {% for project in featured_projects %}
@@ -23,27 +42,11 @@ layout: default
     </ul>
   </section>
 
-    {% assign post_count = site.posts | size %}
-  {% if post_count > 0 %}
-  <section id="posts">
-    <a class="rss-note" href="{{ '/feed.xml' | relative_url }}">RSS</a>
-    <h1 class="page-heading">Posts</h1>
-    <ul class="post-list">
-      {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <h2>
-          {% assign url = post.url | relative_url %}
-          {% if post.type == "link" %}
-          {% assign url = post.link %}
-          {% endif %}
-          <a class="post-link" href="{{ post.url }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
-  {% endif %}
-
+    <section id="blog">
+        <h1 class="page-heading">Blog</h1>
+        <p class="blog-line">
+            {% for post in site.categories.blog limit:3 %}<a href="{{ post.url }}">{{ post.title | escape }}</a>, {%
+            endfor %} and <a href="{{ '/blog' | relative_url }}"> more</a>.</p>
+    </section>
 
 </div>

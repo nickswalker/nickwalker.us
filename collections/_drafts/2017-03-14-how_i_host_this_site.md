@@ -20,7 +20,7 @@ I found static site generation to be a good fit. I don't want to manage a CMS an
 
 Hosting Jekyll sites on GitHub Pages is free, but many useful plugins aren't supported and you aren't allowed to deploy your own for security reasons. Instead, I chose to use a VPS through *Digital Ocean*. Shared hosting might be a little cheaper, but $60 a year buys you complete control over a server. You'll have the flexibility There are a number of cheap VPS services, but I initally chose them because of their generous GitHub Student Pack promo code. If this isn't a factor, you may consider Linode's $5 tier which sports more RAM.
 
-Digital Ocean also provides detailed how-to guides for almost all sysadmin tasks. These will help you setup an [Nginx server](), [setup Let's Encrypt SSL certificates](), [use Fail2Ban to block malacious traffic](), [host your own VPN]() and more.
+Digital Ocean also provides detailed how-to guides for almost all sysadmin tasks. These will help you setup an [Nginx server](), [setup Let's Encrypt SSL certificates](), [use Fail2Ban to block malacious traffic](), [host your own VPN]() and more. See the Git documentation [guide on hosting Git repos](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server) helpful.
 
 ## DNS + CDN
 

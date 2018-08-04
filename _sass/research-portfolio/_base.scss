@@ -8,6 +8,10 @@ dl, dd, ol, ul, figure {
   padding: 0;
 }
 
+html {
+  // Set root size for rem
+  font-size: $base-font-size
+}
 
 
 /**
@@ -122,9 +126,6 @@ blockquote {
   color: $grey-color;
   border-left: 2px solid $grey-color-light;
   padding-left: $spacing-unit / 2;
-  font-size: 18px;
-  letter-spacing: -1px;
-  font-style: italic;
 
   > :last-child {
     margin-bottom: 0;

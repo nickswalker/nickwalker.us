@@ -2,13 +2,13 @@
 layout: post
 title:  "First Conference: AAAI 2017"
 date:   2017-03-02 18:49:02 -0600
-categories: aaai conference research
+categories: aaai conference research blog
 published: true
 type: blog
 ---
 
 {% include article_image.html img="/assets/images/posts/jivko-spotlight.jpg"
-    caption="<a href='https://www.cs.utexas.edu/~jsinapov/'>Jivko</a> giving the poster spotlight for <i>Automattic Curriculum Graph Generation for Reinforcement Learning Agents</i>."%}
+    caption="[Jivko](https://www.cs.utexas.edu/~jsinapov/) giving the poster spotlight for _Automatic Curriculum Graph Generation for Reinforcement Learning Agents_."%}
 
 I attended [AAAI-17](http://www.aaai.org/Conferences/AAAI/aaai17.php) in San Fransisco last month, my first academic conference. I went in with only a vague idea of what the week would be like. Every conference is different, but my experience might help you set your expectations and better prepare.
 
@@ -16,7 +16,7 @@ I attended [AAAI-17](http://www.aaai.org/Conferences/AAAI/aaai17.php) in San Fra
 
 The first two days were wholly dedicated to four-hour, lecture-style "tutorials." Each was led by two or three researchers who had signficant experience with some subtopic, like logic programming or optimization. There was a good range of topics, and I appreciated the chance to get exposed to ideas from across the field. You could ask questions at any time, and the presenters were prepared and enthusiastic. Unfortunately attendance was pretty light, likely because they were scheduled against a number of industry-sponsored events. Also, I imagine late students or established researchers grow jaded to the value of sitting in classes for a weekend.
 
-In particular, I enjoyed [Interactive Machine Learning](http://interactiveml.net) and [Paper of the Future](http://scientificpaperofthefuture.org/training-materials). Both covered topics that aren't accessible via coursework at UT.
+In particular, I enjoyed [Interactive Machine Learning](http://interactiveml.net) and [Paper of the Future](http://scientificpaperofthefuture.org/materials.html). Both covered topics that aren't accessible via coursework at UT.
 
 ## Technical Sessions
 
@@ -25,7 +25,7 @@ The meat of the conference was the technical sessions. AAAI has tracks for just 
 ## Posters
 
 {% include article_image.html img="/assets/images/posts/aaai-poster.jpg"
-    caption="Me, Rishi and Jivko in front of our poster. Thanks for the photo, <a href='http://eecs.csuohio.edu/~szhang/'>Shiqi</a>."%}
+    caption="Me, Rishi and Jivko in front of our poster. Thanks for the photo, [Shiqi](http://eecs.csuohio.edu/~szhang/)."%}
 
 The format changes from year to year, but this year all papers were assigned to either a talk (to occur in a technical session) or a poster. Every day, fifty or so posters were set up in a ballroom, available for viewing starting at six in the evening. The organizers arranged to have dinner (and amazing desserts) served, so these showings had a lot of traffic. Some people were in browse-only mode, reading titles and abstracts, maybe taking a photo of a poster with their phone. Others would ask for a walkthrough, interjecting with questions or comments. These usually lasted five to ten minutes.
 
@@ -37,11 +37,11 @@ Student abstract posters were mixed in every evening. These were largely from un
 
 ## Other Activities
 
-Each morning and evening, distinguised researchers gave invited talks on their work. These were typically fairly accessible and interesting, and much more polished than the technical session presentations happening.
+Each morning and evening, distinguished researchers gave invited talks on their work. These were typically fairly accessible and interesting, and much more polished than the technical session presentations happening.
 
 There were a number of industry talks, though most of these were just thinly veiled recruiting presentations with little technical value.
 
- The career fair was great because all of the companies there were interested in recruiting people with exactly the attendees' background. This is a little unusual if you're used to general univerisity fairs where the recruiters probably only have a faint idea of whatever your research topic is and little inclination to hear about it.
+ The career fair was great because all of the companies there were interested in recruiting people with exactly the attendees' background. This is a little unusual if you're used to general university fairs where the recruiters probably only have a faint idea of whatever your research topic is and little inclination to hear about it.
 
 The [Innovative Applications of Artificial Intelligence (IAAI)](http://www.aaai.org/Conferences/IAAI/iaai17.php) conference was colocated with AAAI this year, and a standard registration was good for both. There were a lot of sessions where researchers from universities and companies alike showed off impressive practical work.
 

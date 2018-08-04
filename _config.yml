@@ -12,18 +12,27 @@ twitter_username: nickwalker.us
 github_username:  nickswalker
 linkedin_username: niwalker
 flickr_username: nickwalker-us
-google_plus_profile_url: https://plus.google.com/109675278505943174152/
 gravatar_url: https://www.gravatar.com/avatar/05a17826262b803bdc53a402751c884e
 
 permalink: /blog/:year/:month/:title
 
 # Custom collections
+collections_dir: collections
 collections:
   projects:
     output: true
     permalink: projects/:title
   publications:
     output: true
+
+jekyll-archives:
+  enabled: ['year', 'month']
+  layout: 'archive'
+  permalinks:
+    year: '/blog/:year/'
+    month: '/blog/:year/:month/'
+    tag: '/blog/tag/:name/'
+    category: '/blog/category/:name/'
 
 
 defaults:
@@ -52,7 +61,10 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-archives
 exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+include:
+  - .well-known

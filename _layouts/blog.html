@@ -6,7 +6,7 @@ layout: default
     <h1 class="page-title">{{ page.title | escape }}</h1>
 </header>
 <div class="blog-list">
-{% for post in site.posts %}
+{% for post in site.posts limit:6 %}
 
 {% assign url = post.url | relative_url %}
 {% assign post-type-class = "full-post" %}

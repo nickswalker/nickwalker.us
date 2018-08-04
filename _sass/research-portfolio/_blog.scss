@@ -10,7 +10,6 @@
 
 .post-link {
   display: block;
-  font-size: 18px;
 }
 
 .permalink, .permalink:visited {
@@ -33,6 +32,7 @@ header:hover .permalink {
 article.full-post {
   header a {
     text-decoration: none;
+    letter-spacing: .4px;
   }
   header a:hover {
     text-decoration: underline;
@@ -62,6 +62,8 @@ article.project img {
 }
 
 article {
+
+  font-size: $post-content-font-size;
 
   ol, ul,
   header, p, iframe, pre, h1, h2, h3, h4, h5, blockquote, hr {
@@ -94,7 +96,7 @@ article {
     }
 
     h1, h2 {
-      font-size: 21px;
+      font-size: 1.25rem;
       font-weight: 700;
       margin-bottom: 0;
 
@@ -111,8 +113,8 @@ article {
       background-color: $grey-color-light;
       max-height: 75vh;
     }
-    figcaption {
-      font-size: 14px;
+    figcaption p {
+      font-size: $small-font-size;
       color: #333;
     }
   }
@@ -122,13 +124,16 @@ article {
   }
   .post-content, .project-content {
     margin-bottom: $spacing-unit;
+    font-family: $post-content-font-family;
 
     p {
       margin: 0 auto $spacing-unit auto;
+
+      font-size: 1rem;
     }
 
     h2 {
-      font-size: 18px;
+      font-size: 1rem;
       font-weight: bold;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -136,7 +141,7 @@ article {
     }
 
     h3, h4 {
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: bold;
     }
   }

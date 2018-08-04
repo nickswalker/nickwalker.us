@@ -1,7 +1,7 @@
 <header class="site-header">
 
   <div class="wrapper">
-      <a class="site-title" href="{{ '/' | relative_url}}">{% include kerned_name.html %}</a>
+      <a class="site-title" href="{{ '/' | relative_url}}">{{ site.title }}</a>
     <nav class="site-nav">
         <div class="navigation-links">
             {% assign sorted_pages = (site.pages | sort: 'nav_order' | where: "show_in_nav", "true") %}

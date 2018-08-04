@@ -8,6 +8,6 @@
     </a>
     {% endif %}
     {% if include.caption %}
-    <figcaption>{{ include.caption }}</figcaption>
+    <figcaption>{{ include.caption | markdownify }}</figcaption>
     {% endif %}
 </figure>
