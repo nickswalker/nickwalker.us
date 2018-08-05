@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<a href="/bibliography.html">Bibliography</a>
+<article id="{{ page.entry.key}}">
+    <h1>{{ page.entry.title }}</h1>
+    <p class="bib-entry">
+        {{ page.reference }}
+    </p>
+    <div class="details">
+        {% if page.entry.abstract %}
+        <h3>Abstract</h3>
+        <blockquote>{{ page.entry.abstract }}</blockquote>
+        {% endif %}
+
+        <h3>BibTeX Entry</h3>
+        <pre>{{ page.entry.bibtex }}</pre>
+    </div>
+</article>

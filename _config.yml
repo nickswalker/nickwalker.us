@@ -25,6 +25,7 @@ collections:
   publications:
     output: true
 
+# Archive listings for blog
 jekyll-archives:
   enabled: ['year', 'month']
   layout: 'archive'
@@ -34,6 +35,10 @@ jekyll-archives:
     tag: '/blog/tag/:name/'
     category: '/blog/category/:name/'
 
+# bibtex rendering
+scholar:
+  bibliography_template: bib_entry
+  details_layout: bib_details.html
 
 defaults:
   - scope:
@@ -59,9 +64,10 @@ defaults:
 markdown: kramdown
 # theme: research-portfolio
 plugins:
+- jekyll-archives
   - jekyll-feed
+- jekyll-scholar
   - jekyll-sitemap
-  - jekyll-archives
 exclude:
   - Gemfile
   - Gemfile.lock

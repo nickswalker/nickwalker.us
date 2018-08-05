@@ -1,0 +1,34 @@
+---
+layout: page
+---
+
+{% capture journal_count %}
+{% bibliography_count --query @article %}
+{% endcapture %}
+{% assign journal_count = journal_count | plus: 0%}
+
+{% capture conference_count %}
+{% bibliography_count --query @inproceedings[wwwtype/=workshop] %}
+{% endcapture %}
+{% assign conference_count = conference_count | plus: 0 %}
+
+
+{% capture workshop_count %}
+{% bibliography_count --query @inproceedings[wwwtype^=workshop] %}
+{% endcapture %}
+{% assign workshop_count = workshop_count | plus: 0 %}
+
+{% if journal_count > 0 %}
+<h3>Journal</h3>
+{% bibliography --query @journal%}
+{% endif %}
+
+{% if conference_count > 0 %}
+<h3>Conference</h3>
+{% bibliography --query @inproceedings[wwwtype/=workshop] %}
+{% endif %}
+
+{% if workshop_count > 0 %}
+<h3>Workshop</h3>
+{% bibliography --query @inproceedings[wwwtype^=workshop] %}
+{% endif %}

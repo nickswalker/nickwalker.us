@@ -1,12 +1,65 @@
-@misc{svetlick,
-       booktitle = {AAAI-17},
-           month = {November},
+---
+---
+@InProceedings{hart2018,
+          author = {Justin W. Hart and Rishi Shah and Sean Kirmani and Nick Walker and Kathryn Baldauf and Nathan John and Peter Stone},
+           title = {PRISM: Pose Registration for Integrated Semantic Mapping},
+
+        location = {Madrid, Spain},
+           month = {October},
+            year = {2018},
+       booktitle = {2018 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+        keywords = {semantic mapping},
+
+        abstract = {Many robotics applications involve navigating to positions specified in terms of their semantic significance. A robot operating in a hotel may need to deliver room service to a named room. In a hospital, it may need to deliver medication to a patient’s room. The Building-Wide Intelligence Project at UT Austin has been developing a fleet of autonomous mobile robots, called BWIBots, which perform tasks in the computer science department. Tasks include guiding a person, delivering a message, or bringing an object to a location such as an office, lecture hall, or classroom. The process of constructing a map that a robot can use for navigation has been simplified by modern SLAM algorithms. The attachment of semantics to map data, however, remains a tedious manual process of labeling locations in otherwise automatically generated maps. This paper introduces a system called PRISM to automate a step in this process by enabling a robot to localize door signs – a semantic markup intended to aid the human occupants of a building – and to annotate these locations in its map}
+}
+
+@InProceedings{svetlick2017,
+          author = {Maxwell Svetlik and Matteo Leonetti and Jivko Sinapov and Rishi Shah and Nick Walker and Peter Stone},
            title = {Automatic Curriculum Graph Generation for Reinforcement Learning Agents},
-          author = {M Svetlik and M Leonetti and J Sinapov and R Shah and N Walker and P Stone},
        publisher = {Association for the Advancement of Artificial Intelligence},
-            year = {2016},
-         journal = {Proceedings of the Thirty-First AAAI Conference on Artificial Intelligence (AAAI-17)},
+        location = {San Francisco, CA},
+           month = {February},
+            year = {2017},
+       booktitle = {Proceedings of the Thirty-First AAAI Conference on Artificial Intelligence (AAAI-17)},
         keywords = {curriculum learning; reinforcement learning},
-             url = {http://eprints.whiterose.ac.uk/108931/},
+             url = {https://aaai.org/ocs/index.php/AAAI/AAAI17/paper/view/14961/14449},
         abstract = {In recent years, research has shown that transfer learning methods can be leveraged to construct curricula that sequence a series of simpler tasks such that performance on a final target task is improved. A major limitation of existing approaches is that such curricula are handcrafted by humans that are typically domain experts. To address this limitation, we introduce a method to generate a curriculum based on task descriptors and a novel metric of transfer potential. Our method automatically generates a curriculum as a directed acyclic graph (as opposed to a linear sequence as done in existing work). Experiments in both discrete and continuous domains show that our method produces curricula that improve the agent's learning performance when compared to the baseline condition of learning on the target task from scratch.}
+}
+
+
+@InProceedings{schroeder2017,
+          address = {San Francisco},
+           author = {Schroeder, Eric D. and Walker, Nicholas and Danko, Amanda S.},
+        booktitle = {Proceedings of SPIE 10051, Neural Imaging and Sensing},
+              doi = {10.1117/12.2249416},
+           editor = {Luo, Qingming and Ding, Jun},
+             isbn = {9781510605435},
+             issn = {16057422},
+            month = {feb},
+            title = {{Wearable ear EEG for brain interfacing}},
+             year = {2017},
+         abstract = {Brain-computer interfaces (BCIs) measuring electrical activity via electroencephalogram (EEG) have evolved beyond clinical applications to become wireless consumer products. Typically marketed for meditation and neu- rotherapy, these devices are limited in scope and currently too obtrusive to be a ubiquitous wearable. Stemming from recent advancements made in hearing aid technology, wearables have been shrinking to the point that the necessary sensors, circuitry, and batteries can be fit into a small in-ear wearable device. In this work, an ear-EEG device is created with a novel system for artifact removal and signal interpretation. The small, compact, cost-effective, and discreet device is demonstrated against existing consumer electronics in this space for its signal quality, comfort, and usability. A custom mobile application is developed to process raw EEG from each device and display interpreted data to the user. Artifact removal and signal classification is accomplished via a combination of support matrix machines (SMMs) and soft thresholding of relevant statistical properties.}
+}
+
+@comment{WORKSHOPS}
+
+@inproceedings{thomason:robodial18,
+         title = {Jointly Improving Parsing and Perception for Natural Language Commands through Human-Robot Dialog},
+        author = {Jesse Thomason and Aishwarya Padmakumar and Jivko Sinapov and Nick Walker and Yuqian Jiang and Harel Yedidsion and Justin Hart and Peter Stone and Raymond J. Mooney},
+     booktitle = {Late-breaking Track at the SIGDIAL Special Session on Physically Situated Dialogue (RoboDIAL-18)},
+         month = {July},
+          year = {2018},
+       wwwtype = {workshop},
+      abstract = {In this work, we present methods for parsing natural language to underlying meanings, and using robotic sensors to create multi-modal models of perceptual concepts. We combine these steps towards language understanding into a holistic agent for jointly improving parsing and perception on a robotic platform through human-robot dialog. We train and evaluate this agent on Amazon Mechanical Turk, then demonstrate it on a robotic platform initialized from that conversational data. Our experiments show that improving both parsing and perception components from conversations improves communication quality and human ratings of the agent.}
+}
+
+@inproceedings{thomason:mrhrc18,
+         title = {Jointly Improving Parsing and Perception for Natural Language Commands through Human-Robot Dialog},
+        author = {Jesse Thomason and Aishwarya Padmakumar and Jivko Sinapov and Nick Walker and Yuqian Jiang and Harel Yedidsion and Justin Hart and Peter Stone and Raymond J. Mooney},
+     booktitle = {Proceedings of the RSS Workshop on Models and Representations for Natural Human-Robot Communication (MRHRC-18)},
+     publisher = {Robotics: Science and Systems (RSS)},
+         month = {June},
+          year = {2018},
+       wwwtype = {workshop},
+      abstract = {Natural language understanding in robots needs to be robust to a wide-range of both human speakers and human environments. Rather than force humans to use language that robots can understand, robots in human environments should dynamically adapt—continuously learning new language constructions and perceptual concepts as they are used in context. In this work, we present methods for parsing natural language to underlying meanings, and using robotic sensors to create multi-modal models of perceptual concepts. We combine these steps towards language understanding into a holistic agent for jointly improving parsing and perception on a robotic platform through human-robot dialog. We train and evaluate this agent on Amazon Mechanical Turk, then demonstrate it on a robotic platform initialized from conversational data gathered from Mechanical Turk. Our experiments show that improving both parsing and perception components from conversations improves communication quality and human ratings of the agent.}
 }
