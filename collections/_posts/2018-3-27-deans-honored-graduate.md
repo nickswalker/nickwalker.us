@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Named a Dean's Honored Graduate"
 date:   2018-03-27 11:25:00 -0600
 categories: ut recognition news

@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "3D Production Renders"
 date:   2016-02-08 12:29:02 -0700
 categories: project blog

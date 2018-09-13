@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "First Conference: AAAI 2017"
 date:   2017-03-02 18:49:02 -0600
 categories: aaai conference research blog

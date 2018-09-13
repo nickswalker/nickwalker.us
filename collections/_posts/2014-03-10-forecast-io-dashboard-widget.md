@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Forecast.io Dashboard Widget"
 date:   2014-03-10 18:58:02 -0700
 categories: project blog

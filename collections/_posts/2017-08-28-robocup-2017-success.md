@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Austin Villa@Home takes 3rd at RoboCup 2017"
 date:   2017-08-28 18:49:02 -0600
 categories: hsr robocup research news

@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Follow Me: A Tool For Live Coding"
 date:   2017-01-22 10:48:02 -0700
 categories: jekyll update blog

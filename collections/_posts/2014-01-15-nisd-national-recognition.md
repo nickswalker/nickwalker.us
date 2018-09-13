@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Northside Students Achieve National Recognition"
 date:   2014-01-15 21:29:02 -0700
 categories: news media blog
