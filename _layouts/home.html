@@ -32,15 +32,36 @@ layout: default
   </section>
   {% endif %}
 
+    {% assign featured_projects = site.research | where:"featured", true | where: "published", true %}
+    {% if featured_projects.size > 0 %}
+    <section id="research">
+        <h1 class="page-heading">Research</h1>
+        <ul class="project-list">
+
+            {% for project in featured_projects %}
+            {% include research_block.html project=project %}
+            {% endfor %}
+        </ul>
+        {% if site.research.size > featured_projects.size %}
+        <p>See all <a href="{% link pages/research.md %}">research projects</a>, or a <a
+                href="{% link pages/bibliography.md %}">bibliography</a>.</p>
+        {% else %}
+        <p>See my <a href="{% link pages/bibliography.md %}">bibliography</a></p>
+        {% endif %}
+    </section>
+    {% endif %}
+
+    {% assign featured_projects = site.projects | where:"featured", true %}
+    {% if featured_projects.size > 0 %}
   <section id="projects">
     <h1 class="page-heading">Projects</h1>
     <ul class="project-list">
-      {% assign featured_projects = site.projects | where:"featured", true %}
       {% for project in featured_projects %}
         {% include project_block.html project=project %}
       {% endfor %}
     </ul>
   </section>
+    {% endif %}
 
     <section id="blog">
         <h1 class="page-heading">Blog</h1>

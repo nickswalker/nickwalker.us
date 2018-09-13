@@ -2,12 +2,48 @@
 layout: default
 ---
 
-<a href="/bibliography.html">Bibliography</a>
+<!--<a href="/bibliography.html">Bibliography</a>-->
 <article id="{{ page.entry.key}}">
-    <h1>{{ page.entry.title }}</h1>
-    <p class="bib-entry">
-        {{ page.reference }}
-    </p>
+    <header class="project-header">
+        <h1>{{ page.entry.title }}</h1>
+        <ul class="quick-links">
+            {% if page.entry.url %}
+            <li>
+                <a href="{{ page.entry.url }}" title="Download"> <i class="ion-link"></i>Download</a>
+            </li>
+            {% endif %}
+            {% if page.code_url %}
+            <li>
+                <a href="{{ page.entry.wwwcodeurl }}" title="See code"> <i class="ion-social-github github"></i>Code</a>
+            </li>
+            {% endif %}
+            {% if page.report %}
+            <li>
+                <a href="{{ project_assets }}/{{slug}}-report.pdf" title="See report."> <i class="ion-document"></i>Report</a>
+            </li>
+            {% endif %}
+            {% if page.slides %}
+            <li>
+                <a href="{{ project_assets }}/{{slug}}-slides.pdf" title="See slides."> <i
+                        class="ion-easel"></i>Slides</a>
+            </li>
+            {% endif %}
+        </ul>
+    </header>
+
+    {% assign research_pages = site.research %}
+    {% for research_page in research_pages %}
+    {% comment %}<!-- Check whether a research page links back to this paper --> {% endcomment %}
+
+    {% if research_page.published and research_page.citation_keys contains page.entry.key %}
+    <p>For background and additional information this paper, see this post: <a class="page-link"
+                                                                               href="{{ page.url | relative_url }}">{{
+        page.title | escape }}</a></p>
+    {% endif %}
+    {% endfor %}
+
+    {{ page.reference }}
+
     <div class="details">
         {% if page.entry.abstract %}
         <h3>Abstract</h3>

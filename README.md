@@ -10,7 +10,7 @@ My portfolio website. Built with [Jekyll](https://jekyllrb.com), based off of [M
 
 Make sure you have Ruby `>=2.3` and [Bundler](http://bundler.io/) installed. Clone down the repo and run
 
-    bundle install
+    bundle install --path vendor/bundle
 
 to install gem dependencies. Then
 
@@ -20,4 +20,17 @@ to begin testing the site locally. Add `--drafts` and/or `--unpublished` to see 
 
 To run tests
 
-    bundle exec htmlproofer ./_site --only-4xx --check-favicon --check-html --assume-extension --alt-ignore '/.*/' 
+    bundle exec htmlproofer ./_site --only-4xx --check-favicon --check-html --assume-extension --alt-ignore '/.*/'
+
+## Authoring
+
+### Post
+
+Types:
+
+* Link: a linkpost, in the vein of Daring Fireball
+* Blog: standalone post
+
+Categories:
+
+* News: display the headline on the homepage

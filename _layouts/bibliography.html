@@ -5,18 +5,18 @@ layout: page
 {% capture journal_count %}
 {% bibliography_count --query @article %}
 {% endcapture %}
-{% assign journal_count = journal_count | plus: 0%}
+{% assign journal_count = journal_count | to_integer %}
 
 {% capture conference_count %}
-{% bibliography_count --query @inproceedings[wwwtype/=workshop] %}
+{% bibliography_count --query @inproceedings[wwwtype/=workshop]%}
 {% endcapture %}
-{% assign conference_count = conference_count | plus: 0 %}
+{% assign conference_count = conference_count | to_integer %}
 
 
 {% capture workshop_count %}
 {% bibliography_count --query @inproceedings[wwwtype^=workshop] %}
 {% endcapture %}
-{% assign workshop_count = workshop_count | plus: 0 %}
+{% assign workshop_count = workshop_count | to_integer %}
 
 {% if journal_count > 0 %}
 <h3>Journal</h3>
@@ -29,6 +29,6 @@ layout: page
 {% endif %}
 
 {% if workshop_count > 0 %}
-<h3>Workshop</h3>
+<h3>Workshop, Symposium</h3>
 {% bibliography --query @inproceedings[wwwtype^=workshop] %}
 {% endif %}

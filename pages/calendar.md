@@ -1,7 +1,6 @@
 ---
 layout: page-full
 title: Calendar
-show_in_nav: false
 permalink: calendar
 ---
 

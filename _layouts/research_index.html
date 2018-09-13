@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<section id="research">
+    <h1 class="page-heading">Research</h1>
+    <ul class="project-list">
+
+        {% for project in featured_projects %}
+        {% include research_block.html project=project %}
+        {% endfor %}
+    </ul>
+    <p>See all <a href="{% link pages/research.md %}">research projects</a>, or a <a
+            href="{% link pages/bibliography.md %}">bibliography</a>. </p>
+</section>

@@ -2,13 +2,13 @@ title: Nick Walker
 first_last_name: Nick Walker
 email: nick@nickwalker.us
 description: > # this means to ignore newlines until "baseurl:"
-  Computer science student at UT Austin with interests spanning reinforcement learning, interactive machine learning and digital media.
+  Computer science student at the University of Washington with interests in robotics, interactive machine learning and digital media.
 baseurl: "" # Subpath, in my case, root
 url: "https://nickwalker.us" # includes protocol
 google_analytics: "UA-30066313-1"
 
 # Bio information
-twitter_username: nickwalker.us
+twitter_username: nickwalker_us
 github_username:  nickswalker
 linkedin_username: niwalker
 flickr_username: nickwalker-us
@@ -22,8 +22,9 @@ collections:
   projects:
     output: true
     permalink: projects/:title
-  publications:
+  research:
     output: true
+    permalink: research/:title
 
 # Archive listings for blog
 jekyll-archives:
@@ -37,15 +38,21 @@ jekyll-archives:
 
 # bibtex rendering
 scholar:
-  bibliography_template: bib_entry
-  details_layout: bib_details.html
+  bibliography_template: 'bib_entry'
+  details_layout: 'bib_details.html'
+  reference_tagname: 'p'
 
 defaults:
   - scope:
       path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
       type: projects
     values:
-      layout: project
+      layout: project_entry
       featured: false
       has_article: true
       custom_js:
@@ -56,21 +63,24 @@ defaults:
       - "/assets/css/jquery.fancybox.min.css"
   - scope:
       path: ""
-      type: publications
+      type: research
     values:
-      layout: publication
+      layout: research_entry
 
 # Build settings
 markdown: kramdown
 # theme: research-portfolio
 plugins:
 - jekyll-archives
-  - jekyll-feed
+- jekyll-compose
+- jekyll-feed
+- jekyll-redirect-from
 - jekyll-scholar
-  - jekyll-sitemap
+- jekyll-sitemap
 exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - .idea
 include:
   - .well-known
