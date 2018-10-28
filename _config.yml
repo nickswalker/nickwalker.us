@@ -41,6 +41,7 @@ scholar:
   bibliography_template: 'bib_entry'
   details_layout: 'bib_details.html'
   reference_tagname: 'p'
+  details_link: ""
 
 defaults:
   - scope:

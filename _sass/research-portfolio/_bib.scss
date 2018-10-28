@@ -2,3 +2,18 @@
   margin-bottom: $spacing-unit / 2;
   display: inline-block;
 }
+
+.bib-entry .title {
+  font-weight: bold;
+}
+
+.bib-entry .venue {
+  font-style: italic;
+}
+
+.bib-entry .authors {
+}
+
+.bib-entry a {
+  margin: 0 0 0 .5rem;
+}

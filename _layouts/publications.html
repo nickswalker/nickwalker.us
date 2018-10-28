@@ -25,10 +25,10 @@ layout: page
 
 {% if conference_count > 0 %}
 <h3>Conference</h3>
-{% bibliography --query @inproceedings[wwwtype/=workshop] %}
+{% bibliography --query @inproceedings[wwwtype=conference] %}
 {% endif %}
 
 {% if workshop_count > 0 %}
 <h3>Workshop, Symposium</h3>
-{% bibliography --query @inproceedings[wwwtype^=workshop] %}
+{% bibliography --query @inproceedings[wwwtype^=workshop|symposium] %}
 {% endif %}

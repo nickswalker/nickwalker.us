@@ -24,7 +24,7 @@ The meat of the conference was the technical sessions. AAAI has tracks for just 
 ## Posters
 
 {% include article_image.html img="/assets/images/posts/aaai-poster.jpg"
-    caption="Me, Rishi and Jivko in front of our poster. Thanks for the photo, [Shiqi](http://eecs.csuohio.edu/~szhang/)."%}
+    caption="Me, Rishi and Jivko in front of our poster. Thanks for the photo, [Shiqi](http://www.cs.binghamton.edu/~szhang/)."%}
 
 The format changes from year to year, but this year all papers were assigned to either a talk (to occur in a technical session) or a poster. Every day, fifty or so posters were set up in a ballroom, available for viewing starting at six in the evening. The organizers arranged to have dinner (and amazing desserts) served, so these showings had a lot of traffic. Some people were in browse-only mode, reading titles and abstracts, maybe taking a photo of a poster with their phone. Others would ask for a walkthrough, interjecting with questions or comments. These usually lasted five to ten minutes.
 

@@ -2,30 +2,45 @@
 layout: default
 ---
 
-<!--<a href="/bibliography.html">Bibliography</a>-->
-<article id="{{ page.entry.key}}">
+<article id="{{ page.entry.key}}-details">
     <header class="project-header">
         <h1>{{ page.entry.title }}</h1>
         <ul class="quick-links">
+            {% if page.entry.wwwpdf %}
+            <li>
+                <a href="{{ page.entry.wwwpdf }}" title="Get PDF">
+                    <ion-icon name="document"></ion-icon>
+                    PDF</a>
+            </li>
+            {% endif %}
             {% if page.entry.url %}
             <li>
-                <a href="{{ page.entry.url }}" title="Download"> <i class="ion-link"></i>Download</a>
+                <a href="{{ page.entry.url }}" title="More information">
+                    <ion-icon name="link"></ion-icon>
+                    More info</a>
             </li>
             {% endif %}
-            {% if page.code_url %}
+            {% if page.entry.wwwcodeurl %}
             <li>
-                <a href="{{ page.entry.wwwcodeurl }}" title="See code"> <i class="ion-social-github github"></i>Code</a>
+                <a href="{{ page.entry.wwwcodeurl }}" title="See code">
+                    <ion-icon name="logo-github"></ion-icon>
+                    Code</a>
             </li>
             {% endif %}
+
             {% if page.report %}
             <li>
-                <a href="{{ project_assets }}/{{slug}}-report.pdf" title="See report."> <i class="ion-document"></i>Report</a>
+                <a href="{{ project_assets }}/{{slug}}-report.pdf" title="See report.">
+                    <ion-icon name="document"></ion-icon>
+                    Report</a>
             </li>
             {% endif %}
             {% if page.slides %}
             <li>
-                <a href="{{ project_assets }}/{{slug}}-slides.pdf" title="See slides."> <i
-                        class="ion-easel"></i>Slides</a>
+                <a href="{{ project_assets }}/{{slug}}-slides.pdf" title="See slides.">
+                    <ion-icon
+                            name="easel"></ion-icon>
+                    Slides</a>
             </li>
             {% endif %}
         </ul>

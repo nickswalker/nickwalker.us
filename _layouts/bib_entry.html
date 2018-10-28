@@ -2,8 +2,15 @@
 ---
 
 <div class="bib-entry">
-    {{ reference }}
-    {% if entry.url %}
+    {% capture venue %}
+    {% if entry.booktitle %}{{ entry.booktitle }}{% else if entry.journal %}{{ entry.journal }}{% endif %}{% endcapture
+    %}
+    <span class="title">{{ entry.title }}</span><br/>
+    <span class="venue">{{ venue }}, {{ entry.year }}</span><br/>
+    <span class="authors">{{ entry.author | replace_first: "Walker, Nick", "<u>Walker, Nick</u>" | replace_first: "Walker, Nicholas", "<u>Walker, Nicholas</u>" }}</span>
 
+    {% if entry.wwwpdf %}
+    <a href="{{ entry.wwwpdf }}">PDF</a>
     {% endif %}
+    {% cite_details entry.key --text Details %}
 </div>

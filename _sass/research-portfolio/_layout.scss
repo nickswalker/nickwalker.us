@@ -144,10 +144,11 @@ footer {
 }
 
 .social-media-list {
-  i {
+  ion-icon {
     margin-right: 8px;
+    margin-bottom: -3px;
     display: inline-block;
-    width: 13px;
+    width: 15px;
   }
 }
 
