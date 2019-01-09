@@ -195,16 +195,6 @@ pre {
   clear: both;
 }
 
-
-
-/**
- * Icons
- */
-.icon > svg {
-  display: inline-block;
-  vertical-align: middle;
-
-  path {
-    fill: $grey-color;
-  }
+ion-icon {
+  margin-bottom: -3px;
 }

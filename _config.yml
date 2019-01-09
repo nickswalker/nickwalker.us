@@ -39,6 +39,7 @@ jekyll-archives:
 # bibtex rendering
 scholar:
   bibliography_template: 'bib_entry'
+  source: '/_data'
   details_layout: 'bib_details.html'
   reference_tagname: 'p'
   details_link: ""

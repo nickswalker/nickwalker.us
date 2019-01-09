@@ -29,3 +29,13 @@ kind of wild to think that you don't need verifiable documentation attesting to 
 
 Don't require official score reports for applications. It's expensive, it's unnecessary, and its one more thing that can arrive late or not be
 sent or otherwise muck up the admissions timeline. Accept self-reported scores, then gather an official report as a condition of admission.
+
+---
+
+**Update December 2nd, 2018:** According to the new remark in the [PhD application materials FAQ](https://www.cs.washington.edu/academics/phd/admissions/required-materials),  you do not have to submit an official report to UW CSE to be fully considered for admission:
+
+>A note on self-reported scores: The Allen School will evaluate an application using
+>self-reported scores. However, official scores must be delievered [sic] to the University of
+> Washington prior to accepting an offer of admission.
+
+This was the policy even last year. Consider asking the places you're applying if they treat unofficial scores the same way.
