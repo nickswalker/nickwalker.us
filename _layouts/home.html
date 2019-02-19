@@ -27,6 +27,7 @@ layout: default
         </h2>
       </li>
       {% endfor %}
+        <p>Older news is on the <a href="{% link pages/blog.md %}">blog</a></p>
     </ul>
 
   </section>
@@ -36,14 +37,14 @@ layout: default
     {% if featured_projects.size > 0 %}
     <section id="research">
         <h1 class="page-heading">Research</h1>
-        <ul class="project-list">
+        <ul class="project-list bulleted">
             {% for project in featured_projects %}
-            {% include research_block.html project=project %}
+            <li>{{ project.short_description }}</li>
             {% endfor %}
         </ul>
         {% if site.research.size > featured_projects.size %}
-        <p>See all <a href="{% link pages/research.md %}">research projects</a>, or a <a
-                href="{% link pages/publications.md %}">bibliography</a>.</p>
+        <p>Read more about my <a href="{% link pages/research.md %}">research projects</a>, or check out <a
+                href="{% link pages/publications.md %}">publications</a>.</p>
         {% else %}
         <p>See a full list of my <a href="{% link pages/publications.md %}">publications</a></p>
         {% endif %}
