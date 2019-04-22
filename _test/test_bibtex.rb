@@ -10,6 +10,9 @@ end
 passed = true
 bibtex = BibTeX.open(ARGV[0])
 bibtex.each do |entry|
+  if !entry.instance_of? BibTeX::Entry
+    next
+  end
   if !entry["abstract"]
     STDERR.puts "\"%s\"  does not have an abstract. Please add one." % entry["title"]
     passed = false
