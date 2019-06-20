@@ -13,13 +13,7 @@ layout: default
                     PDF</a>
             </li>
             {% endif %}
-            {% if page.entry.url %}
-            <li>
-                <a href="{{ page.entry.url }}" title="More information">
-                    <ion-icon name="link"></ion-icon>
-                    More info</a>
-            </li>
-            {% endif %}
+
             {% if page.entry.wwwcodeurl %}
             <li>
                 <a href="{{ page.entry.wwwcodeurl }}" title="See code">
@@ -28,19 +22,35 @@ layout: default
             </li>
             {% endif %}
 
-            {% if page.report %}
-            <li>
-                <a href="{{ project_assets }}/{{slug}}-report.pdf" title="See report.">
-                    <ion-icon name="document"></ion-icon>
-                    Report</a>
-            </li>
-            {% endif %}
             {% if page.slides %}
             <li>
                 <a href="{{ project_assets }}/{{slug}}-slides.pdf" title="See slides.">
                     <ion-icon
                             name="easel"></ion-icon>
                     Slides</a>
+            </li>
+            {% endif %}
+            {% if page.entry.wwwposter %}
+            <li>
+                <a href="{{ page.entry.wwwposter }}" title="See Poster.">
+                    <ion-icon
+                            name="easel"></ion-icon>
+                    Poster</a>
+            </li>
+            {% endif %}
+            {% if page.entry.wwwvideo %}
+            <li>
+                <a href="{{ page.entry.wwwvideo }}" title="See Video.">
+                    <ion-icon
+                            name="video"></ion-icon>
+                    Video</a>
+            </li>
+            {% endif %}
+            {% if page.entry.url %}
+            <li>
+                <a href="{{ page.entry.url }}" title="More information">
+                    <ion-icon name="link"></ion-icon>
+                    More info</a>
             </li>
             {% endif %}
         </ul>
@@ -57,6 +67,18 @@ layout: default
     {% break %}
     {% endif %}
     {% endfor %}
+
+    {% comment %}
+    This doesn't seem important yet. People will know to use the newer version
+    {% if page.entry.wwwalso %}
+    {% assign also_at= page.entry.wwwalso | split: "," %}
+    {% for also_entry in also_at %}
+    <i>Also presented at {% cite_details thomason18mrhrc --text hi %}</i><br/>
+
+
+    {% endfor %}
+    {% endif %}
+    {% endcomment %}
 
     {{ page.reference }}
 

@@ -2,15 +2,38 @@
 ---
 
 <div class="bib-entry">
-    {% capture venue %}
-    {% if entry.booktitle %}{{ entry.booktitle }}{% else if entry.journal %}{{ entry.journal }}{% endif %}{% endcapture
-    %}
+    {%comment%}Yes, captures have to be on one line or they'll capture whitespace too{%endcomment%}
+    {% assign venue = "" %}
+    {% if entry.booktitle %}
+    {% capture venue %}{{ entry.booktitle }}{% endcapture %}
+    {% else if entry.journal == "CoRR" %}
+    {% assign venue = "arXiv preprint" %}
+    {% else if entry.journal %}
+    {% capture venue %}{{ entry.journal }}{% endcapture %}
+    {% endif %}
+
     <span class="title">{{ entry.title }}</span><br/>
     <span class="venue">{{ venue }}, {{ entry.year }}</span><br/>
+    {%comment%}TODO: Print these in human friendly order{%endcomment%}
     <span class="authors">{{ entry.author | replace_first: "Walker, Nick", "<u>Walker, Nick</u>" | replace_first: "Walker, Nicholas", "<u>Walker, Nicholas</u>" }}</span>
 
-    {% if entry.wwwpdf %}
-    <a href="{{ entry.wwwpdf }}">PDF</a>
-    {% endif %}
-    {% cite_details entry.key --text Details %}
+    <ul class="quick-links">
+        {% if entry.wwwpdf %}
+        <li><a href="{{ entry.wwwpdf }}">PDF</a></li>
+        {% endif %}
+
+        {% if entry.wwwslides %}
+        <li><a href="{{ entry.wwwslides }}">Slides</a></li>
+        {% endif %}
+
+        {% if entry.wwwposter %}
+        <li><a href="{{ entry.wwwposter }}">Poster</a></li>
+        {% endif %}
+
+        {% if entry.wwwvideo %}
+        <li><a href="{{ entry.wwwvideo }}">Video</a></li>
+        {% endif %}
+
+        <li>{% cite_details entry.key --text Details %}</li>
+    </ul>
 </div>

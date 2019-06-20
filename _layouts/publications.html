@@ -3,7 +3,8 @@ layout: page
 ---
 
 {% capture journal_count %}
-{% bibliography_count --query @article %}
+{%comment%} Exclude arXiv "articles" {%endcomment%}
+{% bibliography_count --query @article[journal/=CoRR && wwwhidden!=true] %}
 {% endcapture %}
 {% assign journal_count = journal_count | to_integer %}
 
@@ -12,23 +13,41 @@ layout: page
 {% endcapture %}
 {% assign conference_count = conference_count | to_integer %}
 
-
 {% capture workshop_count %}
-{% bibliography_count --query @inproceedings[wwwtype^=workshop] %}
+{% bibliography_count --query @inproceedings[wwwtype^=workshop|symposium && wwwhidden!=true] %}
 {% endcapture %}
 {% assign workshop_count = workshop_count | to_integer %}
 
+{% capture working_count %}
+{% bibliography_count --query @article[wwwtype^=working] %}
+{% endcapture %}
+{% assign working_count = working_count | to_integer %}
+
+{% if working_count > 0 %}
+<h3>Working</h3>
+{% bibliography --query @article[wwwtype^=working && wwwhidden!=true]%}
+{% endif %}
+
 {% if journal_count > 0 %}
 <h3>Journal</h3>
-{% bibliography --query @journal%}
+{% bibliography --query @article[journal/=CoRR && wwwhidden!=true]%}
 {% endif %}
 
 {% if conference_count > 0 %}
 <h3>Conference</h3>
-{% bibliography --query @inproceedings[wwwtype=conference] %}
+{% bibliography --query @inproceedings[wwwtype=conference && wwwhidden!=true] %}
 {% endif %}
 
 {% if workshop_count > 0 %}
-<h3>Workshop, Symposium</h3>
-{% bibliography --query @inproceedings[wwwtype^=workshop|symposium] %}
+<h3>Symposium, Refereed Workshop</h3>
+{% bibliography --query @inproceedings[wwwtype^=workshop|symposium && wwwhidden!=true] %}
 {% endif %}
+
+<script>
+    window.onload = function (ev) {
+        let lists = document.getElementsByTagName("ol");
+        for (let list of lists) {
+            list.setAttribute("reversed", true);
+        }
+    };
+</script>

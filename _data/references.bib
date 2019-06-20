@@ -1,5 +1,49 @@
 ---
 ---
+@InProceedings{jiang2019icaps,
+  author = {Yuqian Jiang and Nick Walker and Justin Hart and Peter Stone},
+  title = {Open-World Reasoning for Service Robots},
+  booktitle = {Proceedings of the 29th International Conference on Automated Planning and Scheduling (ICAPS 2019)},
+  location = {Berkeley, CA, USA},
+  month = {July},
+  year = {2019},
+  wwwtype = {conference},
+  wwwpdf = {http://www.cs.utexas.edu/~pstone/Papers/bib2html-links/ICAPS19-Jiang.pdf},
+  wwwvideo = {https://youtu.be/TLXGQDTAZvA},
+  abstract = {
+  A service robot accepting verbal commands from a human operator is likely to
+  encounter requests that reference objects not currently represented in its
+  knowledge base. In domestic or office settings, the construction of a
+  complete knowledge base would be cumbersome and unlikely to succeed in most
+  real-world deployments. The world that such a robot operates in is thus
+  "open: in the sense that some objects that it must act on in the real world
+  are not described in its internal representation. However, when an operator
+  gives a command referencing an object that the robot has not yet observed (
+  and thus not incorporated into its knowledge base), we can think of the
+  object as being hypothetical to the robot. This paper presents a novel
+  method for closing the robot's world model for planning purposes by
+  introducing hypothetical objects into the robot's knowledge base, reasoning
+  about these hypothetical objects, and acting on these hypotheses in the real
+  world. We use our implementation of this method on a domestic service robot
+  as an illustrative demonstration to explore how it works in practice.
+  },
+}
+
+@inproceedings{thomason2019icra,
+  title={Improving Grounded Natural Language Understanding through Human-Robot Dialog},
+  author={Jesse Thomason and Aishwarya Padmakumar and Jivko Sinapov and Nick Walker and Yuqian Jiang and Harel Yedidsion and Justin Hart and Peter Stone and Raymond J. Mooney},
+  booktitle={International Conference on Robotics and Automation (ICRA)},
+  year={2019},
+  wwwtype = {conference},
+  wwwpdf = {https://arxiv.org/pdf/1903.00122.pdf},
+  wwwalso = {thomason18robodial,thomason18mrhrc},
+  wwwvideo = {https://youtu.be/PbOfteZ_CJc?t=5},
+  abstract = {
+  Natural language understanding for robotics can require substantial domain- and platform-specific engineering. For example, for mobile robots to pick-and-place objects in an environment to satisfy human commands, we can specify the language humans use to issue such commands, and connect concept words like red can to physical object properties. One way to alleviate this engineering for a new domain is to enable robots in human environments to adapt dynamically—continually learning new language constructions and perceptual concepts. In this work, we present an end-to-end pipeline for translating natural language commands to discrete robot actions, and use clarification dialogs to jointly improve language parsing and concept grounding. We train and evaluate this agent in a virtual setting on Amazon Mechanical Turk, and we transfer the learned agent to a physical robot platform to demonstrate it in the real world.
+
+  }
+}
+
 @InProceedings{hart2018iros,
           author = {Justin W. Hart and Rishi Shah and Sean Kirmani and Nick Walker and Kathryn Baldauf and Nathan John and Peter Stone},
            title = {PRISM: Pose Registration for Integrated Semantic Mapping},
@@ -23,6 +67,7 @@
             year = {2017},
          wwwtype = {conference},
           wwwpdf = {https://aaai.org/ocs/index.php/AAAI/AAAI17/paper/view/14961/14449},
+       wwwposter = {http://doi.org/10.5281/zenodo.3244636},
        booktitle = {Proceedings of the Thirty-First AAAI Conference on Artificial Intelligence (AAAI-17)},
         keywords = {curriculum learning; reinforcement learning},
              url = {https://aaai.org/ocs/index.php/AAAI/AAAI17/paper/view/14961/14449},
@@ -45,7 +90,7 @@
          abstract = {Brain-computer interfaces (BCIs) measuring electrical activity via electroencephalogram (EEG) have evolved beyond clinical applications to become wireless consumer products. Typically marketed for meditation and neu- rotherapy, these devices are limited in scope and currently too obtrusive to be a ubiquitous wearable. Stemming from recent advancements made in hearing aid technology, wearables have been shrinking to the point that the necessary sensors, circuitry, and batteries can be fit into a small in-ear wearable device. In this work, an ear-EEG device is created with a novel system for artifact removal and signal interpretation. The small, compact, cost-effective, and discreet device is demonstrated against existing consumer electronics in this space for its signal quality, comfort, and usability. A custom mobile application is developed to process raw EEG from each device and display interpreted data to the user. Artifact removal and signal classification is accomplished via a combination of support matrix machines (SMMs) and soft thresholding of relevant statistical properties.}
 }
 
-@comment{WORKSHOPS}
+@comment{SYMPOSIUMS AND REFEREED WORKSHOPS}
 
 @inproceedings{jiang18fss,
          title = {LAAIR: A Layered Architecture for Autonomous Interactive Robots},
@@ -57,7 +102,7 @@
         wwwpdf = {https://arxiv.org/abs/1811.03563.pdf},
            url = {https://arxiv.org/abs/1811.03563},
       abstract = {When developing general purpose robots, the overarching software architecture can greatly affect the ease of accomplishing various tasks. Initial efforts to create unified robot systems in the 1990s led to hybrid architectures, emphasizing a hierarchy in which deliberative plans direct the use of reactive skills. However, since that time there has been significant progress in the low-level skills available to robots, including manipulation and perception, making it newly feasible to accomplish many more tasks in real-world domains. There is thus renewed optimism that robots will be able to perform a wide array of tasks while maintaining responsiveness to human operators. However, the top layer in traditional hybrid architectures, designed to achieve long-term goals, can make it difficult to react quickly to human interactions during goal-driven execution. To mitigate this difficulty, we propose a novel architecture that supports such transitions by adding a top-level reactive module which has flexible access to both reactive skills and a deliberative control module. To validate this architecture, we present a case study of its application on a domestic service robot platform.
-}
+  }
 }
 
 @inproceedings{hart18fss,
@@ -79,6 +124,7 @@
          month = {July},
           year = {2018},
        wwwtype = {workshop},
+     wwwhidden = {true},
       abstract = {In this work, we present methods for parsing natural language to underlying meanings, and using robotic sensors to create multi-modal models of perceptual concepts. We combine these steps towards language understanding into a holistic agent for jointly improving parsing and perception on a robotic platform through human-robot dialog. We train and evaluate this agent on Amazon Mechanical Turk, then demonstrate it on a robotic platform initialized from that conversational data. Our experiments show that improving both parsing and perception components from conversations improves communication quality and human ratings of the agent.}
 }
 
@@ -90,6 +136,27 @@
          month = {June},
           year = {2018},
        wwwtype = {workshop},
+     wwwhidden = {true},
         wwwpdf = {http://www.cs.utexas.edu/%7Epstone/Papers/bib2html-links/MRHRC18-thomason.pdf},
       abstract = {Natural language understanding in robots needs to be robust to a wide-range of both human speakers and human environments. Rather than force humans to use language that robots can understand, robots in human environments should dynamically adapt—continuously learning new language constructions and perceptual concepts as they are used in context. In this work, we present methods for parsing natural language to underlying meanings, and using robotic sensors to create multi-modal models of perceptual concepts. We combine these steps towards language understanding into a holistic agent for jointly improving parsing and perception on a robotic platform through human-robot dialog. We train and evaluate this agent on Amazon Mechanical Turk, then demonstrate it on a robotic platform initialized from conversational data gathered from Mechanical Turk. Our experiments show that improving both parsing and perception components from conversations improves communication quality and human ratings of the agent.}
+}
+
+@comment{WORKING}
+
+@article{kim2018,
+  author    = {Minkyu Kim and
+               Miguel Arduengo and
+               Nick Walker and
+               Yuqian Jiang and
+               Justin W. Hart and
+               Peter Stone and
+               Luis Sentis},
+  title     = {An Architecture for Person-Following using Active Target Search},
+  journal   = {CoRR},
+  volume    = {abs/1809.08793},
+  year      = {2018},
+  url       = {http://arxiv.org/abs/1809.08793},
+  archivePrefix = {arXiv},
+  eprint    = {1809.08793},
+  wwwtype = {working},
 }
