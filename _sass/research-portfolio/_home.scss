@@ -13,11 +13,11 @@
   width: 150px;
   border-radius: 75px;
   display: inline-block;
-  margin-right: $spacing-unit;
+  margin-right: 0.5rem;
   box-sizing: padding-box;
   float: left;
   shape-outside: border-box;
-  shape-margin: $spacing-unit;
+  shape-margin: 0.5rem;
 
   @include media-query($on-laptop) {
     shape-outside: none;
@@ -84,7 +84,7 @@
       -webkit-text-decoration: none;
       color: inherit;
       text-decoration: none;
-      padding: $spacing-unit;
+      padding: 1rem;
       box-sizing: border-box;
       width: 100%;
       height: 100%;

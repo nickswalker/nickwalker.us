@@ -17,11 +17,6 @@ $small-font-size:  $base-font-size * 0.875;
 $post-content-font-family: "Elena", "Georgia";
 $post-content-font-size: 18px;
 
-$spacing-unit:     25px;
-
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      $light-green-color;
 
 // Width of the content area
 $content-width:    900px;
@@ -62,6 +57,14 @@ $on-laptop:        800px;
   src: url('/assets/fonts/ElenaWebBasicBoldItalic.woff2') format('woff2');
 }
 
+:root {
+  --brand-color: hsl(72.88, 66.53%, 48%);
+  --brand-color-light: hsl(72.88, 66.53%, 53%);
+  --brand-color-lighter: hsl(72.88, 66.53%, 58%);
+  --brand-color-dark: hsl(72.88, 66.53%, 43%);
+  --brand-color-darker: hsl(72.88, 66.53%, 38%);
+  --brand-color-darkest: hsl(72.88, 66.53%, 28%);
+}
 
 /* Header customizations */
 

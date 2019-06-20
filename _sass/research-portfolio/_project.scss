@@ -3,14 +3,14 @@
   font-weight: bold;
 }
 
-.project h1 {
-  margin-bottom: $spacing-unit / 2;
+.project-header h1 {
+  margin-bottom: 1rem;
 }
 
 // Gallery
 
 .project-images {
-  margin-bottom: 24px;
+  margin-bottom: 1rem;
   background-color: $grey-color-light;
 }
 
@@ -79,21 +79,21 @@
 
 .quick-links li {
   display: inline-block;
-  margin-right: $spacing-unit / 2;
-  margin-bottom: $spacing-unit / 2;
-  border-radius: $spacing-unit / 4;
-  border: 1px solid $brand-color;
+  margin-right: .75rem;
+  margin-bottom: .75rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--brand-color);
   background-color: transparent;
   a {
-    color: $brand-color;
-    padding: $spacing-unit / 4;
+    color: var(--brand-color);
+    padding: 0.5rem;
   }
 }
 
 .quick-links li:hover {
-  background-color: $brand-color;
+  background-color: var(--brand-color);
   a {
-    color: white;
+    color: var(--background-color);
   }
 }
 
@@ -102,7 +102,7 @@
 .quick-links li a:hover {
   text-decoration: none;
   display: block;
-  padding: $spacing-unit / 4 $spacing-unit / 2;
+  padding: 0.25rem .5rem;
 }
 
 .quick-links li ion-icon {

@@ -12,7 +12,6 @@ $base-line-height: 1.5 !default;
 
 $spacing-unit:     24px !default;
 
-$light-green-color: #a9cc29;
 $light-purple-color: #7348f1;
 $blue-color: rgb(0, 123, 255);
 $red-color: #dc3d2c;
@@ -22,10 +21,6 @@ $grey-color-light: lighten($grey-color, 40%);
 $grey-color-mid-light: lighten($grey-color, 20%);
 $grey-color-dark:  darken($grey-color, 25%);
 
-$text-color:       #111 !default;
-$background-color: #fdfdfd !default;
-$brand-color: $light-green-color !default;
-$text-brand-color: darken($light-green-color, 10%) !default;
 
 // Width of the content area
 $content-width:    900px !default;

@@ -1,6 +1,6 @@
 .post-meta {
   font-size: $small-font-size;
-  color: $grey-color;
+  color: var(--lighter-text-color);
   letter-spacing: 2px;
   text-transform: uppercase;
   @include media-query($on-laptop) {
@@ -79,16 +79,16 @@ article {
   hr {
     border: none;
     height: 1px;
-    background-color: $grey-color-light;
+    background-color: var(--neutral-accent);
     margin: 2 * $spacing-unit auto;
     width: 40%;
   }
 
   header {
-    margin-bottom: $spacing-unit;
+    margin-bottom: 1rem;
     .post-meta {
       font-size: $small-font-size;
-      color: $grey-color;
+      color: var(--light-text-color);
       font-weight: normal;
       letter-spacing: 2px;
       text-transform: uppercase;
@@ -104,18 +104,18 @@ article {
   }
 
   .article-image {
-    margin-bottom: $spacing-unit;
+    margin-bottom: 2rem;
     img {
       margin: 0 auto;
       margin-bottom: $spacing-unit/2.0;
       width: 100%;
       object-fit: contain;
-      background-color: $grey-color-light;
+      background-color: var(--light-background-color);
       max-height: 75vh;
     }
     figcaption p {
       font-size: $small-font-size;
-      color: #333;
+      color: var(--text-color);
     }
   }
 
@@ -123,12 +123,11 @@ article {
     //font-size: 21px;
   }
   .post-content, .project-content {
-    margin-bottom: $spacing-unit;
+    margin-bottom: 2rem;
     font-family: $post-content-font-family;
 
     p {
-      margin: 0 auto $spacing-unit auto;
-
+      margin: 0 auto 1rem auto;
       font-size: 1rem;
     }
 
@@ -137,7 +136,7 @@ article {
       font-weight: bold;
       text-transform: uppercase;
       letter-spacing: 2px;
-      line-height: $spacing-unit;
+      line-height: 2rem;
     }
 
     h3, h4 {
@@ -157,7 +156,7 @@ article {
   list-style: none;
 
   > li {
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: 0.5rem;
   }
 }
 

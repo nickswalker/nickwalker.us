@@ -17,10 +17,21 @@ html {
 /**
  * Basic styling
  */
-body {
+:root {
+  --text-color: #111;
+  --light-text-color: #333;
+  --lighter-text-color: #828282;
+  --background-color: #fdfdfd;
+  --brand-color: red;
+  --light-background-color: #eee;
+  --text-brand-color: var(--brand-color);
+  --link-color: var(--brand-color-darker);
+  --link-decoration-color: var(--brand-color-light);
+  --link-color-hover: var(--brand-color-darker);
+  --link-border-color: rgba(255, 255, 255, .3);
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-  color: $text-color;
-  background-color: $background-color;
+  color: var(--text-color);
+  background-color: var(--background-color);
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -29,6 +40,21 @@ body {
   font-kerning: normal;
 }
 
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: hsl(120, 2%, 9%);
+    --light-background-color: hsl(120, 2%, 20%);
+    --text-color: #ccc;
+    --light-text-color: #aaa;
+
+    --heading-color: #dee2e6;
+    --hr-color: rgba(255, 255, 255, .1);
+    --code-color: rgba(212, 73, 80, .85);
+    --code-snippet-border: rgba(255, 255, 255, .1);
+    --neutral-accent: #828282;
+  }
+}*/
 
 
 /**
@@ -75,7 +101,7 @@ figcaption {
  * Lists
  */
 ul, ol {
-  margin-left: $spacing-unit;
+  margin-left: 2rem;
 }
 
 li {
@@ -100,21 +126,21 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: $text-brand-color;
-  -webkit-text-decoration-color: desaturate(lighten($text-brand-color, 30%), 30%);
-  text-decoration-color: desaturate(lighten($text-brand-color, 30%), 30%);
+  color: var(--link-color);
+  -webkit-text-decoration-color: var(--link-decoration-color);
+  text-decoration-color: var(--link-decoration-color);
   transition:.2s;
 
   &:hover {
     border-bottom: none;
-    -webkit-text-decoration-color: desaturate($text-brand-color, 10%);
-    text-decoration-color: desaturate($text-brand-color, 10%);
+    -webkit-text-decoration-color: var(--link-color-hover);
+    text-decoration-color: var(--link-color-hover);
   }
 }
 
 p a {
   &:visited {
-    color: darken($text-brand-color, 5%);
+    color: var(--brand-color-darker);
   }
 }
 
@@ -123,9 +149,9 @@ p a {
  * Blockquotes
  */
 blockquote {
-  color: $grey-color;
-  border-left: 2px solid $grey-color-light;
-  padding-left: $spacing-unit / 2;
+  color: var(--lighter-text-color);
+  border-left: 2px solid var(--light-background-color);
+  padding-left: 1rem;
 
   > :last-child {
     margin-bottom: 0;
@@ -142,19 +168,19 @@ blockquote {
 pre,
 code {
   font-size: 15px;
-  border: 1px solid $grey-color-light;
+  border: 1px solid var(--light-background-color);
   border-radius: 3px;
 }
 
 code {
   padding: 1px 5px;
-  background-color: #eee;
+  background-color: var(--light-background-color);
 }
 
 pre {
   padding: 8px 12px;
   overflow-x: auto;
-  background-color: #eee;
+  background-color: var(--light-background-color);
 
   > code {
     border: 0;
@@ -170,11 +196,11 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: calc(#{$content-width} - (#{$spacing-unit}));
+  max-width: calc(#{$content-width} - 2rem);
   margin-right: auto;
   margin-left: auto;
-  padding-right: $spacing-unit / 2;
-  padding-left: $spacing-unit / 2;
+  padding-right: 1rem;
+  padding-left: 1rem;
   @extend %clearfix;
 
   .full-width {
