@@ -1,23 +1,21 @@
 <footer class="site-footer">
 
-  <div class="wrapper">
+    <div class="wrapper">
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <a href="{{ '/' | relative_url}}" class="branded-title">
-            {{ site.title }}
-        </a>
-      </div>
-
+        <div class="footer-col-wrapper">
+            <div class="footer-col footer-col-1">
+                <a href="{{ '/' | relative_url}}" class="branded-title">
+                    {{ site.title }}
+                </a>
+            </div>
+            <!-- @formatter:off -->
       <div class="footer-col footer-col-2">
         <ul class="social-media-list">
 
             {% if site.twitter_username %}
             <li>
                 <a href="https://twitter.com/{{site.twitter_username}}" title="See tweets">
-                    <ion-icon
-                            name="logo-twitter"></ion-icon>
-                    {{site.twitter_username}} </a>
+                    <ion-icon name="logo-twitter"></ion-icon>{{site.twitter_username}} </a>
             </li>
             {% endif %}
 
@@ -25,39 +23,35 @@
             <li>
                 <a href="https://linkedin.com/in/{{site.linkedin_username}}"
                    title="See history.">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                    {{site.linkedin_username}}</a>
+                    <ion-icon name="logo-linkedin"></ion-icon>{{site.linkedin_username}}</a>
             </li>
             {% endif %}
 
             {% if site.github_username %}
               <li>
                   <a href="https://github.com/{{site.github_username}}" title="See code">
-                      <ion-icon name="logo-github"></ion-icon>
-                      {{site.github_username}} </a>
+                      <ion-icon name="logo-github"></ion-icon>{{site.github_username}} </a>
               </li>
             {% endif %}
 
             {% if site.flickr_username %}
             <li>
                 <a href="https://flickr.com/photos/{{site.flickr_username}}" title="See photos">
-                    <ion-icon
-                            name="photos"></ion-icon>
-                    {{site.flickr_username}} </a>
+                    <ion-icon name="photos"></ion-icon>{{site.flickr_username}} </a>
             </li>
             {% endif %}
-
+            <!-- @formatter:on -->
 
         </ul>
       </div>
-        <div class="footer-col footer-col-3">
-            {% if site.description %}
-            <p>{{ site.description }}</p>
-            {% endif %}
+            <div class="footer-col footer-col-3">
+                {% if site.description %}
+                <p>{{ site.description }}</p>
+                {% endif %}
+            </div>
+
         </div>
 
     </div>
-
-  </div>
 
 </footer>

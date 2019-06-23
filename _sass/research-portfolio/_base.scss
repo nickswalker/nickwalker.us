@@ -64,13 +64,14 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-  margin-bottom: $spacing-unit / 2;
+  margin-bottom: 1rem;
 }
 
 
 section {
-  margin-bottom: 2 * $spacing-unit;
-  overflow: auto;
+  margin-bottom: 1rem;
+  /* This ends up hiding hanging bullets
+  overflow: auto;*/
 }
 
 
@@ -100,9 +101,7 @@ figcaption {
 /**
  * Lists
  */
-ul, ol {
-  margin-left: 2rem;
-}
+
 
 li {
   > ul,
