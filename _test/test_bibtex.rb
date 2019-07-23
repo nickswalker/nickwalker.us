@@ -20,3 +20,6 @@ bibtex.each do |entry|
 end
 
 exit(passed)
+
+# TODO: Enforce key format
+# TODO: Check that there aren't broken references in the output directory "(missing reference)"

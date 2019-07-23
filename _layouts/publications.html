@@ -40,7 +40,7 @@ layout: page
 
 {% if workshop_count > 0 %}
 <h3>Symposium, Refereed Workshop</h3>
-{% bibliography --query @inproceedings[wwwtype^=workshop|symposium && wwwhidden!=true] %}
+{% bibliography --query @inproceedings[wwwtype^=workshop|symposium && wwwhidden!=true] @incollection %}
 {% endif %}
 
 <script>

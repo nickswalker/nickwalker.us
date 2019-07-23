@@ -1,6 +1,6 @@
 ---
 ---
-@InProceedings{jiang2019icaps,
+@inproceedings{jiang2019icaps,
   author = {Yuqian Jiang and Nick Walker and Justin Hart and Peter Stone},
   title = {Open-World Reasoning for Service Robots},
   booktitle = {Proceedings of the 29th International Conference on Automated Planning and Scheduling (ICAPS 2019)},
@@ -35,7 +35,7 @@
   booktitle={International Conference on Robotics and Automation (ICRA)},
   year={2019},
   wwwtype = {conference},
-  wwwpdf = {https://arxiv.org/pdf/1903.00122.pdf},
+  wwwpdf = {http://www.cs.utexas.edu/users/ml/papers/thomason.icra19.pdf},
   wwwalso = {thomason18robodial,thomason18mrhrc},
   wwwvideo = {https://youtu.be/PbOfteZ_CJc?t=5},
   abstract = {
@@ -92,7 +92,39 @@
 
 @comment{SYMPOSIUMS AND REFEREED WORKSHOPS}
 
-@inproceedings{jiang18fss,
+@inproceedings{walker2019planrob,
+         title = {Desiderata for Planning Systems in General-Purpose Service Robots},
+        author = {Nick Walker and Yuqian Jiang and Maya Cakmak and Peter Stone},
+     booktitle = {Proceedings of 2019 ICAPS Workshop on Planning and Robotics},
+         month = {July},
+          year = {2019},
+       wwwtype = {workshop},
+        wwwpdf = {https://arxiv.org/pdf/1907.02300.pdf},
+     wwwslides = {https://doi.org/10.5281/zenodo.3244795},
+           url = {https://arxiv.org/pdf/1907.02300},
+      abstract = {General-purpose service robots are expected to undertake a broad range of tasks at the request of users. Knowledge representation and planning systems are essential to flexible autonomous robots, but the field lacks a unified perspective on which features are essential for general-purpose service robots. Progress towards planning and reasoning for general-purpose service robots is hindered by differing assumptions about users, the environment, and the overall robot system. In this position paper, we propose desiderata for planning and reasoning systems to promote general-purpose service robots. Each proposed item draws on our experience with research on service robots in the office and home and on the demands of these environments. Our desiderata emphasize support for natural human-interfaces as well as for robust fallback methods when interactions with humans and the environment fail. We highlight relevant work towards these goals.
+  }
+}
+
+@incollection{walker2019robocup,
+         title = {Neural Semantic Parsing with Anonymization for Command Understanding in General-Purpose Service Robots},
+        author = {Nick Walker and Yu-Tang Peng and Maya Cakmak},
+     booktitle = {RoboCup 2019: Robot Soccer World Cup {XXIII}},
+        series = {Lecture Notes in Artificial Intelligence},
+        editor = {Jackrit Suthakorn and Mary-Anne Williams and Tim Niemueller and Stephan Chalup},
+     publisher = {Springer},
+         month = {July},
+          year = {2019},
+       wwwtype = {symposium},
+        wwwpdf = {https://arxiv.org/abs/1907.01115.pdf},
+     wwwslides = {http://doi.org/10.5281/zenodo.3253252},
+           url = {https://arxiv.org/abs/1907.01115},
+      abstract = {Service robots are envisioned to undertake a wide range of tasks at the request of users. Semantic parsing is one way to convert natural language commands given to these robots into executable representations. Methods for creating semantic parsers, however, rely either on large amounts of data or on engineered lexical features and parsing rules, which has limited their application in robotics. To address this challenge, we propose an approach that leverages neural semantic parsing methods in combination with contextual word embeddings to enable the training of a semantic parser with little data and without domain specific parser engineering. Key to our approach is the use of an anonymized target representation which is more easily learned by the parser. In most cases, this simplified representation can trivially be transformed into an executable format, and in others the parse can be completed through further interaction with the user. We evaluate this approach in the context of the RoboCup@Home General Purpose Service Robot task, where we have collected a corpus of paraphrased versions of commands from the standardized command generator. Our results show that neural semantic parsers can predict the logical form of unseen commands with 89% accuracy. We release our data and the details of our models to encourage further development from the RoboCup and service robotics communities.
+                 }
+}
+
+
+@inproceedings{jiang2018fss,
          title = {LAAIR: A Layered Architecture for Autonomous Interactive Robots},
         author = {Yuqian Jiang and Nick Walker and Minkyu Kim and Nicolas Brissonneau and Daniel S. Brown and Justin W. Hart and Scott Niekum and Luis Sentis and Peter Stone},
      booktitle = {AAAI Fall Symposium on Reasoning and Learning in Real-World Systems for Long-Term Autonomy},
@@ -105,7 +137,7 @@
   }
 }
 
-@inproceedings{hart18fss,
+@inproceedings{hart2018fss,
          title = {Interaction and Autonomy in RoboCup@Home and Building-Wide Intelligence},
         author = {Justin Hart and Harel Yedidsion and Yuqian Jiang and Nick Walker and Rishi Shah and Jesse Thomason and Aishwarya Padmakumar and Rolando Fernandez and Jivko Sinapov and Raymond Mooney and Peter Stone},
      booktitle = {AAAI Fall Symposium on Artificial Intelligence and Human-Robot Interaction},
@@ -117,7 +149,7 @@
       abstract = {Efforts are underway at UT Austin to build autonomous robot systems that address the challenges of long-term deployments in office environments and of the more prescribed domestic service tasks of the RoboCup@Home competition. We discuss the contrasts and synergies of these efforts, highlighting how our work to build a RoboCup@Home Domestic Standard Platform League entry led us to identify an integrated software architecture that could support both projects. Further, naturalistic deployments of our office robot platform as part of the Building-Wide Intelligence project have led us to identify and research new problems in a traditional laboratory setting.}
 }
 
-@inproceedings{thomason18robodial,
+@inproceedings{thomason2018robodial,
          title = {Jointly Improving Parsing and Perception for Natural Language Commands through Human-Robot Dialog},
         author = {Jesse Thomason and Aishwarya Padmakumar and Jivko Sinapov and Nick Walker and Yuqian Jiang and Harel Yedidsion and Justin Hart and Peter Stone and Raymond J. Mooney},
      booktitle = {Late-breaking Track at the SIGDIAL Special Session on Physically Situated Dialogue (RoboDIAL-18)},
@@ -128,7 +160,7 @@
       abstract = {In this work, we present methods for parsing natural language to underlying meanings, and using robotic sensors to create multi-modal models of perceptual concepts. We combine these steps towards language understanding into a holistic agent for jointly improving parsing and perception on a robotic platform through human-robot dialog. We train and evaluate this agent on Amazon Mechanical Turk, then demonstrate it on a robotic platform initialized from that conversational data. Our experiments show that improving both parsing and perception components from conversations improves communication quality and human ratings of the agent.}
 }
 
-@inproceedings{thomason18mrhrc,
+@inproceedings{thomason2018mrhrc,
          title = {Jointly Improving Parsing and Perception for Natural Language Commands through Human-Robot Dialog},
         author = {Jesse Thomason and Aishwarya Padmakumar and Jivko Sinapov and Nick Walker and Yuqian Jiang and Harel Yedidsion and Justin Hart and Peter Stone and Raymond J. Mooney},
      booktitle = {Proceedings of the RSS Workshop on Models and Representations for Natural Human-Robot Communication (MRHRC-18)},
