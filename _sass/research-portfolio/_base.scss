@@ -143,6 +143,54 @@ p a {
   }
 }
 
+@mixin quick-link {
+  display: inline-block;
+  margin-right: .75rem;
+  margin-bottom: .75rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--brand-color);
+  background-color: transparent;
+  a {
+    color: var(--brand-color);
+    padding: 0.5rem;
+  }
+  &:hover {
+    background-color: var(--brand-color);
+
+    a {
+      color: var(--background-color);
+      text-decoration: none;
+      display: block;
+      padding: 0.25rem .5rem;
+    }
+  }
+
+  a:any-link,
+  a {
+    text-decoration: none;
+    display: block;
+    padding: 0.25rem .5rem;
+  }
+
+  ion-icon {
+    margin-right: 6px;
+    margin-bottom: -3px;
+  }
+
+}
+
+div.quick-link {
+  @include quick-link;
+}
+
+.centered-link {
+  display: flex;
+
+  div {
+    margin: 0 auto;
+  }
+
+}
 
 /**
  * Blockquotes

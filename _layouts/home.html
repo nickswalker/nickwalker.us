@@ -27,28 +27,12 @@ layout: default
         </h2>
       </li>
       {% endfor %}
-        <p>Older news is on the <a href="{% link pages/blog.md %}">blog</a></p>
     </ul>
 
-  </section>
-  {% endif %}
+      <div class="quick-link"><a href="{% link pages/blog.md %}">More</a></div>
 
-    {% assign featured_projects = site.research | where:"featured", true | where: "published", true %}
-    {% if featured_projects.size > 0 %}
-    <section id="research">
-        <h1 class="page-heading">Research</h1>
-        <ul class="project-list bulleted">
-            {% for project in featured_projects %}
-            <li>{{ project.short_description }}</li>
-            {% endfor %}
-        </ul>
-        {% if site.research.size > featured_projects.size %}
-        <p>Read more about my <a href="{% link pages/research.md %}">research projects</a>, or check out <a
-                href="{% link pages/publications.md %}">publications</a>.</p>
-        {% else %}
-        <p>See a full list of my <a href="{% link pages/publications.md %}">publications</a></p>
-        {% endif %}
-    </section>
+
+  </section>
     {% endif %}
 
     {% assign featured_projects = site.projects | where:"featured", true %}
@@ -60,6 +44,11 @@ layout: default
         {% include project_block.html project=project %}
       {% endfor %}
     </ul>
+      {% if site.projects.size > featured_projects.size %}
+
+      <div class="quick-link"><a href="{% link pages/projects.md %}">More</a></div>
+
+      {% endif %}
   </section>
     {% endif %}
 

@@ -1,0 +1,61 @@
+---
+layout: default
+---
+<article class="project">
+
+    {% assign slug = page.title | slugify %}
+    {% assign project_assets = "/assets/projects/" | append: slug %}
+    {% if page.images.size > 0 %}
+    <figure class="project-images">
+        <a href="{{ project_assets }}/{{page.images[0]}}" data-fancybox="gallery" class="hero"><img
+                src="{{ project_assets }}/{{page.images[0]}}"/></a>
+        {% if page.images.size > 1 %}
+        <ul class="thumbnails">
+
+            {% for image in page.images offset:1 %}
+            <li><a href="{{ project_assets }}/{{image}}" data-fancybox="gallery"> <img
+                    src="{{ project_assets }}/{{image}}"/></a></li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </figure>
+    {% endif %}
+    <header class="project-header">
+        <h1 class="project-title">{{ page.title | escape }}</h1>
+        <ul class="quick-links">
+            {% if page.link %}
+            <li>
+                <a href="{{ page.link }}" title="See more."> <i class="ion-link"></i>Link</a>
+            </li>
+            {% endif %}
+            {% if page.code_url %}
+            <li>
+                <a href="{{ page.code_url }}" title="See code."> <i class="ion-social-github github"></i>Code</a>
+            </li>
+            {% endif %}
+            {% if page.report %}
+            <li>
+                <a href="{{ project_assets }}/{{slug}}-report.pdf" title="See report."> <i class="ion-document"></i>Report</a>
+            </li>
+            {% endif %}
+            {% if page.slides %}
+            <li>
+                <a href="{{ project_assets }}/{{slug}}-slides.pdf" title="See slides."> <i
+                        class="ion-easel"></i>Slides</a>
+            </li>
+            {% endif %}
+        </ul>
+    </header>
+
+    <div class="project-content">
+        {{ content }}
+
+        <h2>Read More</h2>
+        <p>Details are in {% cite_details page.citation_keys[0] --text the paper%}.</p>
+        {% for citation_key in page.citation_keys %}
+        {% reference citation_key %}
+        {% endfor %}
+    </div>
+
+
+</article>

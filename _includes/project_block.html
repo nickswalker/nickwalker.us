@@ -2,7 +2,7 @@
           {% if project.has_article %}
             {% assign project_url= project.url %}
           {% else %}
-            {% assign project_url= project.github_repo_url  %}
+      {% assign project_url= project.code_url %}
           {% endif%}
           <a class="project-link" href="{{ project_url }}">
             {% if project.block_image %}

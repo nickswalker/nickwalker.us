@@ -22,7 +22,7 @@
   @include media-query($on-laptop) {
     shape-outside: none;
     shape-margin: unset;
-    margin-right: 2 * $spacing-unit;
+    margin-right: 2rem;
   }
 }
 
@@ -34,7 +34,7 @@
 .project-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 1rem 0;
 
   &.bulleted {
     list-style: disc;
@@ -59,7 +59,7 @@
 .project-block-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 1rem 0;
 
   li {
     min-height: 96px;

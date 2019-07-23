@@ -63,11 +63,6 @@ defaults:
       - "/assets/js/initialize-fancybox.js"
       custom_css:
       - "/assets/css/jquery.fancybox.min.css"
-  - scope:
-      path: ""
-      type: research
-    values:
-      layout: research_entry
 
 # Build settings
 markdown: kramdown
