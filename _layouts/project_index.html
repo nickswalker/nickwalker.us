@@ -3,8 +3,8 @@ layout: page
 ---
 
 
-{% assign featured_projects = site.projects | where:"featured", true %}
-{% assign other_projects = site.projects | where:"featured", false %}
+{% assign featured_projects = site.projects | where:"featured", true | sort: 'date' | reverse %}
+{% assign other_projects = site.projects | where:"featured", false | sort: 'date' | reverse %}
 
 
 <ul class="project-block-list">

@@ -1,6 +1,6 @@
 ---
 title:  "BubblesView"
-date:   2017-12-23 19:43:23 -0700
+date:   2016-05-23 19:43:23 -0700
 categories: ios
 short_description: "iOS view for information graphs"
 code_url: "https://github.com/nickswalker/BubblesView"

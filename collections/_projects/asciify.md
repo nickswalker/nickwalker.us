@@ -1,6 +1,6 @@
 ---
 title:  "ASCIIfy"
-date:   2016-12-17 10:48:02 -0700
+date:   2016-04-17 10:48:02 -0700
 categories: ios
 short_description: "Image to ASCII art conversion in Swift"
 code_url: "https://github.com/nickswalker/ASCIIfy"
