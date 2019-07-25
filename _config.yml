@@ -38,11 +38,15 @@ jekyll-archives:
 
 # bibtex rendering
 scholar:
+  bibliography: "publications.bib"
   bibliography_template: 'bib_entry'
+  bibliography_list_attributes:
+    reversed: "reversed"
   source: '/_data'
   details_layout: 'bib_details.html'
   reference_tagname: 'p'
   details_link: ""
+  details_dir: "publications"
 
 defaults:
   - scope:

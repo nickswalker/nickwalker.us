@@ -1,10 +1,49 @@
 ---
-layout: publications
+layout: page
 title: Publications
 permalink: publications/
 redirect_from:
   - /bibliography/
 ---
 
-{% bibliography %}
+{% capture journal_count %}
+{%comment%} Exclude arXiv "articles" {%endcomment%}
+{% bibliography_count --query @article[journal/=CoRR && wwwhidden!=true] %}
+{% endcapture %}
+{% assign journal_count = journal_count | to_integer %}
 
+{% capture conference_count %}
+{% bibliography_count --query @inproceedings[wwwtype=conference && wwwhidden!=true]%}
+{% endcapture %}
+{% assign conference_count = conference_count | to_integer %}
+
+{% capture workshop_count %}
+{% bibliography_count --query @inproceedings[wwwtype^=workshop|symposium && wwwhidden!=true] %}
+{% endcapture %}
+{% assign workshop_count = workshop_count | to_integer %}
+
+{% capture working_count %}
+{% bibliography_count --query @article[wwwtype^=working] %}
+{% endcapture %}
+{% assign working_count = working_count | to_integer %}
+
+
+{% if journal_count > 0 %}
+<h3>Journal</h3>
+{% bibliography --query @article[journal/=CoRR && wwwhidden!=true]%}
+{% endif %}
+
+{% if conference_count > 0 %}
+<h3>Conference</h3>
+{% bibliography --query @inproceedings[wwwtype=conference && wwwhidden!=true] %}
+{% endif %}
+
+{% if workshop_count > 0 %}
+<h3>Symposium, Refereed Workshop</h3>
+{% bibliography --query @inproceedings[wwwtype^=workshop|symposium && wwwhidden!=true] @incollection  %}
+{% endif %}
+
+{% if working_count > 0 %}
+<h3>Preprints</h3>
+{% bibliography --query @article[wwwtype^=working && wwwhidden!=true]%}
+{% endif %}
