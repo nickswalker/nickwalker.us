@@ -1,7 +1,7 @@
 source "https://rubygems.org"
-ruby RUBY_VERSION
+ruby File.read(".ruby-version").strip
 
-gem "jekyll"
+gem "jekyll", "~> 4.0"
 gem "unicode"
 group :jekyll_plugins do
    gem "jekyll-archives"
