@@ -43,6 +43,7 @@ scholar:
   bibliography_list_attributes:
     reversed: "reversed"
   source: '/_data'
+  style: ieee
   details_layout: 'bib_details.html'
   reference_tagname: 'p'
   details_link: ""

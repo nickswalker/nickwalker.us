@@ -14,8 +14,7 @@
 
     <span class="title">{{ entry.title }}</span><br/>
     <span class="venue">{{ venue }}, {{ entry.year }}</span><br/>
-    {%comment%}TODO: Print these in human friendly order{%endcomment%}
-    <span class="authors">{{ entry.author | replace_first: "Walker, Nick", "<u>Walker, Nick</u>" | replace_first: "Walker, Nicholas", "<u>Walker, Nicholas</u>" }}</span>
+    <span class="authors">{%for author in entry.author_array%}{%if forloop.last%} and {%elsif forloop.first%}{%else%}, {%endif%}{%if (author.first == "Nick" or author.first == "Nicholas") and author.last == "Walker%}<u>{{author.first}} {{author.last}}</u>{%else%} {{author.first}} {{author.last}}{%endif%}{%endfor%}</span>
 
     <ul class="quick-links">
         {% if entry.wwwpdf %}
