@@ -10,13 +10,14 @@ layout: default
 {% assign posts = page.posts %}
 {% endif %}
 
+{% assign sectionYear = "" %}
 {% for post in posts %}
 {% assign currentDate = post.date | date: "%Y" %}
-{% if currentDate != myDate %}
+{% if currentDate != sectionYear %}
 {% unless forloop.first %}</ul>{% endunless %}
 <h2>{{ currentDate }}</h2>
 <ul class="post-list">
-    {% assign myDate = currentDate %}
+    {% assign sectionYear = currentDate %}
     {% endif %}
 
 <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
