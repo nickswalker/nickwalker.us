@@ -1,5 +1,20 @@
 ---
 ---
+
+@inproceedings{walker2020perceptions,
+  author = {Nick Walker and Kevin Weatherwax and Julian Alchin and Leila Takayama and Maya Cakmak},
+  title = {Human Perceptions of a Curious Robot's Off-Task Actions},
+  booktitle = {ACM/IEEE International Conference on Human-Robot Interaction (HRI)},
+  location = {Oxford, UK},
+  month = {March},
+  year = {2020},
+  wwwtype = {conference},
+  abstract = {
+Researchers have proposed models of curiosity as a means to drive robots to learn and adapt to their environments.
+While these models balance goal- and exploration-oriented actions in a mathematically principled manor, it is not understood how users perceive a robot that pursues off-task actions. Motivated by a model of curiosity based on intrinsic rewards, we conducted three online video-surveys with a total of 264 participants, evaluating a variety of curious behaviors. Our results indicate that a robot's off-task actions are perceived as expressions of curiosity, but that these actions lead to a negative impact on perceptions of the robot's competence. When the robot explains or acknowledges its deviation from the primary task, this can partially mitigate the negative effects of off-task actions.
+  },
+}
+
 @inproceedings{jiang2019icaps,
   author = {Yuqian Jiang and Nick Walker and Justin Hart and Peter Stone},
   title = {Open-World Reasoning for Service Robots},
@@ -101,9 +116,8 @@
          month = {July},
           year = {2019},
        wwwtype = {workshop},
-        wwwpdf = {https://arxiv.org/pdf/1907.02300.pdf},
+        wwwpdf = {https://icaps19.icaps-conference.org/workshops/PlanRob/PlanRob_2019_submissions/PlanRob_2019_paper_9.pdf},
      wwwslides = {https://doi.org/10.5281/zenodo.3244795},
-           url = {https://arxiv.org/pdf/1907.02300},
       abstract = {General-purpose service robots are expected to undertake a broad range of tasks at the request of users. Knowledge representation and planning systems are essential to flexible autonomous robots, but the field lacks a unified perspective on which features are essential for general-purpose service robots. Progress towards planning and reasoning for general-purpose service robots is hindered by differing assumptions about users, the environment, and the overall robot system. In this position paper, we propose desiderata for planning and reasoning systems to promote general-purpose service robots. Each proposed item draws on our experience with research on service robots in the office and home and on the demands of these environments. Our desiderata emphasize support for natural human-interfaces as well as for robust fallback methods when interactions with humans and the environment fail. We highlight relevant work towards these goals.
   }
 }
@@ -112,13 +126,14 @@
          title = {Neural Semantic Parsing with Anonymization for Command Understanding in General-Purpose Service Robots},
         author = {Nick Walker and Yu-Tang Peng and Maya Cakmak},
      booktitle = {RoboCup 2019: Robot Soccer World Cup {XXIII}},
+           doi = {10.1007/978-3-030-35699-6_26},
         series = {Lecture Notes in Artificial Intelligence},
         editor = {Jackrit Suthakorn and Mary-Anne Williams and Tim Niemueller and Stephan Chalup},
      publisher = {Springer},
          month = {July},
           year = {2019},
        wwwtype = {symposium},
-        wwwpdf = {https://arxiv.org/abs/1907.01115.pdf},
+        wwwpdf = {https://hcrlab.cs.washington.edu/assets/pdfs/2019/walker2019parsing.pdf},
      wwwslides = {http://doi.org/10.5281/zenodo.3253252},
            url = {https://arxiv.org/abs/1907.01115},
       abstract = {Service robots are envisioned to undertake a wide range of tasks at the request of users. Semantic parsing is one way to convert natural language commands given to these robots into executable representations. Methods for creating semantic parsers, however, rely either on large amounts of data or on engineered lexical features and parsing rules, which has limited their application in robotics. To address this challenge, we propose an approach that leverages neural semantic parsing methods in combination with contextual word embeddings to enable the training of a semantic parser with little data and without domain specific parser engineering. Key to our approach is the use of an anonymized target representation which is more easily learned by the parser. In most cases, this simplified representation can trivially be transformed into an executable format, and in others the parse can be completed through further interaction with the user. We evaluate this approach in the context of the RoboCup@Home General Purpose Service Robot task, where we have collected a corpus of paraphrased versions of commands from the standardized command generator. Our results show that neural semantic parsers can predict the logical form of unseen commands with 89% accuracy. We release our data and the details of our models to encourage further development from the RoboCup and service robotics communities.
