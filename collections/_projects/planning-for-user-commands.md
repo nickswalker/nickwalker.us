@@ -11,6 +11,8 @@ layout: published_project_entry
 citation_keys: [jiang2019icaps]
 ---
 
+> Note 12-2-19: I'll add some explainer notes and throw these files in a ZIP tonight. Right now, you can run all of the code from _Planning Domain_ with all of the code in _Initial Planning Query_ to make a plan to pick up an apple, then you can run all of the files under _Diagnostics_ along with `base_rules.asp` to see if the solver can refute the hypothesis from the state of the knowledge after trying to execute the plan.
+
 ## Planning Domain
 
 `action_generation.asp`
@@ -231,24 +233,6 @@ is_near(101, 52). % At sofa
 ````
 #program check(n).
 
-% Rule out plans of length less than 3
-%:- query(n), n < 6.
-
-% Rule out plans of length exactly 3
-%:- query(3).
-
-% Force the last action to be something
-%put_down(102,55,n) :- query(n).
-
-%navigate_to(55,n) :- query(n).
-
-% Goal to be holding the apple
-%:- not is_holding(self, 102, n), query(n).
-%:- not is_near(self, 52, n), query(n).
-
-%hand_over(102,101,n) :- query(n).
-
-
 % Hypothetical apple referenced in user command
 instance_of(102, 4).
 instance_of(102, 17).
@@ -258,13 +242,6 @@ can_be_placed(102, 50, 0).
 
 :- not is_delivered(102, 101, n), query(n).
 
-
-%:- not is_holding(100, 102, n), query(n).
-%:- not can_be_placed().
-%:- not navigate_to(100, 0).
-%:- not instance_of_recursive(51, 5).
-%:- n == 10.
-%:-  not instance_of(101, 2).
 ````
 
 ## Diagnostics
