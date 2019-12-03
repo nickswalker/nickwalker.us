@@ -11,31 +11,121 @@ layout: published_project_entry
 citation_keys: [jiang2019icaps]
 ---
 
-> Note 12-2-19: I'll add some explainer notes and throw these files in a ZIP tonight. Right now, you can run all of the code from _Planning Domain_ with all of the code in _Initial Planning Query_ to make a plan to pick up an apple, then you can run all of the files under _Diagnostics_ along with `base_rules.asp` to see if the solver can refute the hypothesis from the state of the knowledge after trying to execute the plan.
+If a robot is asked to get an apple from the kitchen, how should it represent this command? There are plenty of possibilities, but in one recent paper, we looked at a compact [Answer Set Programming](https://en.wikipedia.org/wiki/Answer_set_programming) encoding that handles many of the concerns that arise when actually trying to execute such a command.
 
-## Planning Domain
+The [paper](http://www.cs.utexas.edu/%7Epstone/Papers/bib2html-links/ICAPS19-Jiang.pdf) provides more robotics-y context, but here I'll break down the actual answer set programs that our system would construct to handle a command like the apple fetching example. While the paper doesn't give rules in enough detail to step beyond vanilla ASP semantics, here I'll give complete code that you can run in [clingo](https://potassco.org/clingo/). Many of Clingo's innovations extend the typical ASP solving semantics, so I'll highlight unique features that we rely on.
 
-`action_generation.asp`
+You can download the full, ready to execute examples [here]({{"/assets/planning_for_user_commands_examples.zip" | absolute_url}}).
+
+## Knowledge Representation
+
+A planning problem is the task of generating a sequence of actions to accomplish a goal. So to start with, in what terms do you express the goal?
+
+We chose a representation with three primitives: _concepts_, the abstract idea of something; _instances_, concrete objects in the physical world; and _relations_, descriptions of the relationships between and amongst concepts and instances.
+
+Each concept and instance gets an ID, and relations are represented as predicates. Here's an example encoding of a world that consists of kitchen and a living room:
+
+
+{% include article_image.html img="/assets/images/research/knowledge.svg"
+    caption="A graphical depiction of a small knowledgebase. In this simple example, the label on each instance is a shorthand for an _instance of_ relation with the concept of the same name."%}
+
 ````
-#include <incmode>.
-#program step(n).
+name(1, "robot").
+name(2, "object").
+name(3, "operator").
+name(4, "hypothetical").
+name(5, "location").
+name(6, "room").
+is_a(6, 5).
 
-1{
-navigate_to(T, n) : has_concept(T, "location"); % TODO: change this to navigable
-pick_up(O, L, n) : has_concept(O, "object"), has_concept(L, "placement"); % TODO: change object to graspable
-put_down(O, L, n) : has_concept(O, "object"), has_concept(L, "placement");
-hand_over(O, P, n) : has_concept(O, "object"), has_concept(P, "person");
-perceive_surface(O, L, n) : has_concept(O, "object"), has_concept(L, "placement");
-find_person(P, L, n) : has_concept(P, "person"), has_concept(L, "location")
-}1.
+name(7, "placement").
+is_a(7, 5).
+name(8, "beacon").
+is_a(8, 5).
+name(9, "fruit").
+is_a(9,2).
+default_location(9, 12). % Usually in kitchen
+name(10, "graspable").
+name(11, "scanned").
+name(12, "kitchen").
+is_a(12, 6). % Room
+name(13, "living room").
+is_a(13, 6). % Room
+name(14, "sofa").
+name(15, "counter").
 
-#show navigate_to/2.
-#show pick_up/3.
-#show put_down/3.
-#show hand_over/3.
-#show perceive_surface/3.
-#show find_person/3.
+name(16, "table").
+name(17, "cupboard").
+name(18, "apple").
+is_a(18, 9).
+name(19, "empty_handed").
+name(20, "person").
+
+% Arrangement of the world
+instance_of(50, 12). % Kitchen
+instance_of(51, 13). % Living room
+is_connected(50, 51).
+
+
+instance_of(52, 14). % Sofa
+instance_of(52, 8). % Beacon
+is_in(52, 51).
+
+instance_of(53, 15). % Counter
+instance_of(53, 7). % Placement
+is_in(53, 50).
+
+instance_of(54, 16). % Table
+instance_of(54, 7). % Placement
+is_in(54, 50).
+
+instance_of(55, 17). % Cupboard
+instance_of(55, 7). % Placement
+is_in(55, 50).
+
+
+% Robot
+instance_of(100, 1).
+instance_of(100, 19). % Empty handed
+is_near(100, 52). % At sofa
+
+% Operator
+instance_of(101, 20).
+is_near(101, 52). % At sofa
 ````
+
+## Actions
+
+We can now describe actions in terms of their requirements and effects on this encoded version of the world.
+
+First, we'll add some rules that take state atoms and produce helpful summary facts or equivalent fluents:
+`base_rules.asp`
+````
+is_a(C1, C3) :- is_a(C1, C2), is_a(C2, C3).
+instance_of_recursive(O, C1) :- instance_of(O, C2), is_a(C2, C1).
+instance_of_recursive(O, C) :- instance_of(O, C).
+has_concept(O, C) :- instance_of_recursive(O, C_id), name(C_id, C).
+
+%% Support non-fluent to fluent promotion for basic attributes
+is_near(self, L, 0) :- is_near(self, L).
+is_near(P, L, 0) :- is_near(P, L).
+is_placed(O, L, 0) :- is_placed(O, L).
+is_facing(self, P, 0) :- is_facing(self, P).
+is_holding(self, O, 0) :- is_holding(self, O).
+is_delivered(O, P, 0) :- is_delivered(O, P).
+
+% short-hand for concepts
+scanned(S, 0) :- has_concept(S, "scanned").
+hand_empty(0) :- has_concept(self, "empty_handed").
+
+% Demotion
+can_be_placed(O, L) :- can_be_placed(O, L, 0), has_concept(L, "placement"). 
+
+% If an objecct can be placed in a room, then it can be placed on any surface in the room
+can_be_placed(O, L) :- can_be_placed(O, R, 0), has_concept(R, "room"), is_in(L, R), has_concept(L, "placement").
+````
+
+Now we can define the pre and post conditions for a range of robot actions:
 
 `action_rules.asp`
 ````
@@ -93,158 +183,96 @@ scanned(L, n) :- scanned(L, n - 1).
 is_holding(self, O, n) :- is_holding(self, O, n - 1), not -is_holding(self, O, n).
 hand_empty(n) :- hand_empty(n - 1), not -hand_empty(n).
 is_delivered(O, P, n) :- is_delivered(O, P, n - 1).
-
-% allow passing concept name in goal query
-is_near_name(self, L_name, n) :- is_near(self, L_id, n), name(L_id, L_name).
-is_placed_concept(O_concept, L_concept, n) :- is_placed(O_id, L_id, n), has_concept(O_id, O_concept), has_concept(L_id, L_concept).
-is_in_concept(O_concept, R_concept, n) :- is_placed(O_id, L, n), is_in(L, R_id), has_concept(O_id, O_concept), has_concept(R_id, R_concept).
-is_delivered_concept(O_concept, P, n) :- is_delivered(O_id, P, n), has_concept(O_id, O_concept).
-scanned_concept(L_concept, n) :- scanned(L_id, n), has_concept(L_id, L_concept).
-is_holding_concept(self, O_concept, n) :- is_holding(self, O_id, n), has_concept(O_id, O_concept).
 ````
 
-`base_rules.asp`
-````
-#program base.
-
-is_a(C1, C3) :- is_a(C1, C2), is_a(C2, C3).
-instance_of_recursive(O, C1) :- instance_of(O, C2), is_a(C2, C1).
-instance_of_recursive(O, C) :- instance_of(O, C).
-has_concept(O, C) :- instance_of_recursive(O, C_id), name(C_id, C).
-
-%% Support non-fluent to fluent promotion for basic attributes
-is_near(self, L, 0) :- is_near(self, L).
-is_near(P, L, 0) :- is_near(P, L).
-is_placed(O, L, 0) :- is_placed(O, L).
-is_facing(self, P, 0) :- is_facing(self, P).
-is_holding(self, O, 0) :- is_holding(self, O).
-is_delivered(O, P, 0) :- is_delivered(O, P).
-is_near_name(self, L_name, 0) :- is_near(self, L_id), name(L_id, L_name).
-is_placed_concept(O_concept, L_concept, 0) :- is_placed(O_id, L_id), has_concept(O_id, O_concept), has_concept(L_id, L_concept).
-is_in_concept(O_concept, R_concept, 0) :- is_placed(O_id, L), is_in(L, R_id), has_concept(O_id, O_concept), has_concept(R_id, R_concept).
-is_delivered_concept(O_concept, P, 0) :- is_delivered(O_id, P), has_concept(O_id, O_concept).
-scanned_concept(L_concept, 0) :- scanned(L_id, 0), has_concept(L_id, L_concept).
-is_holding_concept(self, O_concept, 0) :- is_holding(self, O_id, 0), has_concept(O_id, O_concept).
-
-% short-hand for concepts
-scanned(S, 0) :- has_concept(S, "scanned").
-hand_empty(0) :- has_concept(self, "empty_handed").
-
-% Silence warnings
-default_location(O, L) :- default_location(O, L).
-is_facing(self, P) :- is_facing(self, P).
-is_near(self, L) :- is_near(self, L).
-is_holding(self, O) :- is_holding(self, O).
-is_in(L, R) :- is_in(L, R).
-is_placed(O, L) :- is_placed(O, L).
-is_near(P, L) :- is_near(P, L).
-is_delivered(O, P) :- is_delivered(O, P).
--is_near(P, L, n) :- -is_near(P, L, n).
-can_be_near(O, L, 0) :- can_be_near(O, L, 0).
-can_be_placed(O, L, 0) :- can_be_placed(O, L, 0).
+Clingo lets us realize [iterative deepening](https://en.wikipedia.org/wiki/Iterative_deepening_depth-first_search) with a built in incremental solver mode that interleaves grounding and solving until an answer set is found. To activate this mode, we include the special incmode file and mark this section of the code as a subprogram named `step` with a single parameter, `n`. `step` programs will be grounded once for every time step in the incremental solving process, each time with an incremented value for `n`. It's important that incremental grounding doesn't redefine any existing rules or atoms, so generally step programs consist solely of fluents. The makers of Clingo have a [detailed description of the semantics of incremental Clingo](https://arxiv.org/pdf/1705.09811.pdf) if you want to look at the details.
 
 
-% Fluent to predicate demotion
-can_be_near(P, L) :- can_be_near(P, L, 0), has_concept(L, "beacon"). 
+## Planning
 
-% If person can be in a room, they can be near any beacon in the room
-can_be_near(P, L) :- can_be_near(P, R, 0), has_concept(R, "room"), is_in(L, R), has_concept(L, "beacon").
+So far we've described the state of the world and its dynamics. As long as the knowledge is consistent, the answer sets for these programs will just be the original facts and some summary deductions from our `base_rules`. Now we'll phrase a planning query to this domain.
 
-% Demotion
-can_be_placed(O, L) :- can_be_placed(O, L, 0), has_concept(L, "placement"). 
-
-% If an objecct can be placed in a room, then it can be placed on any surface in the room
-can_be_placed(O, L) :- can_be_placed(O, R, 0), has_concept(R, "room"), is_in(L, R), has_concept(L, "placement").
-
-can_be_placed(O_id, L_id) :- default_location(O_category_id, L_concept_id), is_a(O_id, O_concept_id), is_a(O_concept_id, O_category_id), is_a(L_id, L_concept_id), has_concept(O_id, "hypothetical"), 0{can_be_placed(O_id, L, 0)}0.
-
-````
-
-## Initial Planning Query
+Let's say our user asked for an apple from the kitchen. This tells the robot that their _could_ be an apple placed in the kitchen, even if the robot has never seen it before. So we'll update the knowledgebase with an apple instance but tag it as hypothetical. To encode the tentative placement information, we'll use a soft version of the `placed` predicate.
 
 `knowledge.asp`
 ````
-name(1, "robot").
-name(2, "object").
-name(3, "operator").
-name(4, "hypothetical").
-name(5, "location").
-name(18, "room").
-is_a(18, 5).
-name(19, "empty_handed").
-name(20, "person").
+%...
 
-name(6, "placement").
-is_a(6, 5).
-name(7, "beacon").
-is_a(7, 5).
-name(8, "fruit").
-is_a(8,2).
-default_location(8, 11). % Usually in kitchen
-name(9, "graspable").
-name(10, "scanned").
-name(11, "kitchen").
-is_a(11, 18). % Room
-name(12, "living room").
-is_a(12, 18). % Room
-name(13, "sofa").
-name(14, "counter").
+% Hypothetical apple
+instance_of(102, 4).
+instance_of(102, 18).
 
-name(15, "table").
-name(16, "cupboard").
-name(17, "apple").
-is_a(17, 8).
-
-
-% Arrangement of the world
-instance_of(50, 11). % Kitchen
-instance_of(51, 12). % Living room
-is_connected(50, 51).
-
-
-instance_of(52, 13). % Sofa
-instance_of(52, 7). % Beacon
-is_in(52, 51).
-
-instance_of(53, 14). % Counter
-instance_of(53, 6). % Placement
-is_in(53, 50).
-
-instance_of(54, 15). % Table
-instance_of(54, 6). % Placement
-is_in(54, 50).
-
-instance_of(55, 16). % Cupboard
-instance_of(55, 6). % Placement
-is_in(55, 50).
-
-
-% Robot
-instance_of(100, 1).
-instance_of(100, 19). % Empty handed
-is_near(100, 52). % At sofa
-
-% Operator
-instance_of(101, 20).
-is_near(101, 52). % At sofa
+% Hypothesis extracted from user command
+can_be_placed(102, 50, 0).
 ````
+
+Then, we'll encode the actual goal of this command as the delivery of this hypothetical apple to the operator. We do this using the special `check` program, which tells Clingo to stop the incremental solving process when an answer set is found that satisfies some constraints.
 
 `query.asp`
 ````
 #program check(n).
 
-% Hypothetical apple referenced in user command
-instance_of(102, 4).
-instance_of(102, 17).
-
-% Hypothesis extracted from user command
-can_be_placed(102, 50, 0).
-
 :- not is_delivered(102, 101, n), query(n).
 
 ````
 
+The `query` atom available in the `check` program is a special addition by the incremental solving control loop, allowing the developer to easily refer to specific loop iterations by conditioning on its truth. For instance, we could dissallow plans of less than 10 steps by saying something like `:- query(n), n < 10.`
+
+Now, following the generate and test paradigm, we'll produce all possible sequences of actions:
+
+`action_generation.asp`
+````
+#include <incmode>.
+#program step(n).
+
+1{
+navigate_to(T, n) : has_concept(T, "location");
+pick_up(O, L, n) : has_concept(O, "object"), has_concept(L, "placement");
+put_down(O, L, n) : has_concept(O, "object"), has_concept(L, "placement");
+hand_over(O, P, n) : has_concept(O, "object"), has_concept(P, "person");
+perceive_surface(O, L, n) : has_concept(O, "object"), has_concept(L, "placement");
+find_person(P, L, n) : has_concept(P, "person"), has_concept(L, "location")
+}1.
+
+% Hide everything that isn't an action when displaying answer sets
+#show navigate_to/2.
+#show pick_up/3.
+#show put_down/3.
+#show hand_over/3.
+#show perceive_surface/3.
+#show find_person/3.
+````
+
+Running the `clingo` executable with  on the code shown up to this point will produce a plan. To get all acceptable plans, we can run `clingo 0`:
+
+````
+clingo version 5.4.0
+...
+Solving...
+Solving...
+Solving...
+Solving...
+Solving...
+Solving...
+Answer: 1
+navigate_to(55,1) perceive_surface(102,55,2) pick_up(102,55,3) navigate_to(52,4) find_person(101,52,5) hand_over(102,101,6)
+Answer: 2
+navigate_to(53,1) perceive_surface(102,53,2) pick_up(102,53,3) navigate_to(52,4) find_person(101,52,5) hand_over(102,101,6)
+Answer: 3
+navigate_to(54,1) perceive_surface(102,54,2) pick_up(102,54,3) navigate_to(52,4) find_person(101,52,5) hand_over(102,101,6)
+SATISFIABLE
+
+Models       : 3
+Calls        : 7
+Time         : 0.022s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.022s
+
+````
+
+
 ## Diagnostics
+
+>Note 12-3-19: I'll add some description here tonight. These snippets are meant to be run just along with the original knowledge and the base rules (so no action rules or generation required). The query is attempting to derive the negation of the `can_be_placed` hypothesis that the user provided based on the knowledge that was collected from executing plans in the real world.
 
 `diagnostic_rules.asp`
 
@@ -266,8 +294,6 @@ instance_of(55, 10).
 
 `query.asp`
 ````
-#program base.
-
 0{ can_be_placed(102, 50, 0)}1.
 :~ can_be_placed(102, 50, 0). [-1, 1]
 ````
