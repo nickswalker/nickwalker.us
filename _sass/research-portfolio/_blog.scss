@@ -72,6 +72,13 @@ article {
     margin-right: auto;
     max-width: 650px;
   }
+
+  @include media-query($on-laptop) {
+    pre {
+      //max-width: initial;
+    }
+  }
+
   blockquote {
     box-sizing: border-box;
   }

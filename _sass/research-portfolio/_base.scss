@@ -214,9 +214,11 @@ blockquote {
 
 pre,
 code {
-  font-size: 15px;
+  font-size: 14px;
   border: 1px solid var(--light-background-color);
   border-radius: 3px;
+  line-height: 1.3rem;
+  font-family: "IBM Plex Mono", monospace;
 }
 
 code {
