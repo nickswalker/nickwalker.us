@@ -51,7 +51,8 @@ layout: default
         {{ content }}
 
         <h2>Read More</h2>
-        <p>Details are in {% cite_details page.citation_keys[0] --text the paper%}.</p>
+        <p>Details add additional information about the paper are {% cite_details page.citation_keys[0] --text
+            here%}.</p>
         {% for citation_key in page.citation_keys %}
         {% reference citation_key %}
         {% endfor %}

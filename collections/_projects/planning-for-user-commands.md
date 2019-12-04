@@ -303,13 +303,92 @@ CPU Time     : 0.022s
 
 ## Plan Execution
 
-In practice, we randomly pick one of the feasible plans and begin execution. Plan fluents are mapped to action executors. Each executor is responsible for updating the knowledge base with the results. Execution can fail in many different ways (e.g. executor believes it succeeded when in reality the robot did not actually accomplish the postcondition, changes in environment invalidating plan), so it's non-trivial to implement a practicable system. An unusual twist in our encoding is that we actually rely on plan execution failing. The `perceive_surface` action is formulated optimistically. Its post condition is that the desired object is placed on the surface, something that may or may not be true. Further, we actually guarantee that this post condition is never met by ensuring that the executor always creates fresh instances for the objects that it sees. The robot will never "see" object 102 on a surface, it'll see a fresh ID, so plan execution will fail and the robot will replan. If the perceived objects happen to include an instance of the concept "apple", the new plan will be to pick up that instance instead. If no apple is perceived, the surface will have been marked scanned, so replanning will produce another plan for a feasible hypothetical placement, until no such plans remain.
+In practice, we randomly pick one of the feasible plans and begin execution. Plan fluents are mapped to action executors. Each executor is responsible for updating the knowledge base with the results. Execution is tricky because it can fail in many different ways (e.g. executor believes it succeeded when in reality the robot did not actually accomplish the postcondition, changes in environment invalidating plan). An unusual twist in our encoding is that we actually rely on plan execution failing. The `perceive_surface` action's post conditions are specified optimistically, stating that the desired object will be known to be placed on the surface. We guarantee that this post condition is never met by ensuring that the executor creates fresh instances for the objects that it sees. The robot will never "see" object 102 on a surface, it'll see a fresh ID, so plan execution will fail and the plan execution process will attepmt to replan. 
+
+To play with this, we can move the robot to the cupboard
+
+````prolog 
+% knowledge.asp
+% ...
+% Robot
+instance_of(100, 1).
+instance_of(100, 19). % Empty handed
+is_near(100, 55). % At cupboard
+is_facing(100, 55).
+%...
+% Say we've scanned the cupboard.
+instance_of(55, 11).
+````
+
+Now we can try to check if the remainder of the plan still accomplishes the goal. We call this a monitor query.
+
+````prolog
+% query.asp
+#program check(n).
+
+% Assert the remainder of the plan
+pick_up(102,55,1).
+navigate_to(52,2).
+find_person(101,52,3).
+hand_over(102,101,4).
+
+% Is it possible for us to achieve the goal with this plan?
+:- not is_delivered_concept("apple", 101, n), query(n).
+````
+
+Because we know the bound on number of timesteps for the solving process in this case, we can call clingo with a cap: `clingo * 0 -c imax=5`:
+
+````
+clingo version 5.4.0
+Solving...
+Solving...
+Solving...
+Solving...
+UNSATISFIABLE
+
+Models       : 0
+Calls        : 5
+Time         : 0.073s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.019s
+
+````
+
+If the perceived objects happen to include an instance of the concept "apple", the new plan will be to pick up that instance instead. You can see this by manipulating knowledge and then running the original planning query.
+
+````prolog
+% knowledge.asp
+% ...
+% This is what perceiving the cupboard should have done
+% according to the post condition. We implement the 
+% action such that this can never happen.
+% is_placed(102, 55).
+
+% We _could_ see a real apple, in which case it would be
+% added to the knowledgebase with a fresh ID. The 
+% original plan is invalid, but replanning will just
+% adopt this instance.
+instance_of(103,18).
+is_placed(103, 55).
+````
+
+If no apple is perceived, the surface will have been marked scanned, so replanning will produce another plan for a feasible hypothetical placement until no such plans remain. There are three surfaces in the kitchen where the apple could be placed, so the robot would visit each before finally failing to generate additional plans.
 
 ## Diagnostics
 
->Note 12-3-19: I'll add some description here tonight. These snippets are meant to be run just along with the original knowledge and the base rules (so no action rules or generation required). The query is attempting to derive the negation of the `can_be_placed` hypothesis that the user provided based on the knowledge that was collected from executing plans in the real world.
+Say the robot has perceived every surface in the kitchen without finding an apple.
+````prolog
+% knowledge.asp
+% ...
+% Hypothesis extracted from user command
+can_be_placed(102, 50, 0).
 
-``
+% Results of scanning surfaces
+instance_of(53, 10).
+instance_of(54, 10).
+instance_of(55, 10).
+````
+
+It would be nice to provide the user with an explanation of what happened. In this case, the encoding lets us detect that the user's command was premised on a false assumption. The strategy we adopt is to attempt to deduce the negation of the provided hypotheses. In this case, we leverage a couple of rules specifying that if we've perceived every surface in the kitchen and there are no apples on them, then the apple could not be placed in the kitchen.
 
 ````prolog
 % diagnostic_rules.asp
@@ -326,17 +405,36 @@ In practice, we randomly pick one of the feasible plans and begin execution. Pla
 #show -can_be_placed/3.
 ````
 
-Update `knowledge.asp` with
+Running this program would return UNSAT because we have both `can_be_placed(102,50,0)` and its negation via the diagnostic rules. 
+
+To phrase this query a little more nicely, we make the hypothesis optional, which allows us to get an answer set containing the negation of the hypothesis. Finally, we can use Clingo's built in optimization mode to rank the returned answer sets by the number of hypotheses that are upheld (giving the user the benefit of the doubt).
 
 ````prolog
-% Results of scanning surfaces
-instance_of(53, 10).
-instance_of(54, 10).
-instance_of(55, 10).
-````
-
-`query.asp`
-````prolog
+% query.asp
+% Optionally generate the hypothesis.
 0{ can_be_placed(102, 50, 0)}1.
+% When the body of this rule is satisfied, add a weight of -1 for 
+% for this answer set. Lower weights are prefered.
 :~ can_be_placed(102, 50, 0). [-1, 1]
 ````
+
+Note that this query isn't in a `check(n)` program. That's because it doesn't need to reason about actions or the dynamics of the environment at all. In fact, the action rules and generation files shouldn't be included in this program at all.
+
+````
+clingo version 5.4.0
+Solving...
+Answer: 1
+-can_be_placed(102,53,0) -can_be_placed(102,54,0) 
+-can_be_placed(102,55,0) -can_be_placed(102,50,0) 
+-can_be_placed(102,51,0)
+Optimization: 0
+OPTIMUM FOUND
+````
+
+There is no way for us to uphold the user's hypothesis in this situation, so we have one answer set with weight 0 that contains the negation of the hypothesis.
+
+## With A Robot
+
+When wrapped up into the actual system, a user command like this will end up generating 6-10 planning, replanning, monitoring and diagnostic queries.
+
+<iframe width="100%" height="485" src="https://www.youtube-nocookie.com/embed/TLXGQDTAZvA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
