@@ -6,9 +6,9 @@
     {% assign venue = "" %}
     {% if entry.booktitle %}
     {% capture venue %}{{ entry.booktitle }}{% endcapture %}
-    {% else if entry.journal == "CoRR" %}
+    {% elsif entry.journal == "CoRR" %}
     {% assign venue = "arXiv preprint" %}
-    {% else if entry.journal %}
+    {% elsif entry.journal %}
     {% capture venue %}{{ entry.journal }}{% endcapture %}
     {% endif %}
 
