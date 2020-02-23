@@ -14,7 +14,7 @@ linkedin_username: niwalker
 flickr_username: nickwalker-us
 gravatar_url: https://www.gravatar.com/avatar/05a17826262b803bdc53a402751c884e
 
-permalink: /blog/:year/:month/:title
+permalink: /blog/:year/:title
 
 # Custom collections
 collections_dir: collections
@@ -32,7 +32,6 @@ jekyll-archives:
   layout: 'archive'
   permalinks:
     year: '/blog/:year/'
-    month: '/blog/:year/:month/'
     tag: '/blog/tag/:name/'
     category: '/blog/category/:name/'
 
@@ -55,6 +54,12 @@ defaults:
       type: posts
     values:
       layout: post
+      custom_js:
+        - "https://code.jquery.com/jquery-3.1.1.min.js"
+        - "/assets/js/jquery.fancybox.min.js"
+        - "/assets/js/initialize-fancybox.js"
+      custom_css:
+        - "/assets/css/jquery.fancybox.min.css"
   - scope:
       path: ""
       type: projects
