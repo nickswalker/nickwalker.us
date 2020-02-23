@@ -4,7 +4,7 @@ date:   2014-01-15 21:29:02 -0700
 categories: news media blog
 published: true
 type: link
-link: https://nisd.net/news/articles/53697
+link: https://web.archive.org/web/20150325195622/http://nisd.net/news/articles/53697
 ---
 
 >Northside ISD students continue to excel and receive numerous honors and awards. Below are students who have been named 
