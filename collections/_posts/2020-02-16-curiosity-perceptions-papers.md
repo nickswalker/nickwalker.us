@@ -4,6 +4,7 @@ date: 2020-02-16 12:00 -0500
 type: blog
 categories: news uw
 published: true
+featured_image: /assets/images/posts/curiosity-perceptions-setup.jpg
 ---
 
 Making robots that learn is still a hard problem, so it's no surprise that most robot learning research is focused on algorithmic challenges. As we're considering how to build robot learners though, we must keep in mind what people will actually think about them. After all, if a learning robot makes its owners think that it's broken, we may have to redesign the learner entirely.

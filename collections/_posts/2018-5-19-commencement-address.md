@@ -5,6 +5,7 @@ categories: ut recognition news
 published: true
 type: link
 link: https://www.youtube.com/watch?v=DodZguvCda8
+featured_image: /assets/images/posts/commencement-address.jpg
 ---
 
 I had the honor of speaking on behalf of the College of Natural Science's graduating Astronomy, Chemistry, Computer Science, Mathematics, and Physics majors. A [video](https://www.youtube.com/watch?v=DodZguvCda8) is available, and below you'll find an annotated version of the address.

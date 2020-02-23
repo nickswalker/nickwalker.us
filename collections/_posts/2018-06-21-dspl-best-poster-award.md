@@ -4,6 +4,7 @@ date: 2018-06-21 18:35 -0500
 categories: news recognition ut
 type: blog
 published: true
+featured_image: /assets/images/posts/robocup-poster-presentation.jpg
 ---
 
 {% include article_image.html img="/assets/images/posts/robocup-poster-presentation.jpg"
