@@ -31,3 +31,31 @@
 {% if jekyll.environment == 'production' and site.google_analytics %}
 {% include google-analytics.html %}
 {% endif %}
+
+{% if page.entry %}
+<meta name="citation_title" content="{{ page.entry.title }}" />
+{% for author in page.entry.author_array %}
+<meta name="citation_author" content="{{ author.last }}, {{ author.first }}" />{% endfor %}
+<meta name="citation_publication_date" content="{{ page.entry.year }}" />
+
+{% if page.entry.booktitle %}
+<meta name="citation_conference_title" content="{{ page.entry.booktitle }}" />
+{% elsif page.entry.journal %}
+<meta name="citation_journal_title" content="{{ page.entry.journal }}" />
+{% endif %}
+
+{% if page.entry.issn %}<meta name="citation_issn" content="{{ page.entry.issn }}">{% endif %}
+{% if page.entry.isbn %}<meta name="citation_isbn" content="{{ page.entry.isbn }}">{% endif %}
+{% if page.entry.volume %}<meta name="citation_volume" content="{{ page.entry.volume }}">{% endif %}
+{% if page.entry.number %}<meta name="citation_issue" content="{{ page.entry.number }}">{% endif %}
+{% if page.entry.pages %}{% assign page_range = page.entry.pages | replace: "--", "–" | split: "–" %}
+
+<meta name="citation_firstpage" content="{{ page_range[0] }}">
+<meta name="citation_lastpage" content="{{ page_range[1] }}">{% endif %}
+<meta name="citation_public_url" content="{{ site.url }}{{ page.url }}" />
+
+{% if page.entry.wwwpdf %}
+<meta name="citation_pdf_url" content="{{ page.entry.wwwpdf }}">
+{% endif %}
+
+{% endif %}
