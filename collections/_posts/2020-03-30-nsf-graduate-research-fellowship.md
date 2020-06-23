@@ -1,7 +1,8 @@
 ---
 title: Awarded an NSF Graduate Research Fellowship
 date: 2020-03-30 22:00 -0500
-type: blog
+type: link
+link: https://news.cs.washington.edu/2020/06/23/allen-school-students-recognized-for-excellence-in-research-by-the-national-science-foundation
 categories: news uw
 published: true
 ---
