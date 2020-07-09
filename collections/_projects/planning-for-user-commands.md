@@ -8,6 +8,7 @@ featured: true
 has_article: true
 published: true
 layout: published_project_entry
+featured_image: /assets/images/research/robot_command.jpg
 citation_keys: [jiang2019icaps]
 ---
 

@@ -33,6 +33,8 @@
         <li><a href="{{ entry.wwwvideo }}">Video</a></li>
         {% endif %}
 
-        <li>{% cite_details entry.key --text Details %}</li>
+        <!-- Something is wrong with Jekyll Scholar tags rendering specifically on bib entries
+        <li><a href="{% details_link entry.key %}">Details</a></li>-->
+        <li><a href="{{entry.key}}">Details</a></li>
     </ul>
 </div>
