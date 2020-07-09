@@ -27,12 +27,10 @@ collections:
 
 # Archive listings for blog
 jekyll-archives:
-  enabled: ['year', 'month']
+  enabled: ['year']
   layout: 'archive'
   permalinks:
     year: '/blog/:year/'
-    tag: '/blog/tag/:name/'
-    category: '/blog/category/:name/'
 
 # bibtex rendering
 scholar:
