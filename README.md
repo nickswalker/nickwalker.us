@@ -1,4 +1,4 @@
-# nickwalker.us [![Build Status](https://travis-ci.org/nickswalker/nickwalker.us.svg?branch=master)](https://travis-ci.org/nickswalker/nickwalker.us)
+# nickwalker.us [![Build and Deploy](https://github.com/nickswalker/nickwalker.us/workflows/Build%20and%20Deploy/badge.svg)](https://github.com/nickswalker/nickwalker.us/actions?query=workflow%3A%22Build+and+Deploy%22)
 
 My portfolio website. Built with [Jekyll](https://jekyllrb.com), based off of [Minima](https://github.com/jekyll/minima).
 
