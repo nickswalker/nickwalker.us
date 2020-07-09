@@ -10,5 +10,6 @@ group :jekyll_plugins do
    gem "jekyll-redirect-from"
    gem "jekyll-scholar"
    gem "jekyll-sitemap"
+   gem "jekyll-tidy"
    gem "html-proofer"
 end
