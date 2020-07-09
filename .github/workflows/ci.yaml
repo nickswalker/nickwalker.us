@@ -1,0 +1,30 @@
+name: Build and deploy jekyll site
+
+on:
+  push:
+    branches:
+      - master
+      - develop
+
+jobs:
+  jekyll:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📂 setup
+        uses: actions/checkout@v2
+      - name: 💎 setup ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.5.1
+      - run:  yes | gem update --system --force
+      - name: 🔨 install dependencies & build site
+        uses: limjh16/jekyll-action-ts@v2
+        with:
+          enable_cache: true
+      - name: run tests
+        run: |
+          ./_test/test_bibtex.rb _data/references.bib
+          bundle exec htmlproofer ./_site --only-4xx --check-favicon --check-html --assume-extension --alt-ignore '/.*/' --url-ignore '/vimeo.com/'
+      - name: 🚀 deploy
+        if: github.ref == 'refs/heads/master'
+        run: "rsync -havz _site/* ssh://ssh.nickwalker.us:/var/www/nickwalker.us/"
