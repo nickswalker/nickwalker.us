@@ -8,10 +8,19 @@ on:
 
 jobs:
   jekyll:
-    env:
-      NOKOGIRI_USE_SYSTEM_LIBRARIES: true
+#    env:
+#      NOKOGIRI_USE_SYSTEM_LIBRARIES: true
     runs-on: ubuntu-latest
     steps:
+      - name: Setup SSH Keys and known_hosts
+        env:
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          ssh-keyscan ssh.nickwalker.us >> ~/.ssh/known_hosts
+          ssh-agent -a $SSH_AUTH_SOCK > /dev/null
+          ssh-add - <<< "${{ secrets.SSH_PRIVATE_KEY }}"
       - name: 📂 setup
         uses: actions/checkout@v2
       - name: 💎 setup ruby
@@ -29,4 +38,16 @@ jobs:
           bundle exec htmlproofer ./_site --only-4xx --check-favicon --check-html --assume-extension --alt-ignore '/.*/' --url-ignore '/vimeo.com/'
       - name: 🚀 deploy
         if: github.ref == 'refs/heads/master'
-        run: "rsync -havz _site/* ssh://ssh.nickwalker.us:/var/www/nickwalker.us/"
+        run: "rsync -havz _site/* www-data@ssh.nickwalker.us:/var/www/nickwalker.us/"
+      - name: 🚀 deploy to staging
+        if: github.ref == 'refs/heads/develop'
+        run: "rsync -havz --delete _site/ www-data@ssh.nickwalker.us:/var/www/testing.nickwalker.us/"
+      - name: purge Cloudflare cache
+        uses: jakejarvis/cloudflare-purge-action@v0.3.0
+        if: github.ref == 'refs/heads/develop'
+        env:
+          CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
+          CLOUDFLARE_EMAIL: ${{ secrets.CLOUDFLARE_EMAIL }}
+          CLOUDFLARE_KEY: ${{ secrets.CLOUDFLARE_KEY }}
+
+
