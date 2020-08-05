@@ -8,12 +8,12 @@
 <figure class="article-image">
     {% if include.url %}
     <a href="{{ include.url }}" title="{{ include.title }}" target="_blank">
-        <img src="{{ site.url }}/{{ include.img }}" alt="{{ include.title }}"/>
+        <img src="{{ include.img }}" alt="{{ include.title }}"/>
     </a>
     {% elsif lightbox %}
-    <a href="{{ site.url }}/{{ include.img }}" data-fancybox="gallery"><img src="{{ site.url }}/{{ include.img }}" alt="{{ include.title }}"/></a>
+    <a href="{{ include.img }}" data-fancybox="gallery"><img src="{{ include.img }}" alt="{{ include.title }}"/></a>
     {% else %}
-    <img src="{{ site.url }}/{{ include.img }}" alt="{{ include.title }}"/>
+    <img src="{{ include.img }}" alt="{{ include.title }}"/>
     {% endif %}
     {% if include.caption %}
     <figcaption>{{ include.caption | markdownify }}</figcaption>
