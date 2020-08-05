@@ -8,8 +8,8 @@ on:
 
 jobs:
   jekyll:
-#    env:
-#      NOKOGIRI_USE_SYSTEM_LIBRARIES: true
+    #    env:
+    #      NOKOGIRI_USE_SYSTEM_LIBRARIES: true
     runs-on: ubuntu-latest
     steps:
       - name: Setup SSH Keys and known_hosts
@@ -38,10 +38,14 @@ jobs:
           bundle exec htmlproofer ./_site --only-4xx --check-favicon --check-html --assume-extension --alt-ignore '/.*/' --url-ignore '/vimeo.com/'
       - name: 🚀 deploy
         if: github.ref == 'refs/heads/master'
+        env:
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
         run: "rsync -havz _site/* www-data@ssh.nickwalker.us:/var/www/nickwalker.us/"
       - name: 🚀 deploy to staging
         if: github.ref == 'refs/heads/develop'
-        run: "rsync -havz --delete _site/ www-data@ssh.nickwalker.us:/var/www/testing.nickwalker.us/"
+        env:
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+        run: "rsync -havz --delete _site/ www-data@ssh.nickwalker.us:/var/www/testing.nickwalker.us/ --exclude=/.well-known"
       - name: purge Cloudflare cache
         uses: jakejarvis/cloudflare-purge-action@v0.3.0
         if: github.ref == 'refs/heads/develop'
