@@ -7,11 +7,62 @@ on:
       - develop
 
 jobs:
-  jekyll:
-    #    env:
-    #      NOKOGIRI_USE_SYSTEM_LIBRARIES: true
+  jekyll-build:
     runs-on: ubuntu-latest
     steps:
+      - name: 📂 setup
+        uses: actions/checkout@v2
+      - name: 💎 setup ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.5.1
+      - run:  yes | gem update --system --force
+      - name: 🔨 install dependencies & build site
+        uses: limjh16/jekyll-action-ts@master
+        with:
+          enable_cache: true
+      - name: run tests
+        run: |
+          ./_test/test_bibtex.rb _data/references.bib
+          bundle exec htmlproofer ./_site --only-4xx --check-favicon --check-html --assume-extension --alt-ignore '/.*/' --url-ignore '/vimeo.com/'
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: site
+          path: _site
+  jekyll-build-drafts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📂 setup
+        uses: actions/checkout@v2
+      - name: 💎 setup ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.5.1
+      - run:  yes | gem update --system --force
+      - name: 🔨 install dependencies & build site
+        uses: limjh16/jekyll-action-ts@master
+        with:
+          enable_cache: true
+          custom_opts: '--drafts --unpublished --future'
+      - name: run tests
+        run: |
+          ./_test/test_bibtex.rb _data/references.bib
+          bundle exec htmlproofer ./_site --only-4xx --check-favicon --check-html --assume-extension --alt-ignore '/.*/' --url-ignore '/vimeo.com/'
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: site-drafts
+          path: _site
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [jekyll-build]
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - name: Download build result
+        uses: actions/download-artifact@v2
+        with:
+          name: site
       - name: Setup SSH Keys and known_hosts
         env:
           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
@@ -21,37 +72,57 @@ jobs:
           ssh-keyscan ssh.nickwalker.us >> ~/.ssh/known_hosts
           ssh-agent -a $SSH_AUTH_SOCK > /dev/null
           ssh-add - <<< "${{ secrets.SSH_PRIVATE_KEY }}"
-      - name: 📂 setup
-        uses: actions/checkout@v2
-      - name: 💎 setup ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.5.1
-      - run:  yes | gem update --system --force
-      - name: 🔨 install dependencies & build site
-        uses: limjh16/jekyll-action-ts@v2
-        with:
-          enable_cache: true
-      - name: run tests
-        run: |
-          ./_test/test_bibtex.rb _data/references.bib
-          bundle exec htmlproofer ./_site --only-4xx --check-favicon --check-html --assume-extension --alt-ignore '/.*/' --url-ignore '/vimeo.com/'
       - name: 🚀 deploy
-        if: github.ref == 'refs/heads/master'
         env:
           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
-        run: "rsync -havz _site/* www-data@ssh.nickwalker.us:/var/www/nickwalker.us/"
-      - name: 🚀 deploy to staging
-        if: github.ref == 'refs/heads/develop'
-        env:
-          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
-        run: "rsync -havz --delete _site/ www-data@ssh.nickwalker.us:/var/www/testing.nickwalker.us/ --exclude=/.well-known"
+        run: "rsync -havz * www-data@ssh.nickwalker.us:/var/www/nickwalker.us/"
       - name: purge Cloudflare cache
         uses: jakejarvis/cloudflare-purge-action@v0.3.0
-        if: github.ref == 'refs/heads/develop'
         env:
           CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
           CLOUDFLARE_EMAIL: ${{ secrets.CLOUDFLARE_EMAIL }}
           CLOUDFLARE_KEY: ${{ secrets.CLOUDFLARE_KEY }}
-
+  deploy-staging:
+    runs-on: ubuntu-latest
+    needs: [jekyll-build]
+    if: github.ref == 'refs/heads/develop'
+    steps:
+      - name: Download build result
+        uses: actions/download-artifact@v2
+        with:
+          name: site
+      - name: Setup SSH Keys and known_hosts
+        env:
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          ssh-keyscan ssh.nickwalker.us >> ~/.ssh/known_hosts
+          ssh-agent -a $SSH_AUTH_SOCK > /dev/null
+          ssh-add - <<< "${{ secrets.SSH_PRIVATE_KEY }}"
+      - name: 🚀 deploy to staging
+        env:
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+        run: "rsync -havz --delete ./ www-data@ssh.nickwalker.us:/var/www/testing.nickwalker.us/ --exclude=/.well-known"
+  deploy-drafts:
+    runs-on: ubuntu-latest
+    needs: [jekyll-build-drafts]
+    steps:
+    - name: Download build result
+      uses: actions/download-artifact@v2
+      with:
+        name: site
+    - name: Setup SSH Keys and known_hosts
+      env:
+        SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+      run: |
+        mkdir -p ~/.ssh
+        ssh-keyscan github.com >> ~/.ssh/known_hosts
+        ssh-keyscan ssh.nickwalker.us >> ~/.ssh/known_hosts
+        ssh-agent -a $SSH_AUTH_SOCK > /dev/null
+        ssh-add - <<< "${{ secrets.SSH_PRIVATE_KEY }}"
+    - name: 🚀 deploy
+      env:
+        SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+      run: "rsync -havz --delete * www-data@ssh.nickwalker.us:/var/www/drafts.nickwalker.us/ --exclude=/.well-known"
 
