@@ -36,7 +36,8 @@ layout: default
     {% endif %}
 
     {% assign featured_projects = site.projects | where:"featured", true %}
-    {% if featured_projects.size > 0 %}
+{% comment %}
+  {% if featured_projects.size > 0 %}
   <section id="projects">
     <h1 class="page-heading">Projects</h1>
       <ul class="project-block-list">
@@ -51,6 +52,7 @@ layout: default
       {% endif %}
   </section>
     {% endif %}
+  {% endcomment %}
 
     <section id="blog">
         <h1 class="page-heading">Blog</h1>
