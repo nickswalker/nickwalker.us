@@ -60,6 +60,28 @@
   }
  ],
  "volunteer": [
+    {
+   "organization": "IEEE Trans. Cognitive Developmental Systems",
+   "position": "Reviewer",
+   "date": "2020"
+  },
+      {
+   "organization": "Allen School Graduate Student Committee, UW",
+   "position": "NSF GRFP Seminar Coordinator",
+   "date": "2020"
+  },
+    {
+   "organization": "Practical Service Robots Workshop, RSS",
+   "position": "Organizer",
+   "website": "https://sites.google.com/cs.washington.edu/rss-2020-service-robots/home",
+   "date": "2020"
+  },
+  {
+   "organization": "Imitation Learning Workshop, RSS",
+   "position": "Organizer",
+   "website": "https://sites.google.com/utexas.edu/rss-2020-imitation-learning/home",
+   "date": "2020"
+  },
   {
    "organization": "RoboCup@Home",
    "position": "Technical Committee",
@@ -109,7 +131,9 @@
   {
    "title": "Graduate Research Fellowship",
    "startDate": "2020",
-   "awarder": "National Science Foundation"
+   "awarder": "National Science Foundation",
+      "link": "https://news.cs.washington.edu/2020/06/23/allen-school-students-recognized-for-excellence-in-research-by-the-national-science-foundation/"
+
   },
   {
    "title": "Computer Science & Engineering Research Fellowship",
@@ -147,7 +171,7 @@
   {
    "title": "TIDES Fellowship",
    "date": "2017",
-   "awarder": "Texas Institue for Discovery Education in Science, UT"
+   "awarder": "Texas Institute for Discovery Education in Science, UT"
   },
   {
    "title": "College of Natural Sciences Scholarship",
@@ -308,7 +332,7 @@
   {
    "name": "UT Austin Villa@Home",
    "institution": "University of Texas at Austin",
-   "summary": "PIs: P. Stone, L. Sentis, S. Niekum, A. Thomaz, R. Mooney. Supervisor: Justin Hart",
+   "summary": "PIs: P.\u00a0Stone, L.\u00a0Sentis, S.\u00a0Niekum, A.\u00a0Thomaz, R.\u00a0Mooney. Supervisor: Justin Hart",
    "startDate": "2017",
    "endDate": "2018",
    "link": "https://wncg.org/news/ut-austin-takes-3rd-place-robocuphome-2017-competition-japan"
@@ -375,20 +399,29 @@
   }
  ],
  "presentations": [
+    {
+   "name": "Human Perceptions of a Curious Robot that Performs Off-Task Actions",
+   "venue": "Human-Robot Interaction",
+   "date": "2020",
+   "location": "Oxford",
+   "authors": "N.\u00a0Walker",
+   "format": "Video",
+   "link": "https://www.youtube.com/watch?v=1j91ISstdH8"
+  },
   {
    "name": "Human Perceptions of a Curious Robot that Performs Off-Task Actions",
    "venue": "Honda Research Institute Curious Minded Machines Workshop",
    "date": "2019",
    "location": "San Jose",
-   "authors": "N. Walker",
+   "authors": "N.\u00a0Walker",
    "format": "Oral"
   },
   {
-   "name": "Desiderata for Planning for Planning Systems in General Purpose Service Robots",
+   "name": "Desiderata for Planning Systems in General Purpose Service Robots",
    "venue": "ICAPS PlanRob Workshop",
    "date": "2019",
    "location": "Berkeley",
-   "authors": "N. Walker",
+   "authors": "N.\u00a0Walker",
    "format": "Oral"
   },
   {
@@ -396,7 +429,7 @@
    "venue": "RoboCup Symposium",
    "date": "2019",
    "location": "Sydney",
-   "authors": "N. Walker",
+   "authors": "N.\u00a0Walker",
    "format": "Oral"
   },
   {
@@ -404,7 +437,7 @@
    "venue": "RoboCup@Home Domestic Standard Platform League",
    "date": "2018",
    "location": "Sydney",
-   "authors": "N. Walker for UT Austin Villa",
+   "authors": "N.\u00a0Walker for UT Austin Villa",
    "format": "Oral",
    "link": "https://doi.org/10.5281/zenodo.3249235",
    "note": "Best DSPL Poster"
@@ -414,7 +447,7 @@
    "venue": "AAAI",
    "date": "2017",
    "location": "San Francisco",
-   "authors": "N. Walker, R. Shah",
+   "authors": "N.\u00a0Walker, R.\u00a0Shah",
    "format": "Poster",
    "link": "https://doi.org/10.5281/zenodo.3244636"
   }
@@ -433,6 +466,16 @@
   }
  ],
  "meetings": [
+    {
+   "name": "RSS",
+   "date": "2020",
+   "location": "virtual"
+  },
+  {
+   "name": "HRI",
+   "date": "2020",
+   "location": "virtual"
+  },
   {
    "name": "Honda Research Institute Curious Minded Machine Workshop",
    "date": "2019",
