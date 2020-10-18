@@ -24,7 +24,7 @@ layout: default
 
             {% if page.entry.wwwslides %}
             <li>
-                <a href="{{ page.entry.wwwslides }}" title="See slides.">
+                <a href="{{ page.entry.wwwslides }}" title="See slides">
                     <ion-icon
                             name="albums"></ion-icon>
                     Slides</a>
@@ -32,7 +32,7 @@ layout: default
             {% endif %}
             {% if page.entry.wwwposter %}
             <li>
-                <a href="{{ page.entry.wwwposter }}" title="See Poster.">
+                <a href="{{ page.entry.wwwposter }}" title="See poster">
                     <ion-icon
                             name="easel"></ion-icon>
                     Poster</a>
@@ -40,10 +40,17 @@ layout: default
             {% endif %}
             {% if page.entry.wwwvideo %}
             <li>
-                <a href="{{ page.entry.wwwvideo }}" title="See Video.">
+                <a href="{{ page.entry.wwwvideo }}" title="See video">
                     <ion-icon
                             name="film"></ion-icon>
                     Video</a>
+            </li>
+            {% endif %}
+            {% if page.entry.wwwextra %}
+            <li>
+                <a href="{{ page.entry.wwwextra }}" title="Access supplement">
+                    <ion-icon name="document-attach"></ion-icon>
+                    Supplement</a>
             </li>
             {% endif %}
             {% if page.entry.url %}
