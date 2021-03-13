@@ -2,15 +2,15 @@
 ---
 
 @inproceedings{walker2020perceptions,
-  author = {Nick Walker and Kevin Weatherwax and Julian Alchin and Leila Takayama and Maya Cakmak},
-  title = {Human Perceptions of a Curious Robot that Performs Off-Task Actions},
-  booktitle = {ACM/IEEE International Conference on Human-Robot Interaction (HRI)},
+    author = {Nick Walker and Kevin Weatherwax and Julian Alchin and Leila Takayama and Maya Cakmak},
+     title = {Human Perceptions of a Curious Robot that Performs Off-Task Actions},
+ booktitle = {ACM/IEEE International Conference on Human-Robot Interaction (HRI)},
   location = {Oxford, UK},
-  month = {March},
-  year = {2020},
-  doi  = {10.1145/3319502.3374821},
-  wwwtype = {conference},
-  wwwpdf  = {https://hcrlab.cs.washington.edu/assets/pdfs/2020/walker2020perceptions.pdf},
+     month = {March},
+      year = {2020},
+       doi = {10.1145/3319502.3374821},
+   wwwtype = {conference},
+    wwwpdf = {https://hcrlab.cs.washington.edu/assets/pdfs/2020/walker2020perceptions.pdf},
   wwwvideo = {https://www.youtube.com/watch?v=1j91ISstdH8},
   wwwextra = {https://doi.org/10.5281/zenodo.3600599},
   abstract = {
@@ -20,28 +20,29 @@ While these models balance goal- and exploration-oriented actions in a mathemati
 }
 
 @article{thomason2020improving,
-title={Jointly Improving Parsing and Perception for Natural Language Commands through Human-Robot Dialog},
-author={Jesse Thomason and Aishwarya Padmakumar and Jivko Sinapov and Nick Walker and Yuqian Jiang and Harel Yedidsion and Justin Hart and Peter Stone and Raymond J. Mooney},
-volume={67},
-journal={The Journal of Artificial Intelligence Research (JAIR)},
-month={February},
-year={2020},
-wwwtype={journal},
-wwwpdf = {http://www.cs.utexas.edu/users/ml/papers/thomason.jair20.pdf},
-abstract = {In this work, we present methods for using human-robot dialog to improve language understanding for a mobile robot agent. The agent parses natural language to underlying semantic meanings and uses robotic sensors to create multi-modal models of perceptual concepts like red and heavy. The agent can be used for showing navigation routes, delivering objects to people, and relocating objects from one location to another. We use dialog clarification questions both to understand commands and to generate additional parsing training data. The agent employs opportunistic active learning to select questions about how words relate to objects, improving its understanding of perceptual concepts. We evaluated this agent on Amazon Mechanical Turk. After training on data induced from conversations, the agent reduced the number of dialog questions it asked while receiving higher usability ratings. Additionally, we demonstrated the agent on a robotic platform, where it learned new perceptual concepts on the fly while completing a real-world task.}
+      title = {Jointly Improving Parsing and Perception for Natural Language Commands through Human-Robot Dialog},
+     author = {Jesse Thomason and Aishwarya Padmakumar and Jivko Sinapov and Nick Walker and Yuqian Jiang and Harel Yedidsion and Justin Hart and Peter Stone and Raymond J. Mooney},
+     volume = {67},
+    journal = {The Journal of Artificial Intelligence Research (JAIR)},
+      month = {February},
+       year = {2020},
+    wwwtype = {journal},
+     wwwpdf = {http://www.cs.utexas.edu/users/ml/papers/thomason.jair20.pdf},
+   abstract = {In this work, we present methods for using human-robot dialog to improve language understanding for a mobile robot agent. The agent parses natural language to underlying semantic meanings and uses robotic sensors to create multi-modal models of perceptual concepts like red and heavy. The agent can be used for showing navigation routes, delivering objects to people, and relocating objects from one location to another. We use dialog clarification questions both to understand commands and to generate additional parsing training data. The agent employs opportunistic active learning to select questions about how words relate to objects, improving its understanding of perceptual concepts. We evaluated this agent on Amazon Mechanical Turk. After training on data induced from conversations, the agent reduced the number of dialog questions it asked while receiving higher usability ratings. Additionally, we demonstrated the agent on a robotic platform, where it learned new perceptual concepts on the fly while completing a real-world task.}
 }
 
 @inproceedings{jiang2019icaps,
      author = {Yuqian Jiang and Nick Walker and Justin Hart and Peter Stone},
+    cofirst = {2},
       title = {Open-World Reasoning for Service Robots},
   booktitle = {Proceedings of the 29th International Conference on Automated Planning and Scheduling (ICAPS 2019)},
    location = {Berkeley},
-  month = {July},
-  year = {2019},
-  wwwtype = {conference},
-  wwwpdf = {http://www.cs.utexas.edu/%7Epstone/Papers/bib2html-links/ICAPS19-Jiang.pdf},
-  wwwvideo = {https://youtu.be/TLXGQDTAZvA},
-  abstract = {
+      month = {July},
+       year = {2019},
+    wwwtype = {conference},
+     wwwpdf = {http://www.cs.utexas.edu/%7Epstone/Papers/bib2html-links/ICAPS19-Jiang.pdf},
+   wwwvideo = {https://youtu.be/TLXGQDTAZvA},
+   abstract = {
   A service robot accepting verbal commands from a human operator is likely to
   encounter requests that reference objects not currently represented in its
   knowledge base. In domestic or office settings, the construction of a
@@ -61,21 +62,18 @@ abstract = {In this work, we present methods for using human-robot dialog to imp
 }
 
 @inproceedings{thomason2019icra,
-  title={Improving Grounded Natural Language Understanding through Human-Robot Dialog},
-  author={Jesse Thomason and Aishwarya Padmakumar and Jivko Sinapov and Nick Walker and Yuqian Jiang and Harel Yedidsion and Justin Hart and Peter Stone and Raymond J. Mooney},
-  booktitle = {International Conference on Robotics and Automation (ICRA)},
-  month = {May},
-  year={2019},
-  doi={10.1109/ICRA.2019.8794287},
-  location={Montreal},
-  wwwtype = {conference},
-  wwwpdf = {http://www.cs.utexas.edu/users/ml/papers/thomason.icra19.pdf},
-  wwwalso = {thomason18robodial,thomason18mrhrc},
-  wwwvideo = {https://youtu.be/PbOfteZ_CJc?t=5},
-  abstract = {
-  Natural language understanding for robotics can require substantial domain- and platform-specific engineering. For example, for mobile robots to pick-and-place objects in an environment to satisfy human commands, we can specify the language humans use to issue such commands, and connect concept words like red can to physical object properties. One way to alleviate this engineering for a new domain is to enable robots in human environments to adapt dynamically—continually learning new language constructions and perceptual concepts. In this work, we present an end-to-end pipeline for translating natural language commands to discrete robot actions, and use clarification dialogs to jointly improve language parsing and concept grounding. We train and evaluate this agent in a virtual setting on Amazon Mechanical Turk, and we transfer the learned agent to a physical robot platform to demonstrate it in the real world.
-
-  }
+           title = {Improving Grounded Natural Language Understanding through Human-Robot Dialog},
+          author = {Jesse Thomason and Aishwarya Padmakumar and Jivko Sinapov and Nick Walker and Yuqian Jiang and Harel Yedidsion and Justin Hart and Peter Stone and Raymond J. Mooney},
+       booktitle = {International Conference on Robotics and Automation (ICRA)},
+           month = {May},
+            year = {2019},
+             doi = {10.1109/ICRA.2019.8794287},
+        location = {Montreal},
+         wwwtype = {conference},
+          wwwpdf = {http://www.cs.utexas.edu/users/ml/papers/thomason.icra19.pdf},
+         wwwalso = {thomason18robodial,thomason18mrhrc},
+        wwwvideo = {https://youtu.be/PbOfteZ_CJc?t=5},
+        abstract = {Natural language understanding for robotics can require substantial domain- and platform-specific engineering. For example, for mobile robots to pick-and-place objects in an environment to satisfy human commands, we can specify the language humans use to issue such commands, and connect concept words like red can to physical object properties. One way to alleviate this engineering for a new domain is to enable robots in human environments to adapt dynamically—continually learning new language constructions and perceptual concepts. In this work, we present an end-to-end pipeline for translating natural language commands to discrete robot actions, and use clarification dialogs to jointly improve language parsing and concept grounding. We train and evaluate this agent in a virtual setting on Amazon Mechanical Turk, and we transfer the learned agent to a physical robot platform to demonstrate it in the real world.}
 }
 
 @InProceedings{hart2018iros,
@@ -129,6 +127,7 @@ abstract = {In this work, we present methods for using human-robot dialog to imp
 @inproceedings{walker2019planrob,
          title = {Desiderata for Planning Systems in General-Purpose Service Robots},
         author = {Nick Walker and Yuqian Jiang and Maya Cakmak and Peter Stone},
+       cofirst = {2},
      booktitle = {Proceedings of 2019 ICAPS Workshop on Planning and Robotics},
       location = {Berkeley},
          month = {July},
@@ -162,6 +161,7 @@ abstract = {In this work, we present methods for using human-robot dialog to imp
 @inproceedings{jiang2018fss,
          title = {LAAIR: A Layered Architecture for Autonomous Interactive Robots},
         author = {Yuqian Jiang and Nick Walker and Minkyu Kim and Nicolas Brissonneau and Daniel S. Brown and Justin W. Hart and Scott Niekum and Luis Sentis and Peter Stone},
+       cofirst = {2},
      booktitle = {AAAI Fall Symposium on Reasoning and Learning in Real-World Systems for Long-Term Autonomy},
      location  = {Arlington},
          month = {October},

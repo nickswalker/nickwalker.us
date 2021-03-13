@@ -30,19 +30,28 @@
  },
  "work": [
   {
+   "company": "UW CSE 478",
+   "position": "Teaching Assistant",
+   "website": "https://courses.cs.washington.edu/courses/cse478/21sp/",
+   "date": "2021 Spring",
+   "highlights": [
+    "Updated assignments and supported undergraduates using an autonomous race-car platform"
+   ]
+  },
+  {
    "company": "UW CSE 481C",
    "position": "Teaching Assistant",
    "website": "https://courses.cs.washington.edu/courses/cse481c/19wi/",
-   "date": "Winter 2019",
+   "date": "2019 Winter",
    "highlights": [
-    "Developed assignments and supported undergraduates using the Kuri robot for their robotics capstone course"
+    "Developed assignments and supported undergraduates using the Kuri robot"
    ]
   },
   {
    "company": "USAA",
    "position": "Research Engineer Intern",
    "website": "https://usaa.com",
-   "date": "Summer 2016",
+   "date": "2016 Summer",
    "highlights": [
     "Developed experimental brain-computer interface software and hardware",
     "Work contributed to a SPIE conference publication"
@@ -52,7 +61,7 @@
    "company": "USAA",
    "position": "Research Engineer Intern",
    "website": "https://usaa.com",
-   "date": "Summer 2015",
+   "date": "2015 Summer",
    "highlights": [
     "Characterized the performance of automated speech transcription vendors",
     "Developed evaluation methodology that led to a patent application"
@@ -60,17 +69,47 @@
   }
  ],
  "volunteer": [
-    {
-   "organization": "IEEE Trans. Cognitive Developmental Systems",
+  {
+   "organization": "Robotics: Science and Systems",
+   "shortName": "RSS",
+   "website": "https://roboticsconference.org",
+   "position": "Reviewer",
+   "date": "2021"
+  },
+  {
+   "organization": "IEEE International Conference on Robotics and Automation",
+   "shortName": "ICRA",
+   "position": "Reviewer",
+   "number": 2,
+   "date": "2021"
+  },
+  {
+   "organization": "IEEE Transactions on Affective Computing",
+   "shortName": "TAFFC",
+   "position": "Reviewer",
+   "website": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5165369",
+   "date": "2020"
+  },
+  {
+   "organization": "ACM Transactions on Human-Robot Interaction",
+   "shortName": "THRI",
+   "website": "https://dl.acm.org/journal/thri",
    "position": "Reviewer",
    "date": "2020"
   },
-      {
+  {
+   "organization": "IEEE Transactions on Cognitive Developmental Systems",
+   "shortName": "TCDS",
+   "position": "Reviewer",
+   "website": "https://cis.ieee.org/publications/t-cognitive-and-developmental-systems",
+   "date": "2020"
+  },
+  {
    "organization": "Allen School Graduate Student Committee, UW",
    "position": "NSF GRFP Seminar Coordinator",
    "date": "2020"
   },
-    {
+  {
    "organization": "Practical Service Robots Workshop, RSS",
    "position": "Organizer",
    "website": "https://sites.google.com/cs.washington.edu/rss-2020-service-robots/home",
@@ -94,8 +133,10 @@
    "startDate": "2019"
   },
   {
-   "organization": "ICRA",
+   "organization": "IEEE International Conference on Robotics and Automation",
+   "shortName": "ICRA",
    "position": "Reviewer",
+   "website": "https://www.ieee-ras.org/conferences-workshops/fully-sponsored/icra",
    "date": "2019"
   },
   {
@@ -110,6 +151,14 @@
    "area": "Computer Science",
    "studyType": "Ph.D.",
    "startDate": "2018",
+   "courses": []
+  },
+  {
+   "institution": "The University of Washington, Seattle, WA.",
+   "area": "Computer Science",
+   "studyType": "MS",
+   "startDate": "2018",
+   "endDate": "2020",
    "courses": []
   },
   {
@@ -132,8 +181,7 @@
    "title": "Graduate Research Fellowship",
    "startDate": "2020",
    "awarder": "National Science Foundation",
-      "link": "https://news.cs.washington.edu/2020/06/23/allen-school-students-recognized-for-excellence-in-research-by-the-national-science-foundation/"
-
+   "link": "https://news.cs.washington.edu/2020/06/23/allen-school-students-recognized-for-excellence-in-research-by-the-national-science-foundation/"
   },
   {
    "title": "Computer Science & Engineering Research Fellowship",
@@ -201,7 +249,7 @@
   {
    "type": "conference",
    "name": "Open-World Reasoning for Service Robots",
-   "authors": "Y.\u00a0Jiang, N.\u00a0Walker, J.\u00a0Hart, P.\u00a0Stone",
+   "authors": "Y.\u00a0Jiang*, N.\u00a0Walker*, J.\u00a0Hart, P.\u00a0Stone",
    "location": "Berkeley",
    "publisher": "Proc. 29th Int. Conf. Automated Planning Scheduling",
    "releaseDate": "July 2019",
@@ -246,7 +294,7 @@
   {
    "type": "workshop",
    "name": "Desiderata for Planning Systems in General-Purpose Service Robots",
-   "authors": "N.\u00a0Walker, Y.\u00a0Jiang, M.\u00a0Cakmak, P.\u00a0Stone",
+   "authors": "N.\u00a0Walker*, Y.\u00a0Jiang*, M.\u00a0Cakmak, P.\u00a0Stone",
    "location": "Berkeley",
    "publisher": "Proc. of 2019 ICAPS Workshop Planning Robotics",
    "releaseDate": "July 2019",
@@ -264,7 +312,7 @@
   {
    "type": "symposium",
    "name": "LAAIR: A Layered Architecture for Autonomous Interactive Robots",
-   "authors": "Y.\u00a0Jiang, N.\u00a0Walker, M.\u00a0Kim, N.\u00a0Brissonneau, D.\u00a0S.\u00a0Brown, J.\u00a0W.\u00a0Hart, S.\u00a0Niekum, L.\u00a0Sentis, P.\u00a0Stone",
+   "authors": "Y.\u00a0Jiang*, N.\u00a0Walker*, M.\u00a0Kim, N.\u00a0Brissonneau, D.\u00a0S.\u00a0Brown, J.\u00a0W.\u00a0Hart, S.\u00a0Niekum, L.\u00a0Sentis, P.\u00a0Stone",
    "location": "Arlington",
    "publisher": "AAAI Fall Symp. Reasoning Learning in Real-World Systems for Long-Term Autonomy",
    "releaseDate": "October 2018",
@@ -301,6 +349,24 @@
    ]
   },
   {
+   "name": "User research",
+   "level": "Proficient",
+   "keywords": [
+    "Study Design",
+    "Hypothesis Testing",
+    "Amazon Mechanical Turk"
+   ]
+  },
+  {
+   "name": "Machine learning techniques, tools",
+   "level": "Proficient",
+   "keywords": [
+    "PyTorch",
+    "Numpy",
+    "Pandas"
+   ]
+  },
+  {
    "name": "Web Technologies",
    "level": "Proficient",
    "keywords": [
@@ -311,7 +377,7 @@
    ]
   },
   {
-   "name": "Creative tasks",
+   "name": "Digital Media",
    "level": "Handy",
    "keywords": [
     "Premiere",
@@ -399,7 +465,7 @@
   }
  ],
  "presentations": [
-    {
+  {
    "name": "Human Perceptions of a Curious Robot that Performs Off-Task Actions",
    "venue": "Human-Robot Interaction",
    "date": "2020",
@@ -466,7 +532,7 @@
   }
  ],
  "meetings": [
-    {
+  {
    "name": "RSS",
    "date": "2020",
    "location": "virtual"
