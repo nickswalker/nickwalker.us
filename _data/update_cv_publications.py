@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 import re
 
 from pybtex.database.input import bibtex
@@ -26,11 +27,17 @@ for key in bib_data.entries:
         continue
     desc["name"] = fields["title"]
     desc["authors"] = ""
-    for person in entry.persons["author"]:
+    cofirst = -1
+    if "cofirst" in fields:
+        cofirst = int(fields["cofirst"])
+    for (i, person) in enumerate(entry.persons["author"]):
         nbsp = " "
         name = NameStyle().format(person, abbr=True).format().render_as("text")
         name = name.replace(". ", "."+nbsp)
-        desc["authors"] += name + ", "
+        desc["authors"] += name
+        if i < cofirst:
+            desc["authors"] += "*"
+        desc["authors"] += ", "
     desc["authors"] = desc["authors"][:-2]
     if "location" in fields:
         desc["location"] = fields["location"]
