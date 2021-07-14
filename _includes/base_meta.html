@@ -6,6 +6,8 @@
 {% capture url %}{{ page.url | replace:'index.html','' | absolute_url }}{% endcapture %}
 <title>{{ title }}</title>
 <meta name="description" content="{{ description }}">
+<meta name="theme-color" content="#a9cc29">
+
 {% if page.featured_image %}
 <meta name="twitter:card" content="summary_large_image">
 {% capture og_image %}{{ site.url }}{{ page.featured_image }}{% endcapture %}
