@@ -38,7 +38,7 @@ examples are based on that limitation. Note that the CNS printer in Painter (mos
 ### Branding Guidelines
 
 * [University](https://brand.utexas.edu)
-* [Computer Science](https://www.cs.utexas.edu/department/identity-standards)
+* [Computer Science (login required)](https://www.cs.utexas.edu/department/identity-standards/overview)
 * [College of Natural Sciences](https://cns.utexas.edu/communications/style-guide)
 * [College of Liberal Arts](https://liberalarts.utexas.edu/public-affairs/branding-guidelines/)
 * [Cockrell School of Engineering](http://www.engr.utexas.edu/visualguidelines)
