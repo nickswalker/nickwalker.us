@@ -70,16 +70,42 @@
  ],
  "volunteer": [
   {
+   "organization": "IEEE Robotics and Automation Letters",
+   "shortName": "RA-L",
+   "website": "https://www.ieee-ras.org/publications/ra-l",
+   "position": "Reviewer",
+   "number": 1,
+   "date": "2021"
+  },
+  {
+   "organization": "IEEE International Symposium on Safety, Security, and Rescue Robotics",
+   "shortName": "SSRR",
+   "website": "https://www.ieee-ras.org/conferences-workshops/fully-sponsored/ssrr",
+   "position": "Reviewer",
+   "number": 1,
+   "date": "2021"
+  },
+  {
+   "organization": "IEEE International Conference on Intelligent Robots and Systems",
+   "shortName": "IROS",
+   "website": "https://www.ieee-ras.org/conferences-workshops/financially-co-sponsored/iros",
+   "position": "Reviewer",
+   "number": 2,
+   "date": "2021"
+  },
+  {
    "organization": "Robotics: Science and Systems",
    "shortName": "RSS",
    "website": "https://roboticsconference.org",
    "position": "Reviewer",
+   "number": 2,
    "date": "2021"
   },
   {
    "organization": "IEEE International Conference on Robotics and Automation",
    "shortName": "ICRA",
    "position": "Reviewer",
+   "website": "https://www.ieee-ras.org/conferences-workshops/fully-sponsored/icra",
    "number": 2,
    "date": "2021"
   },
@@ -231,6 +257,24 @@
  "publications": [
   {
    "type": "conference",
+   "name": "Influencing Behavioral Attributions to Robot Motion During Task Execution",
+   "authors": "N.\u00a0Walker, C.\u00a0Mavrogiannis, S.\u00a0Srinivasa, M.\u00a0Cakmak",
+   "location": "London, UK",
+   "publisher": "Conf. Robot Learning",
+   "releaseDate": "November 2021",
+   "link": "https://nickwalker.us/publications/walker2021attributions"
+  },
+  {
+   "type": "conference",
+   "name": "Learning Backchanneling Behaviors for a Social Robot via Data Augmentation from Human-Human Conversations",
+   "authors": "M.\u00a0Murray, N.\u00a0Walker, A.\u00a0Nanavati, P.\u00a0Alves-Oliveira, N.\u00a0Filippov, A.\u00a0Sauppe, B.\u00a0Mutlu, M.\u00a0Cakmak",
+   "location": "London, UK",
+   "publisher": "Conf. Robot Learning",
+   "releaseDate": "November 2021",
+   "link": "https://nickwalker.us/publications/murray2021learning"
+  },
+  {
+   "type": "conference",
    "name": "Human Perceptions of a Curious Robot that Performs Off-Task Actions",
    "authors": "N.\u00a0Walker, K.\u00a0Weatherwax, J.\u00a0Alchin, L.\u00a0Takayama, M.\u00a0Cakmak",
    "location": "Oxford, UK",
@@ -290,6 +334,15 @@
    "publisher": "Proc. of SPIE 10051, Neural Imaging Sensing",
    "releaseDate": "February 2017",
    "link": "https://nickwalker.us/publications/schroeder2017"
+  },
+  {
+   "type": "workshop",
+   "name": "Influencing Behavioral Attributions to Robot Motion During Task Execution",
+   "authors": "N.\u00a0Walker, C.\u00a0Mavrogiannis, S.\u00a0Srinivasa, M.\u00a0Cakmak",
+   "location": "Xi'an, China",
+   "publisher": "Proc. 2021 ICRA Workshop Modern Approaches for Intrinsically-Motivated Intelligent Behavior",
+   "releaseDate": "June 2021",
+   "link": "https://nickwalker.us/publications/walker2021influencing"
   },
   {
    "type": "workshop",
@@ -465,6 +518,14 @@
   }
  ],
  "presentations": [
+  {
+   "name": "Modeling and Eliciting Desired Attributions from a Robot's Observers",
+   "venue": "Honda Research Institute Curious Minded Machines Workshop",
+   "date": "2021",
+   "location": "Virtual",
+   "authors": "N.\u00a0Walker",
+   "format": "Oral"
+  },
   {
    "name": "Human Perceptions of a Curious Robot that Performs Off-Task Actions",
    "venue": "Human-Robot Interaction",

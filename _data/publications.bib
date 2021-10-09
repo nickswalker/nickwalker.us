@@ -1,6 +1,34 @@
 ---
 ---
 
+@inproceedings{walker2021attributions,
+    author = {Nick Walker and Christoforos Mavrogiannis and Siddhartha Srinivasa and Maya Cakmak},
+     title = {Influencing Behavioral Attributions to Robot Motion During Task Execution},
+ booktitle = {Conference on Robot Learning (CoRL)},
+  location = {London, UK},
+     month = {November},
+      year = {2021},
+   wwwtype = {conference},
+    wwwpdf = {https://openreview.net/pdf?id=UIaodSPHNFN},
+  abstract = {
+    Recent literature has proposed algorithms for autonomous generation of robot motion that communicates functional attributes of a robot's state such as intent or incapability. However, less is known about how to automate the generation of motion for communicating higher-level behavioral attributes such as curiosity or competence. We propose a framework that jointly addresses the challenges of modeling human attributions to robot motion, generating trajectories that elicit attributions, and selecting trajectories that balance attribution and task completion. The insight underpinning our approach is that many attributions can be traced to salient features of the robot's motion. We illustrate the framework in a coverage task resembling household vacuum cleaning. Through a virtual interface, we collect a dataset of human attributions to robot trajectories during task execution and learn a probabilistic model that maps robot trajectories to human attributions. We then incorporate this model into a trajectory generation mechanism that balances between task completion and communication of a desired behavioral attribution. Through an online user study on a different household layout, we find that our prediction model accurately captures human attribution for coverage tasks.
+  },
+}
+
+@inproceedings{murray2021learning,
+    author = {Michael Murray and Nick Walker and Amal Nanavati and Patricia Alves-Oliveira and Nikita Filippov and Allison Sauppe and Bilge Mutlu and Maya Cakmak},
+     title = {Learning Backchanneling Behaviors for a Social Robot via Data Augmentation from Human-Human Conversations},
+ booktitle = {Conference on Robot Learning (CoRL)},
+  location = {London, UK},
+     month = {November},
+      year = {2021},
+   wwwtype = {conference},
+    wwwpdf = {https://openreview.net/pdf?id=0WDtVJVwBcf},
+  abstract = {
+    Backchanneling behaviors on a robot, such as nodding, can make talking to a robot feel more natural and engaging by giving a sense that the robot is actively listening. For backchanneling to be effective, it is important that the timing of such cues is appropriate given the humans' conversational behaviors. Recent progress has shown that these behaviors can be learned from datasets of human-human conversations. However, recent data-driven methods tend to overfit to the human speakers that are seen in training data and fail to generalize well to previously unseen speakers. In this paper, we explore the use of data augmentation for effective nodding behavior in a robot. We show that, by augmenting the input speech and visual features, we can produce data-driven models that are more robust to unseen features without collecting additional data. We analyze the efficacy of data-driven backchanneling in a realistic human-robot conversational setting with a user study, showing that users perceived the data-driven model to be better at listening as compared to rule-based and random baselines.
+  },
+}
+
 @inproceedings{walker2020perceptions,
     author = {Nick Walker and Kevin Weatherwax and Julian Alchin and Leila Takayama and Maya Cakmak},
      title = {Human Perceptions of a Curious Robot that Performs Off-Task Actions},
