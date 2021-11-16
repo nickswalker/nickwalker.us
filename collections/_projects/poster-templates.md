@@ -40,7 +40,7 @@ examples are based on that limitation. Note that the CNS printer in Painter (mos
 * [University](https://brand.utexas.edu)
 * [Computer Science (login required)](https://www.cs.utexas.edu/department/identity-standards/overview)
 * [College of Natural Sciences](https://cns.utexas.edu/communications/style-guide)
-* [College of Liberal Arts](https://liberalarts.utexas.edu/public-affairs/branding-guidelines/)
+<!-- Broken as of 11-2021 * [College of Liberal Arts](https://liberalarts.utexas.edu/public-affairs/branding-guidelines/)-->
 * [Cockrell School of Engineering](http://www.engr.utexas.edu/visualguidelines)
 
 ## FAQ
