@@ -23,6 +23,10 @@
     <span class="authors">{%for author in entry.author_array%}{%if forloop.last%} and {%elsif forloop.first%}{%else%}, {%endif%}{%if (author.first == "Nick" or author.first == "Nicholas") and author.last == "Walker%}<u>{{author.first}} {{author.last}}{% if forloop.index0 < cofirst %}*{% endif %}</u>{%else%} {{author.first}} {{author.last}}{% if forloop.index0 < cofirst %}*{% endif %}{%endif%}{%endfor%}</span>
 
     <ul class="quick-links">
+        {% if entry.wwwurl %}
+        <li><a href="{{ entry.wwwurl }}">Site</a></li>
+        {% endif %}
+
         {% if entry.wwwpdf %}
         <li><a href="{{ entry.wwwpdf }}">PDF</a></li>
         {% endif %}
@@ -39,6 +43,10 @@
         <li><a href="{{ entry.wwwvideo }}">Video</a></li>
         {% endif %}
 
-        <li><a href="/publications/{{entry.key}}">Details</a></li>
+        {% if entry.wwwcode %}
+        <li><a href="{{ entry.wwwcode }}">Code</a></li>
+        {% endif %}
+
+        <li><a href="/publications/{{entry.key}}">More</a></li>
     </ul>
 </div>
