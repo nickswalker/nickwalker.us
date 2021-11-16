@@ -15,6 +15,7 @@ from pybtex.style.formatting import BaseStyle, toplevel
 from pybtex.style.template import field, join, optional, sentence, words
 from pybtex.style.sorting import BaseSortingStyle
 
+month_abbreviations = {"January": "Jan.", "February": "Feb.", "March": "Mar.", "April": "Apr.", "May": "May", "June": "Jun.", "July": "Jul.", "August": "Aug.", "September": "Sept.", "October": "Oct.", "November": "Nov.", "December": "Dec."}
 
 for key in bib_data.entries:
     entry = bib_data.entries[key]
@@ -57,7 +58,8 @@ for key in bib_data.entries:
     desc["publisher"] = desc["publisher"].replace(" on ", " ")
     desc["publisher"] = desc["publisher"].replace(" of the ", " ")
     desc["publisher"] = re.sub(r' \([^)]*\)', '', desc["publisher"])
-    desc["releaseDate"] = fields["month"] + " " + fields["year"]
+    month_string = month_abbreviations[fields["month"]]
+    desc["releaseDate"] = month_string + " " + fields["year"]
     desc["link"] = "https://nickwalker.us/publications/" + key
     pubs.append(desc)
 

@@ -30,19 +30,19 @@
  },
  "work": [
   {
-   "company": "UW CSE 478",
+   "company": "UW CSE 478 (Robotics)",
    "position": "Teaching Assistant",
    "website": "https://courses.cs.washington.edu/courses/cse478/21sp/",
-   "date": "2021 Spring",
+   "date": "2021 Sp.",
    "highlights": [
-    "Updated assignments and supported undergraduates using an autonomous race-car platform"
+    "Updated assignments based on an autonomous race-car platform"
    ]
   },
   {
-   "company": "UW CSE 481C",
+   "company": "UW CSE 481C (Robotics Capstone)",
    "position": "Teaching Assistant",
    "website": "https://courses.cs.washington.edu/courses/cse481c/19wi/",
-   "date": "2019 Winter",
+   "date": "2019 Wi.",
    "highlights": [
     "Developed assignments and supported undergraduates using the Kuri robot"
    ]
@@ -51,7 +51,7 @@
    "company": "USAA",
    "position": "Research Engineer Intern",
    "website": "https://usaa.com",
-   "date": "2016 Summer",
+   "date": "2016 Su.",
    "highlights": [
     "Developed experimental brain-computer interface software and hardware",
     "Work contributed to a SPIE conference publication"
@@ -61,7 +61,7 @@
    "company": "USAA",
    "position": "Research Engineer Intern",
    "website": "https://usaa.com",
-   "date": "2015 Summer",
+   "date": "2015 Su.",
    "highlights": [
     "Characterized the performance of automated speech transcription vendors",
     "Developed evaluation methodology that led to a patent application"
@@ -151,12 +151,14 @@
    "organization": "RoboCup@Home",
    "position": "Technical Committee",
    "website": "https://athome.robocup.org/committees/",
-   "startDate": "2019"
+   "startDate": "2019",
+   "endDate": "2020"
   },
   {
    "organization": "Allen School First Year Graduate Student Mentoring, UW",
    "position": "Peer Mentor",
-   "startDate": "2019"
+   "startDate": "2019",
+   "endDate": "2021"
   },
   {
    "organization": "IEEE International Conference on Robotics and Automation",
@@ -173,24 +175,33 @@
  ],
  "education": [
   {
-   "institution": "The University of Washington, Seattle, WA.",
+   "institution": "University of Washington",
+   "location": "Seattle, WA",
    "area": "Computer Science",
    "studyType": "Ph.D.",
    "startDate": "2018",
+   "highlights": [
+    {
+     "description": "Advisor: Maya Cakmak",
+     "link": "http://www.mayacakmak.com"
+    }
+   ],
    "courses": []
   },
   {
-   "institution": "The University of Washington, Seattle, WA.",
+   "institution": "University of Washington",
+   "location": "Seattle, WA",
    "area": "Computer Science",
-   "studyType": "MS",
+   "studyType": "M.S.",
    "startDate": "2018",
    "endDate": "2020",
    "courses": []
   },
   {
-   "institution": "The University of Texas, Austin, TX.",
+   "institution": "The University of Texas",
+   "location": "Austin, TX",
    "area": "Computer Science",
-   "studyType": "BSA",
+   "studyType": "B.S.A.",
    "startDate": "2014",
    "endDate": "2018",
    "highlights": [
@@ -261,7 +272,7 @@
    "authors": "N.\u00a0Walker, C.\u00a0Mavrogiannis, S.\u00a0Srinivasa, M.\u00a0Cakmak",
    "location": "London, UK",
    "publisher": "Conf. Robot Learning",
-   "releaseDate": "November 2021",
+   "releaseDate": "Nov. 2021",
    "link": "https://nickwalker.us/publications/walker2021attributions"
   },
   {
@@ -270,7 +281,7 @@
    "authors": "M.\u00a0Murray, N.\u00a0Walker, A.\u00a0Nanavati, P.\u00a0Alves-Oliveira, N.\u00a0Filippov, A.\u00a0Sauppe, B.\u00a0Mutlu, M.\u00a0Cakmak",
    "location": "London, UK",
    "publisher": "Conf. Robot Learning",
-   "releaseDate": "November 2021",
+   "releaseDate": "Nov. 2021",
    "link": "https://nickwalker.us/publications/murray2021learning"
   },
   {
@@ -279,7 +290,7 @@
    "authors": "N.\u00a0Walker, K.\u00a0Weatherwax, J.\u00a0Alchin, L.\u00a0Takayama, M.\u00a0Cakmak",
    "location": "Oxford, UK",
    "publisher": "ACM/IEEE Int. Conf. Human-Robot Interaction",
-   "releaseDate": "March 2020",
+   "releaseDate": "Mar. 2020",
    "link": "https://nickwalker.us/publications/walker2020perceptions"
   },
   {
@@ -287,7 +298,7 @@
    "name": "Jointly Improving Parsing and Perception for Natural Language Commands through Human-Robot Dialog",
    "authors": "J.\u00a0Thomason, A.\u00a0Padmakumar, J.\u00a0Sinapov, N.\u00a0Walker, Y.\u00a0Jiang, H.\u00a0Yedidsion, J.\u00a0Hart, P.\u00a0Stone, R.\u00a0J.\u00a0Mooney",
    "publisher": "Journal of Artificial Intelligence Research",
-   "releaseDate": "February 2020",
+   "releaseDate": "Feb. 2020",
    "link": "https://nickwalker.us/publications/thomason2020improving"
   },
   {
@@ -296,7 +307,7 @@
    "authors": "Y.\u00a0Jiang*, N.\u00a0Walker*, J.\u00a0Hart, P.\u00a0Stone",
    "location": "Berkeley",
    "publisher": "Proc. 29th Int. Conf. Automated Planning Scheduling",
-   "releaseDate": "July 2019",
+   "releaseDate": "Jul. 2019",
    "link": "https://nickwalker.us/publications/jiang2019icaps"
   },
   {
@@ -314,7 +325,7 @@
    "authors": "J.\u00a0W.\u00a0Hart, R.\u00a0Shah, S.\u00a0Kirmani, N.\u00a0Walker, K.\u00a0Baldauf, N.\u00a0John, P.\u00a0Stone",
    "location": "Madrid, Spain",
    "publisher": "2018 IEEE/RSJ Int. Conf. Intelligent Robots Systems",
-   "releaseDate": "October 2018",
+   "releaseDate": "Oct. 2018",
    "link": "https://nickwalker.us/publications/hart2018iros"
   },
   {
@@ -323,7 +334,7 @@
    "authors": "M.\u00a0Svetlik, M.\u00a0Leonetti, J.\u00a0Sinapov, R.\u00a0Shah, N.\u00a0Walker, P.\u00a0Stone",
    "location": "San Francisco",
    "publisher": "Proc. Thirty-First AAAI Conf. Artificial Intelligence",
-   "releaseDate": "February 2017",
+   "releaseDate": "Feb. 2017",
    "link": "https://nickwalker.us/publications/svetlik2017aaai"
   },
   {
@@ -332,7 +343,7 @@
    "authors": "E.\u00a0D.\u00a0Schroeder, N.\u00a0Walker, A.\u00a0S.\u00a0Danko",
    "location": "San Francisco",
    "publisher": "Proc. of SPIE 10051, Neural Imaging Sensing",
-   "releaseDate": "February 2017",
+   "releaseDate": "Feb. 2017",
    "link": "https://nickwalker.us/publications/schroeder2017"
   },
   {
@@ -341,7 +352,7 @@
    "authors": "N.\u00a0Walker, C.\u00a0Mavrogiannis, S.\u00a0Srinivasa, M.\u00a0Cakmak",
    "location": "Xi'an, China",
    "publisher": "Proc. 2021 ICRA Workshop Modern Approaches for Intrinsically-Motivated Intelligent Behavior",
-   "releaseDate": "June 2021",
+   "releaseDate": "Jun. 2021",
    "link": "https://nickwalker.us/publications/walker2021influencing"
   },
   {
@@ -350,7 +361,7 @@
    "authors": "N.\u00a0Walker*, Y.\u00a0Jiang*, M.\u00a0Cakmak, P.\u00a0Stone",
    "location": "Berkeley",
    "publisher": "Proc. of 2019 ICAPS Workshop Planning Robotics",
-   "releaseDate": "July 2019",
+   "releaseDate": "Jul. 2019",
    "link": "https://nickwalker.us/publications/walker2019planrob"
   },
   {
@@ -359,7 +370,7 @@
    "authors": "N.\u00a0Walker, Y.-T.\u00a0Peng, M.\u00a0Cakmak",
    "location": "Sydney",
    "publisher": "RoboCup 2019: Robot Soccer World Cup XXIII",
-   "releaseDate": "July 2019",
+   "releaseDate": "Jul. 2019",
    "link": "https://nickwalker.us/publications/walker2019robocup"
   },
   {
@@ -368,7 +379,7 @@
    "authors": "Y.\u00a0Jiang*, N.\u00a0Walker*, M.\u00a0Kim, N.\u00a0Brissonneau, D.\u00a0S.\u00a0Brown, J.\u00a0W.\u00a0Hart, S.\u00a0Niekum, L.\u00a0Sentis, P.\u00a0Stone",
    "location": "Arlington",
    "publisher": "AAAI Fall Symp. Reasoning Learning in Real-World Systems for Long-Term Autonomy",
-   "releaseDate": "October 2018",
+   "releaseDate": "Oct. 2018",
    "link": "https://nickwalker.us/publications/jiang2018fss"
   },
   {
@@ -377,7 +388,7 @@
    "authors": "J.\u00a0Hart, H.\u00a0Yedidsion, Y.\u00a0Jiang, N.\u00a0Walker, R.\u00a0Shah, J.\u00a0Thomason, A.\u00a0Padmakumar, R.\u00a0Fernandez, J.\u00a0Sinapov, R.\u00a0Mooney, P.\u00a0Stone",
    "location": "Arlington",
    "publisher": "AAAI Fall Symp. Artificial Intelligence Human-Robot Interaction",
-   "releaseDate": "October 2018",
+   "releaseDate": "Oct. 2018",
    "link": "https://nickwalker.us/publications/hart2018fss"
   }
  ],
@@ -395,10 +406,10 @@
    "name": "Robotics platforms",
    "level": "Experienced",
    "keywords": [
+    "Stretch",
     "Fetch",
     "Kuri",
-    "HSR",
-    "BWIBot"
+    "HSR"
    ]
   },
   {
