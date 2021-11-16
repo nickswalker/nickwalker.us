@@ -5,16 +5,16 @@
 @import "research-portfolio-variables";
 
 // Our variables
-$base-font-family: "Elena", "Georgia", serif;
-$display-font-family: "Elena", 'Georgia', serif;;
-$base-font-size:   18px;
+$base-font-family: "Rowan-Variable", "Georgia", serif;
+$display-font-family: "Rowan-Variable", 'Georgia', serif;;
+$base-font-size:   17px;
 $base-font-weight: 400;
-$base-line-height: 1.4;
+$base-line-height: 1.5;
 
-$small-font-size:  $base-font-size * 0.875;
+$small-font-size:  0.875rem;
 
 
-$post-content-font-family: "Elena", "Georgia";
+$post-content-font-family: "Rowan-Variable", "Georgia";
 $post-content-font-size: 18px;
 
 
@@ -29,33 +29,7 @@ $on-laptop:        800px;
 @import "gallery";
 
 /* Custom Fonts */
-@font-face {
-  font-family: 'Elena';
-  font-weight: normal;
-  font-style: normal;
-  src:url('/assets/fonts/ElenaWebBasicRegular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Elena';
-  font-weight: normal;
-  font-style: italic;
-  src: url('/assets/fonts/ElenaWebBasicRegularItalic.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Elena';
-  font-weight: bold;
-  font-style: normal;
-  src: url('/assets/fonts/ElenaWebBasicBold.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Elena';
-  font-weight: bold;
-  font-style: italic;
-  src: url('/assets/fonts/ElenaWebBasicBoldItalic.woff2') format('woff2');
-}
+@import "rowan.css";
 
 :root {
   --brand-color: hsl(72.88, 66.53%, 48%);
@@ -64,6 +38,10 @@ $on-laptop:        800px;
   --brand-color-dark: hsl(72.88, 66.53%, 43%);
   --brand-color-darker: hsl(72.88, 66.53%, 38%);
   --brand-color-darkest: hsl(72.88, 66.53%, 28%);
+}
+
+i, em {
+  font-family: "Rowan-VariableItalic", "Georgia";
 }
 
 /* Header customizations */
