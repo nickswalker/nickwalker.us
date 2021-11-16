@@ -2,7 +2,7 @@ title: Nick Walker
 first_last_name: Nick Walker
 email: nick@nickwalker.us
 description: > # this means to ignore newlines until "baseurl:"
-  Computer science student at the University of Washington with interests in robotics, interactive machine learning.
+  Computer science student at the University of Washington with interests in human-robot communication.
 baseurl: "" # Subpath, in my case, root
 url: "https://nickwalker.us" # includes protocol
 
