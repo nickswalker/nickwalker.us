@@ -17,9 +17,10 @@
 {% assign project_assets = "/assets/projects/" | append: slug %}
 {% capture og_image %}{{ site.url }}{{ project_assets }}/{{page.images[0]}}{% endcapture %}
 {% else %}
-{% capture og_image %}{{ site.url }}/assets/images/og-banner.png{% endcapture %}
 {% endif %}
+{% if og_image %}
 <meta property="og:image" content="{{ og_image }}"/>
+{% endif %}
 <meta property="og:type"  content="{% if page.collection == 'posts' or page.collection == 'projects' %}article{% else %}website{% endif%}" />
 <meta property="og:url" content="{{ url }}"/>
 <meta property="og:title" content="{{ title }}"/>
