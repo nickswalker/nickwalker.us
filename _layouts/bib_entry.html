@@ -5,7 +5,7 @@
     {%comment%}Yes, captures have to be on one line or they'll capture whitespace too{%endcomment%}
     {% assign venue = "" %}
     {% if entry.booktitle %}
-    {% capture venue %}{{ entry.booktitle }}{% endcapture %}
+    {% capture venue %}{{ entry.booktitle | remove: "Proceedings of the " | remove: "Proceedings of " | replace: "International Conference on", "Int. Conf."}}{% endcapture %}
     {% elsif entry.journal == "CoRR" %}
     {% assign venue = "arXiv preprint" %}
     {% elsif entry.journal %}
