@@ -8,11 +8,12 @@ featured: false
 has_article: true
 ---    
 
-<!-- TODO: Add some images of posters here and link to archive examples -->
+{% include article_multiimage.html images="/assets/projects/poster-templates/influencing-poster.webp /assets/projects/poster-templates/template-poster.webp /assets/projects/poster-templates/villa2019-poster.webp" caption="Some posters I've made using these templates. Looking at them shrunken down on a screen can be a helpful reminder of what a poster looks like from a distance. "%}
+
 
 ## University of Washington
 
-These include the official brand colors as well as some nice compliments which you can use in supporting figures or call outs.
+These include UW's brand colors as well as some nice compliments which you can use in supporting figures or call outs.
 Vector versions of the university branding as well as the CSE branding are included too.
 
 CSE's large format printers [use 36 inch wide rolls](https://www.cs.washington.edu/lab/printing/poster-printer), so these
@@ -63,14 +64,14 @@ Once you need to work with the layout:
 
 Guides legend:
 <!-- TODO: Colored dots here -->
-* Red guides are for margin. Respect the margin
-* Magenta guides are for inter-column space. You can let images extend into this space, and bullets **should** hang out here
-* Green guides are for text bounds
+* Red guides are for margin. Respect the margin.
+* Magenta guides are for inter-column space. You can let images extend into this space, and bullets **should** hang out here.
+* Green guides are for text bounds.
 
 ### How do I use them tastefully?
 
 * Stick to the given font sizes.
-* Don't waste ink with unnecessary dark backgrounds; it increases the odds that something goes wrong with the print (e.g. smearing, streaking)
+* Don't waste ink with unnecessary dark backgrounds; it increases the odds that something goes wrong with the print (e.g. smearing, streaking).
 * Use the highest resolution assets you have access to.
   * If you have a vector figure or logo, use [this process](https://webapps.stackexchange.com/a/107705) to make sure it is inserted without loss of quality
 * Use the correct university and department branding.

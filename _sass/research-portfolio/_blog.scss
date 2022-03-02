@@ -62,16 +62,23 @@ article.project img {
 }
 
 article {
-
   font-size: $post-content-font-size;
 
-  ol, ul,
-  header, p, pre, h1, h2, h3, h4, h5, blockquote, hr {
+  header, p, pre, h1, h2, h3, h4, h5, blockquote, hr, ul, ol {
     margin-left: auto;
     display: block;
     margin-right: auto;
     max-width: 650px;
   }
+
+  ol, ul {
+    padding-left: .75rem;
+  }
+
+  li > ul, li > ol {
+    padding-left: .5rem;
+  }
+
 
   @include media-query($on-laptop) {
     pre {
@@ -124,6 +131,38 @@ article {
       object-fit: contain;
       background-color: var(--light-background-color);
       max-height: 75vh;
+    }
+    figcaption p {
+      font-size: $small-font-size;
+      color: var(--text-color);
+    }
+  }
+
+  .article-multiimage {
+    margin-bottom: 2rem;
+
+
+    .images {
+      display: flex;
+      flex-direction: column;
+      //grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      //grid-gap: 1rem;
+      align-items: start;
+      @include media-query($on-tablet) {
+        & {
+         flex-direction: row;
+          gap: .5rem
+        }
+      }
+
+      img {
+        margin: 0 auto;
+        margin-bottom: $spacing-unit/2.0;
+        width: 100%;
+        object-fit: contain;
+        background-color: var(--light-background-color);
+        max-height: 75vh;
+      }
     }
     figcaption p {
       font-size: $small-font-size;

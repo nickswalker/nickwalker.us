@@ -1,0 +1,22 @@
+<!-- _includes/article_multiimage.html -->
+{% comment %} TODO: Check if there's a better way to do asset URLs{% endcomment %}
+{% if include.lightbox == nil or include.lightbox %}
+{% assign lightbox = true %}
+{% else %}
+{% assign lightbox = false %}
+{% endif %}
+{% assign images = include.images | split: " " %}
+<figure class="article-multiimage">
+    <div class="images">
+    {% for image in images %}
+    {% if lightbox %}
+    <a href="{{ image }}" data-fancybox="gallery"><img src="{{ image }}" alt="{{ include.title }}"/></a>
+    {% else %}
+    <img src="{{ image }}" alt="{{ include.title }}"/>
+    {% endif %}
+    {% endfor %}
+    </div>
+    {% if include.caption %}
+    <figcaption>{{ include.caption | markdownify }}</figcaption>
+    {% endif %}
+</figure>
