@@ -27,7 +27,7 @@ I had the honor of speaking on behalf of the College of Natural Science's gradua
 >
 >This college, this university, is filled with high quality people, and I’m sure that you have benefited from their instruction, their expertise, and their guidance as well. Whether you measure it by number of lives saved, number of citations, or number of quotes in the New York Times, our professors give us a model for how to be forward thinkers and upstanding people. If we ever think we have nothing left to achieve, we can look to them.
 >
->(And if we ever think we can’t have possibly failed worse, just remember the [Speedway bricks](http://www.dailytexanonline.com/2017/10/18/speedway-mall-project-to-be-almost-entirely-redone-due-to-faulty-bricks).)
+>(And if we ever think we can’t have possibly failed worse, just remember the [Speedway bricks](https://thedailytexan.com/2017/10/18/speedway-mall-project-to-be-almost-entirely-redone-due-to-faulty-bricks/).)
 >
 >Of course, it wasn’t all about professors. We’ve spent the vast majority of our time with each other. Last year, I went to hear a friend present their thesis. It was excellent, and they’ve since graduated, but I remember how I felt seeing them then. I felt proud, proud to be at a place where students were doing such good work, and, overwhelmingly, I felt inspired to live up to the standard they set. I felt energized. It’s a feeling I’ve had again and again these past weeks, whether it was while seeing my fellow [Polymathic Scholars](https://cns.utexas.edu/honors/honors-programs-center/polymathic) finish their research, or talking to friends about their org events or hearing people’s post-graduation aspirations.
 >
