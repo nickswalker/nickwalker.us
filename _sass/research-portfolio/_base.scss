@@ -144,12 +144,17 @@ p a {
 }
 
 @mixin quick-link {
-  display: inline-block;
-  margin-right: .75rem;
-  margin-bottom: .75rem;
+  display: block;
   border-radius: 0.5rem;
   border: 1px solid var(--brand-color);
   background-color: transparent;
+  text-align: center;
+  margin-bottom: .25rem;
+
+  @include media-query($on-phone) {
+    display: inline-block;
+    margin-bottom: 0;
+  }
   a {
     color: var(--brand-color);
     padding: 0.5rem;
