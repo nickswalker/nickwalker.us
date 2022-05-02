@@ -70,6 +70,43 @@
  ],
  "volunteer": [
   {
+   "organization": "Northwest Robotics Symposium",
+   "position": "Organizer",
+   "website": "https://nwrsymposium.github.io",
+   "date": "2022"
+  },
+  {
+   "organization": "ACM/IEEE International Conference on Human-Robot Interaction",
+   "shortName": "HRI",
+   "website": "https://humanrobotinteraction.org/",
+   "position": "Reviewer",
+   "number": 1,
+   "date": "2022"
+  },
+  {
+   "organization": "IEEE Transactions on Affective Computing",
+   "shortName": "TAFFC",
+   "position": "Reviewer",
+   "website": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5165369",
+   "date": "2022"
+  },
+  {
+   "organization": "International Journal of Social Robotics",
+   "shortName": "IJSR",
+   "website": "https://www.springer.com/journal/12369",
+   "position": "Reviewer",
+   "number": 1,
+   "date": "2022"
+  },
+  {
+   "organization": "Science Robotics",
+   "shortName": "Sci. Rob.",
+   "website": "https://www.science.org/journal/scirobotics",
+   "position": "Reviewer",
+   "number": 1,
+   "date": "2021"
+  },
+  {
    "organization": "IEEE Robotics and Automation Letters",
    "shortName": "RA-L",
    "website": "https://www.ieee-ras.org/publications/ra-l",
@@ -114,7 +151,7 @@
    "shortName": "TAFFC",
    "position": "Reviewer",
    "website": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5165369",
-   "date": "2020"
+   "date": "2021"
   },
   {
    "organization": "ACM Transactions on Human-Robot Interaction",
@@ -268,6 +305,15 @@
  "publications": [
   {
    "type": "conference",
+   "name": "Not All Who Wander Are Lost: A Localization-Free System for In-the-Wild Mobile Robot Deployments",
+   "authors": "A.\u00a0Nanavati*, N.\u00a0Walker*, L.\u00a0Taber, C.\u00a0Mavrogiannis, L.\u00a0Takayama, M.\u00a0Cakmak, S.\u00a0S.\u00a0Srinivasa",
+   "location": "Virtual",
+   "publisher": "Proc. 2022 ACM/IEEE Int. Conf. Human-Robot Interaction",
+   "releaseDate": "Mar. 2022",
+   "link": "https://nickwalker.us/publications/nanavati2022wandering"
+  },
+  {
+   "type": "conference",
    "name": "Influencing Behavioral Attributions to Robot Motion During Task Execution",
    "authors": "N.\u00a0Walker, C.\u00a0Mavrogiannis, S.\u00a0Srinivasa, M.\u00a0Cakmak",
    "location": "London, UK",
@@ -289,7 +335,7 @@
    "name": "Human Perceptions of a Curious Robot that Performs Off-Task Actions",
    "authors": "N.\u00a0Walker, K.\u00a0Weatherwax, J.\u00a0Alchin, L.\u00a0Takayama, M.\u00a0Cakmak",
    "location": "Oxford, UK",
-   "publisher": "ACM/IEEE Int. Conf. Human-Robot Interaction",
+   "publisher": "Proc. 2020 ACM/IEEE Int. Conf. Human-Robot Interaction",
    "releaseDate": "Mar. 2020",
    "link": "https://nickwalker.us/publications/walker2020perceptions"
   },
@@ -529,6 +575,15 @@
   }
  ],
  "presentations": [
+  {
+   "name": "Human Perceptions of a Curious Robot that Performs Off-Task Actions",
+   "venue": "Workshop on Robot Curiosity in Human Robot Interaction (RCHRI)",
+   "date": "2022",
+   "location": "Virtual",
+   "authors": "N.\u00a0Walker",
+   "format": "Oral",
+   "link": "https://sites.google.com/view/rchri/home"
+  },
   {
    "name": "Modeling and Eliciting Desired Attributions from a Robot's Observers",
    "venue": "Honda Research Institute Curious Minded Machines Workshop",
