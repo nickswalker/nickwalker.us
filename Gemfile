@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 ruby File.read(".ruby-version").strip
 
-gem "jekyll", "~> 4.0"
+gem "jekyll", "~> 4.2"
 gem "unicode"
 group :jekyll_plugins do
    gem "jekyll-archives"
@@ -11,5 +11,7 @@ group :jekyll_plugins do
    gem "jekyll-scholar"
    gem "jekyll-sitemap"
    gem "jekyll-tidy"
-   gem "html-proofer"
 end
+
+gem "html-proofer"
+gem "webrick", "~> 1.7"

@@ -8,9 +8,9 @@ My portfolio website. Built with [Jekyll](https://jekyllrb.com), based off of [M
 
 ## Development
 
-Make sure you have Ruby `>=2.4` and [Bundler](http://bundler.io/) installed. You can manage Ruby installations with rbenv. Clone down the repo and run
+Make sure you have Ruby `>=2.6` and [Bundler](http://bundler.io/) installed. You can manage Ruby installations with rbenv. Clone down the repo and run
 
-    bundle install --path vendor/bundle
+    bundle install 
 
 to install gem dependencies. Then
 
