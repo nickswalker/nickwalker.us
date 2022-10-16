@@ -30,6 +30,15 @@
  },
  "work": [
   {
+   "company": "NVIDIA",
+   "position": "Research Intern",
+   "website": "https://nvidia_srl.gitlab.io/",
+   "date": "2022 Su.",
+   "highlights": [
+    "Worked with Seattle Robotics Lab researchers"
+   ]
+  },
+  {
    "company": "UW CSE 478 (Robotics)",
    "position": "Teaching Assistant",
    "website": "https://courses.cs.washington.edu/courses/cse478/21sp/",
@@ -69,6 +78,38 @@
   }
  ],
  "volunteer": [
+  {
+   "organization": "IEEE International Conference on Intelligent Robots and Systems",
+   "shortName": "IROS",
+   "website": "https://www.ieee-ras.org/conferences-workshops/financially-co-sponsored/iros",
+   "position": "Reviewer",
+   "number": 1,
+   "date": "2023"
+  },
+  {
+   "organization": "International Journal of Social Robotics",
+   "shortName": "IJSR",
+   "website": "https://www.springer.com/journal/12369",
+   "position": "Reviewer",
+   "number": 1,
+   "date": "2023"
+  },
+  {
+   "organization": "ACM/IEEE International Conference on Human-Robot Interaction",
+   "shortName": "HRI",
+   "website": "https://humanrobotinteraction.org/",
+   "position": "Reviewer",
+   "number": 2,
+   "date": "2023"
+  },
+  {
+   "organization": "Conference on Robot Learning",
+   "shortName": "CoRL",
+   "website": "https://corl2022.org/",
+   "position": "Reviewer",
+   "number": 4,
+   "date": "2022"
+  },
   {
    "organization": "Northwest Robotics Symposium",
    "position": "Organizer",
@@ -304,10 +345,18 @@
  ],
  "publications": [
   {
+   "type": "popular",
+   "name": "Wandering Robots in the Wild",
+   "authors": "N.\u00a0Walker, A.\u00a0Nanavati",
+   "publisher": "IEEE Spectrum",
+   "releaseDate": "Jul. 2022",
+   "link": "https://nickwalker.us/publications/walker2022wandering"
+  },
+  {
    "type": "conference",
    "name": "Not All Who Wander Are Lost: A Localization-Free System for In-the-Wild Mobile Robot Deployments",
-   "authors": "A.\u00a0Nanavati*, N.\u00a0Walker*, L.\u00a0Taber, C.\u00a0Mavrogiannis, L.\u00a0Takayama, M.\u00a0Cakmak, S.\u00a0S.\u00a0Srinivasa",
-   "location": "Virtual",
+   "authors": "A.\u00a0Nanavati*, N.\u00a0Walker*, L.\u00a0Taber, C.\u00a0Mavrogiannis, L.\u00a0Takayama, M.\u00a0Cakmak, S.\u00a0Srinivasa",
+   "location": "Sapporo, Hokkaido, Japan",
    "publisher": "Proc. 2022 ACM/IEEE Int. Conf. Human-Robot Interaction",
    "releaseDate": "Mar. 2022",
    "link": "https://nickwalker.us/publications/nanavati2022wandering"
@@ -659,6 +708,11 @@
   }
  ],
  "meetings": [
+  {
+   "name": "CoRL",
+   "date": "2021",
+   "location": "virtual"
+  },
   {
    "name": "RSS",
    "date": "2020",
