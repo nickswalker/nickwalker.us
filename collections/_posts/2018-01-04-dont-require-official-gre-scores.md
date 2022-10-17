@@ -6,7 +6,7 @@ published: true
 type: blog
 ---
 
-From ETS's [guidelines](https://www.ets.org/s/gre/pdf/gre_guide.pdf) on how institutions should use 
+From ETS's [guidelines](https://web.archive.org/web/20171215105301/http://www.ets.org/s/gre/pdf/gre_guide.pdf) on how institutions should use 
 [GRE](https://en.wikipedia.org/wiki/Graduate_Record_Examinations) scores (italics are mine):
 
 >**Accept Only Official GRE Score Reports** <br/>
