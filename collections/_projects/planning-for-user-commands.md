@@ -12,7 +12,7 @@ featured_image: /assets/images/research/robot_command.jpg
 citation_keys: [jiang2019icaps]
 ---
 
-If a robot is asked to get an apple from the kitchen, how should it represent this command? There are plenty of possibilities, but in [a recent paper](http://www.cs.utexas.edu/%7Epstone/Papers/bib2html-links/ICAPS19-Jiang.pdf), we looked at a compact [Answer Set Programming](https://en.wikipedia.org/wiki/Answer_set_programming) encoding that handles many of the concerns that arise when actually trying to execute such a command.
+If a robot is asked to get an apple from the kitchen, how should it represent this command? There are plenty of possibilities, but in [a recent paper](https://www.cs.utexas.edu/%7Epstone/Papers/bib2html-links/ICAPS19-Jiang.pdf), we looked at a compact [Answer Set Programming](https://en.wikipedia.org/wiki/Answer_set_programming) encoding that handles many of the concerns that arise when actually trying to execute such a command.
 
 Here I'll break down the actual answer set programs that our system would construct to handle the apple fetching example, giving complete code that you can run in [clingo](https://potassco.org/clingo/). Many of Clingo's innovations extend the typical ASP solving semantics, so I'll highlight unique features that we rely on.
 

@@ -6,4 +6,4 @@ categories: news
 published: true
 ---
 
-I'll be working with Claudia D'Arpino in the [Seattle Robotics Lab](https://nvidia_srl.gitlab.io/).
+I'll be working with Claudia D'Arpino in the [Seattle Robotics Lab](https://research.nvidia.com/labs/srl/).

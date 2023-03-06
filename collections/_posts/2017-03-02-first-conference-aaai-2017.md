@@ -15,7 +15,7 @@ I attended [AAAI-17](http://www.aaai.org/Conferences/AAAI/aaai17.php) in San Fra
 
 The first two days were wholly dedicated to four-hour, lecture-style "tutorials." Each was led by two or three researchers who had signficant experience with some subtopic, like logic programming or optimization. There was a good range of topics, and I appreciated the chance to get exposed to ideas from across the field. You could ask questions at any time, and the presenters were prepared and enthusiastic. Unfortunately attendance was pretty light, likely because they were scheduled against a number of industry-sponsored events. Also, I imagine late students or established researchers grow jaded to the value of sitting in classes for a weekend.
 
-In particular, I enjoyed [Interactive Machine Learning](http://interactiveml.net) and [Paper of the Future](http://scientificpaperofthefuture.org/materials.html). Both covered topics that aren't accessible via coursework at UT.
+In particular, I enjoyed [Interactive Machine Learning](https://web.archive.org/web/20180203084547/http://interactiveml.net/) and [Paper of the Future](https://scientificpaperofthefuture.org/materials.html). Both covered topics that aren't accessible via coursework at UT.
 
 ## Technical Sessions
 
@@ -24,11 +24,11 @@ The meat of the conference was the technical sessions. AAAI has tracks for just 
 ## Posters
 
 {% include article_image.html img="/assets/images/posts/aaai-poster.jpg"
-    caption="Me, Rishi and Jivko in front of [our poster](http://doi.org/10.5281/zenodo.3244636). Thanks for the photo, [Shiqi](http://www.cs.binghamton.edu/~szhang/)."%}
+    caption="Me, Rishi and Jivko in front of [our poster](https://doi.org/10.5281/zenodo.3244636). Thanks for the photo, [Shiqi](https://www.cs.binghamton.edu/~szhang/)."%}
 
 The format changes from year to year, but this year all papers were assigned to either a talk (to occur in a technical session) or a poster. Every day, fifty or so posters were set up in a ballroom, available for viewing starting at six in the evening. The organizers arranged to have dinner (and amazing desserts) served, so these showings had a lot of traffic. Some people were in browse-only mode, reading titles and abstracts, maybe taking a photo of a poster with their phone. Others would ask for a walkthrough, interjecting with questions or comments. These usually lasted five to ten minutes.
 
-Posters designs ranged from "enlarged version of the paper" to "illustrated companion." Some of the text heavy ones were well executed, but overall I felt like the simpler posters tended to be more successful. Unlike the technical session, there was plenty of time to discuss the work in great depth--but the vast majority of the passersby were there for a pitch, not a lecture. Having good supporting graphics and charts for this audience is more important than including every last detail. As a bonus, nice figures are magnetic. We got a number of comments from people that our eye-catching diagrams were the reason they stopped to talk to us.
+Poster designs ranged from "enlarged version of the paper" to "illustrated companion." Some of the text heavy ones were well executed, but overall I felt like the simpler posters tended to be more successful. Unlike the technical session, there was plenty of time to discuss the work in great depth--but the vast majority of the passersby were there for a pitch, not a lecture. Having good supporting graphics and charts for this audience is more important than including every last detail. As a bonus, nice figures are magnetic. We got a number of comments from people that our eye-catching diagrams were the reason they stopped to talk to us.
 
 Student abstract posters were mixed in every evening. These were largely from undergraduates or early graduate students, and showed work in progress. I didn't even know this type of submission existed, but they seem quite common at most conferences.
 
@@ -42,7 +42,7 @@ There were a number of industry talks, though most of these were just thinly vei
 
  The career fair was great because all of the companies there were interested in recruiting people with exactly the attendees' background. This is a little unusual if you're used to general university fairs where the recruiters probably only have a faint idea of whatever your research topic is and little inclination to hear about it.
 
-The [Innovative Applications of Artificial Intelligence (IAAI)](http://www.aaai.org/Conferences/IAAI/iaai17.php) conference was colocated with AAAI this year, and a standard registration was good for both. There were a lot of sessions where researchers from universities and companies alike showed off impressive practical work.
+The [Innovative Applications of Artificial Intelligence (IAAI)](https://www.aaai.org/Conferences/IAAI/iaai17.php) conference was colocated with AAAI this year, and a standard registration was good for both. There were a lot of sessions where researchers from universities and companies alike showed off impressive practical work.
 
 There were a few student activities throughout the conference. I got to eat lunch with [Sven Koenig](https://en.wikipedia.org/wiki/Sven_Koenig_(computer_scientist)) through *Lunch With a Fellow*, and I met lots of impressive students (including many more undergrads than I was expecting) at the student reception.
 
