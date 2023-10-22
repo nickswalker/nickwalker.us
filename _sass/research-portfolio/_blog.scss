@@ -10,6 +10,7 @@
 
 .post-link {
   display: block;
+  font-weight: normal;
 }
 
 .permalink, .permalink:visited {
@@ -109,12 +110,7 @@ article {
       float: none;
     }
 
-    h1, h2 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 0;
 
-    }
   }
 
   iframe {
@@ -131,7 +127,7 @@ article {
 
     img {
       margin: 0 auto;
-      margin-bottom: $spacing-unit/2.0;
+      margin-bottom: calc($spacing-unit/2.0);
       width: 100%;
       object-fit: contain;
       background-color: var(--light-background-color);
@@ -162,7 +158,7 @@ article {
 
       img {
         margin: 0 auto;
-        margin-bottom: $spacing-unit/2.0;
+        margin-bottom: calc($spacing-unit/2.0);
         width: 100%;
         object-fit: contain;
         background-color: var(--light-background-color);
@@ -182,11 +178,6 @@ article {
     margin-bottom: 2rem;
     font-family: $post-content-font-family;
 
-    p {
-      margin: 0 auto 1rem auto;
-      font-size: 1rem;
-    }
-
     h2 {
       font-size: 1rem;
       font-weight: bold;
@@ -195,10 +186,6 @@ article {
       line-height: 2rem;
     }
 
-    h3, h4 {
-      font-size: 1rem;
-      font-weight: bold;
-    }
   }
 
 }

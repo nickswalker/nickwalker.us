@@ -1,5 +1,13 @@
 <head>
   {% include base_meta.html%}
+  <script type="importmap">
+    {
+      "imports": {
+        "lit": "https://cdn.jsdelivr.net/gh/lit/dist@3/core/lit-core.min.js",
+        "lit-html": "https://cdn.jsdelivr.net/gh/lit/dist@3/core/lit-core.min.js",
+        "lit-element": "https://cdn.jsdelivr.net/gh/lit/dist@3/core/lit-core.min.js"        }
+    }
+  </script>
   <link rel="stylesheet" href="/assets/css/main.css">
   {% include fonts.html %}
   {% include favicons.html %}
@@ -11,6 +19,11 @@
   {% if page.custom_js %}
     {% for js_file in page.custom_js %}
     <script src='{{ js_file }}'></script>
+    {% endfor %}
+  {% endif %}
+  {% if page.custom_js_modules %}
+    {% for js_file in page.custom_js_modules %}
+    <script src='{{ js_file }}' type="module"></script>
     {% endfor %}
   {% endif %}
 </head>
