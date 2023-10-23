@@ -7,7 +7,7 @@ type: link
 link: https://flic.kr/p/24p3ezA
 ---
 
-[Background](https://cns.utexas.edu/honors/academic-distinction/dean-s-honored-graduates):
+[Background](https://cns.utexas.edu/info-undergraduate-students/events-recognition/deans-honored-graduates):
 
 >Dean’s Honored Graduate is the highest honor awarded to graduating seniors in the College of Natural Sciences. It is
 >restricted to fewer than one percent of the graduating class of the college during an academic year. Dean’s Honored Graduates are nominated by

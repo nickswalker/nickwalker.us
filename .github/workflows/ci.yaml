@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 📂 setup
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: 💎 setup ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -24,9 +24,9 @@ jobs:
       - name: run tests
         run: |
           ./_test/test_bibtex.rb _data/references.bib
-          bundle exec htmlproofer ./_site --only-4xx  --assume-extension .html --no-enforce-https --ignore-missing-alt --ignore-urls '/vimeo.com/' --ignore-urls '/twitter.com/' --swap-urls 'https?\:\/\/nickwalker\.us:'
+          bundle exec htmlproofer ./_site --only-4xx  --assume-extension .html --no-enforce-https --ignore-missing-alt --ignore-urls '/vimeo.com/' --ignore-urls '/twitter.com/' --ignore-urls '/www.researchgate.net/' --swap-urls 'https?\:\/\/nickwalker\.us:'
       - name: Upload build artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: site
           path: _site
@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 📂 setup
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: 💎 setup ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -48,9 +48,9 @@ jobs:
       - name: run tests
         run: |
           ./_test/test_bibtex.rb _data/references.bib
-          bundle exec htmlproofer ./_site --only-4xx  --assume-extension .html --no-enforce-https --ignore-missing-alt --ignore-urls '/vimeo.com/' --ignore-urls '/twitter.com/' --swap-urls 'https?\:\/\/nickwalker\.us:'
+          bundle exec htmlproofer ./_site --only-4xx  --assume-extension .html --no-enforce-https --ignore-missing-alt --ignore-urls '/vimeo.com/' --ignore-urls '/twitter.com/' --ignore-urls '/www.researchgate.net/' --swap-urls 'https?\:\/\/nickwalker\.us:'
       - name: Upload build artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: site-drafts
           path: _site
@@ -60,7 +60,7 @@ jobs:
     if: github.ref == 'refs/heads/master'
     steps:
       - name: Download build result
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: site
       - name: Setup SSH Keys and known_hosts
@@ -88,7 +88,7 @@ jobs:
     if: github.ref == 'refs/heads/develop'
     steps:
       - name: Download build result
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: site
       - name: Setup SSH Keys and known_hosts
@@ -109,7 +109,7 @@ jobs:
     needs: [jekyll-build-drafts]
     steps:
     - name: Download build result
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v3
       with:
         name: site-drafts
     - name: Setup SSH Keys and known_hosts
