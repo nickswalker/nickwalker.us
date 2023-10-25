@@ -40,6 +40,10 @@ html {
   font-kerning: normal;
 }
 
+::selection {
+  background-color: hsl(72.9, 72.5%, 78.6%);
+}
+
 /*
 @media (prefers-color-scheme: dark) {
   :root {
@@ -141,22 +145,16 @@ h3, h4 {
  */
 a {
   color: var(--link-color);
-  -webkit-text-decoration-color: var(--link-decoration-color);
   text-decoration-color: var(--link-decoration-color);
+  text-underline-offset: 2px;
   transition:.2s;
 
   &:hover {
     border-bottom: none;
-    -webkit-text-decoration-color: var(--link-color-hover);
     text-decoration-color: var(--link-color-hover);
   }
 }
 
-p a {
-  &:visited {
-    color: var(--brand-color-darker);
-  }
-}
 
 @mixin quick-link {
   display: block;

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: article-page
 title: Note to Interested Undergrads
 permalink: undergrads
 ---

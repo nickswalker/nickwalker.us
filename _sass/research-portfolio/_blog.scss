@@ -65,6 +65,21 @@ article.project img {
 article {
   font-size: $post-content-font-size;
 
+  p a, ul a, ol a, blockquote a, pre a {
+    color: var(--light-text-color);
+    text-decoration-color: var(--light-text-color);
+    transition:.2s;
+
+    &:hover {
+      text-decoration: none;
+      background-color: var(--brand-color);
+    }
+
+    &:visited {
+      color: var(--text-color);
+    }
+  }
+
   header, p, pre, h1, h2, h3, h4, h5, blockquote, hr, ul, ol {
     margin-left: auto;
     display: block;
