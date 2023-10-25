@@ -3,6 +3,7 @@ layout: page
 title:  "Homemade Energy Gel Recipe"
 permalink: energy-gels/
 custom_js_modules: ['/assets/js/nutritionCalculators.js']
+excerpt: "Cheap, easy, and customizable fuel"
 ---
 
 Endurance athletes consume highly concentrated carbohydrate solutions because it maintains blood glucose levels and spares [limited accessible energy sources](https://doi.org/10.1093%2Fnutrit%2Fnuy001). There are [many "energy gel" sports nutrition products](https://www.researchgate.net/profile/Xuguang-Zhang-2/publication/277081684_Extreme_Variation_of_Nutritional_Composition_and_Osmolality_of_Commercially_Available_Carbohydrate_Energy_Gel/links/557971f508aeb6d8c020255c/Extreme-Variation-of-Nutritional-Composition-and-Osmolality-of-Commercially-Available-Carbohydrate-Energy-Gel.pdf) to choose from.
@@ -28,11 +29,11 @@ Keeps for atleast 2-3 days in a refrigerator.
 
 The recommendation for events longer than an hour is 60g per hour, and there's [evidence of performance and recovery benefits for using as much as 120g of carbohydrate an hour](https://www.mdpi.com/2072-6643/12/5/1367) (in elite endurance athletes). Tolerance varies between individuals and is trainable.
 
-### Glucose:Fructose Ratio
+### Glucose:fructose Ratio
 
 Glucose and fructose [use separate metabolic pathways](https://www.mysportscience.com/post/2015/05/14/carb-mixes-and-benefits). The recipe defaults to a low amount of fructose compared to common recommendations of 2:1 or 1:1 ratios largely because using honey keeps the flavor tolerable, and because fructose is largely a moot point until you're able to saturate the glucose pathway. If you want to go lower than 1.25:1 you'll need to swap honey, and it's tag-along 30% glucose content, for pure fructose to keep the osmolality manageable.
 
-### Osmolality and Isotonicity
+### Osmolality and isotonicity
 
 Absorption is best if the solution is isotonic, meaning it has [osmotic concentration](https://en.wikipedia.org/wiki/Osmotic_concentration) (units mOsm/L, milliosmole per liter) matching that of bodily fluids. If the solution is too concentrated, it'll cause GI stress as fluids are pulled in. If it's too dilute, it'll pass quickly before full absorption. The only way to change osmolality while holding carbohydrate mass constant is to use fewer particles (e.g. use heavier carbohydrates, like maltodextrin, which are still quickly metabolized) or add more water. Given the typical estimate of blood plasma osmolality at 280 mOsm/L, the default 4500 mOsm/L for this recipe is high (albeit similar to that of most commercial products). Making the solution isotonic will usually involve adding so much fluid as to make it impractical (and doesn't align with fluid consumption of [high-performing athletes either](https://pubmed.ncbi.nlm.nih.gov/22450589/)).
 
@@ -49,6 +50,10 @@ The [recommendation](https://doi.org/10.3390%2Fnu15010148) is 3-6mg caffeine per
 <figure style="max-width: 650px; margin: 0 auto 1rem auto;">
 <caffeine-calculator style="display: inline-block; background-color: rgba(0,0,0,.1); padding:1rem; border-radius: .5rem; margin: 0 auto 1rem auto;"></caffeine-calculator>
 </figure>
+
+### Carb loading
+
+You can also use this gel/drink recipe in the lead up to a big event for an easy-to-tolerate carb load. See [this helpful calculator](https://www.featherstonenutrition.com/carb-loading) for an idea of how many carbs and when to eat them.
 
 ### Ingredient Prices
 
