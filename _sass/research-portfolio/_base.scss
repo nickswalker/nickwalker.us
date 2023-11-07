@@ -130,7 +130,6 @@ h1, h2 {
 }
 p {
   margin: 0 auto 1rem auto;
-  font-size: 1rem;
 }
 
 h3, h4 {
@@ -171,6 +170,10 @@ a {
   a {
     color: var(--brand-color);
     padding: 0.5rem;
+
+    &:visited {
+      color: var(--brand-color) !important;
+    }
   }
   &:hover {
     background-color: var(--brand-color);

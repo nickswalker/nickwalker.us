@@ -42,6 +42,13 @@ article.full-post {
     display: none;
   }
 }
+sup {
+  line-height: 0px;
+}
+
+sup a:link {
+  padding: 3px;
+}
 
 .blog-list article {
   margin-bottom: 3 * $spacing-unit;
@@ -62,8 +69,25 @@ article.project img {
   margin: 0 auto;
 }
 
+.footnotes {
+  padding-left: 1rem;
+  padding-top: 1rem;
+  margin-top: 4rem;
+  font-size: $small-font-size;
+}
+
+.footnotes::before {
+  content: "";
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  height: 1px;
+  display: block;
+  background-color: lightgray;
+  margin-bottom: 1rem;
+}
+
 article {
-  font-size: $post-content-font-size;
 
   p a, ul a, ol a, blockquote a, pre a {
     color: var(--light-text-color);
@@ -107,11 +131,15 @@ article {
   }
 
   hr {
-    border: none;
-    height: 1px;
-    background-color: var(--neutral-accent);
-    margin: 2 * $spacing-unit auto;
-    width: 40%;
+    &::after {
+      content: "···";
+      letter-spacing: 2em;
+    }
+    margin: 2em auto 4em auto;
+    text-align: center;
+    border-color: var(--light-text-color);
+    border-width: 0;
+    border-style: dotted;
   }
 
   header {
