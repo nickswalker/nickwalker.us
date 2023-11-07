@@ -6,6 +6,13 @@ redirect_from:
   - /bibliography/
 ---
 
+## 2023
+{% bibliography --query @*[year=2023 && wwwhidden!=true]%}
+
+<!--
+{% bibliography --query @*[year=2023 && wwwhidden=true]%}
+-->
+
 ## 2022
 {% bibliography --query @*[year=2022 && wwwhidden!=true]%}
 
