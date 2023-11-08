@@ -39,7 +39,8 @@ export class GelRecipeCalculator extends LitElement {
         const targetFructose = 1 / (glucoseFructoseRatio + 1)
         const targetGlucose = glucoseFructoseRatio / (glucoseFructoseRatio + 1)
 
-        const maltodextrinMolarMass = 1400
+        const maltodextrinMolarMass = 1800 // We assume malto is N glucose molecules (180g/mol), and we assume degree
+        // of polymerization of 10
         const fructoseMolarMass = 180
 
         const [hours, minutes] = this.duration.split(':').map(parseFloat);
