@@ -28,12 +28,6 @@ I suspect that, if Semantic Scholar were to pursue this path, they'd discover wh
 
 [^1]: I have not interacted with anyone who treats Semantic Scholar as a source of truth. But I worry that, [somewhere](https://blog.allenai.org/conference-peer-review-with-the-semantic-scholar-api-24ab9fce2324), they exist.
 
-[^2]: In an unusual twist for an institute set up in ["service of the common good"](https://allenai.org/about), AI2 has, in the past, adopted a deliberately _uncritical_ perspective about the problems with Semantic Scholar. Noah Smith, [responding](https://twitter.com/nlpnoah/status/1194836101241831424) to another dissatisfied user four years ago:
-
-    > I'm not sure where you think this responsibility for "quality control" comes from.  Any system this large will involve automation.  Anyone who understands automation understands there will be mistakes and improving quality is a continuous process.  Don't like it?  Don't use it.
-
-    I am reminded of [another group of blithe technologists](https://www.scientificamerican.com/article/exxon-knew-about-climate-change-almost-40-years-ago/).
-
 [^3]: [dblp](https://dblp.org/) disambiguated my profile in 2019 within a day of my asking. There haven't been any mistakes since, perhaps because they defer to standard [ORCiD](https://orcid.org/) identifiers wherever possible.
 
 [^4]: See the White House's ["Blueprint for an AI Bill of Rights"](https://www.whitehouse.gov/wp-content/uploads/2022/10/Blueprint-for-an-AI-Bill-of-Rights.pdf) for a more expansive expression of the same view. 
