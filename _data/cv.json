@@ -1,15 +1,14 @@
 {
  "basics": {
   "name": "Nick Walker",
-  "label": "Ph.D. Student in Computer Science",
+  "label": "Ph.D. Candidate in Computer Science",
   "email": "nswalker@cs.uw.edu",
   "website": "https://nickwalker.us",
-  "summary": "Nick Walker is a Ph.D. student in Computer Science at the University of Washington in Seattle.",
+  "summary": "Nick Walker is a Ph.D. candidate in Computer Science at the University of Washington in Seattle.",
   "profiles": [
    {
-    "network": "Twitter",
-    "username": "nickwalker_us",
-    "url": "https://twitter.com/nickwalker_us"
+    "network": "Mastodon",
+    "url": "https://sigmoid.social/@nickwalker"
    },
    {
     "network": "GitHub",
@@ -32,7 +31,7 @@
   {
    "company": "NVIDIA",
    "position": "Research Intern",
-   "website": "https://nvidia_srl.gitlab.io/",
+   "website": "https://research.nvidia.com/labs/srl/",
    "date": "2022 Su.",
    "highlights": [
     "Worked with Seattle Robotics Lab researchers"
@@ -79,9 +78,41 @@
  ],
  "volunteer": [
   {
-   "organization": "IEEE International Conference on Intelligent Robots and Systems",
-   "shortName": "IROS",
-   "website": "https://www.ieee-ras.org/conferences-workshops/financially-co-sponsored/iros",
+   "organization": "ACM Transactions on Human-Robot Interaction",
+   "shortName": "THRI",
+   "website": "https://dl.acm.org/journal/thri",
+   "position": "Reviewer",
+   "number": 1,
+   "date": "2023"
+  },
+  {
+   "organization": "ACM/IEEE International Conference on Human-Robot Interaction",
+   "shortName": "HRI",
+   "website": "https://humanrobotinteraction.org/",
+   "position": "Reviewer",
+   "number": 4,
+   "date": "2024"
+  },
+  {
+   "organization": "Conference on Robot Learning",
+   "shortName": "CoRL",
+   "website": "https://corl2023.org/",
+   "position": "Reviewer",
+   "number": 4,
+   "date": "2023"
+  },
+  {
+   "organization": "IEEE International Conference on Robotics and Automation",
+   "shortName": "ICRA",
+   "website": "https://www.ieee-ras.org/conferences-workshops/financially-co-sponsored/icra",
+   "position": "Reviewer",
+   "number": 1,
+   "date": "2024"
+  },
+  {
+   "organization": "IEEE International Conference on Robotics and Automation",
+   "shortName": "ICRA",
+   "website": "https://www.ieee-ras.org/conferences-workshops/financially-co-sponsored/icra",
    "position": "Reviewer",
    "number": 1,
    "date": "2023"
