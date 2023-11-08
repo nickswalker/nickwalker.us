@@ -3,7 +3,7 @@ title: "Any AI that writes about people needs an opt-out button"
 date: 2023-11-06 12:00 -0600
 type: blog
 categories: research
-published: false
+published: true
 ---
 
 I am five years into fix my profile on Semantic Scholar. It's never been a pressing activity, just something I would think to try every so often. But it's taken on a new urgency as I'm approaching graduation.
@@ -23,8 +23,6 @@ My emails to support over the past couple months haven't led to the issue being 
 This harm[^1] is small, but it comes in the [same pattern](https://en.wikipedia.org/wiki/Externality) by which many greater harms have come to pass. A technology enables something new, something which would've traditionally required unimaginable human effort. The technology is pushed to its limit and becomes enmeshed in the creation of value. It's only after this point---due to a lack of critical evaluation[^2] at any stage prior---that a litany of issues arises, issues which can only reliably be resolved with...an unimaginable amount of human effort. This is how even well-intentioned firms find themselves funneling their profits into the sisyphean task of [unwinding the harms wrought by their own success](https://www.theverge.com/2019/2/25/18229714/cognizant-facebook-content-moderator-interviews-trauma-working-conditions-arizona).
 
 Any AI system empowered to publicly characterize a person _must_ allow that person to opt out entirely. The stakes here are low, so I'd argue this is the bare minimum concession any platform should be required to make[^4]. If such a feature were easily implementable for Semantic Scholar, I would likely not have had issues with the platform in the first place. But I am raising the bar[^3] to the provision of a guarantee that I not be conscripted for the correction of future problems.
-
-{%-- I understand that Semantic Scholar cannot easily implement this black-holing because it cannot reliably distinguish who I am.  --%}
 
 I suspect that, if Semantic Scholar were to pursue this path, they'd discover what Google Scholar has long understood; it's simpler to create profile pages only for users who want them, as they can then be relied upon to contribute to curation. But the resulting sparse graph of author profiles would cut against the utility of their platform. So we're left to gripe, and, along with some support staff, push rocks.
 

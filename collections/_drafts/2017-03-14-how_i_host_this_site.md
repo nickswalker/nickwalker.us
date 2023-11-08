@@ -14,13 +14,11 @@ I've had this portfolio in some form for the past eight years but it's only rece
 
 ## Development
 
-I found static site generation to be a good fit. I don't want to manage a CMS and database, and because I have such light requirements, I wouldn't benefit much from the additional capabilities. I chose *Jekyll* because it had the most traction.
+I don't want to manage a CMS and database, and because I have such light requirements, I wouldn't benefit much from the additional capabilities. I chose *Jekyll* because it had the most traction.
 
 ## Hosting
 
-Hosting Jekyll sites on GitHub Pages is free, but many useful plugins aren't supported and you aren't allowed to deploy your own for security reasons. Instead, I chose to use a VPS through *Digital Ocean*. Shared hosting might be a little cheaper, but $60 a year buys you complete control over a server. You'll have the flexibility There are a number of cheap VPS services, but I initally chose them because of their generous GitHub Student Pack promo code. If this isn't a factor, you may consider Linode's $5 tier which sports more RAM.
-
-Digital Ocean also provides detailed how-to guides for almost all sysadmin tasks. These will help you setup an [Nginx server](), [setup Let's Encrypt SSL certificates](), [use Fail2Ban to block malacious traffic](), [host your own VPN]() and more. See the Git documentation [guide on hosting Git repos](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server) helpful.
+Hosting Jekyll sites on GitHub Pages is free, but many useful plugins aren't supported and you aren't allowed to deploy your own for security reasons. Instead, I chose to use a VPS through *Digital Ocean*. Shared hosting might be a little cheaper, but $60 a year buys you complete control over a server. There are a number of cheap VPS services, but I initially chose them because of their generous GitHub Student Pack promo code.
 
 ## DNS + CDN
 
@@ -28,12 +26,12 @@ Digital Ocean also provides detailed how-to guides for almost all sysadmin tasks
 
 ## Domain Registrar
 
-**NameCheap**. They don't have the greatest admin interface, but their prices are competitive and they stay on top of new TLDs. If having a good webmail interface is important, you might consider paying a little more and using [Google Domains]() instead though.
+**NameCheap**. They don't have the greatest admin interface, but their prices are competitive and they stay on top of new TLDs. 
 
 ## Mail
 
-*Zoho*. Hosting your own email server [is a nightmare](). Zoho lets you point your MX records at their servers and call it a day, for free if you only need a single address. They provide a fairly vanila webmail interface and IMAP access.
+*Zoho*. Hosting your own email server is a nightmare. Zoho lets you point your MX records at their servers and call it a day, for free if you only need a single address. They provide a fairly vanila webmail interface and IMAP access.
 
 ## Deployment
 
-I don't mind having my site's source publicly available, and using a service like *GitHub* lets me use webhooks to deploy the site on every push. I adapted a script to run Jekyll and copy the files to the web root
+I don't mind having my site's source publicly available, and using a service like *GitHub* lets me use GitHub actions to deploy the site on every push. I adapted a script to run Jekyll and copy the files to the web root
