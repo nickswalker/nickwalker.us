@@ -6,7 +6,8 @@
 {% assign lightbox = false %}
 {% endif %}
 {% assign images = include.images | split: " " %}
-<figure class="article-multiimage">
+<div class="full-width">
+<figure class="article-multiimage limit-width">
     <div class="images">
     {% for image in images %}
     {% if lightbox %}
@@ -20,3 +21,4 @@
     <figcaption>{{ include.caption | markdownify }}</figcaption>
     {% endif %}
 </figure>
+</div>

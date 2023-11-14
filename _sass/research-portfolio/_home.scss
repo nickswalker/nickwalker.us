@@ -114,7 +114,7 @@
       position: relative;
     }
     .project-description {
-      font-size: $small-font-size;
+      font-size: var(--small-font-size);
       opacity: 0.8;
     }
   }

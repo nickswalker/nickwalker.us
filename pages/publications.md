@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page-restrict-width
 title: Publications
 permalink: publications/
 redirect_from:

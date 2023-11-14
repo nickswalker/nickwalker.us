@@ -1,5 +1,5 @@
 ---
-layout: article-page
+layout: page-restrict-width-article
 title:  "Homemade Energy Gel Recipe"
 permalink: energy-gels/
 custom_js_modules: ['/assets/js/nutritionCalculators.js']

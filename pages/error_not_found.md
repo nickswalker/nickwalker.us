@@ -1,5 +1,5 @@
 ---
-layout: article-page
+layout: page-article
 title: Not Found 🙁
 sitemap: false
 permalink: error_404

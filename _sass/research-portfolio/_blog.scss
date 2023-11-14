@@ -1,5 +1,5 @@
 .post-meta {
-  font-size: $small-font-size;
+  font-size: var(--small-font-size);
   color: var(--lighter-text-color);
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -64,16 +64,11 @@ article.project img {
   background-color: #ccc;
 }
 
-.restrict-width {
-  max-width: 650px;
-  margin: 0 auto;
-}
-
 .footnotes {
   padding-left: 1rem;
   padding-top: 1rem;
   margin-top: 4rem;
-  font-size: $small-font-size;
+  font-size: var(--small-font-size);
 }
 
 .footnotes::before {
@@ -92,23 +87,10 @@ article {
   p a, ul a, ol a, blockquote a, pre a {
     color: var(--light-text-color);
     text-decoration-color: var(--light-text-color);
-    transition:.2s;
-
-    &:hover {
-      text-decoration: none;
-      background-color: var(--brand-color);
-    }
 
     &:visited {
       color: var(--text-color);
     }
-  }
-
-  header, p, pre, h1, h2, h3, h4, h5, blockquote, hr, ul, ol {
-    margin-left: auto;
-    display: block;
-    margin-right: auto;
-    max-width: 650px;
   }
 
   ol, ul {
@@ -145,7 +127,7 @@ article {
   header {
     margin-bottom: 1rem;
     .post-meta {
-      font-size: $small-font-size;
+      font-size: var(--small-font-size);
       color: var(--light-text-color);
       font-weight: normal;
       letter-spacing: 2px;
@@ -156,10 +138,6 @@ article {
 
   }
 
-  iframe {
-    margin-bottom: 2rem;
-  }
-
   .video {
     aspect-ratio: 16 / 9;
     width: 100%;
@@ -167,6 +145,8 @@ article {
 
   .article-image {
     margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
 
     img {
       margin: 0 auto;
@@ -177,9 +157,13 @@ article {
       max-height: 75vh;
     }
     figcaption p {
-      font-size: $small-font-size;
+      font-size: var(--small-font-size);
       color: var(--text-color);
     }
+  }
+
+  .full-width figcaption {
+    padding: 0 var(--bs-gutter-x);
   }
 
   .article-multiimage {
@@ -209,7 +193,7 @@ article {
       }
     }
     figcaption p {
-      font-size: $small-font-size;
+      font-size: var(--small-font-size);
       color: var(--text-color);
     }
   }
@@ -219,8 +203,6 @@ article {
   }
   .post-content, .project-content {
     margin-bottom: 2rem;
-    font-family: $post-content-font-family;
-
     h2 {
       font-size: 1rem;
       font-weight: bold;

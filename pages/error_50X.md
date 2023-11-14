@@ -1,5 +1,5 @@
 ---
-layout: article-page
+layout: page-article
 title: Something Went Wrong 😓
 sitemap: false
 ---

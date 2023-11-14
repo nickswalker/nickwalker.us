@@ -1,21 +1,7 @@
 // Define defaults for each variable.
 
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$base-font-size:   16px !default;
-$base-font-weight: 400 !default;
-$display-font-family: "Georgia", serif !default;
-$post-content-font-family: "Georgia", serif !default;
-$post-content-font-size: 16px !default;
-
-$small-font-size:  $base-font-size * 0.875 !default;
-$base-line-height: 1.5 !default;
-
 $spacing-unit:     24px !default;
 
-$light-purple-color: #7348f1;
-$blue-color: rgb(0, 123, 255);
-$red-color: #dc3d2c;
-$teal-color: #5ec8ec;
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-mid-light: lighten($grey-color, 20%);
@@ -26,8 +12,8 @@ $grey-color-dark:  darken($grey-color, 25%);
 $content-width:    900px !default;
 
 $on-phone: 300px !default;
-$on-tablet: 700px !default;
-$on-laptop: 900px !default;
+$on-tablet: 768px !default;
+$on-laptop: 992px !default;
 
 // Use media queries like this:
 // @include media-query($on-palm) {

@@ -1,5 +1,5 @@
 ---
-layout: page-full
+layout: page
 title: Calendar
 permalink: calendar
 ---

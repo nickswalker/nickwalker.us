@@ -2,9 +2,10 @@
 layout: default
 ---
 
+<div class="container">
 <div class="home">
 
-  <section class="bio">
+  <section class="bio overflow-auto">
   <img class="avatar"
        src="{{site.gravatar_url}}?s=360"
        srcset="{{site.gravatar_url}}?s=720 2x"
@@ -29,7 +30,7 @@ layout: default
       {% endfor %}
     </ul>
 
-      <div class="quick-link"><a href="{% link pages/blog.md %}">More</a></div>
+     <a class="btn btn-outline-primary" href="{% link pages/blog.md %}">More</a>
 
 
   </section>
@@ -61,4 +62,5 @@ layout: default
             endfor %} and <a href="{% link pages/blog.md %}"> more</a>.</p>
     </section>
 
+</div>
 </div>

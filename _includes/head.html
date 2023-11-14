@@ -1,4 +1,6 @@
 <head>
+  <!-- Prevent flash of unstyled text -->
+  <style>html{visibility: hidden;opacity:0;}</style>
   {% include base_meta.html%}
   <script type="importmap">
     {
@@ -8,6 +10,7 @@
         "lit-element": "https://cdn.jsdelivr.net/gh/lit/dist@3/core/lit-core.min.js"        }
     }
   </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" integrity="sha512-t4GWSVZO1eC8BM339Xd7Uphw5s17a86tIZIj8qRxhnKub6WoyhnrxeCIMeAqBPgdZGlCcG2PrZjMc+Wr78+5Xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="/assets/css/main.css">
   {% include fonts.html %}
   {% include favicons.html %}

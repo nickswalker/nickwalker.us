@@ -438,4 +438,8 @@ There is no way for us to uphold the user's hypothesis in this situation, so we 
 
 When wrapped up into the actual system, a user command like this will end up generating 6-10 planning, replanning, monitoring and diagnostic queries.
 
+<div class="full-width">
+<figure class="almost-full-bleed">
 <iframe class="video" src="https://www.youtube-nocookie.com/embed/TLXGQDTAZvA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
+</div>

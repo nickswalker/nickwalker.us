@@ -4,17 +4,6 @@
 
 @import "research-portfolio-variables";
 
-// Our variables
-$base-font-family: "Rowan-Variable", "Georgia", serif;
-$display-font-family: "Rowan-Variable", 'Georgia', serif;;
-$base-font-size:   17px;
-$base-font-weight: 400;
-$base-line-height: 1.5;
-
-$small-font-size:  0.875rem;
-
-
-$post-content-font-family: "Rowan-Variable", "Georgia";
 $post-content-font-size: 18px;
 
 
@@ -32,22 +21,24 @@ $on-laptop:        800px;
 @import "rowan.css";
 
 :root {
-  --brand-color: hsl(72.88, 66.53%, 48%);
-  --brand-color-light: hsl(72.88, 66.53%, 53%);
-  --brand-color-lighter: hsl(72.88, 66.53%, 58%);
-  --brand-color-dark: hsl(72.88, 66.53%, 43%);
-  --brand-color-darker: hsl(72.88, 66.53%, 38%);
-  --brand-color-darkest: hsl(72.88, 66.53%, 28%);
+  --bs-body-font-family: "Rowan-Variable", "Georgia", serif;
+  --small-font-size: 0.875rem;
+  --theme-color: hsl(72.88, 66.53%, 48%);
+  --theme-color-light: hsl(72.88, 66.53%, 53%);
+  --theme-color-lighter: hsl(72.88, 66.53%, 58%);
+  --theme-color-faint: hsl(72.88, 66.53%, 85%);
+  --theme-color-dark: hsl(72.88, 66.53%, 43%);
+  --theme-color-darker: hsl(72.88, 66.53%, 38%);
+  --theme-color-darkest: hsl(72.88, 66.53%, 28%);
 }
 
 i, em {
-  font-family: "Rowan-VariableItalic", "Georgia";
+  font-family: "Rowan-VariableItalic", "Georgia", serif;
 }
 
 /* Header customizations */
 
 .site-title {
-  font-family: $display-font-family;
   font-size: 21px;
   font-weight: 900;
   letter-spacing: 0;
@@ -65,4 +56,10 @@ i, em {
     opacity: 0.8;
     text-decoration: none;
   }
+}
+
+/* Override initial hiding which we applied to prevent flash of unstyled content */
+html {
+  visibility: visible;
+  opacity: 1;
 }

@@ -24,29 +24,29 @@
 
     <ul class="quick-links">
         {% if entry.wwwurl %}
-        <li><a href="{{ entry.wwwurl }}">Site</a></li>
+        <li><a class="btn btn-outline-primary" href="{{ entry.wwwurl }}">Site</a></li>
         {% endif %}
 
         {% if entry.wwwpdf %}
-        <li><a href="{{ entry.wwwpdf }}">PDF</a></li>
+        <li><a class="btn btn-outline-primary" href="{{ entry.wwwpdf }}">PDF</a></li>
         {% endif %}
 
         {% if entry.wwwslides %}
-        <li><a href="{{ entry.wwwslides }}">Slides</a></li>
+        <li><a class="btn btn-outline-primary" href="{{ entry.wwwslides }}">Slides</a></li>
         {% endif %}
 
         {% if entry.wwwposter %}
-        <li><a href="{{ entry.wwwposter }}">Poster</a></li>
+        <li><a class="btn btn-outline-primary" href="{{ entry.wwwposter }}">Poster</a></li>
         {% endif %}
 
         {% if entry.wwwvideo %}
-        <li><a href="{{ entry.wwwvideo }}">Video</a></li>
+        <li><a class="btn btn-outline-primary" href="{{ entry.wwwvideo }}">Video</a></li>
         {% endif %}
 
         {% if entry.wwwcode %}
-        <li><a href="{{ entry.wwwcode }}">Code</a></li>
+        <li><a class="btn btn-outline-primary" href="{{ entry.wwwcode }}">Code</a></li>
         {% endif %}
 
-        <li><a href="/publications/{{entry.key}}">More</a></li>
+        <li><a class="btn btn-outline-primary" href="/publications/{{entry.key}}">More</a></li>
     </ul>
 </div>

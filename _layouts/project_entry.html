@@ -1,12 +1,13 @@
 ---
-layout: default
+layout: contained-restrict-width
 ---
 <article class="project">
 
     {% assign slug = page.title | slugify %}
     {% assign project_assets = "/assets/projects/" | append: slug %}
     {% if page.images.size > 0 %}
-    <figure class="project-images">
+    <div class="full-width">
+    <figure class="project-images almost-full-bleed">
         <a href="{{ project_assets }}/{{page.images[0]}}" data-fancybox="gallery" class="hero"><img src="{{ project_assets }}/{{page.images[0]}}"/></a>
         {% if page.images.size > 1 %}
         <ul class="thumbnails">
@@ -16,29 +17,30 @@ layout: default
         </ul>
         {% endif %}
     </figure>
+    </div>
     {% endif %}
   <header class="project-header">
     <h1 class="project-title">{{ page.title | escape }}</h1>
       <ul class="quick-links">
           {% if page.link %}
           <li>
-              <a href="{{ page.link }}" title="See more"> <ion-icon name="link"></ion-icon>Link</a>
+              <a class="btn btn-outline-primary" href="{{ page.link }}" title="See more"> <ion-icon name="link"></ion-icon> Link</a>
           </li>
           {% endif %}
           {% if page.code_url %}
           <li>
-              <a href="{{ page.code_url }}" title="See code"> <ion-icon name="logo-github"></ion-icon>Code</a>
+              <a class="btn btn-outline-primary" href="{{ page.code_url }}" title="See code"> <ion-icon name="logo-github"></ion-icon> Code</a>
           </li>
           {% endif %}
           {% if page.report %}
           <li>
-              <a href="{{ project_assets }}/{{slug}}-report.pdf" title="See report"> <ion-icon name="document"></ion-icon>Report</a>
+              <a class="btn btn-outline-primary" href="{{ project_assets }}/{{slug}}-report.pdf" title="See report"> <ion-icon name="document"></ion-icon> Report</a>
           </li>
           {% endif %}
           {% if page.slides %}
           <li>
-              <a href="{{ project_assets }}/{{slug}}-slides.pdf" title="See slides"> <ion-icon
-                      name="easel"></ion-icon>Slides</a>
+              <a class="btn btn-outline-primary" href="{{ project_assets }}/{{slug}}-slides.pdf" title="See slides"> <ion-icon
+                      name="easel"></ion-icon> Slides</a>
           </li>
           {% endif %}
       </ul>

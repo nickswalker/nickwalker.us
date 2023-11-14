@@ -11,10 +11,12 @@ has_article: true
 *Making videos to present research has become more common over the pandemic. These are my working notes on how to make good videos and advice on tools and workflow.*
 
 
-<figure>
+<div class="full-width">
+<figure class="almost-full-bleed">
 <iframe class="video" src="https://www.youtube-nocookie.com/embed/SyTuuUbTFVU?rel=0" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0"></iframe>
 <figcaption><p>An HRI 2022 conference presentation video for <a href="https://wandering.nickwalker.us/"> a project</a>.</p></figcaption>
 </figure>
+</div>
 
 
 ## A video and a talk are different

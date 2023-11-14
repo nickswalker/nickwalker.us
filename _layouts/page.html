@@ -1,14 +1,16 @@
 ---
-layout: default
+layout: contained
+wrapper_type: 'section'
+restrict_width: false
 ---
-<section class="page restrict-width {{ page.title | downcase }}-page">
+<{{ layout.wrapper_type }} class="page {{ page.title | downcase }}-page">
 
-  <header class="page-heading">
-    <h1 class="page-title">{{ page.title | escape }}</h1>
-  </header>
+<header class="page-heading">
+  <h1 class="page-title">{{ page.title | escape }}</h1>
+</header>
 
-  <div>
-    {{ content }}
-  </div>
+<div>
+  {{ content }}
+</div>
 
-</section>
+</{{ layout.wrapper_type }}>

@@ -4,13 +4,14 @@
   {% include head.html %}
 
   <body>
-
+    {% if jekyll.environment == "development" %}
+    <div class="alert alert-warning w-100" role="alert">
+      This is a development copy of the site <pre>{{layout | jsonify}}</pre>
+    </div>
+    {% endif %}
     {% include navigation.html %}
-
     <main class="page-content" aria-label="Content">
-      <div class="wrapper">
         {{ content }}
-      </div>
     </main>
 
     {% include footer.html %}

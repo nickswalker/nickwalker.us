@@ -1,5 +1,5 @@
 ---
-layout: article-page
+layout: page-restrict-width-article
 title: Info
 redirect_from:
   - /contact/

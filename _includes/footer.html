@@ -1,57 +1,57 @@
 <footer class="site-footer">
 
-    <div class="wrapper">
+    <div class="container">
 
-        <div class="footer-col-wrapper">
-            <div class="footer-col footer-col-1">
+        <div class="row">
+            <div class="col-sm-4">
                 <a href="{{ '/' | relative_url}}" class="branded-title">
                     {{ site.title }}
                 </a>
             </div>
             <!-- @formatter:off -->
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
+            <div class="col-sm-3">
+                <ul class="social-media-list">
 
-            {% if site.mastodon_username %}
-            <li>
-                <a href="https://{{site.mastodon_instance}}/@{{site.mastodon_username}}" title="See posts" rel="me">
-                    <ion-icon name="logo-mastodon"></ion-icon>@{{site.mastodon_username}} </a>
-            </li>
-            {% endif %}
+                {% if site.mastodon_username %}
+                <li>
+                    <a href="https://{{site.mastodon_instance}}/@{{site.mastodon_username}}" title="See posts" rel="me">
+                        <ion-icon name="logo-mastodon"></ion-icon>@{{site.mastodon_username}} </a>
+                </li>
+                {% endif %}
 
-            {% if site.twitter_username %}
-            <li>
-                <a href="https://twitter.com/{{site.twitter_username}}" title="See tweets">
-                    <ion-icon name="logo-twitter"></ion-icon>{{site.twitter_username}} </a>
-            </li>
-            {% endif %}
+                {% if site.twitter_username %}
+                <li>
+                    <a href="https://twitter.com/{{site.twitter_username}}" title="See tweets">
+                        <ion-icon name="logo-twitter"></ion-icon>{{site.twitter_username}} </a>
+                </li>
+                {% endif %}
 
-            {% if site.linkedin_username %}
-            <li>
-                <a href="https://linkedin.com/in/{{site.linkedin_username}}"
-                   title="See history.">
-                    <ion-icon name="logo-linkedin"></ion-icon>{{site.linkedin_username}}</a>
-            </li>
-            {% endif %}
+                {% if site.linkedin_username %}
+                <li>
+                    <a href="https://linkedin.com/in/{{site.linkedin_username}}"
+                       title="See history">
+                        <ion-icon name="logo-linkedin"></ion-icon>{{site.linkedin_username}}</a>
+                </li>
+                {% endif %}
 
-            {% if site.github_username %}
-              <li>
-                  <a href="https://github.com/{{site.github_username}}" title="See code">
-                      <ion-icon name="logo-github"></ion-icon>{{site.github_username}} </a>
-              </li>
-            {% endif %}
+                {% if site.github_username %}
+                  <li>
+                      <a href="https://github.com/{{site.github_username}}" title="See code">
+                          <ion-icon name="logo-github"></ion-icon>{{site.github_username}} </a>
+                  </li>
+                {% endif %}
 
-            {% if site.flickr_username %}
-            <li>
-                <a href="https://flickr.com/photos/{{site.flickr_username}}" title="See photos">
-                    <ion-icon name="images"></ion-icon>{{site.flickr_username}} </a>
-            </li>
-            {% endif %}
+                {% if site.flickr_username %}
+                <li>
+                    <a href="https://flickr.com/photos/{{site.flickr_username}}" title="See photos">
+                        <ion-icon name="images"></ion-icon>{{site.flickr_username}} </a>
+                </li>
+                {% endif %}
+                </ul>
+            </div>
             <!-- @formatter:on -->
 
-        </ul>
-      </div>
-            <div class="footer-col footer-col-3">
+            <div class="col-sm-5">
                 {% if site.description %}
                 <p>{{ site.description }}</p>
                 {% endif %}

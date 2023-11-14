@@ -16,4 +16,6 @@ In [our work for HRI]({% details_link walker2020perceptions %}), we present a la
 
 **Update April 7th, 2020:** HRI 2020 was cancelled, but we all made videos!
 
-<iframe class="video" src="https://www.youtube-nocookie.com/embed/1j91ISstdH8?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="full-width">
+<iframe class="video almost-full-bleed" src="https://www.youtube-nocookie.com/embed/1j91ISstdH8?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>

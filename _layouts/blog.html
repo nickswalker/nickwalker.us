@@ -1,10 +1,8 @@
 ---
-layout: default
+layout: page
+restrict_width: true
 ---
 
-<header class="page-heading restrict-width">
-    <h1 class="page-title">{{ page.title | escape }}</h1>
-</header>
 <div class="blog-list">
 {% for post in site.posts limit:6 %}
 
@@ -17,7 +15,7 @@ layout: default
 
     <article class="post {{ post-type-class }}">
     <header class="post-header">
-        <a class="float-right permalink" href="{{ post.url }}" title="Permalink">*</a>
+        <a class="float-end permalink" href="{{ post.url }}" title="Permalink">*</a>
         <h2>
             <a class="{% if post.type == 'link' %}post-link{% endif %}" href="{{ url }}">{{ post.title | escape }}</a>
         </h2>
@@ -37,6 +35,6 @@ layout: default
 
 {% endfor %}
 </div>
-<div class="centered-link">
-    <div class="quick-link"><a href="{% link pages/archive.md %}">Archive</a></div>
+<div class="d-flex justify-content-center">
+<a class="btn btn-outline-primary" href="{% link pages/archive.md %}">Archive</a>
 </div>

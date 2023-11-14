@@ -8,40 +8,55 @@ dl, dd, ol, ul, figure {
   padding: 0;
 }
 
-html {
-  // Set root size for rem
-  font-size: $base-font-size
-}
-
 
 /**
  * Basic styling
  */
 :root {
-  --text-color: #111;
+  --bs-body-color: #111;
   --light-text-color: #333;
   --lighter-text-color: #828282;
-  --background-color: #fdfdfd;
-  --brand-color: red;
+  --bs-body-bg: #fdfdfd;
+  --theme-color: red;
   --light-background-color: #eee;
-  --text-brand-color: var(--brand-color);
-  --link-color: var(--brand-color-darker);
-  --link-decoration-color: var(--brand-color-light);
-  --link-color-hover: var(--brand-color-darker);
+  --text-brand-color: var(--theme-color);
+  --link-color: var(--theme-color-darker);
+  --link-decoration-color: var(--theme-color-lighter);
+  --link-color-hover: var(--theme-color-darker);
   --link-border-color: rgba(255, 255, 255, .3);
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-  color: var(--text-color);
-  background-color: var(--background-color);
+  --bs-body-line-height: 1.5;
+  --bs-body-font-size: 16px;
+  --bs-body-font-weight: 400;
+  --bs-body-font-family: "Georgia", serif;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
        -o-font-feature-settings: "kern" 1;
           font-feature-settings: "kern" 1;
   font-kerning: normal;
+
+  @include media-query($on-laptop) {
+    --bs-body-font-size: 17px;
+  }
+}
+
+.navbar {
+  --bs-navbar-padding-y: 0;
+  --bs-navbar-brand-padding-y: 0;
+}
+
+.navbar-nav {
+  --bs-nav-link-color: white;
+  --bs-nav-link-color-hover: red;
+  --bs-nav-link-hover-color: #eaeaea;
+}
+
+.navbar a:hover {
+  background-color: inherit;
 }
 
 ::selection {
-  background-color: hsl(72.9, 72.5%, 78.6%);
+  background-color: var(--theme-color-faint);
 }
 
 /*
@@ -78,7 +93,6 @@ section {
   overflow: auto;*/
 }
 
-
 /**
  * Images
  */
@@ -97,7 +111,7 @@ figure > img {
 }
 
 figcaption {
-  font-size: $small-font-size;
+  font-size: var(--small-font-size);
 }
 
 
@@ -120,7 +134,6 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight;
 }
 
 h1, h2 {
@@ -146,72 +159,37 @@ a {
   color: var(--link-color);
   text-decoration-color: var(--link-decoration-color);
   text-underline-offset: 2px;
-  transition:.2s;
 
   &:hover {
-    border-bottom: none;
-    text-decoration-color: var(--link-color-hover);
-  }
-}
-
-
-@mixin quick-link {
-  display: block;
-  border-radius: 0.5rem;
-  border: 1px solid var(--brand-color);
-  background-color: transparent;
-  text-align: center;
-  margin-bottom: .25rem;
-
-  @include media-query($on-phone) {
-    display: inline-block;
-    margin-bottom: 0;
-  }
-  a {
-    color: var(--brand-color);
-    padding: 0.5rem;
-
-    &:visited {
-      color: var(--brand-color) !important;
-    }
-  }
-  &:hover {
-    background-color: var(--brand-color);
-
-    a {
-      color: var(--background-color);
-      text-decoration: none;
-      display: block;
-      padding: 0.25rem .5rem;
-    }
-  }
-
-  a:any-link,
-  a {
     text-decoration: none;
-    display: block;
-    padding: 0.25rem .5rem;
+    background-color: var(--theme-color-faint);
   }
-
-  ion-icon {
-    margin-right: 6px;
-    margin-bottom: -3px;
-  }
-
 }
 
-div.quick-link {
-  @include quick-link;
+.btn {
+  padding: .25rem .5rem;
 }
 
-.centered-link {
-  display: flex;
-
-  div {
-    margin: 0 auto;
-  }
-
+.btn-outline-primary {
+  --bs-btn-color: var(--theme-color);
+  --bs-btn-hover-bg: var(--theme-color-light);
+  --bs-btn-hover-color: white;
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-active-bg: var(--theme-primary-color);
+  --bs-btn-active-border-color: var(--theme-color);
+  --bs-btn-active-color: #eee;
+  --bs-btn-border-color: var(--theme-color-light);
+  --bs-btn-focus-shadow-rgb: 255, 255, 255
 }
+
+a.btn:visited {
+  color: var(--bs-btn-color)
+}
+
+a.btn:visited:hover {
+  color: var(--bs-btn-hover-color)
+}
+
 
 /**
  * Blockquotes
@@ -260,36 +238,12 @@ pre {
   }
 }
 
-
-
-/**
- * Wrapper
- */
-.wrapper {
-  max-width: calc(#{$content-width} - 2rem);
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  @extend %clearfix;
-
-  .full-width {
-    margin-left: calc(-100vw / 2 + 100% / 2);
-    margin-right: calc(-100vw / 2 + 100% / 2);
-  }
-
+.container {
+  max-width: 900px;
 }
 
 
 
-/**
- * Clearfix
- */
-%clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
 ion-icon {
   margin-bottom: -3px;

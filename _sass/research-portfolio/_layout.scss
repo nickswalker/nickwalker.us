@@ -3,7 +3,7 @@
  */
 .site-header {
   /*border-bottom: 1px solid $grey-color;*/
-  background-color: var(--brand-color);
+  background-color: var(--theme-color);
   color: white;
   // Positioning context for the mobile navigation icon
   position: relative;
@@ -22,21 +22,16 @@
 }
 
 .site-title {
-  font-family: $display-font-family;
   font-size: 21px;
   font-weight: 900;
   line-height: 2.0rem;
   margin-bottom: 0;
-  flex: 0 0 auto;
-  color: white;
 
-  margin: 0 auto;
   @include media-query($on-laptop) {
     margin-left: 0;
     font-size: 24px;
     line-height: $spacing-unit * 2;
   }
-  -webkit-text-decoration: none;
   text-decoration: none;
   &:visited {
     color: inherit;
@@ -63,9 +58,8 @@
 
   .page-link {
     color: inherit;
-    line-height: $base-line-height;
     -webkit-text-decoration: none;
-    text-decoration: none;    
+    text-decoration: none;
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
       margin-right: 20px;
@@ -80,6 +74,9 @@
  */
 .page-content {
   margin: 1rem 0;
+  overflow-x: clip;
+  /* Our full bleed hack can cause overflow: https://css-tricks.com/full-bleed/ */
+
   @include media-query($on-tablet) {
     margin: 2rem 0;
   }
@@ -90,9 +87,32 @@
   font-size: 1.25rem;
 }
 
+.restrict-width {
+  max-width: 650px;
+}
 
-.float-right {
-  float: right;
+.limit-width {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.almost-full-bleed {
+  max-width: 900px;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: calc(-50vw + 50% - 450px);
+  margin-right: calc(-50vw + 50% - 450px);
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 1.5dppx) {
@@ -117,7 +137,6 @@ footer p {
 
 .branded-title,
 .branded-title:visited {
-  font-family: $display-font-family;
   font-weight: 900;
   letter-spacing: 0.2px;
   -webkit-text-decoration: none;
@@ -157,54 +176,5 @@ footer {
   }
 }
 
-.footer-col-wrapper {
-  color: $grey-color;
-  @extend %clearfix;
-}
 
-.footer-col {
-  float: none;
-  width: -webkit-calc(100% - 1rem);
-  width: calc(100% - 1rem);
-}
-
-@include media-query($on-tablet) {
-  .footer-col-1,
-  .footer-col-2 {
-    width: -webkit-calc(50% - 1rem);
-    width: calc(50% - 1rem);
-  }
-
-  .footer-col-3 {
-    width: -webkit-calc(100% - 1rem);
-    width: calc(100% - 1rem);
-  }
-  .footer-col {
-    float: left;
-    margin-bottom: 1rem;
-    padding-left: 1rem;
-  }
-}
-
-@include media-query($on-laptop) {
-
-  .footer-col-wrapper {
-    margin-left: -1rem;
-  }
-  .footer-col-1 {
-    width: -webkit-calc(35% - 1rem);
-    width: calc(35% - 1rem);
-  }
-
-  .footer-col-2 {
-    width: -webkit-calc(20% - 1rem);
-    width: calc(20% - 1rem);
-  }
-
-  .footer-col-3 {
-    width: -webkit-calc(45% - 1rem);
-    width: calc(45% - 1rem);
-  }
-
-}
 

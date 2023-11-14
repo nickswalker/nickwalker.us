@@ -1,5 +1,7 @@
 ---
-layout: default
+layout: contained-restrict-width
+comment: "The way Jekyll scholar processes this layout seems to ignore front matter variables, so we have to make
+a stub layout with the correct vars and inherit it"
 ---
 
 <article id="{{ page.entry.key}}-details">
@@ -8,14 +10,14 @@ layout: default
         <ul class="quick-links">
             {% if page.entry.wwwurl %}
             <li>
-                <a href="{{ page.entry.wwwurl }}" title="See project site">
+                <a class="btn btn-outline-primary" href="{{ page.entry.wwwurl }}" title="See project site">
                     <ion-icon name="link"></ion-icon>
                     Site</a>
             </li>
             {% endif %}
             {% if page.entry.wwwpdf %}
             <li>
-                <a href="{{ page.entry.wwwpdf }}" title="Get PDF">
+                <a class="btn btn-outline-primary" href="{{ page.entry.wwwpdf }}" title="Get PDF">
                     <ion-icon name="document"></ion-icon>
                     PDF</a>
             </li>
@@ -23,7 +25,7 @@ layout: default
 
             {% if page.entry.wwwcode %}
             <li>
-                <a href="{{ page.entry.wwwcode }}" title="See code">
+                <a class="btn btn-outline-primary" href="{{ page.entry.wwwcode }}" title="See code">
                     <ion-icon name="logo-github"></ion-icon>
                     Code</a>
             </li>
@@ -31,7 +33,7 @@ layout: default
 
             {% if page.entry.wwwslides %}
             <li>
-                <a href="{{ page.entry.wwwslides }}" title="See slides">
+                <a class="btn btn-outline-primary" href="{{ page.entry.wwwslides }}" title="See slides">
                     <ion-icon
                             name="albums"></ion-icon>
                     Slides</a>
@@ -39,7 +41,7 @@ layout: default
             {% endif %}
             {% if page.entry.wwwposter %}
             <li>
-                <a href="{{ page.entry.wwwposter }}" title="See poster">
+                <a class="btn btn-outline-primary" href="{{ page.entry.wwwposter }}" title="See poster">
                     <ion-icon
                             name="easel"></ion-icon>
                     Poster</a>
@@ -47,7 +49,7 @@ layout: default
             {% endif %}
             {% if page.entry.wwwvideo %}
             <li>
-                <a href="{{ page.entry.wwwvideo }}" title="See video">
+                <a class="btn btn-outline-primary" href="{{ page.entry.wwwvideo }}" title="See video">
                     <ion-icon
                             name="film"></ion-icon>
                     Video</a>
@@ -55,14 +57,14 @@ layout: default
             {% endif %}
             {% if page.entry.wwwextra %}
             <li>
-                <a href="{{ page.entry.wwwextra }}" title="Access supplement">
+                <a class="btn btn-outline-primary" href="{{ page.entry.wwwextra }}" title="Access supplement">
                     <ion-icon name="document-attach"></ion-icon>
                     Supplement</a>
             </li>
             {% endif %}
             {% if page.entry.url %}
             <li>
-                <a href="{{ page.entry.url }}" title="More information">
+                <a class="btn btn-outline-primary" href="{{ page.entry.url }}" title="More information">
                     <ion-icon name="link"></ion-icon>
                     More info</a>
             </li>
