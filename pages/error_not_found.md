@@ -1,5 +1,5 @@
 ---
-layout: page-article
+layout: page-restrict-width-article
 title: Not Found 🙁
 sitemap: false
 permalink: error_404

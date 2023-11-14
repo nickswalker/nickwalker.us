@@ -31,7 +31,7 @@ The recommendation for events longer than an hour is 60g per hour, and there's [
 
 ### Glucose:fructose Ratio
 
-Glucose and fructose [use separate metabolic pathways](https://www.mysportscience.com/post/2015/05/14/carb-mixes-and-benefits). The recipe defaults to a low amount of fructose compared to common recommendations of 2:1 or 1:1 ratios largely because using honey keeps the flavor tolerable, and because fructose is largely a moot point until you're able to saturate the glucose pathway. If you want to go lower than 1.25:1 you'll need to swap honey, and it's tag-along 30% glucose content, for pure fructose to keep the osmolality manageable.
+Glucose and fructose [use separate metabolic pathways](https://www.mysportscience.com/post/2015/05/14/carb-mixes-and-benefits). The recipe defaults to a low amount of fructose compared to common recommendations of 2:1 or 1:1 ratios because using honey keeps the flavor tolerable, and because fructose is largely a moot point until you're able to saturate the glucose pathway. If you want to go lower than 1.25:1 you'll need to swap honey, and it's tag-along 30% glucose content, for pure fructose to keep the osmolality manageable.
 
 ### Osmolality and isotonicity
 
