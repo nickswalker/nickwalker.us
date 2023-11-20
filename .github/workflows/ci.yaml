@@ -103,7 +103,7 @@ jobs:
       - name: 🚀 deploy to staging
         env:
           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
-        run: "rsync -havz --delete ./ www-data@ssh.nickwalker.us:/var/www/testing.nickwalker.us/ --exclude=/.well-known"
+        run: "rsync -havz --delete * www-data@ssh.nickwalker.us:/var/www/testing.nickwalker.us/ --exclude=/.well-known"
   deploy-drafts:
     runs-on: ubuntu-latest
     needs: [jekyll-build-drafts]
