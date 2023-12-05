@@ -32,7 +32,7 @@ sent or otherwise muck up the admissions timeline. Accept self-reported scores, 
 
 ---
 
-**Update December 2nd, 2018:** According to the new remark in the [PhD application materials FAQ](https://www.cs.washington.edu/academics/phd/admissions/required-materials),  you do not have to submit an official report to UW CSE to be fully considered for admission:
+**Update December 2nd, 2018:** According to the new remark in the [PhD application materials FAQ](https://web.archive.org/web/20190107083907/https://www.cs.washington.edu/academics/phd/admissions/required-materials),  you do not have to submit an official report to UW CSE to be fully considered for admission:
 
 >A note on self-reported scores: The Allen School will evaluate an application using
 >self-reported scores. However, official scores must be delievered [sic] to the University of
