@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {% capture title %}{% if page.title %}{{ page.title | escape }} || {{ site.title | escape}}{% else %}{{ site.title | escape }}{% endif %}{% endcapture %}
 {% capture description %}{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}{% endcapture %}
-{% capture url %}{{ page.url | replace:'index.html','' | absolute_url }}{% endcapture %}
+{% capture url %}{{ page.url | absolute_url }}{% endcapture %}
 <title>{{ title }}</title>
 <meta name="description" content="{{ description }}">
 <meta name="theme-color" content="#a9cc29">

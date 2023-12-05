@@ -6,7 +6,7 @@
   <body>
     {% if jekyll.environment == "development" %}
     <div class="alert alert-warning w-100" role="alert">
-      This is a development copy of the site <pre>{{layout | jsonify}}</pre>
+      This is a development copy of {{page.url}} <pre>{{layout | jsonify}}</pre>
     </div>
     {% endif %}
     {% include navigation.html %}

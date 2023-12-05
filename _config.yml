@@ -14,17 +14,18 @@ linkedin_username: niwalker
 flickr_username: nickwalker-us
 gravatar_url: https://www.gravatar.com/avatar/05a17826262b803bdc53a402751c884e
 
-permalink: /blog/:year/:title
+# trailing slash -> index.html. Note that jekyll scholar bases its behavior on the trailing slash here
+permalink: /blog/:year/:title/
 
 # Custom collections
 collections_dir: collections
 collections:
   projects:
     output: true
-    permalink: projects/:title
+    permalink: projects/:title/
   research:
     output: true
-    permalink: research/:title
+    permalink: research/:title/
 
 # Archive listings for blog
 jekyll-archives:

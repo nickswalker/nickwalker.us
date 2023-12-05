@@ -1,7 +1,7 @@
 ---
 layout: page-restrict-width-article
 title: Note to Interested Undergrads
-permalink: undergrads
+permalink: undergrads/
 ---
 
 * **Skim my papers**. Most likely, we'd end up working together on something distinct but connected to stuff described in these. Is there something there that you find especially interesting, or something related that you'd want to try? If you don't find anything interesting, then consider checking through other grad students' work; feeling some intellectual engagement with the project is an important part of having a good research experience.

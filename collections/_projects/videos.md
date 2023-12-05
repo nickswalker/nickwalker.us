@@ -6,6 +6,7 @@ short_description: "Tools and advice"
 block_color: "rgb(12, 82, 13)"
 featured: false
 has_article: true
+permalink: making-project-videos/
 ---    
 
 *Making videos to present research has become more common over the pandemic. These are my working notes on how to make good videos and advice on tools and workflow.*
