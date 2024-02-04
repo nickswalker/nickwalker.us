@@ -1,19 +1,15 @@
 <header class="site-header">
-    <nav class="navbar navbar-expand text-light">
-  <div class="container">
-      <a class="navbar-brand site-title" href="{{ '/' | relative_url}}">{{ site.title }}</a>
-
-        <div class="navigation-links">
-            <ul class="navbar-nav">
-            {% for page in site.data.navigation %}
-                {% if page.title %}<li class="nav-item"><a class="nav-link" href="{{ page.href }}">{{ page.title | escape }}</a></li>{%
-            endif %}
-            {% endfor %}
-            </ul>
+    <nav class="navbar navbar-expand-sm">
+      <div class="container justify-content-around justify-content-sm-between">
+          <a class="navbar-brand site-title" href="{{ '/' | relative_url}}">{{ site.title }}</a>
+            <div class="navigation-links">
+                <ul class="navbar-nav d-flex flex-row gap-2 flex-wrap justify-content-around ">
+                {% for page in site.data.navigation %}
+                    {% if page.title %}<li class="nav-item"><a class="nav-link" href="{{ page.href }}">{{ page.title | escape }}</a></li>{%
+                endif %}
+                {% endfor %}
+                </ul>
+          </div>
       </div>
-
-  </div>
     </nav>
-
-
 </header>
