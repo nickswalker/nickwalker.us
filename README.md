@@ -26,11 +26,14 @@ To run tests
 
 ### Post
 
-Types:
+Types: string
 
 * Link: a linkpost, in the vein of Daring Fireball
 * Blog: standalone post
 
-Categories:
+Categories: space separated list
 
 * News: display the headline on the homepage
+* Blog: will display in the blog line on homepage
+* Research: own research
+* Running:

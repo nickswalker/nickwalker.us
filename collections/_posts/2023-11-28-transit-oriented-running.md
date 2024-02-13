@@ -2,7 +2,7 @@
 title: "A Guide to Transit-Oriented Running in Seattle"
 date: 2023-11-28 12:00 -0600
 type: link
-categories: running
+categories: running blog
 published: true
 link: https://www.theurbanist.org/2023/11/28/a-guide-to-transit-oriented-running-in-seattle/
 ---

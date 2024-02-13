@@ -2,7 +2,7 @@
 title: "Any AI that writes about people needs an opt-out button"
 date: 2023-11-19 12:00 -0600
 type: blog
-categories: research
+categories: blog
 published: true
 ---
 
