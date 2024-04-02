@@ -6,8 +6,8 @@
     {% assign venue = "" %}
     {% if entry.booktitle %}
     {% capture venue %}{{ entry.booktitle | remove: "Proceedings of the " | remove: "Proceedings of " | replace: "International Conference on", "Int. Conf."}}{% endcapture %}
-    {% elsif entry.journal == "CoRR" %}
-    {% assign venue = "arXiv preprint" %}
+    {% elsif entry.archiveprefix %}
+    {% capture venue %}{{ entry.archiveprefix }}{% if entry.primaryclass %} ({{ entry.primaryclass }}){% endif %} preprint{% endcapture %}
     {% elsif entry.journal %}
     {% capture venue %}{{ entry.journal }}{% endcapture %}
     {% endif %}
