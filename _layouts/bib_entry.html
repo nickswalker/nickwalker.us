@@ -20,7 +20,7 @@
 
     <span class="title">{{ entry.title }}</span><br/>
     <span class="venue">{{ venue }}, {{ entry.year }}</span><br/>
-    <span class="authors">{%for author in entry.author_array%}{%if forloop.last%} and {%elsif forloop.first%}{%else%}, {%endif%}{%if (author.first == "Nick" or author.first == "Nicholas") and author.last == "Walker%}<u>{{author.first}} {{author.last}}{% if forloop.index0 < cofirst %}*{% endif %}</u>{%else%} {{author.first}} {{author.last}}{% if forloop.index0 < cofirst %}*{% endif %}{%endif%}{%endfor%}</span>
+    <span class="authors">{%for author in entry.author_array%}{%if forloop.last and forloop.first != true %} and {%elsif forloop.first%}{%else%}, {%endif%}{%if (author.first == "Nick" or author.first == "Nicholas") and author.last == "Walker%}<u>{{author.first}} {{author.last}}{% if forloop.index0 < cofirst %}*{% endif %}</u>{%else%} {{author.first}} {{author.last}}{% if forloop.index0 < cofirst %}*{% endif %}{%endif%}{%endfor%}</span>
 
     <ul class="quick-links">
         {% if entry.wwwurl %}
