@@ -14,3 +14,4 @@ group :jekyll_plugins do
 end
 
 gem "html-proofer"
+gem "jekyll-sass-converter", "~> 2.0"
