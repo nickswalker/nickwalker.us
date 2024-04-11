@@ -15,7 +15,8 @@ jobs:
       - name: 💎 setup ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.1.2
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          cache-version: 0 # Increment this number if you need to re-download cached gems
       - run:  yes | gem update --system --force
       - name: 🔨 install dependencies & build site
         uses: limjh16/jekyll-action-ts@master
@@ -26,7 +27,7 @@ jobs:
           ./_test/test_bibtex.rb _data/references.bib
           bundle exec htmlproofer ./_site --only-4xx  --assume-extension .html --no-enforce-https --ignore-missing-alt --ignore-urls '/vimeo.com/,/twitter.com/,/www.researchgate.net/' --swap-urls 'https?\:\/\/nickwalker\.us:'
       - name: Upload build artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: site
           path: _site
@@ -38,7 +39,8 @@ jobs:
       - name: 💎 setup ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.1.2
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          cache-version: 0 # Increment this number if you need to re-download cached gems
       - run:  yes | gem update --system --force
       - name: 🔨 install dependencies & build site
         uses: limjh16/jekyll-action-ts@master
@@ -50,7 +52,7 @@ jobs:
           ./_test/test_bibtex.rb _data/references.bib
           bundle exec htmlproofer ./_site --only-4xx  --assume-extension .html --no-enforce-https --ignore-missing-alt --ignore-urls '/vimeo.com/,/twitter.com/,/www.researchgate.net/' --swap-urls 'https?\:\/\/nickwalker\.us:'
       - name: Upload build artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: site-drafts
           path: _site
@@ -60,7 +62,7 @@ jobs:
     if: github.ref == 'refs/heads/master'
     steps:
       - name: Download build result
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: site
       - name: Setup SSH Keys and known_hosts
@@ -88,7 +90,7 @@ jobs:
     if: github.ref == 'refs/heads/develop'
     steps:
       - name: Download build result
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: site
       - name: Setup SSH Keys and known_hosts
@@ -109,7 +111,7 @@ jobs:
     needs: [jekyll-build-drafts]
     steps:
     - name: Download build result
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: site-drafts
     - name: Setup SSH Keys and known_hosts
