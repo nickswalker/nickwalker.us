@@ -24,6 +24,11 @@
     "network": "flickr",
     "username": "nickwalker-us",
     "url": "https://flickr.com/photos/nickwalker-us"
+   },
+   {
+    "network": "strava",
+    "username": "5387878",
+    "url": "https://strava.com/athletes/35387878"
    }
   ]
  },
@@ -77,6 +82,26 @@
   }
  ],
  "volunteer": [
+  {
+   "organization": "Drumheller Marathon & Half Marathon",
+   "position": "Organizer",
+   "website": "https://drumhellermarathon.com",
+   "startDate": "2022"
+  },
+  {
+   "organization": "Light Rail Relay",
+   "position": "Organizer",
+   "website": "https://lightrailrelay.com",
+   "startDate": "2021"
+  },
+  {
+   "organization": "IEEE Transactions on Robotics",
+   "shortName": "T-RO",
+   "website": "https://www.ieee-ras.org/publications/t-ro",
+   "position": "Reviewer",
+   "number": 1,
+   "date": "2024"
+  },
   {
    "organization": "ACM Transactions on Human-Robot Interaction",
    "shortName": "THRI",
@@ -144,7 +169,7 @@
   {
    "organization": "Northwest Robotics Symposium",
    "position": "Organizer",
-   "website": "https://nwrsymposium.github.io",
+   "website": "https://nwrsymposium.github.io/2022",
    "date": "2022"
   },
   {
@@ -293,6 +318,9 @@
     {
      "description": "Advisor: Maya Cakmak",
      "link": "http://www.mayacakmak.com"
+    },
+    {
+     "description": "\"Making Robot Behaviors Automatically Transparent\""
     }
    ],
    "courses": []
@@ -323,6 +351,12 @@
   }
  ],
  "awards": [
+  {
+   "title": "Best Short Paper",
+   "startDate": "2024",
+   "awarder": "ACM/IEEE International Conference on Human-Robot Interaction",
+   "link": "https://dl.acm.org/doi/10.1145/3610977.3637486"
+  },
   {
    "title": "Graduate Research Fellowship",
    "startDate": "2020",
@@ -376,12 +410,38 @@
  ],
  "publications": [
   {
-   "type": "popular",
+   "type": "conference",
+   "name": "Using 3D Mice to Control Robot Manipulators",
+   "authors": "V.\u00a0Dhat, N.\u00a0Walker, M.\u00a0Cakmak",
+   "location": "Boulder, CO, USA",
+   "publisher": "ACM/IEEE Int. Conf. Human-Robot Interaction",
+   "releaseDate": "Mar. 2024",
+   "link": "https://nickwalker.us/publications/dhat2024mice/"
+  },
+  {
+   "type": "feature",
+   "name": "A Guide to Transit-Oriented Running in Seattle",
+   "authors": "N.\u00a0Walker",
+   "publisher": "The Urbanist",
+   "releaseDate": "Nov. 2023",
+   "link": "https://nickwalker.us/publications/walker2023transitrunning/"
+  },
+  {
+   "type": "workshop",
+   "name": "Towards robustly picking unseen objects from densely packed shelves",
+   "authors": "M.\u00a0Grotz, J.\u00a0Lowry, S.\u00a0Atar, Y.\u00a0Li, P.\u00a0Torrado, B.\u00a0Yang, N.\u00a0Walker, M.\u00a0Murray, D.\u00a0Fox, M.\u00a0Cakmak, J.\u00a0R.\u00a0Smith",
+   "location": "Daegu, Republic of Korea",
+   "publisher": "Proc. RSS Workshop Perception Manipulation Challenges for Warehouse Automation",
+   "releaseDate": "Jul. 2023",
+   "link": "https://nickwalker.us/publications/grotz2023densely/"
+  },
+  {
+   "type": "feature",
    "name": "Wandering Robots in the Wild",
    "authors": "N.\u00a0Walker, A.\u00a0Nanavati",
    "publisher": "IEEE Spectrum",
    "releaseDate": "Jul. 2022",
-   "link": "https://nickwalker.us/publications/walker2022wandering"
+   "link": "https://nickwalker.us/publications/walker2022wandering/"
   },
   {
    "type": "conference",
@@ -390,7 +450,7 @@
    "location": "Sapporo, Hokkaido, Japan",
    "publisher": "Proc. 2022 ACM/IEEE Int. Conf. Human-Robot Interaction",
    "releaseDate": "Mar. 2022",
-   "link": "https://nickwalker.us/publications/nanavati2022wandering"
+   "link": "https://nickwalker.us/publications/nanavati2022wandering/"
   },
   {
    "type": "conference",
@@ -399,7 +459,7 @@
    "location": "London, UK",
    "publisher": "Conf. Robot Learning",
    "releaseDate": "Nov. 2021",
-   "link": "https://nickwalker.us/publications/walker2021attributions"
+   "link": "https://nickwalker.us/publications/walker2021attributions/"
   },
   {
    "type": "conference",
@@ -408,7 +468,7 @@
    "location": "London, UK",
    "publisher": "Conf. Robot Learning",
    "releaseDate": "Nov. 2021",
-   "link": "https://nickwalker.us/publications/murray2021learning"
+   "link": "https://nickwalker.us/publications/murray2021learning/"
   },
   {
    "type": "conference",
@@ -417,7 +477,7 @@
    "location": "Oxford, UK",
    "publisher": "Proc. 2020 ACM/IEEE Int. Conf. Human-Robot Interaction",
    "releaseDate": "Mar. 2020",
-   "link": "https://nickwalker.us/publications/walker2020perceptions"
+   "link": "https://nickwalker.us/publications/walker2020perceptions/"
   },
   {
    "type": "journal",
@@ -425,7 +485,7 @@
    "authors": "J.\u00a0Thomason, A.\u00a0Padmakumar, J.\u00a0Sinapov, N.\u00a0Walker, Y.\u00a0Jiang, H.\u00a0Yedidsion, J.\u00a0Hart, P.\u00a0Stone, R.\u00a0J.\u00a0Mooney",
    "publisher": "Journal of Artificial Intelligence Research",
    "releaseDate": "Feb. 2020",
-   "link": "https://nickwalker.us/publications/thomason2020improving"
+   "link": "https://nickwalker.us/publications/thomason2020improving/"
   },
   {
    "type": "conference",
@@ -434,7 +494,7 @@
    "location": "Berkeley",
    "publisher": "Proc. 29th Int. Conf. Automated Planning Scheduling",
    "releaseDate": "Jul. 2019",
-   "link": "https://nickwalker.us/publications/jiang2019icaps"
+   "link": "https://nickwalker.us/publications/jiang2019icaps/"
   },
   {
    "type": "conference",
@@ -443,7 +503,7 @@
    "location": "Montreal",
    "publisher": "Int. Conf. Robotics Automation",
    "releaseDate": "May 2019",
-   "link": "https://nickwalker.us/publications/thomason2019icra"
+   "link": "https://nickwalker.us/publications/thomason2019icra/"
   },
   {
    "type": "conference",
@@ -452,7 +512,7 @@
    "location": "Madrid, Spain",
    "publisher": "2018 IEEE/RSJ Int. Conf. Intelligent Robots Systems",
    "releaseDate": "Oct. 2018",
-   "link": "https://nickwalker.us/publications/hart2018iros"
+   "link": "https://nickwalker.us/publications/hart2018iros/"
   },
   {
    "type": "conference",
@@ -461,7 +521,7 @@
    "location": "San Francisco",
    "publisher": "Proc. Thirty-First AAAI Conf. Artificial Intelligence",
    "releaseDate": "Feb. 2017",
-   "link": "https://nickwalker.us/publications/svetlik2017aaai"
+   "link": "https://nickwalker.us/publications/svetlik2017aaai/"
   },
   {
    "type": "conference",
@@ -470,7 +530,7 @@
    "location": "San Francisco",
    "publisher": "Proc. of SPIE 10051, Neural Imaging Sensing",
    "releaseDate": "Feb. 2017",
-   "link": "https://nickwalker.us/publications/schroeder2017"
+   "link": "https://nickwalker.us/publications/schroeder2017/"
   },
   {
    "type": "workshop",
@@ -479,7 +539,7 @@
    "location": "Xi'an, China",
    "publisher": "Proc. 2021 ICRA Workshop Modern Approaches for Intrinsically-Motivated Intelligent Behavior",
    "releaseDate": "Jun. 2021",
-   "link": "https://nickwalker.us/publications/walker2021influencing"
+   "link": "https://nickwalker.us/publications/walker2021influencing/"
   },
   {
    "type": "workshop",
@@ -488,7 +548,7 @@
    "location": "Berkeley",
    "publisher": "Proc. of 2019 ICAPS Workshop Planning Robotics",
    "releaseDate": "Jul. 2019",
-   "link": "https://nickwalker.us/publications/walker2019planrob"
+   "link": "https://nickwalker.us/publications/walker2019planrob/"
   },
   {
    "type": "symposium",
@@ -497,7 +557,7 @@
    "location": "Sydney",
    "publisher": "RoboCup 2019: Robot Soccer World Cup XXIII",
    "releaseDate": "Jul. 2019",
-   "link": "https://nickwalker.us/publications/walker2019robocup"
+   "link": "https://nickwalker.us/publications/walker2019robocup/"
   },
   {
    "type": "symposium",
@@ -506,7 +566,7 @@
    "location": "Arlington",
    "publisher": "AAAI Fall Symp. Reasoning Learning in Real-World Systems for Long-Term Autonomy",
    "releaseDate": "Oct. 2018",
-   "link": "https://nickwalker.us/publications/jiang2018fss"
+   "link": "https://nickwalker.us/publications/jiang2018fss/"
   },
   {
    "type": "symposium",
@@ -515,7 +575,7 @@
    "location": "Arlington",
    "publisher": "AAAI Fall Symp. Artificial Intelligence Human-Robot Interaction",
    "releaseDate": "Oct. 2018",
-   "link": "https://nickwalker.us/publications/hart2018fss"
+   "link": "https://nickwalker.us/publications/hart2018fss/"
   }
  ],
  "skills": [

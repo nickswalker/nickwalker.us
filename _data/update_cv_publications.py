@@ -60,7 +60,7 @@ for key in bib_data.entries:
     desc["publisher"] = re.sub(r' \([^)]*\)', '', desc["publisher"])
     month_string = month_abbreviations[fields["month"]]
     desc["releaseDate"] = month_string + " " + fields["year"]
-    desc["link"] = "https://nickwalker.us/publications/" + key
+    desc["link"] = "https://nickwalker.us/publications/" + key + "/"
     pubs.append(desc)
 
 with open("cv.json", 'r') as f:
