@@ -24,8 +24,6 @@ for key in bib_data.entries:
     if "wwwhidden" in fields and fields["wwwhidden"]:
         continue
     desc["type"] = fields["wwwtype"]
-    if desc["type"] == "working":
-        continue
     desc["name"] = fields["title"]
     desc["authors"] = ""
     cofirst = -1
@@ -45,8 +43,8 @@ for key in bib_data.entries:
     if desc["type"] == "journal":
         desc["publisher"] = fields["journal"]
     elif desc["type"] == "working":
-        # Preprint
-        pass
+        desc["publisher"] = fields["archivePrefix"]
+        desc["eprint"] = fields["eprint"]
     else:
         desc["publisher"] = fields["booktitle"]
     desc["publisher"] = desc["publisher"].replace("The Journal", "Journal")
