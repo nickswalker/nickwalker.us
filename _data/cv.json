@@ -32,16 +32,8 @@
    }
   ]
  },
- "work": [
-  {
-   "company": "NVIDIA",
-   "position": "Research Intern",
-   "website": "https://research.nvidia.com/labs/srl/",
-   "date": "2022 Su.",
-   "highlights": [
-    "Worked with Seattle Robotics Lab researchers"
-   ]
-  },
+ "interests": "My research focuses on improving human-robot communication by uncovering and formalizing design knowledge. Specific topics have included interactions with service robots as well as assistive teleoperation and natural language interfaces.",
+ "teaching_experience": [
   {
    "company": "UW CSE 478 (Robotics)",
    "position": "Teaching Assistant",
@@ -59,6 +51,29 @@
    "highlights": [
     "Developed assignments and supported undergraduates using the Kuri robot"
    ]
+  }
+ ],
+ "research_experience": [
+    {
+     "company": "University of Washington",
+     "position": "Graduate Research Assistant",
+     "website": "https://hcrlab.cs.washington.edu",
+     "startDate": "2018",
+     "highlights": [
+        "Making robot behaviors automatically transparent",
+        "Generating communicative actions during task execution",
+        "Perceptions of intrinsically motivated robot behaviors",
+
+     ]
+    },
+  {
+   "company": "NVIDIA",
+   "position": "Research Intern",
+   "website": "https://research.nvidia.com/labs/srl/",
+   "date": "2022 Su.",
+   "highlights": [
+    "Assistive teleoperation for manipulation in cluttered environments"
+   ]
   },
   {
    "company": "USAA",
@@ -66,8 +81,21 @@
    "website": "https://usaa.com",
    "date": "2016 Su.",
    "highlights": [
-    "Developed experimental brain-computer interface software and hardware",
-    "Work contributed to a SPIE conference publication"
+    "Ear-worn brain-computer interface software and hardware for biometric authentication"
+   ]
+  },
+  {
+   "company": "University of Texas",
+   "position": "Peer Mentor",
+   "website": "https://www.cs.utexas.edu/~larg/bwi_web/",
+   "startDate": "2016",
+   "endDate": "2018",
+   "highlights": [
+    "Long-term autonomy for service robots",
+    "Mobile manipulation in homes and offices",
+    "Grounded natural language understanding",
+    "Automated curriculum learning for reinforcement learning agents"
+
    ]
   },
   {
@@ -76,8 +104,7 @@
    "website": "https://usaa.com",
    "date": "2015 Su.",
    "highlights": [
-    "Characterized the performance of automated speech transcription vendors",
-    "Developed evaluation methodology that led to a patent application"
+    "Evaluation of automated speech transcription vendors"
    ]
   }
  ],
@@ -93,6 +120,14 @@
    "position": "Organizer",
    "website": "https://lightrailrelay.com",
    "startDate": "2021"
+  },
+  {
+   "organization": "IEEE International Conference on Intelligent Robots and Systems",
+   "shortName": "IROS",
+   "website": "https://www.ieee-ras.org/conferences-workshops/financially-co-sponsored/iros",
+   "position": "Reviewer",
+   "number": 1,
+   "date": "2024"
   },
   {
    "organization": "IEEE Transactions on Robotics",
@@ -320,12 +355,13 @@
      "link": "http://www.mayacakmak.io"
     },
     {
-     "description": "\"Making Robot Behaviors Automatically Transparent\""
+     "description": "Thesis: \"Making Robot Behaviors Automatically Transparent\""
     }
    ],
    "courses": []
   },
   {
+   "hide": true,
    "institution": "University of Washington",
    "location": "Seattle, WA",
    "area": "Computer Science",
@@ -343,6 +379,10 @@
    "endDate": "2018",
    "highlights": [
     {
+     "description": "Advisors: Peter Stone, Matteo Leonetti, Jivko Sinapov, Justin Hart",
+     "link": "https://www.cs.utexas.edu/~pstone/students.shtml"
+    },
+    {
      "description": "Polymathic Scholar (Interdisciplinary Honors)",
      "link": "https://cns.utexas.edu/honors/honors-programs-center/polymathic"
     }
@@ -353,7 +393,7 @@
  "awards": [
   {
    "title": "Best Short Paper",
-   "startDate": "2024",
+   "date": "2024",
    "awarder": "ACM/IEEE International Conference on Human-Robot Interaction",
    "link": "https://dl.acm.org/doi/10.1145/3610977.3637486"
   },
@@ -409,6 +449,15 @@
   }
  ],
  "publications": [
+  {
+   "type": "working",
+   "name": "Fast Explicit-Input Assistance for Teleoperation in Clutter",
+   "authors": "N.\u00a0Walker, X.\u00a0Yang, A.\u00a0Garg, M.\u00a0Cakmak, D.\u00a0Fox, C.\u00a0P\u00e9rez-D'Arpino",
+   "publisher": "arXiv",
+   "eprint": "2402.02612",
+   "releaseDate": "Mar. 2024",
+   "link": "https://nickwalker.us/publications/walker2024explicit/"
+  },
   {
    "type": "conference",
    "name": "Using 3D Mice to Control Robot Manipulators",
@@ -576,21 +625,30 @@
    "publisher": "AAAI Fall Symp. Artificial Intelligence Human-Robot Interaction",
    "releaseDate": "Oct. 2018",
    "link": "https://nickwalker.us/publications/hart2018fss/"
+  },
+  {
+   "type": "working",
+   "name": "An Architecture for Person-Following using Active Target Search",
+   "authors": "M.\u00a0Kim, M.\u00a0Arduengo, N.\u00a0Walker, Y.\u00a0Jiang, J.\u00a0W.\u00a0Hart, P.\u00a0Stone, L.\u00a0Sentis",
+   "publisher": "arXiv",
+   "eprint": "1809.08793",
+   "releaseDate": "Sept. 2019",
+   "link": "https://nickwalker.us/publications/kim2019/"
   }
  ],
  "skills": [
   {
    "name": "Robotics software",
-   "level": "Experienced",
    "keywords": [
     "ROS",
+    "ROS 2",
+    "Python",
     "C++",
-    "Python"
+    "Isaac Sim"
    ]
   },
   {
    "name": "Robotics platforms",
-   "level": "Experienced",
    "keywords": [
     "Stretch",
     "Fetch",
@@ -600,16 +658,14 @@
   },
   {
    "name": "User research",
-   "level": "Proficient",
    "keywords": [
+    "Mixed Methods",
     "Study Design",
-    "Hypothesis Testing",
-    "Amazon Mechanical Turk"
+    "Hypothesis Testing"
    ]
   },
   {
-   "name": "Machine learning techniques, tools",
-   "level": "Proficient",
+   "name": "Data tools",
    "keywords": [
     "PyTorch",
     "Numpy",
@@ -617,18 +673,22 @@
    ]
   },
   {
-   "name": "Web Technologies",
-   "level": "Proficient",
+   "name": "Planning and scheduling",
    "keywords": [
-    "PHP",
+    "Answer Set Programming"
+   ]
+  },
+  {
+   "name": "Web technologies",
+   "keywords": [
     "Typescript",
+    "Javascript",
     "HTML",
     "CSS"
    ]
   },
   {
-   "name": "Digital Media",
-   "level": "Handy",
+   "name": "Digital media",
    "keywords": [
     "Premiere",
     "Photoshop",
