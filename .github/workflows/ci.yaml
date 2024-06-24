@@ -25,7 +25,7 @@ jobs:
       - name: run tests
         run: |
           ./_test/test_bibtex.rb _data/references.bib
-          bundle exec htmlproofer ./_site --only-4xx  --assume-extension .html --no-enforce-https --ignore-missing-alt --ignore-urls '/vimeo.com/,/twitter.com/,/www.researchgate.net/' --swap-urls 'https?\:\/\/nickwalker\.us:'
+          bundle exec htmlproofer ./_site --only-4xx  --assume-extension .html --no-enforce-https --ignore-missing-alt --ignore-urls '/vimeo.com/,/twitter.com/,/www.researchgate.net/,/physoc.onlinelibrary.wiley.com/' --swap-urls 'https?\:\/\/nickwalker\.us:'
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
@@ -50,7 +50,7 @@ jobs:
       - name: run tests
         run: |
           ./_test/test_bibtex.rb _data/references.bib
-          bundle exec htmlproofer ./_site --only-4xx  --assume-extension .html --no-enforce-https --ignore-missing-alt --ignore-urls '/vimeo.com/,/twitter.com/,/www.researchgate.net/' --swap-urls 'https?\:\/\/nickwalker\.us:'
+          bundle exec htmlproofer ./_site --only-4xx  --assume-extension .html --no-enforce-https --ignore-missing-alt --ignore-urls '/vimeo.com/,/twitter.com/,/www.researchgate.net/,/physoc.onlinelibrary.wiley.com/' --swap-urls 'https?\:\/\/nickwalker\.us:'
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
