@@ -8,11 +8,11 @@ excerpt: "Cheap, easy, and customizable fuel"
 
 Endurance athletes consume highly concentrated carbohydrate solutions because it maintains blood glucose levels and spares [limited accessible energy sources](https://doi.org/10.1093%2Fnutrit%2Fnuy001). There are [many "energy gel" sports nutrition products](https://www.researchgate.net/profile/Xuguang-Zhang-2/publication/277081684_Extreme_Variation_of_Nutritional_Composition_and_Osmolality_of_Commercially_Available_Carbohydrate_Energy_Gel/links/557971f508aeb6d8c020255c/Extreme-Variation-of-Nutritional-Composition-and-Osmolality-of-Commercially-Available-Carbohydrate-Energy-Gel.pdf) to choose from.
 
-They can be costly, anywhere from $1 per 25g of carbohydrates to as much as [$3.5 per 25g for high-end solutions](https://www.maurten.com/products/us/gel-100-box-us). If you're running a 4:00 marathon and using 60g per hour, that means spending $8-$28. You might spend $50-$150 per marathon training block on gels if you're practicing nutrition regularly.
+They can be costly, anywhere from $1 per 25g of carbohydrates to as much as [$3.5 per 25g for high-end solutions](https://www.maurten.com/products/us/gel-100-box-us). That means spending $8-$28 to cover a marathon, and maybe $50-$150 per marathon training block on gels if you're practicing nutrition regularly.
 
-Fortunately, it's easy to make passable gels at home. The basic idea is **to target a 3:1 glucose to fructose ratio**, then add water to reach a manageable concentration.
+Fortunately, it's easy to make nutrition at home. The basic idea is **to target a 3:1 glucose to fructose ratio**, then add water to reach a manageable concentration.
 
-DIY means you can easily add caffeine and salt, or substitute a carb source. And you can use the containers of your choice. I am partial to [100ml flip-cap plastic pouches](https://www.amazon.com/s?k=100ml+plastic+flasks+concealable) which fit in most shorts' gel pockets. For workouts, I dump the ingredients in a bottle and treat it like an energy drink.
+DIY means you can easily add caffeine and salt, or substitute a carb source. And you can use the containers of your choice. I am partial to [100ml flip-cap plastic pouches](https://www.amazon.com/s?k=100ml+plastic+flasks+concealable) which fit in most shorts' gel pockets. For workouts, I dump the ingredients in a bottle as a sports drink.
 
 ## Recipe
 
@@ -32,7 +32,7 @@ Keeps for 2-3 days in a refrigerator.
 
 ### Which ingredients should I use?
 
-Refined ingredients are more expensive and generally have to be bought online, but they enable low osmolality and lower volume/mass. Honey and other natural products are cheaper and more widely available, but will require more water to reach a manageable osmolality. 
+Refined ingredients are more expensive and generally have to be bought online, but you need them for low osmolality and lower volume/mass. Honey and other natural products are cheaper and more widely available, but will require more water to reach a manageable osmolality. 
 
 If you're using dry ingredients, use [maltodextrin](#maltodextrin). If you aren't, brown rice syrup is useful as a glucose source because it contains so little fructose, unlike the other viscous ingredients.
 
@@ -46,7 +46,7 @@ Glucose and fructose [use separate metabolic pathways](https://www.mysportscienc
 
 ### Osmolality and isotonicity
 
-[Osmolality](https://en.wikipedia.org/wiki/Osmotic_concentration) is the concentration of a solution. It is measured in units of milliosmole per liter (mOsm/L). A solution is isotonic if it has the same osmolality as blood plasma, ~295mOsm/L. If the solution is too concentrated, it'll cause GI stress as fluids are pulled in. If it's too dilute, it'll pass before full absorption.
+[Osmolality](https://en.wikipedia.org/wiki/Osmotic_concentration) is the concentration of a solution. It is measured in milliosmole per liter (mOsm/L). A solution is isotonic if it has the same osmolality as blood plasma, ~295mOsm/L. If the solution is too concentrated, it'll cause GI stress as fluids are pulled in. If it's too dilute, it'll pass before full absorption.
 
  The only way to change osmolality for a given mass of carbohydrate is to use fewer particles (e.g. use heavier carbohydrates, like [maltodextrin](#maltodextrin), which are still quickly metabolized) or to add more water. The default 3400 mOsm/L for this recipe is high, though lower than [that of most commercial products](https://www.researchgate.net/publication/277081684_Extreme_Variation_of_Nutritional_Composition_and_Osmolality_of_Commercially_Available_Carbohydrate_Energy_Gel). Making the solution isotonic requires adding so much fluid as to make it impractical (and doesn't align with fluid consumption of [high-performing athletes either](https://pubmed.ncbi.nlm.nih.gov/22450589/)).
 
@@ -55,6 +55,10 @@ Glucose and fructose [use separate metabolic pathways](https://www.mysportscienc
 [Maltodextrin](https://en.wikipedia.org/wiki/Maltodextrin) is a large molecule consisting of chains of glucose and is created by chemically processing starch. Its less sweet and crystallization-prone than sugar, but also less viscous in solution than a starch. It is quickly broken down into glucose inside the body, and is typically easier to tolerate in large quantities. All of this is why it's the primary carb source in commercial gels.
 
 The length of the glucose chain is [variable depending on the chemical process and starches used](https://www.naturalproductsinsider.com/specialty-nutrients/making-the-most-of-maltodextrins). Anything between 2 and 20 glucose groups (degree of polymerization) are sold alike. Longer chains are preferable as they'll result in a lower osmolality. You can contact the manufacturer to get the number, but generally longer chain versions will take longer to dissolve in water and will be barely sweet. The calculator assumes a degree of polymerization of 10, since I was quoted 10-12 by a representative of the company I use.
+
+### Does it need to be fully dissolved?
+
+Check fully dissolved if you want a sports drink. If you don't want a sports drink, the recipe will give you a gooey paste. It's not the same as a commercial gel...because there's no [gelling agent](https://en.wikipedia.org/wiki/Thickening_agent).
 
 ### Flavors
 
@@ -91,5 +95,5 @@ You can also use this gel/drink recipe in the lead up to a big event for an easy
 
 ## Changelog
 
-* **2024-06-23**: Handle and solve for multiple ingredients, optimizing for volume. Added brown rice syrup, molasses, and table sugar.
+* **2024-06-23**: Solve for multiple ingredients and add many common carb sources. Allow partial specification of ingredients. Add "fully dissolve" for making drinks
 * **2023-10-22**: Initial post
