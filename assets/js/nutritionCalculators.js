@@ -19,6 +19,7 @@ const INGREDIENTS = {
     // We assume malto is N glucose molecules (180g/mol), and subtract water molecules lost due to glycosidic bonds
     maltodextrin: { volume: 0.95, glucose: 1.0, fructose: 0, calories: 4.0, molarMass: 1640, water: 0, cost: .0133 },
     fructose: { volume: 0.8, glucose: 0, fructose: 1.0, calories: 4.0, molarMass: 180, water: 0, cost: .02 },
+    salt: {volume: 0.9, glucose: 0, fructose: 0, calories: 0, molarMass: 58, osmoles: 0.0342, water: 0, cost: 0.0015},
     sugar: { volume: 0.75, glucose: 0.5, fructose: 0.5, calories: 4.0, molarMass: 342, water: 0, cost: .004 },
     honey: { volume: 0.7, glucose: 0.35, fructose: 0.4, calories: 2.85, molarMass: 155, water: 0.2, cost: .0133 },
     // Maltose, glucose, maltotriose, in .5, .30, .20 ratio
@@ -131,6 +132,7 @@ export class GelRecipeCalculator extends LitElement {
         this.targetGlucoseG = (this.glucoseRatio / (this.glucoseRatio + this.fructoseRatio)) * this.carbohydrateG
         let targetFructose = this.targetFructoseG
         let targetGlucose = this.targetGlucoseG
+        let fixedOsmoles = 0
         // Subtract away ingredients that the user has manually specified
         for (const ingredient of Object.keys(INGREDIENTS)) {
             if (this[suffixCamelCase("use", ingredient)] && this[suffixCamelCase("amount", ingredient)] !== null){
@@ -138,6 +140,7 @@ export class GelRecipeCalculator extends LitElement {
                 targetFructose -= amount * INGREDIENTS[ingredient].fructose
                 targetGlucose -= amount * INGREDIENTS[ingredient].glucose
                 targetCarbs -= amount * (INGREDIENTS[ingredient].glucose + INGREDIENTS[ingredient].fructose)
+                fixedOsmoles += 1000 * amount * INGREDIENTS[ingredient].osmoles
             }
         }
 
@@ -148,7 +151,7 @@ export class GelRecipeCalculator extends LitElement {
                 glucose: { equal: targetGlucose },
                 fructose: { equal: targetFructose },
                 carbs: { equal: targetCarbs },
-                netOsmolality: {equal: 0}
+                netOsmolality: {equal: -fixedOsmoles}
             },
             variables: {
             }
