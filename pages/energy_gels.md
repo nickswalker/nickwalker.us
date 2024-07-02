@@ -10,9 +10,12 @@ Endurance athletes consume highly concentrated carbohydrate solutions because it
 
 They can be costly, anywhere from $1 per 25g of carbohydrates to as much as [$3.5 per 25g for high-end solutions](https://www.maurten.com/products/us/gel-100-box-us). That means spending $8-$28 to cover a marathon, and maybe $50-$150 per marathon training block on gels if you're practicing nutrition regularly.
 
-Fortunately, it's easy to make nutrition at home. The basic idea is **to target a 3:1 glucose to fructose ratio**, then add water to reach a manageable concentration.
+Fortunately, it's easy to make nutrition at home. The basic idea is **to target a 3:1 glucose to fructose ratio** with just enough water to be at a manageable concentration.
 
 DIY means you can easily add caffeine and salt, or substitute a carb source. And you can use the containers of your choice. I am partial to [100ml flip-cap plastic pouches](https://www.amazon.com/s?k=100ml+plastic+flasks+concealable) which fit in most shorts' gel pockets. For workouts, I dump the ingredients in a bottle as a sports drink.
+
+{% include article_multiimage.html images="/assets/projects/energy-gels/honey-malto-filling.webp /assets/projects/energy-gels/gel-flask.webp" caption="Maltodexterin and honey gel prep for my preferred reusable gel containers."%}
+
 
 ## Recipe
 
@@ -24,7 +27,7 @@ This calculator takes your desired [carb-type ratio](#glucosefructose-ratio), [o
     </div>
 </div>
 
-
+0. (Optionally) warm up the water.
 1. Add viscous ingredients (e.g. syrup, honey) to water and mix until dissolved. 
 2. Add powdered ingredients and mix until dissolved. 
 
@@ -35,6 +38,9 @@ Keeps for 2-3 days in a refrigerator.
 Refined ingredients are more expensive and generally have to be bought online, but you need them for low osmolality and lower volume/mass. Honey and other natural products are cheaper and more widely available, but will require more water to reach a manageable osmolality. 
 
 If you're using dry ingredients, use [maltodextrin](#maltodextrin). If you aren't, brown rice syrup is useful as a glucose source because it contains so little fructose, unlike the other viscous ingredients.
+
+{% include article_image.html img="/assets/projects/energy-gels/whole-foods-lay.webp" caption="Brown rice syrup, honey, salt and molasses gel prep. The hydroflask cap is hard to twist open and closed so I don't recommend it."%}
+
 
 ### How many carbs per hour?
 
@@ -66,7 +72,7 @@ Citric acid or lemon juice work well, and in such small quantities that the effe
 
 ### Caffeine
 
-The [recommendation](https://doi.org/10.3390%2Fnu15010148) is 3-6mg caffeine per kilogram body mass, spread through the window starting an hour before the event to an hour before completion. Caffeine powder is dangerous and easily mishandled. Save yourself the trouble; buy capsules and dump the contents in as needed.
+The [recommendation](https://doi.org/10.3390%2Fnu15010148) is 3-6mg caffeine per kilogram body mass, spread through the window starting an hour before the event to an hour before completion. Caffeine powder is dangerous and easily mishandled, so I recommend buying capsules and dumping the contents in as needed.
 
 <div class="card mb-3">
     <div class="card-body">
@@ -80,10 +86,87 @@ You can also use this gel/drink recipe in the lead up to a big event for an easy
 
 ### Ingredient prices
 
-* Honey: $6/lb, 1 ⅓¢/g, 1lb grocery store container.
-* Maltodextrin: $6/lb, 1 ⅓¢/g. 4lb (1 gallon) container.
-* Fructose: $8/lb, 2¢/g. 3lb bag.
-* Caffeine: 5¢/100mg, 250 capsule container
+
+<table class="table small">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Cost (¢/g)</th>
+      <th scope="col">Common size</th>
+      <th scope="col">Common cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Maltodextrin</td>
+      <td>1.33</td>
+      <td>4lb (1 gallon) container</td>
+      <td>$6/lb</td>
+    </tr>
+    <tr>
+      <td>Fructose</td>
+      <td>2.00</td>
+      <td>3lb bag</td>
+      <td>$8/lb</td>
+    </tr>
+    <tr>
+      <td>Glucose</td>
+      <td>1.00</td>
+      <td>1lb jar</td>
+      <td>$4.50/lb</td>
+    </tr>
+    <tr>
+      <td>Salt</td>
+      <td>0.15</td>
+      <td>26oz container</td>
+      <td>$1/lb</td>
+    </tr>
+    <tr>
+      <td>Sugar</td>
+      <td>0.40</td>
+      <td>4lb bag</td>
+      <td>$1/lb</td>
+    </tr>
+    <tr>
+      <td>Honey</td>
+      <td>1.33</td>
+      <td>1lb squeeze bottle</td>
+      <td>$6/lb</td>
+    </tr>
+    <tr>
+      <td>Brown rice syrup</td>
+      <td>1.30</td>
+      <td>21oz jar</td>
+      <td>$5/lb</td>
+    </tr>
+    <tr>
+      <td>Molasses</td>
+      <td>0.90</td>
+      <td>12oz bottle</td>
+      <td>$8/lb</td>
+    </tr>
+    <tr>
+      <td>Agave nectar</td>
+      <td>3.20</td>
+      <td>23.5oz bottle</td>
+      <td>$15/lb</td>
+    </tr>
+    <tr>
+      <td>Maple syrup</td>
+      <td>3.20</td>
+      <td>32oz bottle</td>
+      <td>$10/lb</td>
+    </tr>
+    <tr>
+      <td>Caffeine</td>
+      <td>5¢/100mg</td>
+      <td>250 100mg capsules</td>
+      <td>$10/250 capsules</td>
+    </tr>
+  </tbody>
+</table>
+
+
 
 ## Other recipes
 
