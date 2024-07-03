@@ -169,7 +169,6 @@ article {
   .article-multiimage {
     margin-bottom: 2rem;
 
-
     .images {
       display: flex;
       flex-direction: column;
@@ -186,7 +185,6 @@ article {
       img {
         margin: 0 auto;
         margin-bottom: calc($spacing-unit/2.0);
-        width: 100%;
         object-fit: contain;
         background-color: var(--light-background-color);
         max-height: 75vh;
