@@ -18,26 +18,47 @@ function suffixCamelCase(prepend, camelCaseString) {
 // Solubility is g/ml
 const INGREDIENTS = {
     // We assume malto is N glucose molecules (180g/mol), and subtract water molecules lost due to glycosidic bonds
-    maltodextrin: { volume: 0.95, solubility: .5, glucose: 1.0, fructose: 0, calories: 4.0, molarMass: 1640, water: 0, cost: .0133},
-    fructose: { volume: 0.8, solubility: .79, glucose: 0, fructose: 1.0, calories: 4.0, molarMass: 180, water: 0, cost: .02 },
-    glucose: {volume: 0.7, solubility: .9, glucose: 1, fructose: 0, calories: 4, molarMass: 180, water: 0, cost: .01},
-    salt: {volume: 0.9, solubility: .36, glucose: 0, fructose: 0, calories: 0, molarMass: 58, osmoles: 0.0342, water: 0, cost: 0.0015},
-    sugar: { volume: 0.75, solubility: 2, glucose: 0.5, fructose: 0.5, calories: 4.0, molarMass: 342, water: 0, cost: .004 },
-    honey: { volume: 0.7, glucose: 0.35, fructose: 0.4, calories: 2.85, molarMass: 155, water: 0.2, cost: .0133 },
+    maltodextrin: {volume: 0.95, solubility: .5, glucose: 1.0, fructose: 0, molarMass: 1640, water: 0, cost: .0133},
+    fructose: {volume: 0.8, solubility: .79, glucose: 0, fructose: 1.0, molarMass: 180, water: 0, cost: .02},
+    glucose: {volume: 0.7, solubility: .9, glucose: 1, fructose: 0, molarMass: 180, water: 0, cost: .01},
+    salt: {
+        volume: 0.9,
+        solubility: .36,
+        glucose: 0,
+        fructose: 0,
+        molarMass: 58,
+        osmoles: 0.0342,
+        water: 0,
+        cost: 0.0015
+    },
+    sugar: {volume: 0.75, solubility: 2, glucose: 0.5, fructose: 0.5, molarMass: 342, water: 0, cost: .004},
+    honey: {volume: 0.7, glucose: 0.35, fructose: 0.4, calories: 3.2, molarMass: 155, water: 0.2, cost: .0133},
     // Maltose, glucose, maltotriose, in .5, .30, .20 ratio
-    brownRiceSyrup: { volume: 0.7, glucose: 0.75, fructose: 0.05, calories: 3.0, molarMass: 334, water: 0.05, cost: .013 },
-    molasses: { volume: 0.7, glucose: 0.3, fructose: 0.2, calories: 3.2, molarMass: 196, water: 0.25, cost: .009 },
-    agaveNectar: { volume: 0.7, glucose: 0.2, fructose: 0.56, calories: 3.0, molarMass: 164, water: 0.2, cost: .032 },
-    mapleSyrup: { volume: 0.7, glucose: 0.33, fructose: 0.33, calories: 3.2, molarMass: 280, water: 0.25, cost: .032 },
-    water: { volume: 1.0, glucose: 0, fructose: 0, calories: 0, water: 1, osmoles: 0, cost: 0},
+    brownRiceSyrup: {
+        volume: 0.7,
+        glucose: 0.75,
+        fructose: 0.05,
+        calories: 3.2,
+        molarMass: 334,
+        water: 0.05,
+        cost: .013
+    },
+    molasses: {volume: 0.7, glucose: 0.3, fructose: 0.2, molarMass: 196, water: 0.25, cost: .009},
+    agaveNectar: {volume: 0.7, glucose: 0.2, fructose: 0.56, molarMass: 164, water: 0.2, cost: .032},
+    mapleSyrup: {volume: 0.7, glucose: 0.33, fructose: 0.33, molarMass: 280, water: 0.25, cost: .032},
+    water: {volume: 1.0, glucose: 0, fructose: 0, water: 1, osmoles: 0, cost: 0},
 };
-for (const ingredient of Object.keys(INGREDIENTS)) {
-    if (INGREDIENTS[ingredient].osmoles === undefined && INGREDIENTS[ingredient].molarMass !== undefined && INGREDIENTS[ingredient].molarMass !== undefined) {
+for (const ingredientName of Object.keys(INGREDIENTS)) {
+    const ingredient = INGREDIENTS[ingredientName]
+    if (ingredient.osmoles === undefined && ingredient.molarMass !== undefined) {
         // Turn g/mol to mol/g. Nothing we have disassociates so molar/osmolar concentration are the same, so that's osm/g, or osm/ml
-        INGREDIENTS[ingredient].osmoles = 1 / (INGREDIENTS[ingredient].molarMass);
+        ingredient.osmoles = 1 / (ingredient.molarMass);
     }
-    if (INGREDIENTS[ingredient].solubility === undefined) {
-        INGREDIENTS[ingredient].solubility = 0
+    if (ingredient.solubility === undefined) {
+        ingredient.solubility = 0
+    }
+    if (ingredient.calories === undefined) {
+        ingredient.calories = (ingredient.fructose + ingredient.glucose) * 4
     }
 }
 
@@ -47,8 +68,6 @@ Object.keys(INGREDIENTS).forEach(ingredient => {
     ingredientProperties[`${ingredient}G`] = { type: Number };
     ingredientProperties[suffixCamelCase("use",ingredient)] = { type: Boolean };
     ingredientProperties[suffixCamelCase("amount", ingredient)] = { type: Number }; // Add this line
-
-
 });
 
 function glucoseFructoseRatio(ingredientName) {
@@ -209,8 +228,6 @@ export class GelRecipeCalculator extends LitElement {
             }
         }
 
-
-
         const model = {
             direction: "minimize",
             objective: this.optimizationObjective === "cost" ? "cost" : "mass",
@@ -314,36 +331,75 @@ export class GelRecipeCalculator extends LitElement {
         return html`<p class="alert alert-warning">${errorString}</p>`
     }
 
-    onDurationChange(event) {
-        this.duration = event.target.value;
-        this.calculateIngredients();
+    onDurationChangePart(event, part) {
+        let [hours, minutes] = this.duration.split(':').map(Number);
+        const input = event.target
+        const value = parseInt(event.target.value, 10);
+
+        if (input.validity.badInput || input.validity.rangeUnderflow || input.validity.rangeOverflow || input.validity.stepMismatch ) {
+            event.target.classList.add('is-invalid');
+        } else {
+            event.target.classList.remove('is-invalid');
+            if (part === 'hours') {
+                hours = value;
+            } else {
+                minutes = value;
+            }
+            this.duration = `${hours}:${minutes.toString().padStart(2, '0')}`;
+            this.calculateIngredients();
+        }
     }
 
     onGlucoseRatioChange(event) {
-        const value = parseFloat(event.target.value)
-        if (Number.isNaN(value)) {
-            this.glucoseRatio = null
+        const input = event.target;
+        const value = event.target.valueAsNumber
+
+        if (input.validity.badInput || input.validity.rangeUnderflow || input.validity.rangeOverflow ) {
+            event.target.classList.add('is-invalid');
         } else {
-            this.glucoseRatio = value
+            event.target.classList.remove('is-invalid');
+            this.glucoseRatio = value;
+            this.calculateIngredients();
         }
-        this.calculateIngredients();
     }
+
     onFructoseRatioChange(event) {
-        const value = parseFloat(event.target.value)
-        if (Number.isNaN(value)) {
-            this.fructoseRatio = null
+        const input = event.target;
+        const value = event.target.valueAsNumber
+
+        if (input.validity.badInput || input.validity.rangeUnderflow || input.validity.rangeOverflow ) {
+            event.target.classList.add('is-invalid');
         } else {
-            this.fructoseRatio = value
+            event.target.classList.remove('is-invalid');
+            this.fructoseRatio = value;
+            this.calculateIngredients();
         }
-        this.calculateIngredients();
     }
+
     onCarbsPerHourChange(event) {
-        this.carbsPerHour = parseFloat(event.target.value);
-        this.calculateIngredients();
+        const input = event.target;
+        const value = event.target.valueAsNumber
+
+        if (input.validity.badInput || input.validity.rangeUnderflow || input.validity.rangeOverflow ) {
+            event.target.classList.add('is-invalid');
+        } else {
+            event.target.classList.remove('is-invalid');
+            this.carbsPerHour = value;
+            this.calculateIngredients();
+        }
     }
+
     onOsmolalityChange(event) {
-        this.targetOsmolalityMOsmL = parseFloat(event.target.value);
-        this.calculateIngredients();
+        const input = event.target;
+        const value = event.target.valueAsNumber
+
+        if (input.validity.badInput || input.validity.rangeUnderflow || input.validity.rangeOverflow || input.validity.valueMissing) {
+            event.target.classList.add('is-invalid');
+        } else {
+            event.target.classList.remove('is-invalid');
+            this.targetOsmolalityMOsmL = value;
+            this.calculateIngredients();
+        }
     }
     onFullyDissolveChange(event) {
         this.fullyDissolve = event.target.checked
@@ -365,19 +421,27 @@ export class GelRecipeCalculator extends LitElement {
     }
 
     onIngredientAmountChange(event, ingredient) {
-        const value = parseFloat(event.target.value);
-        if (Number.isNaN(value)) {
-            // User cleared the input box
-            this[suffixCamelCase("amount", ingredient)] = null;
+        const input = event.target;
+        const value = event.target.valueAsNumber
+
+        if (input.validity.badInput || input.validity.rangeUnderflow || input.validity.rangeOverflow ) {
+            event.target.classList.add('is-invalid');
+        } else {
+            event.target.classList.remove('is-invalid');
+
+            if (Number.isNaN(value)) {
+                // User cleared the input box
+                this[suffixCamelCase("amount", ingredient)] = null;
+            } else if (value === 0 || value === null) {
+                this[suffixCamelCase("use", ingredient)] = false;
+                this[suffixCamelCase("amount", ingredient)] = null;
+            } else if (value > 0) {
+                this[suffixCamelCase("use", ingredient)] = true;
+                this[suffixCamelCase("amount", ingredient)] = value;
+            }
+
+            this.calculateIngredients();
         }
-        else if (value === 0 || value === null) {
-            this[suffixCamelCase("use", ingredient)] = false;
-            this[suffixCamelCase("amount", ingredient)] = null;
-        } else if (value > 0) {
-            this[suffixCamelCase("use", ingredient)] = true;
-            this[suffixCamelCase("amount", ingredient)] = value;
-        }
-        this.calculateIngredients();
     }
     onObjectiveChange(event) {
         this.optimizationObjective = event.target.value;
@@ -388,20 +452,34 @@ export class GelRecipeCalculator extends LitElement {
         return html`
           <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-            <div class="mb-1">
-              <div class="input-group">
-                <label for="duration" class="input-group-text">Duration (hh:mm)</label>
-                <input
-                        id="duration"
-                        type="text"
-                        class="form-control form-control-sm"
-                        .value="${this.duration}"
-                        @input="${this.onDurationChange}"
-                />
-              </div>
+          <div class="row mb-1">
+          <div class="col-sm-6 col-12">
+            <div class="input-group">
+              <label for="hours" class="input-group-text">Duration</label>
+              <input
+                      id="hours"
+                      type="number"
+                      min="0"
+                      class="form-control form-control-sm"
+                      placeholder="hours"
+                      .value="${this.duration.split(':')[0]}"
+                      @input="${e => this.onDurationChangePart(e, 'hours')}"
+              />
+              <span class="input-group-text">:</span>
+              <input
+                      id="minutes"
+                      type="number"
+                      min="0"
+                      max="59"
+                      class="form-control form-control-sm"
+                      placeholder="minutes"
+                      .value="${this.duration.split(':')[1]}"
+                      @input="${e => this.onDurationChangePart(e, 'minutes')}"
+              />
             </div>
+          </div>
 
-            <div class="mb-1">
+            <div class="col-sm-6 col-12">
               <div class="input-group">
                 <label for="carbsPerHour" class="input-group-text">Carbs per hour</label>
                 <input
@@ -416,6 +494,7 @@ export class GelRecipeCalculator extends LitElement {
                 <span class="input-group-text">g</span>
               </div>
             </div>
+          </div>
 
             <div class="mb-1">
               <div class="input-group">
@@ -452,6 +531,7 @@ export class GelRecipeCalculator extends LitElement {
                             max="8000"
                             step="100"
                             class="form-control form-control-sm"
+                            required
                             .value="${this.targetOsmolalityMOsmL}"
                             @input="${this.onOsmolalityChange}"
                     />
@@ -549,10 +629,12 @@ export class GelRecipeCalculator extends LitElement {
                 <tbody>
                 <tr>
                   <td><b>Total Carbohydrate</b></td>
-                  <td title="Glucose:Fructose ${Math.round(this.recipeGlucose)}g:${Math.round(this.recipeFructose)}g">${this.carbohydrateG ? Math.ceil(this.carbohydrateG): 0}g</td>
+                  <td>${this.carbohydrateG ? html`${Math.ceil(this.carbohydrateG)}g <i
+                          class="text-secondary small">${Math.round(this.recipeGlucose)}g:${Math.round(this.recipeFructose)}g</i>` : html`0g`}
+                  </td>
                 </tr>
                 <tr>
-                  <td><b>Size</b></td>
+                  <td><b>Volume</b></td>
                   <td title="${(this.volumeMl * 0.034).toFixed(2)}oz">${Math.ceil(this.volumeMl)}ml</td>
                 </tr>
                 <tr>
@@ -570,23 +652,22 @@ export class GelRecipeCalculator extends LitElement {
                 ${Object.keys(INGREDIENTS).filter(x => x !== 'water').map(ingredient => html`
                   ${this[suffixCamelCase("use", ingredient)] ? html`
                     <tr>
-                      <td>${camelCaseToSplitWords(ingredient)}</td>
-                      <td title="${(INGREDIENTS[ingredient].glucose * this[`${ingredient}G`]).toFixed(1)}g:${(INGREDIENTS[ingredient].fructose * this[`${ingredient}G`]).toFixed(1)}g">${Math.ceil(this[`${ingredient}G`])}g</td>
+                      <td class="${ this[`${ingredient}G`] === 0 ? 'text-secondary' : ''}">${camelCaseToSplitWords(ingredient)}</td>
+                      <td class="${ this[`${ingredient}G`] === 0 ? 'text-secondary' : ''}" title="${(INGREDIENTS[ingredient].glucose * this[`${ingredient}G`]).toFixed(1)}g:${(INGREDIENTS[ingredient].fructose * this[`${ingredient}G`]).toFixed(1)}g">${Math.ceil(this[`${ingredient}G`])}g</td>
                     </tr>
                   ` : ''}
                 `)}
                 <tr>
-                  <td>Water (to add)</td>
-                  <td>${Math.ceil(this.waterG)}ml</td>
-                </tr>
-                <tr class=" small">
-                  <td class="text-secondary ">Water (from ingredients)</td>
-                  <td class="text-secondary ">${Math.ceil(this.waterFromIngredients)}ml</td>
+                  <td>Water</td>
+                  <td>${Math.ceil(this.waterG)}ml ${this.waterFromIngredients > 0 ? html`<i
+                          class="small text-secondary">(+${Math.ceil(this.waterFromIngredients)}ml from
+                    ingredients)</i>` : html``}
+                  </td>
                 </tr>
                 </tbody>
                 <tbody class="table-group-divider">
                 <tr>
-                  <td>Osmolality</td>
+                  <td>Concentration</td>
                   <td>${Math.ceil(this.osmolalityMOsmL)} mOsm/L</td>
                 </tr>
                 <tr>
@@ -643,7 +724,7 @@ export class CaffeineCalculator extends LitElement {
         this.calculateIngredients();
     }
     onDurationChange(event) {
-        this.duration = parseFloat(event.target.value);
+        this.duration = event.target.valueAsNumber
         this.calculateIngredients();
     }
 

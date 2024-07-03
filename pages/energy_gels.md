@@ -8,18 +8,18 @@ excerpt: "Cheap, easy, and customizable fuel"
 
 Endurance athletes consume highly concentrated carbohydrate solutions because it maintains blood glucose levels and spares [limited accessible energy sources](https://doi.org/10.1093%2Fnutrit%2Fnuy001). There are [many "energy gel" sports nutrition products](https://www.researchgate.net/profile/Xuguang-Zhang-2/publication/277081684_Extreme_Variation_of_Nutritional_Composition_and_Osmolality_of_Commercially_Available_Carbohydrate_Energy_Gel/links/557971f508aeb6d8c020255c/Extreme-Variation-of-Nutritional-Composition-and-Osmolality-of-Commercially-Available-Carbohydrate-Energy-Gel.pdf) to choose from.
 
-They can be costly, anywhere from $1 per 25g of carbohydrates to as much as [$3.5 per 25g for high-end solutions](https://www.maurten.com/products/us/gel-100-box-us). That means spending $8-$28 to cover a marathon, and maybe $50-$150 per marathon training block on gels if you're practicing nutrition regularly.
+They can be costly, anywhere from $1 to as much as [$3.5 per 25g for high-end solutions](https://www.maurten.com/products/us/gel-100-box-us). That means spending $8-$28 to cover a marathon, and maybe $50-$150 per training block on gels if you're practicing nutrition regularly.
 
 Fortunately, it's easy to make nutrition at home. The basic idea is **to target a 3:1 glucose to fructose ratio** with just enough water to be at a manageable concentration.
 
-DIY means you can easily add caffeine and salt, or substitute a carb source. And you can use the containers of your choice. I am partial to [100ml flip-cap plastic pouches](https://www.amazon.com/s?k=100ml+plastic+flasks+concealable) which fit in most shorts' gel pockets. For workouts, I dump the ingredients in a bottle as a sports drink.
+DIY means you can easily add caffeine and salt, or substitute a carb source. And you can use the containers of your choice. I prefer these [100ml flip-cap plastic pouches](https://www.amazon.com/s?k=100ml+plastic+flasks+concealable) which fit in most shorts' gel pockets. For workouts, I dump the ingredients in a bottle as a sports drink.
 
-{% include article_multiimage.html images="/assets/projects/energy-gels/honey-malto-filling.webp /assets/projects/energy-gels/gel-flask.webp" caption="Maltodexterin and honey gel prep for my preferred reusable gel containers."%}
+{% include article_multiimage.html images="/assets/projects/energy-gels/honey-malto-filling.webp /assets/projects/energy-gels/gel-flask.webp" caption="Maltodextrin and honey gel prep for my preferred reusable gel containers. April 2023."%}
 
 
 ## Recipe
 
-This calculator takes your desired [carb-type ratio](#glucosefructose-ratio), [osmolality](#osmolality-and-isotonicity) and any [desired ingredients](#which-ingredients-should-i-use), then optimizes for low mass. Only checked ingredients will be considered in the calculation, but they may be ignored if they are not needed to reach the desired characteristics. Heavy syrups will be left out in favor of pure powders unless you specifically exclude the powders or set amounts for the syrups. If your entered ingredients or amounts can't meet your target ratio, the calculator will tell you. Hover over ingredient names to see their glucose/fructose ratio, and hover over ml to see oz.
+This calculator takes your desired [carb-type ratio](#glucosefructose-ratio), [concentration](#osmolality-and-isotonicity) and any [particular ingredient](#which-ingredients-should-i-use) quantities, then optimizes for low mass. Only checked ingredients will be considered in the calculation, but they may be ignored if they are not needed to reach the desired characteristics. Specify amounts manually to force the calculator to include an ingredient. If your entered ingredients or amounts can't meet your target ratio, the calculator will tell you. Hover over ingredient names to see their glucose/fructose ratio, and hover over ml to see oz.
 
 <div class="card mb-3">
     <div class="card-body">
@@ -39,7 +39,7 @@ Refined ingredients are more expensive and generally have to be bought online, b
 
 If you're using dry ingredients, use [maltodextrin](#maltodextrin). If you aren't, brown rice syrup is useful as a glucose source because it contains so little fructose, unlike the other viscous ingredients.
 
-{% include article_image.html img="/assets/projects/energy-gels/whole-foods-lay.webp" caption="Brown rice syrup, honey, salt and molasses gel prep. The hydroflask cap is hard to twist open and closed so I don't recommend it."%}
+{% include article_image.html img="/assets/projects/energy-gels/whole-foods-lay.webp" caption="Brown rice syrup, honey, salt and molasses gel prep. The hydroflask twist-cap is hard to open and close, so I don't recommend it. June 2020."%}
 
 
 ### How many carbs per hour?
@@ -54,7 +54,7 @@ Glucose and fructose [use separate metabolic pathways](https://www.mysportscienc
 
 [Osmolality](https://en.wikipedia.org/wiki/Osmotic_concentration) is the concentration of a solution. It is measured in milliosmole per liter (mOsm/L). A solution is isotonic if it has the same osmolality as blood plasma, ~295mOsm/L. If the solution is too concentrated, it'll cause GI stress as fluids are pulled in. If it's too dilute, it'll pass before full absorption.
 
- The only way to change osmolality for a given mass of carbohydrate is to use fewer particles (e.g. use heavier carbohydrates, like [maltodextrin](#maltodextrin), which are still quickly metabolized) or to add more water. The default 3400 mOsm/L for this recipe is high, though lower than [that of most commercial products](https://www.researchgate.net/publication/277081684_Extreme_Variation_of_Nutritional_Composition_and_Osmolality_of_Commercially_Available_Carbohydrate_Energy_Gel). Making the solution isotonic requires adding so much fluid as to make it impractical (and doesn't align with fluid consumption of [high-performing athletes either](https://pubmed.ncbi.nlm.nih.gov/22450589/)).
+ The only way to change osmolality for a given mass of carbohydrate is to use fewer particles (e.g. use heavier carbohydrates, like [maltodextrin](#maltodextrin), which are still quickly metabolized), or to add more water. The default 3400 mOsm/L for this recipe is high, though lower than [that of most commercial products](https://www.researchgate.net/publication/277081684_Extreme_Variation_of_Nutritional_Composition_and_Osmolality_of_Commercially_Available_Carbohydrate_Energy_Gel). Making the solution isotonic requires adding so much fluid as to make it impractical (and doesn't align with fluid consumption of [high-performing athletes either](https://pubmed.ncbi.nlm.nih.gov/22450589/)).
 
 ### Maltodextrin
 
@@ -64,11 +64,11 @@ The length of the glucose chain is [variable depending on the chemical process a
 
 ### Does it need to be fully dissolved?
 
-Check fully dissolved if you want a sports drink. If you don't want a sports drink, the recipe will give you a gooey paste. It's not the same as a commercial gel...because there's no [gelling agent](https://en.wikipedia.org/wiki/Thickening_agent).
+Check fully dissolved if you want a sports drink. If you don't want a sports drink, the default concentration of 3400 mOsm/L is a gooey paste. It's not the same as a commercial gel because there's no [gelling agent](https://en.wikipedia.org/wiki/Thickening_agent).
 
 ### Flavors
 
-Citric acid or lemon juice work well, and in such small quantities that the effect on concentration is negligible.
+Citric acid, lemon juice or instant coffee work well, and in such small quantities that the effect on concentration is negligible.
 
 ### Caffeine
 
