@@ -19,7 +19,7 @@ DIY means you can easily add caffeine and salt, or substitute a carb source. And
 
 ## Recipe
 
-This calculator takes your desired [carb-type ratio](#glucosefructose-ratio), [concentration](#osmolality-and-isotonicity) and any [particular ingredient](#which-ingredients-should-i-use) quantities, then optimizes for low mass. Only checked ingredients will be considered in the calculation, but they may be ignored if they are not needed to reach the desired characteristics. Specify amounts manually to force the calculator to include an ingredient. If your entered ingredients or amounts can't meet your target ratio, the calculator will tell you. Hover over ingredient names to see their glucose/fructose ratio, and hover over ml to see oz.
+This calculator takes your desired [carb-type ratio](#glucosefructose-ratio), [concentration](#osmotic-concentration-osmolality-and-tonicity) and any [particular ingredient](#which-ingredients-should-i-use) amounts, then optimizes for low volume. Checked ingredients will be considered in the calculation, but they may be ignored if not needed to reach the desired characteristics. Specify amounts manually to force the calculator to include an ingredient. A warning will appear if the ingredients or amounts can't meet the target ratio. Hover over ingredient names to see their glucose/fructose ratio, and hover over ml to see oz.
 
 <div class="card mb-3">
     <div class="card-body">
@@ -35,26 +35,26 @@ Keeps for 2-3 days in a refrigerator.
 
 ### Which ingredients should I use?
 
-Refined ingredients are more expensive and generally have to be bought online, but you need them for low osmolality and lower volume/mass. Honey and other natural products are cheaper and more widely available, but will require more water to reach a manageable osmolality. 
+Refined ingredients are more expensive and generally have to be bought online, but you need them to achieve the lowest concentrations in the smallest volume. Honey and other natural products are cheaper and more widely available, but will require more water to reach a manageable concentration. 
 
-If you're using dry ingredients, use [maltodextrin](#maltodextrin). If you aren't, brown rice syrup is useful as a glucose source because it contains so little fructose, unlike the other viscous ingredients.
+If you're using dry ingredients, use [maltodextrin](#maltodextrin). If you aren't, brown rice syrup is useful because it's close to a pure glucose source. Honey and agave nectar are good fructose sources.
 
 {% include article_image.html img="/assets/projects/energy-gels/whole-foods-lay.webp" caption="Brown rice syrup, honey, salt and molasses gel prep. The hydroflask twist-cap is hard to open and close, so I don't recommend it. June 2020."%}
 
 
 ### How many carbs per hour?
 
-The recommendation for events longer than an hour is 60g per hour, and there's [evidence of performance and recovery benefits for using as much as 120g of carbohydrate an hour](https://www.mdpi.com/2072-6643/12/5/1367) in elite endurance athletes. Tolerance varies between individuals and is trainable.
+For events longer than an hour, the common recommendation is 60g per hour, and there's [evidence of performance and recovery benefits for using as much as 120g of carbohydrate an hour](https://www.mdpi.com/2072-6643/12/5/1367) in elite endurance athletes. Tolerance varies between individuals and is trainable.
 
 ### Glucose:fructose ratio
 
 Glucose and fructose [use separate metabolic pathways](https://www.mysportscience.com/post/2015/05/14/carb-mixes-and-benefits), and taking both at the same time [helps keep carbs available in your system](https://physoc.onlinelibrary.wiley.com/doi/10.1113/JP277116). The recipe defaults to a low amount of fructose compared to common recommendations of 2:1 or 1:1 ratios because fructose is not that important until you're able to saturate the glucose pathway. Large amounts of fructose can also be unpleasantly sweet.
 
-### Osmolality and isotonicity
+### Osmotic concentration: osmolality and tonicity
 
-[Osmolality](https://en.wikipedia.org/wiki/Osmotic_concentration) is the concentration of a solution. It is measured in milliosmole per liter (mOsm/L). A solution is isotonic if it has the same osmolality as blood plasma, ~295mOsm/L. If the solution is too concentrated, it'll cause GI stress as fluids are pulled in. If it's too dilute, it'll pass before full absorption.
+The concentration of a solution is measured by the ratio of particles to water. This calculator uses [osmolality](https://en.wikipedia.org/wiki/Osmotic_concentration), milliosmole of solute per kilogram of solvent (mOsm/kg). A solution is isotonic if it has the same osmolality as blood plasma, ~295mOsm/kg. If the solution has too many particles for not enough water, it'll cause GI stress as osmosis pulls fluids in. If it's too dilute, it'll pass before full absorption.
 
- The only way to change osmolality for a given mass of carbohydrate is to use fewer particles (e.g. use heavier carbohydrates, like [maltodextrin](#maltodextrin), which are still quickly metabolized), or to add more water. The default 3400 mOsm/L for this recipe is high, though lower than [that of most commercial products](https://www.researchgate.net/publication/277081684_Extreme_Variation_of_Nutritional_Composition_and_Osmolality_of_Commercially_Available_Carbohydrate_Energy_Gel). Making the solution isotonic requires adding so much fluid as to make it impractical (and doesn't align with fluid consumption of [high-performing athletes either](https://pubmed.ncbi.nlm.nih.gov/22450589/)).
+ The only way to change osmolality for a given mass of carbohydrate is to use fewer particles (e.g. use heavier carbohydrates, like [maltodextrin](#maltodextrin), which are still quickly metabolized), or to add more water. The default 3400 mOsm/kg for this recipe is high, though lower than [that of most commercial products](https://www.researchgate.net/publication/277081684_Extreme_Variation_of_Nutritional_Composition_and_Osmolality_of_Commercially_Available_Carbohydrate_Energy_Gel). Making the solution isotonic requires adding so much fluid as to make it impractical (and doesn't align with fluid consumption of [high-performing athletes either](https://pubmed.ncbi.nlm.nih.gov/22450589/)).
 
 ### Maltodextrin
 
@@ -64,7 +64,7 @@ The length of the glucose chain is [variable depending on the chemical process a
 
 ### Does it need to be fully dissolved?
 
-Check fully dissolved if you want a sports drink. If you don't want a sports drink, the default concentration of 3400 mOsm/L is a gooey paste. It's not the same as a commercial gel because there's no [gelling agent](https://en.wikipedia.org/wiki/Thickening_agent).
+Check fully dissolved if you want a sports drink. If you don't want a sports drink, the default concentration of 3400 mOsm/kg is a gooey paste. It's not the same as a commercial gel because there's no [gelling agent](https://en.wikipedia.org/wiki/Thickening_agent).
 
 ### Flavors
 
@@ -110,7 +110,7 @@ You can also use this gel/drink recipe in the lead up to a big event for an easy
       <td>$8/lb</td>
     </tr>
     <tr>
-      <td>Glucose</td>
+      <td>Dextrose (glucose)</td>
       <td>1.00</td>
       <td>1lb jar</td>
       <td>$4.50/lb</td>
@@ -122,7 +122,7 @@ You can also use this gel/drink recipe in the lead up to a big event for an easy
       <td>$1/lb</td>
     </tr>
     <tr>
-      <td>Sugar</td>
+      <td>Sugar (sucrose)</td>
       <td>0.40</td>
       <td>4lb bag</td>
       <td>$1/lb</td>
@@ -178,5 +178,8 @@ You can also use this gel/drink recipe in the lead up to a big event for an easy
 
 ## Changelog
 
-* **2024-06-23**: Solve for multiple ingredients and add many common carb sources. Allow partial specification of ingredients. Add "fully dissolve" for making drinks
+* **2024-06-23**: 
+  * Solve for multiple ingredients and add many common carb sources
+  * Allow partial specification of ingredients
+  * Add "fully dissolve" for making drinks
 * **2023-10-22**: Initial post

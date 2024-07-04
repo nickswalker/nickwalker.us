@@ -18,9 +18,9 @@ function suffixCamelCase(prepend, camelCaseString) {
 // Solubility is g/ml
 const INGREDIENTS = {
     // We assume malto is N glucose molecules (180g/mol), and subtract water molecules lost due to glycosidic bonds
-    maltodextrin: {volume: 0.95, solubility: .5, glucose: 1.0, fructose: 0, molarMass: 1640, water: 0, cost: .0133},
+    maltodextrin: {volume: 0.95, solubility: .5, glucose: 1.0, fructose: 0, molarMass: 1640, water: 0, cost: .0133, aka: "easier to stomach form of glucose"},
     fructose: {volume: 0.8, solubility: .79, glucose: 0, fructose: 1.0, molarMass: 180, water: 0, cost: .02},
-    glucose: {volume: 0.7, solubility: .9, glucose: 1, fructose: 0, molarMass: 180, water: 0, cost: .01},
+    dextrose: {volume: 0.7, solubility: .9, glucose: 1, fructose: 0, molarMass: 180, water: 0, cost: .01, aka: "pure glucose"},
     salt: {
         volume: 0.9,
         solubility: .36,
@@ -31,7 +31,7 @@ const INGREDIENTS = {
         water: 0,
         cost: 0.0015
     },
-    sugar: {volume: 0.75, solubility: 2, glucose: 0.5, fructose: 0.5, molarMass: 342, water: 0, cost: .004},
+    sugar: {volume: 0.75, solubility: 2, glucose: 0.5, fructose: 0.5, molarMass: 342, water: 0, cost: .004, aka: "sucrose"},
     honey: {volume: 0.7, glucose: 0.35, fructose: 0.4, calories: 3.2, molarMass: 155, water: 0.2, cost: .0133},
     // Maltose, glucose, maltotriose, in .5, .30, .20 ratio
     brownRiceSyrup: {
@@ -66,8 +66,8 @@ for (const ingredientName of Object.keys(INGREDIENTS)) {
 const ingredientProperties = {};
 Object.keys(INGREDIENTS).forEach(ingredient => {
     ingredientProperties[`${ingredient}G`] = { type: Number };
-    ingredientProperties[suffixCamelCase("use",ingredient)] = { type: Boolean };
-    ingredientProperties[suffixCamelCase("amount", ingredient)] = { type: Number }; // Add this line
+    ingredientProperties[suffixCamelCase("use", ingredient)] = { type: Boolean };
+    ingredientProperties[suffixCamelCase("amount", ingredient)] = { type: Number };
 });
 
 function glucoseFructoseRatio(ingredientName) {
@@ -109,8 +109,9 @@ export class GelRecipeCalculator extends LitElement {
         calories: {type: Number},
         volumeMl: {type: Number},
         weightG: {type: Number},
-        osmolalityMOsmL: {type: Number},
+        osmolalityMOsmKg: {type: Number},
         fullyDissolve: {type: Boolean},
+        saturation: {type: Number},
         targetOsmolality: { type: Number },
         targetGlucoseG: { type: Number },
         targetFructoseG: { type: Number },
@@ -133,12 +134,17 @@ export class GelRecipeCalculator extends LitElement {
         // Default recipe
         this.duration = '4:00'
         this.carbsPerHour = 60
+        for (const ingredient of Object.keys(INGREDIENTS)) {
+            this[suffixCamelCase("use", ingredient)] = false
+            this[suffixCamelCase("amount", ingredient)] = null
+        }
         this.useFructose = true
         this.useMaltodextrin = true
         this.useWater = true
-        this.targetOsmolalityMOsmL = 3400
+        this.targetOsmolalityMOsmKg = 3400
         this.glucoseRatio = 3
         this.fructoseRatio = 1
+        this.fullyDissolve = false
         this.optimizationObjective = 'volume';
         // Initialize ingredient amounts to null
         Object.keys(INGREDIENTS).forEach(ingredient => {
@@ -154,99 +160,15 @@ export class GelRecipeCalculator extends LitElement {
         let targetCarbs = null
         if (this.duration && this.carbsPerHour) {
             targetCarbs = this.carbsPerHour * durationInHours
-
-            for (const ingredient of Object.keys(INGREDIENTS)) {
-                if (this[suffixCamelCase("use", ingredient)] && this[suffixCamelCase("amount", ingredient)] !== null) {
-                    let amount = this[suffixCamelCase("amount", ingredient)]
-                    targetCarbs -= amount * (INGREDIENTS[ingredient].glucose + INGREDIENTS[ingredient].fructose)
-                }
-            }
-        }
-
-
-        let targetFructose = null
-        let targetGlucose = null
-        if (this.fructoseRatio !== null && this.glucoseRatio !== null) {
-            if (targetCarbs !== null) {
-                targetFructose = (this.fructoseRatio / (this.glucoseRatio + this.fructoseRatio)) * targetCarbs
-                targetGlucose = (this.glucoseRatio / (this.glucoseRatio + this.fructoseRatio)) * targetCarbs
-
-            } else {
-                targetFructose = 0
-                targetGlucose = 0
-            }
-            // Subtract away ingredients that the user has manually specified
-            for (const ingredient of Object.keys(INGREDIENTS)) {
-                if (this[suffixCamelCase("use", ingredient)] && this[suffixCamelCase("amount", ingredient)] !== null) {
-                    let amount = this[suffixCamelCase("amount", ingredient)]
-                    targetFructose -= amount * INGREDIENTS[ingredient].fructose
-                    targetGlucose -= amount * INGREDIENTS[ingredient].glucose
-                }
-            }
-            if (targetCarbs === null && (targetFructose !== 0 || targetGlucose !== 0)) {
-                targetGlucose *= -1
-                targetFructose *= -1
-                // We have a ratio goal, and at least one pinned ingredient, but no target amount. Add smallest amount that gets to the goal ratio
-                const currentRatio = targetGlucose / targetFructose
-                const ratioDiff = currentRatio - (this.glucoseRatio + this.fructoseRatio)
-                if (this.fructoseRatio === 0) {
-                    // User said no fructose
-                    targetFructose = 0
-                }else if (targetFructose === 0 && targetGlucose !== 0) {
-                    // Currently no fructose in recipe, so solve for the missing fructose
-                    targetFructose =  this.fructoseRatio * targetGlucose / this.glucoseRatio
-                    targetGlucose = 0
-                } else if (targetFructose !== 0 && targetGlucose === 0) {
-                    // Currently no glucose, so solve for missing glucose
-                    targetGlucose = this.glucoseRatio * targetFructose / this.fructoseRatio
-                    targetFructose = 0
-                } else if (currentRatio === 0) {
-                    // User wrote 0:0
-                    targetGlucose = 0
-                    targetFructose = 0
-                }
-                else if (ratioDiff < 0) {
-                    targetGlucose = ratioDiff / targetFructose
-                } else {
-                    targetFructose =  ratioDiff / targetGlucose
-                }
-            }
-        }
-        let fixedOsmoles = 0
-        // Subtract away ingredients that the user has manually specified
-        for (const ingredient of Object.keys(INGREDIENTS)) {
-            if (this[suffixCamelCase("use", ingredient)] && this[suffixCamelCase("amount", ingredient)] !== null) {
-                let amount = this[suffixCamelCase("amount", ingredient)]
-                fixedOsmoles += 1000 * amount * INGREDIENTS[ingredient].osmoles
-            }
-        }
-        let fixedSolubility = 0
-        for (const ingredient of Object.keys(INGREDIENTS)) {
-            if (this[suffixCamelCase("use", ingredient)] && this[suffixCamelCase("amount", ingredient)] !== null) {
-                let amount = this[suffixCamelCase("amount", ingredient)]
-                fixedSolubility +=  INGREDIENTS[ingredient].solubility > 0 ? amount * 1 / INGREDIENTS[ingredient].solubility: 0
-            }
         }
 
         const model = {
             direction: "minimize",
-            objective: this.optimizationObjective === "cost" ? "cost" : "mass",
+            objective: this.optimizationObjective === "cost" ? "cost" : "volume",
             constraints: {
             },
             variables: {
             }
-        }
-        if (targetFructose !== null || targetGlucose !== null) {
-            model["constraints"].glucose ={ equal: targetGlucose }
-            model["constraints"].fructose = { equal: targetFructose }
-        }
-        if (targetCarbs !== null) {
-            model["constraints"].carbs =  { equal: targetCarbs }
-        }
-        if (this.fullyDissolve) {
-            model["constraints"].netSolubility = {equal: -fixedSolubility}
-        } else {
-            model["constraints"].netOsmolality = {equal: -fixedOsmoles}
         }
 
         // Define variables for the model
@@ -254,9 +176,6 @@ export class GelRecipeCalculator extends LitElement {
             // Check each `use` variable to see if we should include it in the model
             // If we should, add it to the model
             if (!this[suffixCamelCase("use", ingredientName)]) {
-                return
-            }
-            if (this[suffixCamelCase("amount", ingredientName)] !== null){
                 return
             }
             const ingredient = INGREDIENTS[ingredientName]
@@ -269,11 +188,28 @@ export class GelRecipeCalculator extends LitElement {
                 osmoles: ingredient.osmoles,
                 water: ingredient.water,
                 cost: ingredient.cost,
-                netOsmolality: 1000 * ingredient.osmoles  - this.targetOsmolalityMOsmL / 1000 * ingredient.water,
+                netOsmolality: 1000 * ingredient.osmoles  - this.targetOsmolalityMOsmKg / 1000 * ingredient.water,
                 netSolubility: ingredient.solubility > 0 ? 1 / ingredient.solubility : -ingredient.water,
+                netCarbSourceRatio: ingredient.glucose * this.fructoseRatio  - ingredient.fructose * this.glucoseRatio,
                 mass: 1,
             };
+            model.variables[ingredientName][`target${ingredientName}`] = 1
+            if (this[suffixCamelCase("amount", ingredientName)] !== null){
+                model["constraints"][`target${ingredientName}`] = {equal: this[suffixCamelCase("amount", ingredientName)]}
+            }
         });
+
+        if (this.glucoseRatio !== null && this.fructoseRatio !== null) {
+            model["constraints"].netCarbSourceRatio = { equal: 0 }
+        }
+        if (targetCarbs !== null) {
+            model["constraints"].carbs =  { equal: targetCarbs }
+        }
+        if (this.fullyDissolve) {
+            model["constraints"].netSolubility = {equal: 0}
+        } else if (this.amountWater === null && this.targetOsmolalityMOsmKg !== null) {
+            model["constraints"].netOsmolality = {equal: 0}
+        }
 
         // ingredients = X
         // Osmolality =
@@ -291,11 +227,7 @@ export class GelRecipeCalculator extends LitElement {
         // Solution has assigned values for each ingredient. Let's use them to calculate the final values
         // Set others to 0
         for (const ingredient of Object.keys(INGREDIENTS)) {
-            if (this[suffixCamelCase("amount", ingredient)] !== null) {
-                this[ingredient + 'G'] = this[suffixCamelCase("amount", ingredient)]
-            } else {
-                this[ingredient + 'G'] = 0
-            }
+            this[ingredient + 'G'] = 0
         }
         for (const [key, value] of Object.values(solution.variables)) {
             this[key + 'G'] = value
@@ -303,8 +235,10 @@ export class GelRecipeCalculator extends LitElement {
 
         const allWater = Object.keys(INGREDIENTS).reduce((acc, ingredient) => acc + this[`${ingredient}G`] * INGREDIENTS[ingredient].water, 0)
         this.waterFromIngredients = allWater - this.waterG
+        this.saturation = Object.keys(INGREDIENTS).reduce((acc, ingredient) => acc + (INGREDIENTS[ingredient].solubility > 0 ? this[`${ingredient}G`] / INGREDIENTS[ingredient].solubility: 0), 0)
+        this.saturation /= allWater
         const osmoles = Object.keys(INGREDIENTS).reduce((acc, ingredient) => acc + this[`${ingredient}G`] * INGREDIENTS[ingredient].osmoles, 0)
-        this.osmolalityMOsmL = osmoles * 1000 / (allWater / 1000)
+        this.osmolalityMOsmKg = osmoles * 1000 / (allWater / 1000)
         this.calories = Object.keys(INGREDIENTS).reduce((acc, ingredient) => acc + this[`${ingredient}G`] * INGREDIENTS[ingredient].calories, 0)
         this.volumeMl = Object.keys(INGREDIENTS).reduce((acc, ingredient) => acc + this[`${ingredient}G`] * INGREDIENTS[ingredient].volume, 0)
         this.weightG = Object.keys(INGREDIENTS).reduce((acc, ingredient) => acc + this[`${ingredient}G`], 0)
@@ -315,19 +249,7 @@ export class GelRecipeCalculator extends LitElement {
     }
     errorHint(){
         let errorString = "No solution found."
-        let targetGlucose = this.model.constraints.glucose?.equal ?? 1000
-        let targetFructose = this.model.constraints.fructose?.equal ?? 1000
-        if (targetGlucose < 0 || targetFructose < 0){
-            if (targetGlucose < 0 && targetFructose < 0){
-                errorString += ` Try removing ${-targetGlucose.toFixed(0)}g of glucose and ${-targetFructose.toFixed(0)} of fructose.`
-            } else if (targetGlucose < 0) {
-                errorString += ` Try removing ${-targetGlucose.equal}g of glucose.`
-            } else if (targetFructose < 0){
-                errorString += ` Try removing ${-targetFructose.equal}g of fructose.`
-            }
-        } else {
-            errorString += " Try removing a constraint or adding a new ingredient."
-        }
+        errorString += " Try removing a constraint or adding a new ingredient."
         return html`<p class="alert alert-warning">${errorString}</p>`
     }
 
@@ -350,30 +272,38 @@ export class GelRecipeCalculator extends LitElement {
         }
     }
 
-    onGlucoseRatioChange(event) {
+    onRatioChange(event, type) {
         const input = event.target;
-        const value = event.target.valueAsNumber
+        const value = Number.isNaN(event.target.valueAsNumber) ? null : event.target.valueAsNumber
+        const otherType = type === 'glucose' ? 'fructose' : 'glucose'
+        const otherValue = this[`${otherType}Ratio`]
+        const otherInput = this.shadowRoot.querySelector(`#${otherType}Ratio`)
+        this[`${type}Ratio`] = value;
 
-        if (input.validity.badInput || input.validity.rangeUnderflow || input.validity.rangeOverflow ) {
+        if (value === null && otherValue !== null) {
             event.target.classList.add('is-invalid');
+        } else if (value !== null && otherValue === null) {
+            otherInput.classList.add('is-invalid');
+        } else if (value === null && otherValue === null) {
+            event.target.classList.remove('is-invalid');
+            otherInput.classList.remove('is-invalid');
         } else {
             event.target.classList.remove('is-invalid');
-            this.glucoseRatio = value;
-            this.calculateIngredients();
         }
-    }
-
-    onFructoseRatioChange(event) {
-        const input = event.target;
-        const value = event.target.valueAsNumber
-
+        let recompute = true
         if (input.validity.badInput || input.validity.rangeUnderflow || input.validity.rangeOverflow ) {
             event.target.classList.add('is-invalid');
-        } else {
-            event.target.classList.remove('is-invalid');
-            this.fructoseRatio = value;
+            recompute = false
+        }
+        if (otherInput.validity.badInput || otherInput.validity.rangeUnderflow || otherInput.validity.rangeOverflow ) {
+            otherInput.classList.add('is-invalid');
+            recompute = false
+        }
+
+        if (recompute) {
             this.calculateIngredients();
         }
+
     }
 
     onCarbsPerHourChange(event) {
@@ -397,7 +327,32 @@ export class GelRecipeCalculator extends LitElement {
             event.target.classList.add('is-invalid');
         } else {
             event.target.classList.remove('is-invalid');
-            this.targetOsmolalityMOsmL = value;
+            this.targetOsmolalityMOsmKg = value;
+            this.calculateIngredients();
+        }
+    }
+    onSpecifiedWaterChange(event) {
+        const input = event.target;
+        const value = event.target.valueAsNumber
+
+        if (event.target.value !== "") {
+            this.shadowRoot.querySelector("#osmolality").disabled = true
+            this.shadowRoot.querySelector("#fully-dissolve").disabled = true
+        } else {
+            this.shadowRoot.querySelector("#osmolality").removeAttribute("disabled")
+            this.shadowRoot.querySelector("#fully-dissolve").removeAttribute("disabled")
+        }
+
+        if (input.validity.badInput || input.validity.rangeUnderflow || input.validity.rangeOverflow) {
+            event.target.classList.add('is-invalid');
+        } else {
+            event.target.classList.remove('is-invalid');
+            if (Number.isNaN(value)) {
+                // User cleared the input box
+                this.amountWater = null;
+            } else {
+                this.amountWater = value;
+            }
             this.calculateIngredients();
         }
     }
@@ -405,8 +360,10 @@ export class GelRecipeCalculator extends LitElement {
         this.fullyDissolve = event.target.checked
         if (this.fullyDissolve) {
             this.shadowRoot.querySelector("#osmolality").disabled = true
+            this.shadowRoot.querySelector("#water").disabled = true
         } else {
             this.shadowRoot.querySelector("#osmolality").removeAttribute("disabled")
+            this.shadowRoot.querySelector("#water").removeAttribute("disabled")
         }
         this.calculateIngredients()
 
@@ -453,7 +410,7 @@ export class GelRecipeCalculator extends LitElement {
           <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
           <div class="row mb-1">
-          <div class="col-sm-6 col-12">
+          <div class="col-sm-7 col-12">
             <div class="input-group">
               <label for="hours" class="input-group-text">Duration</label>
               <input
@@ -461,25 +418,24 @@ export class GelRecipeCalculator extends LitElement {
                       type="number"
                       min="0"
                       class="form-control form-control-sm"
-                      placeholder="hours"
                       .value="${this.duration.split(':')[0]}"
                       @input="${e => this.onDurationChangePart(e, 'hours')}"
               />
-              <span class="input-group-text">:</span>
+              <span class="input-group-text">hours</span>
               <input
                       id="minutes"
                       type="number"
                       min="0"
                       max="59"
                       class="form-control form-control-sm"
-                      placeholder="minutes"
                       .value="${this.duration.split(':')[1]}"
                       @input="${e => this.onDurationChangePart(e, 'minutes')}"
               />
+              <span class="input-group-text">mins</span>
             </div>
           </div>
 
-            <div class="col-sm-6 col-12">
+            <div class="col-sm-5 col-12">
               <div class="input-group">
                 <label for="carbsPerHour" class="input-group-text">Carbs per hour</label>
                 <input
@@ -505,7 +461,7 @@ export class GelRecipeCalculator extends LitElement {
                         min="0"
                         class="form-control"
                         .value="${this.glucoseRatio}"
-                        @input="${this.onGlucoseRatioChange}"
+                        @input="${e => this.onRatioChange(e, 'glucose')}"
                 />
                 <span class="input-group-text">:</span>
                 <label for="fructoseRatio" class="input-group-text">Fructose</label>
@@ -515,13 +471,13 @@ export class GelRecipeCalculator extends LitElement {
                         min="0"
                         class="form-control"
                         .value="${this.fructoseRatio}"
-                        @input="${this.onFructoseRatioChange}"
+                        @input="${e => this.onRatioChange(e, 'fructose')}"
                 />
               </div>
             </div>
 
-            <div class="mb-3 row align-items-center">
-              <div class="col-auto">
+            <div class="mb-1 row align-items-center">
+              <div class="col-12 col-sm-7">
                   <div class="input-group">
                     <label for="osmolality" class="input-group-text">Osmolality</label>
                     <input
@@ -532,22 +488,41 @@ export class GelRecipeCalculator extends LitElement {
                             step="100"
                             class="form-control form-control-sm"
                             required
-                            .value="${this.targetOsmolalityMOsmL}"
+                            .value="${this.targetOsmolalityMOsmKg}"
                             @input="${this.onOsmolalityChange}"
                     />
-                    <span class="input-group-text">mOsm/L</span>
+                    <span class="input-group-text">mOsm/kg</span>
                   </div>
               </div>
-              <div class="col-auto">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="fullyDissolved"         .value="${this.fullyDissolve}"
-                           @input="${this.onFullyDissolveChange}"/>
-                    <label class="form-check-label" for="fullyDissolved">
-                      Fully dissolve
-                    </label>
-                  </div>
+              <div class="col-12 col-sm-5">
+                <div class="input-group">
+                  <label for="water" class="input-group-text">Water</label>
+                  <input
+                          id="water"
+                          type="number"
+                          min="0"
+                          step="1"
+                          class="form-control form-control-sm"
+                          required
+                          .value="${this.specifiedWater}"
+                          @input="${this.onSpecifiedWaterChange}"
+                  />
+                  <span class="input-group-text">g</span>
+                </div>
               </div>
             </div>
+          <div class="row mb-3 ">
+            <div class="col-auto">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="fully-dissolve"         .value="${this.fullyDissolve}"
+                       @input="${this.onFullyDissolveChange}"/>
+                <label class="form-check-label" for="fully-dissolve">
+                  Fully dissolve
+                </label>
+              </div>
+            </div>
+
+          </div>
 
             <div class="row">
             ${Object.keys(INGREDIENTS).filter(x => x !== 'water').map(ingredient => html`
@@ -562,7 +537,7 @@ export class GelRecipeCalculator extends LitElement {
                             .checked="${this[suffixCamelCase("use", ingredient)]}"
                             @change="${e => this.onIngredientChange(e, ingredient)}"
                     />
-                    <label class="form-check-label ms-2" for="${ingredient}" title="Glucose:Fructose ${glucoseFructoseRatio(ingredient)}">${camelCaseToSplitWords(ingredient)}</label>
+                    <label class="form-check-label ms-2" for="${ingredient}" title="${INGREDIENTS[ingredient].aka? INGREDIENTS[ingredient].aka + ', ' : "" }glucose:fructose ${glucoseFructoseRatio(ingredient)}">${camelCaseToSplitWords(ingredient)}</label>
                   </div>
                   <input
                           id="${suffixCamelCase('amount', ingredient)}"
@@ -635,7 +610,7 @@ export class GelRecipeCalculator extends LitElement {
                 </tr>
                 <tr>
                   <td><b>Volume</b></td>
-                  <td title="${(this.volumeMl * 0.034).toFixed(2)}oz">${Math.ceil(this.volumeMl)}ml</td>
+                  <td title="~${(this.volumeMl * 0.034).toFixed(2)}oz">~${Math.ceil(this.volumeMl)}ml</td>
                 </tr>
                 <tr>
                   <td><b>Weight</b></td>
@@ -659,8 +634,8 @@ export class GelRecipeCalculator extends LitElement {
                 `)}
                 <tr>
                   <td>Water</td>
-                  <td>${Math.ceil(this.waterG)}ml ${this.waterFromIngredients > 0 ? html`<i
-                          class="small text-secondary">(+${Math.ceil(this.waterFromIngredients)}ml from
+                  <td>${Math.ceil(this.waterG)}g ${this.waterFromIngredients > 0 ? html`<i
+                          class="small text-secondary">(+${Math.ceil(this.waterFromIngredients)}g from
                     ingredients)</i>` : html``}
                   </td>
                 </tr>
@@ -668,7 +643,11 @@ export class GelRecipeCalculator extends LitElement {
                 <tbody class="table-group-divider">
                 <tr>
                   <td>Concentration</td>
-                  <td>${Math.ceil(this.osmolalityMOsmL)} mOsm/L</td>
+                  <td>${Math.ceil(this.osmolalityMOsmKg)} mOsm/kg</td>
+                </tr>
+                <tr>
+                  <td>Saturation</td>
+                  <td>${(this.saturation * 100).toFixed(0)} %</td>
                 </tr>
                 <tr>
                   <td>Cost</td>
