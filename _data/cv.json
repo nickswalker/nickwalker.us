@@ -32,7 +32,7 @@
    }
   ]
  },
- "interests": "My research focuses on improving human-robot communication by formalizing and studying models of interactions. Interests include service robots, teleoperation, and natural language interfaces.",
+ "interests": "My research focuses on improving human-robot communication by developing, formalizing and evaluating new interactions. Interests include service robots, teleoperation, and natural language interfaces.",
  "teaching_experience": [
   {
    "company": "UW CSE 478 (Robotics)",
@@ -54,25 +54,27 @@
   }
  ],
  "research_experience": [
-    {
-     "company": "University of Washington",
-     "position": "Graduate Research Assistant",
-     "website": "https://hcrlab.cs.washington.edu",
-     "startDate": "2018",
-     "highlights": [
-        "Making robot behaviors automatically transparent",
-        "Generating communicative actions during task execution",
-        "Perceptions of intrinsically motivated robot behaviors",
-
-     ]
-    },
+  {
+   "company": "University of Washington",
+   "position": "Graduate Research Assistant",
+   "website": "https://hcrlab.cs.washington.edu",
+   "startDate": "2018",
+   "highlights": [
+    "Making robot behaviors automatically transparent",
+    "Generating communicative actions during task execution",
+    "Perceptions of intrinsically motivated robot behaviors"
+   ]
+  },
   {
    "company": "NVIDIA",
    "position": "Research Intern",
    "website": "https://research.nvidia.com/labs/srl/",
    "date": "2022 Su.",
    "highlights": [
-    "Assistive teleoperation for manipulation in cluttered environments"
+    {
+     "description": "Designed and evaluated teleoperation assistance for manipulation in clutter",
+     "link": "https://nickwalker.us/publications/walker2024explicit/"
+    }
    ]
   },
   {
@@ -95,7 +97,6 @@
     "Mobile manipulation in homes and offices",
     "Grounded natural language understanding",
     "Automated curriculum learning for reinforcement learning agents"
-
    ]
   },
   {
@@ -120,6 +121,14 @@
    "position": "Organizer",
    "website": "https://lightrailrelay.com",
    "startDate": "2021"
+  },
+  {
+   "organization": "Conference on Robot Learning",
+   "shortName": "CoRL",
+   "website": "https://corl.org/",
+   "position": "Reviewer",
+   "number": 4,
+   "date": "2024"
   },
   {
    "organization": "ACM Transactions on Human-Robot Interaction",
@@ -458,12 +467,12 @@
  ],
  "publications": [
   {
-   "type": "working",
+   "type": "conference",
    "name": "Fast Explicit-Input Assistance for Teleoperation in Clutter",
    "authors": "N.\u00a0Walker, X.\u00a0Yang, A.\u00a0Garg, M.\u00a0Cakmak, D.\u00a0Fox, C.\u00a0P\u00e9rez-D'Arpino",
-   "publisher": "arXiv",
-   "eprint": "2402.02612",
-   "releaseDate": "Mar. 2024",
+   "location": "Abu Dhabi, UAE",
+   "publisher": "2024 IEEE/RSJ Int. Conf. Intelligent Robots Systems",
+   "releaseDate": "Oct. 2024",
    "link": "https://nickwalker.us/publications/walker2024explicit/"
   },
   {
@@ -681,7 +690,7 @@
    ]
   },
   {
-   "name": "Planning and scheduling",
+   "name": "Automated planning and scheduling",
    "keywords": [
     "Answer Set Programming"
    ]
