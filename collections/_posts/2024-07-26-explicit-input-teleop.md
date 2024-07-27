@@ -7,5 +7,5 @@ categories: news uw research
 published: true
 ---
 
-Both the code and [paper]({% details_link walker2024explicit %}) on our new, pointing-based online teloperation assistance interface are available now, with more material to come before October.
+Both the code and [paper]({% details_link walker2024explicit %}) on our new pointing-based online teloperation assistance interface are available now, with more material to come before October.
 
