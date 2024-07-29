@@ -8,11 +8,16 @@ published: true
 
 In my five years of sporadic checking, there has never been a point where Semantic Scholar has accurately depicted my publication record. 
 
-Early on, it included articles from other Nick Walkers. These kinds of errors are typical. Like Google Scholar and other large scale indices, Semantic Scholar crawls, collects and munges data of various quality, and essentially [has to guess](https://arxiv.org/pdf/2103.07534.pdf) how many Nick Walkers there are and how to assign papers to them. While _you_ can tell that [a paper]({% details_link jiang2019icaps %}) about service robots is unlikely to come from a [synthetic aperture radar expert](https://ieeexplore.ieee.org/author/38181749600), or a [British professor of chemistry](https://www.ncl.ac.uk/nes/people/profile/nickwalker.html), the technology of 2019 was not up to the task. After failing to correct the issue myself with their limited tools, I eventually emailed support, and they fixed enough of the problem for me to stop trying. 
+Early on, it included articles from other Nick Walkers. These kinds of errors are typical. Like Google Scholar and other large scale indices, Semantic Scholar crawls, collects and munges data of various quality, and essentially [has to guess](https://arxiv.org/pdf/2103.07534.pdf) how many Nick Walkers there are and how to assign papers to them. While _you_ can tell that [a paper]({% details_link jiang2019icaps %}) about service robots is unlikely to come from a [synthetic aperture radar expert](https://ieeexplore.ieee.org/author/38181749600), or a [British professor of chemistry](https://www.ncl.ac.uk/nes/people/profile/nickwalker.html), the technology of 2019 was not up to the task. After failing to correct the issue myself with their limited tools, I eventually emailed support, and they fixed enough of the problem for me to stop trying.
 
 The latest issue is more pernicious. In recent years I've had two profiles, [a "verified" one](https://www.semanticscholar.org/author/Nick-Walker/145314605) which includes four publications, and [another](https://www.semanticscholar.org/author/Nick-Walker/8257289) which includes the rest. This abbreviated profile is attached to the papers that show up first in most search results for my name. It's likely that its verification is somehow a result of my flailing to fix the previous issues.
 
+{% include article_multiimage.html images="/assets/images/posts/semantic-scholar-profile-1.png /assets/images/posts/semantic-scholar-profile-2.png" caption="My two profiles on Semantic Scholar on November 7th, 2023." %}
+
+
 My emails to support over the past couple months haven't led to the issue being fixed, and there is no other means of recourse. What happens when you send the email? I'm not sure, but based on my observation, support staff approve the request, then file a polite suggestion to some machine learning pipeline which proceeds to do jack all with it.
+
+> Update 2023-12-20: The two profiles have been merged, likely as a result of internal escalation after emailing this post to the team. There remains no way to opt out of having a profile.
 
 -------------
 
