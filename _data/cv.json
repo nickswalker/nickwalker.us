@@ -27,12 +27,12 @@
    },
    {
     "network": "strava",
-    "username": "5387878",
+    "username": "35387878",
     "url": "https://strava.com/athletes/35387878"
    }
   ]
  },
- "interests": "My research focuses on improving human-robot communication by developing, formalizing and evaluating new interactions. Interests include service robots, teleoperation, and natural language interfaces.",
+ "interests": "I am an expert in developing, formalizing and evaluating new interactions. My Ph.D. focuses on human-robot communication, with topics including service robots, teleoperation, and natural language interfaces. I expect to graduate December 2024.",
  "teaching_experience": [
   {
    "company": "UW CSE 478 (Robotics)",
@@ -40,7 +40,7 @@
    "website": "https://courses.cs.washington.edu/courses/cse478/21sp/",
    "date": "2021 Sp.",
    "highlights": [
-    "Updated assignments based on an autonomous race-car platform"
+    "Ported autonomous race-car assignments to Python 3, developed CI autograder, supported students"
    ]
   },
   {
@@ -49,7 +49,7 @@
    "website": "https://courses.cs.washington.edu/courses/cse481c/19wi/",
    "date": "2019 Wi.",
    "highlights": [
-    "Developed assignments and supported undergraduates using the Kuri robot"
+    "Developed assignments, supported undergraduates using the Kuri robot"
    ]
   }
  ],
@@ -366,19 +366,17 @@
    "area": "Computer Science",
    "studyType": "Ph.D.",
    "startDate": "2018",
+   "gpa": "3.84/4.00",
    "highlights": [
     {
-     "description": "Advisor: Maya Cakmak",
+     "description": "Advised by Maya Cakmak",
      "link": "http://www.mayacakmak.io"
     },
-    {
-     "description": "Thesis: \"Making Robot Behaviors Automatically Transparent\""
-    }
+    "Thesis: Making Robot Behaviors Automatically Transparent"
    ],
    "courses": []
   },
   {
-   "hide": true,
    "institution": "University of Washington",
    "location": "Seattle, WA",
    "area": "Computer Science",
@@ -394,9 +392,10 @@
    "studyType": "B.S.A.",
    "startDate": "2014",
    "endDate": "2018",
+   "gpa": "3.94/4.00",
    "highlights": [
     {
-     "description": "Advisors: Peter Stone, Matteo Leonetti, Jivko Sinapov, Justin Hart",
+     "description": "Research advisors Peter Stone, Matteo Leonetti, Jivko Sinapov, Justin Hart",
      "link": "https://www.cs.utexas.edu/~pstone/students.shtml"
     },
     {
@@ -655,53 +654,40 @@
  ],
  "skills": [
   {
-   "name": "Robotics software",
+   "name": "Languages",
    "keywords": [
-    "ROS",
-    "ROS 2",
     "Python",
+    "Javascript",
+    "Typescript",
     "C++",
-    "Isaac Sim"
+    "HTML",
+    "CSS",
+    "Answer Set Programming",
+    "Swift"
    ]
   },
   {
-   "name": "Robotics platforms",
+   "name": "Frameworks",
    "keywords": [
-    "Stretch",
-    "Fetch",
-    "Kuri",
-    "HSR"
+    "PyTorch",
+    "Numpy",
+    "Scipy",
+    "OpenCV",
+    "Pandas",
+    "ROS 1 & 2",
+    "Isaac Sim",
+    "Arduino",
+    "D3.js",
+    "three.js",
+    "p5.js"
    ]
   },
   {
    "name": "User research",
    "keywords": [
-    "Mixed Methods",
-    "Study Design",
-    "Hypothesis Testing"
-   ]
-  },
-  {
-   "name": "Data tools",
-   "keywords": [
-    "PyTorch",
-    "Numpy",
-    "Pandas"
-   ]
-  },
-  {
-   "name": "Automated planning and scheduling",
-   "keywords": [
-    "Answer Set Programming"
-   ]
-  },
-  {
-   "name": "Web technologies",
-   "keywords": [
-    "Typescript",
-    "Javascript",
-    "HTML",
-    "CSS"
+    "Mixed methods",
+    "Study design",
+    "Hypothesis testing"
    ]
   },
   {
@@ -710,7 +696,8 @@
     "Premiere",
     "Photoshop",
     "Illustrator",
-    "InDesign"
+    "InDesign",
+    "Lightroom"
    ]
   }
  ],
