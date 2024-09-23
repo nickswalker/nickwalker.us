@@ -61,7 +61,7 @@ permalink: /
         <h1 class="page-heading">Blog</h1>
         <p class="blog-line">
             {% for post in site.categories.blog limit:3 %}<a href="{{ post.url }}">{{ post.title | escape }}</a>, {%
-            endfor %} and <a href="{% link pages/blog.md %}"> more</a>.</p>
+            endfor %} and <a href="{{ site.baseurl }}/blog/archive/"> more</a>.</p>
     </section>
 
 </div>
