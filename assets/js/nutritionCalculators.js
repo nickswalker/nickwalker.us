@@ -150,7 +150,67 @@ export class GelRecipeCalculator extends LitElement {
         Object.keys(INGREDIENTS).forEach(ingredient => {
             this[suffixCamelCase("amount", ingredient)] = null;
         });
-        this.calculateIngredients()
+        // Restore state if available
+        this.restoreState();
+
+        this.calculateIngredients();
+    }
+
+    // Store the current state to session storage
+    storeState() {
+        const state = {
+            duration: this.duration,
+            carbsPerHour: this.carbsPerHour,
+            glucoseRatio: this.glucoseRatio,
+            fructoseRatio: this.fructoseRatio,
+            fullyDissolve: this.fullyDissolve,
+            optimizationObjective: this.optimizationObjective,
+            targetOsmolalityMOsmKg: this.targetOsmolalityMOsmKg,
+            ingredientStates: Object.keys(INGREDIENTS).reduce((acc, ingredient) => {
+                acc[ingredient] = {
+                    use: this[suffixCamelCase("use", ingredient)],
+                    amount: this[suffixCamelCase("amount", ingredient)]
+                };
+                return acc;
+            }, {})
+        };
+        sessionStorage.setItem('recipeState', JSON.stringify(state));
+    }
+
+    // Restore the state from session storage
+    restoreState() {
+        const savedState = sessionStorage.getItem('recipeState');
+        if (savedState) {
+            const state = JSON.parse(savedState);
+            this.duration = state.duration || this.duration;
+            this.carbsPerHour = state.carbsPerHour || this.carbsPerHour;
+            this.glucoseRatio = state.glucoseRatio || this.glucoseRatio;
+            this.fructoseRatio = state.fructoseRatio || this.fructoseRatio;
+            this.fullyDissolve = state.fullyDissolve || this.fullyDissolve;
+            this.optimizationObjective = state.optimizationObjective || this.optimizationObjective;
+            this.targetOsmolalityMOsmKg = state.targetOsmolalityMOsmKg || this.targetOsmolalityMOsmKg;
+
+            Object.keys(state.ingredientStates).forEach(ingredient => {
+                this[suffixCamelCase("use", ingredient)] = state.ingredientStates[ingredient].use;
+                this[suffixCamelCase("amount", ingredient)] = state.ingredientStates[ingredient].amount;
+            });
+        }
+    }
+
+    updated(changedProperties) {
+        // Only store the state if relevant properties have changed
+        if (
+            changedProperties.has('duration') ||
+            changedProperties.has('carbsPerHour') ||
+            changedProperties.has('glucoseRatio') ||
+            changedProperties.has('fructoseRatio') ||
+            changedProperties.has('fullyDissolve') ||
+            changedProperties.has('optimizationObjective') ||
+            changedProperties.has('targetOsmolalityMOsmKg') ||
+            Object.keys(INGREDIENTS).some(ingredient => changedProperties.has(suffixCamelCase("use", ingredient)) || changedProperties.has(suffixCamelCase("amount", ingredient)))
+        ) {
+            this.storeState();
+        }
     }
 
     // Calculate ingredient quantities based on body mass, duration, and units

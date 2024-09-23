@@ -178,6 +178,8 @@ You can also use this gel/drink recipe in the lead up to a big event for an easy
 
 ## Changelog
 
+* **2024-09-22**:
+  * Store calculator input across refreshes (open a new tab to restore defaults) 
 * **2024-06-23**: 
   * Solve for multiple ingredients and add many common carb sources
   * Allow partial specification of ingredients
