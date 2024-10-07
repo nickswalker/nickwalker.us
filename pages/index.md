@@ -32,7 +32,7 @@ permalink: /
       {% endfor %}
     </ul>
 
-     <a class="btn btn-outline-primary" href="{% link pages/blog.md %}">More</a>
+     <a class="btn btn-outline-primary" href="{% link pages/archive.md %}">More</a>
 
 
   </section>
