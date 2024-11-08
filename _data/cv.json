@@ -32,7 +32,7 @@
    }
   ]
  },
- "interests": "I am an expert in developing, formalizing and evaluating new interactions. My Ph.D. focuses on human-robot communication, with topics including service robots, teleoperation, and natural language interfaces. I expect to graduate December 2024.",
+ "interests": "I am an expert in developing, formalizing and evaluating new interactions. My Ph.D. focuses on human-robot communication, with topics including service robots, teleoperation, and natural language interfaces. I expect to graduate March 2025.",
  "teaching_experience": [
   {
    "company": "UW CSE 478 (Robotics)",
@@ -121,6 +121,22 @@
    "position": "Organizer",
    "website": "https://lightrailrelay.com",
    "startDate": "2021"
+  },
+  {
+   "organization": "ACM CHI Conference on Human Factors in Computing Systems",
+   "shortName": "CHI",
+   "website": "https://chi2025.acm.org/",
+   "position": "Reviewer",
+   "number": 1,
+   "date": "2025"
+  },
+  {
+   "organization": "ACM/IEEE International Conference on Human-Robot Interaction",
+   "shortName": "HRI",
+   "website": "https://humanrobotinteraction.org/",
+   "position": "Reviewer",
+   "number": 4,
+   "date": "2025"
   },
   {
    "organization": "Conference on Robot Learning",
@@ -467,6 +483,24 @@
  "publications": [
   {
    "type": "conference",
+   "name": "I Can Tell What I Am Doing: Toward Real-World Natural Language Grounding of Robot Experiences",
+   "authors": "Z.\u00a0Wang, B.\u00a0Liang, V.\u00a0Dhat, Z.\u00a0Brumbaugh, N.\u00a0Walker, R.\u00a0Krishna, M.\u00a0Cakmak",
+   "location": "Munich, Germany",
+   "publisher": "Conf. Robot Learning",
+   "releaseDate": "Nov. 2024",
+   "link": "https://nickwalker.us/publications/wang2024doing/"
+  },
+  {
+   "type": "workshop",
+   "name": "Can Large Language Models Help Developers with Robotic Finite State Machine Modification?",
+   "authors": "X.\u00a0Gan*, Y.\u00a0R.\u00a0Song*, N.\u00a0Walker, M.\u00a0Cakmak",
+   "location": "Munich, Germany",
+   "publisher": "LangRob Workshop at Conf. Robot Learning",
+   "releaseDate": "Nov. 2024",
+   "link": "https://nickwalker.us/publications/gan2024can/"
+  },
+  {
+   "type": "conference",
    "name": "Fast Explicit-Input Assistance for Teleoperation in Clutter",
    "authors": "N.\u00a0Walker, X.\u00a0Yang, A.\u00a0Garg, M.\u00a0Cakmak, D.\u00a0Fox, C.\u00a0P\u00e9rez-D'Arpino",
    "location": "Abu Dhabi, UAE",
@@ -657,17 +691,16 @@
    "name": "Languages",
    "keywords": [
     "Python",
+    "C++",
     "Javascript",
     "Typescript",
-    "C++",
     "HTML",
     "CSS",
-    "Answer Set Programming",
-    "Swift"
+    "Answer Set Programming"
    ]
   },
   {
-   "name": "Frameworks",
+   "name": "Frameworks & Tools",
    "keywords": [
     "PyTorch",
     "Numpy",
@@ -675,11 +708,13 @@
     "OpenCV",
     "Pandas",
     "ROS 1 & 2",
+    "Docker",
     "Isaac Sim",
     "Arduino",
     "D3.js",
     "three.js",
-    "p5.js"
+    "p5.js",
+    "MapLibre GL.js"
    ]
   },
   {
