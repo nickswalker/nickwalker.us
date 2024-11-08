@@ -1,5 +1,5 @@
 ---
-title:  "Put Cascade (Lane) on the map again"
+title:  "Put Cascade (Lane) on the Map Again"
 date:   2024-05-31 12:00:00 -0600
 categories: blog uw
 published: true

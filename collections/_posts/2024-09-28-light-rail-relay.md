@@ -1,5 +1,5 @@
 ---
-title: "Light Rail Relay 2024 Hosts More than a Hundred Runners"
+title: "Light Rail Relay 2024 Hosts More Than a Hundred Runners"
 date: 2024-09-28 12:00 -0600
 type: link
 categories: news running

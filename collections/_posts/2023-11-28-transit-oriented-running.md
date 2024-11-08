@@ -22,7 +22,7 @@ Transit-oriented running already works in Seattle. It has for years. But there i
 
 {% include article_image.html img="/assets/images/posts/transit-oriented-running-cap-hill-arb-volunteer-westlake-elliot-bay.png" caption="[Route](https://onthegomap.com/s/o2rg7163): Zach Tatlock and Ellis Michael. (Stadia Maps, OpenMapTiles, and OpenStreetMap contributors)." %}
 
-{% include article_multiimage.html images="/assets/images/posts/transit-oriented-running-interlaken.webp /assets/images/posts/transit-oriented-running-westlake.webp" caption="The descent through Interlaken is steep. Gathering outside Westlake station and the Monorail. ." %}
+{% include article_multiimage.html images="/assets/images/posts/transit-oriented-running-interlaken.webp /assets/images/posts/transit-oriented-running-westlake.webp" caption="The descent through Interlaken. Gathering outside Westlake station and the Monorail." %}
 
 This route is a bundle of three routes, each starting and ending at a light rail station. It might seem like a logistical stretch, but Link stations make great rally points. Just be sure to pick specific landmarks, like a sculpture or a station exit, to meet around.
 
