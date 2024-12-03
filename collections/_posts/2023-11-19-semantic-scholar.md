@@ -27,7 +27,7 @@ This harm[^1] is small, but it comes [from the same mold](https://en.wikipedia.o
 
 As Google Scholar has long demonstrated, it's simpler to create profile pages only for users who want them, as they can then be called upon to contribute to curation. But the resulting sparse graph of author profiles would cut against the utility of Semantic Scholar. So we're left to gripe, and, along with some support staff, push rocks.
 
-[^1]: The harm of the platform's generated profile pages _should_ be small, because in theory no important decisions are made based on metrics like citations or h-index. But beyond this, Semantic Scholar's APIs are broadly available, and might be used in any number of public or private tools. For instance, AI2 has made some efforts to facilitate the use of its data in [conference paper-matching systems](https://blog.allenai.org/conference-peer-review-with-the-semantic-scholar-api-24ab9fce2324).
+[^1]: The harm of the platform's generated profile pages _should_ be small, because in theory no important decisions are made based on metrics like citations or h-index. But beyond this, Semantic Scholar's APIs are broadly available, and might be used in any number of public or private tools. For instance, AI2 has made some efforts to facilitate the use of its data in [conference paper-matching systems](https://medium.com/ai2-blog/conference-peer-review-with-the-semantic-scholar-api-24ab9fce2324).
 
 [^2]: AI2 have been aware of quality issues with the platform for years. Noah Smith, who works on other projects at AI2, [responding](https://twitter.com/nlpnoah/status/1194836101241831424) to another dissatisfied user four years ago:
 
