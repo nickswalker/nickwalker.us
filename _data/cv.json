@@ -40,7 +40,7 @@
    "website": "https://courses.cs.washington.edu/courses/cse478/21sp/",
    "date": "2021 Sp.",
    "highlights": [
-    "Ported autonomous race-car assignments to Python 3, developed CI autograder, supported students"
+    "Ported assignments to Python 3, developed unit tests and CI-based autograder used in 5+ offerings"
    ]
   },
   {
@@ -121,6 +121,14 @@
    "position": "Organizer",
    "website": "https://lightrailrelay.com",
    "startDate": "2021"
+  },
+  {
+   "organization": "IEEE International Conference on Robotics and Automation",
+   "shortName": "ICRA",
+   "website": "https://www.ieee-ras.org/conferences-workshops/financially-co-sponsored/icra",
+   "position": "Reviewer",
+   "number": 1,
+   "date": "2025"
   },
   {
    "organization": "ACM CHI Conference on Human Factors in Computing Systems",
@@ -382,7 +390,7 @@
    "area": "Computer Science",
    "studyType": "Ph.D.",
    "startDate": "2018",
-   "gpa": "3.84/4.00",
+   "_gpa": "3.84/4.00",
    "highlights": [
     {
      "description": "Advised by Maya Cakmak",
@@ -408,7 +416,7 @@
    "studyType": "B.S.A.",
    "startDate": "2014",
    "endDate": "2018",
-   "gpa": "3.94/4.00",
+   "_gpa": "3.94/4.00",
    "highlights": [
     {
      "description": "Research advisors Peter Stone, Matteo Leonetti, Jivko Sinapov, Justin Hart",
