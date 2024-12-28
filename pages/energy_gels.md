@@ -6,7 +6,7 @@ custom_js_modules: ['/assets/js/nutritionCalculators.js']
 excerpt: "Cheap, easy, and customizable fuel"
 ---
 
-Endurance athletes consume highly concentrated carbohydrate solutions because it maintains blood glucose levels and spares [limited accessible energy sources](https://doi.org/10.1093%2Fnutrit%2Fnuy001). There are [many "energy gel" sports nutrition products](https://www.researchgate.net/profile/Xuguang-Zhang-2/publication/277081684_Extreme_Variation_of_Nutritional_Composition_and_Osmolality_of_Commercially_Available_Carbohydrate_Energy_Gel/links/557971f508aeb6d8c020255c/Extreme-Variation-of-Nutritional-Composition-and-Osmolality-of-Commercially-Available-Carbohydrate-Energy-Gel.pdf) to choose from.
+Endurance athletes consume highly concentrated carbohydrate solutions because it maintains blood glucose levels and spares [limited accessible energy sources](https://doi.org/10.1093/nutrit/nuy001). There are [many "energy gel" sports nutrition products](https://www.researchgate.net/profile/Xuguang-Zhang-2/publication/277081684_Extreme_Variation_of_Nutritional_Composition_and_Osmolality_of_Commercially_Available_Carbohydrate_Energy_Gel/links/557971f508aeb6d8c020255c/Extreme-Variation-of-Nutritional-Composition-and-Osmolality-of-Commercially-Available-Carbohydrate-Energy-Gel.pdf) to choose from.
 
 They can be costly, anywhere from $1 to as much as [$3.5 per 25g for high-end solutions](https://www.maurten.com/products/us/gel-100-box-us). That means spending $8-$28 to cover a marathon, and maybe $50-$150 per training block on gels if you're practicing nutrition regularly.
 
@@ -60,7 +60,7 @@ The concentration of a solution is measured by the ratio of particles to water. 
 
 [Maltodextrin](https://en.wikipedia.org/wiki/Maltodextrin) is a large molecule consisting of chains of glucose and is created by chemically processing starch. Its less sweet and crystallization-prone than sugar, but also less viscous in solution than a starch. It is quickly broken down into glucose inside the body, and is typically easier to tolerate in large quantities. All of this is why it's the primary carb source in commercial gels.
 
-The length of the glucose chain is [variable depending on the chemical process and starches used](https://www.naturalproductsinsider.com/specialty-nutrients/making-the-most-of-maltodextrins). Anything between 2 and 20 glucose groups (degree of polymerization) are sold alike. Longer chains are preferable as they'll result in a lower osmolality. You can contact the manufacturer to get the number, but generally longer chain versions will take longer to dissolve in water and will be barely sweet. The calculator assumes a degree of polymerization of 10, since I was quoted 10-12 by a representative of the company I use.
+The length of the glucose chain is [variable depending on the chemical process and starches used](https://www.supplysidesj.com/specialty-nutrients/making-the-most-of-maltodextrins). Anything between 2 and 20 glucose groups (degree of polymerization) are sold alike. Longer chains are preferable as they'll result in a lower osmolality. You can contact the manufacturer to get the number, but generally longer chain versions will take longer to dissolve in water and will be barely sweet. The calculator assumes a degree of polymerization of 10, since I was quoted 10-12 by a representative of the company I use.
 
 ### Does it need to be fully dissolved?
 
@@ -72,7 +72,7 @@ Citric acid, lemon juice or instant coffee work well, and in such small quantiti
 
 ### Caffeine
 
-The [recommendation](https://doi.org/10.3390%2Fnu15010148) is 3-6mg caffeine per kilogram body mass, spread through the window starting an hour before the event to an hour before completion. Caffeine powder is dangerous and easily mishandled, so I recommend buying capsules and dumping the contents in as needed.
+The [recommendation](https://doi.org/10.3390/nu15010148) is 3-6mg caffeine per kilogram body mass, spread through the window starting an hour before the event to an hour before completion. Caffeine powder is dangerous and easily mishandled, so I recommend buying capsules and dumping the contents in as needed.
 
 <div class="card mb-3">
     <div class="card-body">
