@@ -34,4 +34,8 @@
     <script src='{{ js_file }}' type="module"></script>
     {% endfor %}
   {% endif %}
+  {% if jekyll.environment == 'production' %}
+    <script data-goatcounter="{{ site.url }}/stats/count"
+            async src="{{ site.url }}/stats/count.js" data-proofer-ignore></script>
+  {% endif %}
 </head>
