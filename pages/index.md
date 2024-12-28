@@ -1,6 +1,5 @@
 ---
 layout: default
-bio: I'm a Ph.D. candidate at the University of Washington in Seattle. I work on human-robot interaction with the [Human-Centered Robotics Lab](https://hcrlab.cs.washington.edu). Most of my research deals with human-robot communication, either [implicit](https://nickwalker.us/publications/walker2021attributions) or [explicit](https://nickwalker.us/publications/jiang2019icaps). Previously, I was a student at UT Austin, where I worked on service robots with the [Building Wide Intelligence](http://www.cs.utexas.edu/~larg/bwi_web/) project. Otherwise, I'm a [photographer](https://flickr.com/photos/nickwalker-us) and [runner](https://www.strava.com/athletes/35387878).
 permalink: /
 ---
 
@@ -13,7 +12,15 @@ permalink: /
        srcset="{{site.gravatar_url}}?s=720 2x"
   alt="Headshot of man wearing glasses and smiling"/>
 
-    {{page.bio | markdownify}}
+
+<p>I'm a Ph.D. candidate at the University of Washington in Seattle. I work on human-robot interaction with the 
+    <a href="https://hcrlab.cs.washington.edu">Human-Centered Robotics Lab</a>. Most of my research deals with human-robot communication, whether it's through <a href="{% details_link walker2024explicit %}">visual interfaces to help teleoperators</a> or
+    <a href="{% details_link walker2021attributions %}">expressive motion</a> or <a href="{% details_link wang2024doing %}">natural language</a> for users. Previously, I worked on service robots with the 
+    <a href="http://www.cs.utexas.edu/~larg/bwi_web/" data-goatcounter-click="ext-bwi">Building Wide Intelligence</a> project at UT Austin. Otherwise, I'm a 
+    <a href="https://flickr.com/photos/nickwalker-us" data-goatcounter-click="ext-flickr.com-bio">photographer</a> and 
+    <a href="https://www.strava.com/athletes/35387878" data-goatcounter-click="ext-strava.com">runner</a>.</p>
+
+<p class="mt-4"><i>I am graduating in Spring 2025. <a href="/info">Contact me</a> if you have a role in robotics or user research.</i></p>
   </section>
 
 {% assign post_count = site.posts | size %}

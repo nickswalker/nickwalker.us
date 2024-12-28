@@ -14,14 +14,14 @@
 
                 {% if site.mastodon_username %}
                 <li>
-                    <a href="https://{{site.mastodon_instance}}/@{{site.mastodon_username}}" title="See posts" rel="me">
+                    <a href="https://{{site.mastodon_instance}}/@{{site.mastodon_username}}" title="See posts" rel="me" data-goatcounter-click="ext-mastodon">
                         <ion-icon name="logo-mastodon"></ion-icon>@{{site.mastodon_username}} </a>
                 </li>
                 {% endif %}
 
                 {% if site.twitter_username %}
                 <li>
-                    <a href="https://twitter.com/{{site.twitter_username}}" title="See tweets">
+                    <a href="https://x.com/{{site.twitter_username}}" title="See tweets" data-goatcounter-click="ext-x.com">
                         <ion-icon name="logo-twitter"></ion-icon>{{site.twitter_username}} </a>
                 </li>
                 {% endif %}
@@ -29,21 +29,21 @@
                 {% if site.linkedin_username %}
                 <li>
                     <a href="https://linkedin.com/in/{{site.linkedin_username}}"
-                       title="See history">
+                       title="See history" data-goatcounter-click="linkedin.com">
                         <ion-icon name="logo-linkedin"></ion-icon>{{site.linkedin_username}}</a>
                 </li>
                 {% endif %}
 
                 {% if site.github_username %}
                   <li>
-                      <a href="https://github.com/{{site.github_username}}" title="See code">
+                      <a href="https://github.com/{{site.github_username}}" title="See code" data-goatcounter-click="ext-github.com">
                           <ion-icon name="logo-github"></ion-icon>{{site.github_username}} </a>
                   </li>
                 {% endif %}
 
                 {% if site.flickr_username %}
                 <li>
-                    <a href="https://flickr.com/photos/{{site.flickr_username}}" title="See photos">
+                    <a href="https://flickr.com/photos/{{site.flickr_username}}" title="See photos" data-goatcounter-click="ext-flickr.com">
                         <ion-icon name="images"></ion-icon>{{site.flickr_username}} </a>
                 </li>
                 {% endif %}
