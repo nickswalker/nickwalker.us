@@ -12,15 +12,17 @@ permalink: /
        srcset="{{site.gravatar_url}}?s=720 2x"
   alt="Headshot of man wearing glasses and smiling"/>
 
+  <div markdown="1">
+I'm a Ph.D. candidate at the University of Washington in Seattle. I work on human-robot interaction with the [Human-Centered Robotics Lab](https://hcrlab.cs.washington.edu). Most of my research deals with human-robot communication, whether it's through [visual interfaces to help teleoperators]({% details_link walker2024explicit %}) or [expressive motion]({% details_link walker2021attributions %}) or [natural language]({% details_link wang2024doing %}) for users.  Previously, I worked on service robots with the [Building Wide Intelligence](http://www.cs.utexas.edu/~larg/bwi_web/){: data-goatcounter-click="ext-bwi"} project at UT Austin. Otherwise, I'm a [photographer](https://flickr.com/photos/nickwalker-us){: data-goatcounter-click="ext-flickr.com-bio"} and [runner](https://www.strava.com/athletes/35387878){: data-goatcounter-click="ext-strava.com"}.
+</div>
 
-<p>I'm a Ph.D. candidate at the University of Washington in Seattle. I work on human-robot interaction with the 
-    <a href="https://hcrlab.cs.washington.edu">Human-Centered Robotics Lab</a>. Most of my research deals with human-robot communication, whether it's through <a href="{% details_link walker2024explicit %}">visual interfaces to help teleoperators</a> or
-    <a href="{% details_link walker2021attributions %}">expressive motion</a> or <a href="{% details_link wang2024doing %}">natural language</a> for users. Previously, I worked on service robots with the 
-    <a href="http://www.cs.utexas.edu/~larg/bwi_web/" data-goatcounter-click="ext-bwi">Building Wide Intelligence</a> project at UT Austin. Otherwise, I'm a 
-    <a href="https://flickr.com/photos/nickwalker-us" data-goatcounter-click="ext-flickr.com-bio">photographer</a> and 
-    <a href="https://www.strava.com/athletes/35387878" data-goatcounter-click="ext-strava.com">runner</a>.</p>
+<p class="mt-4" markdown="1">
 
-<p class="mt-4"><i>I am graduating in Spring 2025. <a href="/info">Contact me</a> if you have a role in robotics or user research.</i></p>
+_I am graduating in Spring 2025. [Contact me]({% link pages/about.md %}) if you have a role in robotics or user research._
+
+</p>
+
+
   </section>
 
 {% assign post_count = site.posts | size %}
@@ -73,3 +75,26 @@ permalink: /
 
 </div>
 </div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Homepage",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "{{site.url}}/about",
+    "name": "Nick Walker",
+"sameAs": [
+"https://scholar.google.com/citations?user={{ site.google_scholar_id }}",
+"https://dblp.org/pid/{{ site.dblp_id }}"
+]
+},
+
+"isPartOf": {
+"@type": "WebSite",
+"name": "Nick Walker",
+"url": "{{site.url}}"
+}
+}
+</script>

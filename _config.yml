@@ -7,12 +7,29 @@ baseurl: "" # Subpath, in my case, root
 url: "https://nickwalker.us" # includes protocol
 
 # Bio information
+acm_dl_id: 99659508800
+arxiv_id: walker_n_1
+dblp_id: 14/1613-1
+flickr_username: nickwalker-us
+github_username:  nickswalker
+google_scholar_id: JYaJjE8AAAAJ
+gravatar_url: https://www.gravatar.com/avatar/05a17826262b803bdc53a402751c884e
+hackernews_username: nickswalker
+ieee_spectrum_id: nick-walker
+ieeexplore_id: 37086573897
+keybase_username: nickswalker
+linkedin_username: niwalker
 mastodon_username: nickwalker
 mastodon_instance: sigmoid.social
-github_username:  nickswalker
-linkedin_username: niwalker
-flickr_username: nickwalker-us
-gravatar_url: https://www.gravatar.com/avatar/05a17826262b803bdc53a402751c884e
+openreview_id: "~Nick_Walker1"
+openstreetmap_username: nickswalker
+orcid_id: 0000-0001-7711-0003
+semantic_scholar_id: Nick-Walker/145314605
+stackoverflow_id: 1497463/nick-walker
+strava_id: 35387878
+wikidata_id: Q130865802
+web_of_science_id: AEX-3927-2022
+youtube_username: "@WalkerSNick"
 
 # trailing slash -> index.html. Note that jekyll scholar bases its behavior on the trailing slash here
 permalink: /blog/:year/:title/
@@ -83,7 +100,6 @@ plugins:
 - jekyll-redirect-from
 - jekyll-scholar
 - jekyll-sitemap
-- jekyll-tidy
 exclude:
   - Gemfile
   - Gemfile.lock
