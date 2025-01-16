@@ -115,6 +115,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: site
+      - run: 'echo -e "User-agent: *\nDisallow: /" > robots.txt'
       - name: Setup SSH Keys and known_hosts
         env:
           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
@@ -136,6 +137,7 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: site-drafts
+    - run: 'echo -e "User-agent: *\nDisallow: /" > robots.txt'
     - name: Setup SSH Keys and known_hosts
       env:
         SSH_AUTH_SOCK: /tmp/ssh_agent.sock
