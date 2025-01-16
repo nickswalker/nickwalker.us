@@ -23,7 +23,7 @@ This calculator takes your desired [carb-type ratio](#glucosefructose-ratio), [c
 
 <div class="card mb-3">
     <div class="card-body">
-        <gel-recipe-calculator ></gel-recipe-calculator>
+        <gel-recipe-calculator><div class="alert alert-warning">The calculator requires Javascript to be enabled and only works on recent browsers. Sorry!</div></gel-recipe-calculator>
     </div>
 </div>
 
@@ -54,13 +54,13 @@ Glucose and fructose [use separate metabolic pathways](https://www.mysportscienc
 
 The concentration of a solution is measured by the ratio of particles to water. This calculator uses [osmolality](https://en.wikipedia.org/wiki/Osmotic_concentration), milliosmole of solute per kilogram of solvent (mOsm/kg). A solution is isotonic if it has the same osmolality as blood plasma, ~295mOsm/kg. If the solution has too many particles for not enough water, it'll cause GI stress as osmosis pulls fluids in. If it's too dilute, it'll pass before full absorption.
 
- The only way to change osmolality for a given mass of carbohydrate is to use fewer particles (e.g. use heavier carbohydrates, like [maltodextrin](#maltodextrin), which are still quickly metabolized), or to add more water. The default 3400 mOsm/kg for this recipe is high, though lower than [that of most commercial products](https://www.researchgate.net/publication/277081684_Extreme_Variation_of_Nutritional_Composition_and_Osmolality_of_Commercially_Available_Carbohydrate_Energy_Gel). Making the solution isotonic requires adding so much fluid as to make it impractical (and doesn't align with fluid consumption of [high-performing athletes either](https://pubmed.ncbi.nlm.nih.gov/22450589/)).
+ The only way to change osmolality for a given mass of carbohydrate is to use fewer particles (e.g. use heavier carbohydrates, like [maltodextrin](#maltodextrin), which are still quickly metabolized), or to add more water. The default 3400 mOsm/kg for this recipe is high, though lower than [that of most commercial products](https://www.researchgate.net/publication/277081684_Extreme_Variation_of_Nutritional_Composition_and_Osmolality_of_Commercially_Available_Carbohydrate_Energy_Gel). Making the solution isotonic requires adding an impractical amount of water (much more than [high-performing athletes use](https://pubmed.ncbi.nlm.nih.gov/22450589/)).
 
 ### Maltodextrin
 
 [Maltodextrin](https://en.wikipedia.org/wiki/Maltodextrin) is a large molecule consisting of chains of glucose and is created by chemically processing starch. Its less sweet and crystallization-prone than sugar, but also less viscous in solution than a starch. It is quickly broken down into glucose inside the body, and is typically easier to tolerate in large quantities. All of this is why it's the primary carb source in commercial gels.
 
-The length of the glucose chain is [variable depending on the chemical process and starches used](https://www.supplysidesj.com/specialty-nutrients/making-the-most-of-maltodextrins). Anything between 2 and 20 glucose groups (degree of polymerization) are sold alike. Longer chains are preferable as they'll result in a lower osmolality. You can contact the manufacturer to get the number, but generally longer chain versions will take longer to dissolve in water and will be barely sweet. The calculator assumes a degree of polymerization of 10, since I was quoted 10-12 by a representative of the company I use.
+The length of the glucose chain is [variable depending on the chemical process and starches used](https://www.supplysidesj.com/specialty-nutrients/making-the-most-of-maltodextrins). Anything between 2 and 20 glucose groups (degree of polymerization) are sold alike. Longer chains are preferable as they'll result in a lower osmolality. You can contact the manufacturer to get the number, but generally longer chain versions will take longer to dissolve in water and will be barely sweet. The calculator assumes a degree of polymerization of 10, since I was quoted 10-12 by the company I use.
 
 ### Does it need to be fully dissolved?
 
@@ -68,7 +68,7 @@ Check fully dissolved if you want a sports drink. If you don't want a sports dri
 
 ### Flavors
 
-Citric acid, lemon juice or instant coffee work well, and in such small quantities that the effect on concentration is negligible.
+Citric acid, lemon juice or instant coffee work well. You need such a small amount that the effect on concentration is negligible.
 
 ### Caffeine
 
@@ -76,7 +76,7 @@ The [recommendation](https://doi.org/10.3390/nu15010148) is 3-6mg caffeine per k
 
 <div class="card mb-3">
     <div class="card-body">
-        <caffeine-calculator></caffeine-calculator>
+        <caffeine-calculator><div class="alert alert-warning">The calculator requires Javascript to be enabled and only works on recent browsers. Sorry!</div></caffeine-calculator>
     </div>
 </div>
 
