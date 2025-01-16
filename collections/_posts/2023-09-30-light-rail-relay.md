@@ -4,7 +4,7 @@ date: 2023-09-30 12:00 -0600
 type: link
 categories: news running
 published: true
-link: https://raceconditionrunning.com/light-rail-relay-23
+link: https://raceconditionrunning.com/light-rail-relay-23/
 featured_image: /assets/images/posts/lrr23-banner.png
 ---
 

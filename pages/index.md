@@ -83,7 +83,7 @@ _I am graduating in Spring 2025. [Contact me]({% link pages/about.md %}) if you 
   "name": "Homepage",
   "mainEntity": {
     "@type": "Person",
-    "@id": "{{site.url}}/about",
+    "@id": "{{site.url}}{% link pages/about.md %}",
     "name": "Nick Walker",
 "sameAs": [
 "https://scholar.google.com/citations?user={{ site.google_scholar_id }}",

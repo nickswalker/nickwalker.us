@@ -9,7 +9,7 @@ permalink: about/
 
 Nick Walker is a Ph.D. candidate and NSF Graduate Research Fellow at the University of Washington in Seattle. He works on human-robot interaction with the 
     [Human-Centered Robotics Lab](https://hcrlab.cs.washington.edu) where he is advised by Maya Cakmak. His work spans topics in human-robot communication, including
-   [expressive motion]({% details_link walker2021attributions %}) and [natural language]({% details_link wang2024doing %}). In 2022, Nick interned with Claudia Pérez D'Arpino at the [Nvidia's Seattle Robotics Lab](https://research.nvidia.com/labs/srl/) to work on [interfaces to help teleoperators]({% details_link walker2024explicit %}). His work has been published in numerous IEEE and ACM scholarly conferences, and he has also written for IEEE Spectrum and The Urbanist. While a student, Nick led the organization of the first [Northwest Robotics Symposium](https://nwrsymposium.github.io).
+   [expressive motion]({% details_link walker2021attributions %}) and [natural language]({% details_link wang2024doing %}). In 2022, Nick interned with Claudia Pérez D'Arpino at [Nvidia's Seattle Robotics Lab](https://research.nvidia.com/labs/srl/) to work on [interfaces to help teleoperators]({% details_link walker2024explicit %}). He has published in numerous IEEE and ACM scholarly conferences, and written for IEEE Spectrum and The Urbanist. While a student, Nick led the organization of the first [Northwest Robotics Symposium](https://nwrsymposium.github.io).
 
 Nick earned a Bachelor in Computer Science at the University of Texas at Austin where he worked on service robots with the
 [Building Wide Intelligence](http://www.cs.utexas.edu/~larg/bwi_web/){: data-goatcounter-click="ext-bwi"}. He was part of the [Austin Villa@Home RoboCup team](https://www.cs.utexas.edu/~AustinVilla/) that [placed 3rd]({% post_url 2017-08-28-robocup-2017-success %}) in 2017 and [won best-poster in 2018]({% post_url 2018-06-21-dspl-best-poster-award %}). He was recognized as a [Dean's Honored Graduate]({% post_url 2018-3-27-deans-honored-graduate %}) and selected as the [student commencement speaker]({% post_url 2018-5-19-commencement-address %}).
@@ -31,22 +31,23 @@ For bug reports or suggestions on projects, please open an issue on the GitHub r
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "{{ site.title }}",
+  "@id": "{{ site.url }}{{ page.url }}",
   "disambiguatingDescription": "Robotics researcher",
   "gender" : "male",
   "jobTitle": "PhD Candidate",
   "email": "{{ site.email }}",
-"knowsAbout": "robotics, user research",
+  "knowsAbout": "robotics, user research",
   "url": "{{ site.url }}",
   "image": "{{ site.gravatar_url }}",
-   "alumniOf": {
+  "alumniOf": {
     "@type": "CollegeOrUniversity",
     "name": "The University of Texas at Austin"
   },
-"nationality": {
+  "nationality": {
     "@type": "Country",
     "name": "United States"
   },
-"birthPlace": {
+  "birthPlace": {
     "@type": "Place",
     "address": {
       "@type": "PostalAddress",
@@ -78,7 +79,7 @@ For bug reports or suggestions on projects, please open an issue on the GitHub r
     "https://www.wikidata.org/wiki/{{ site.wikidata_id }}",
     "https://www.webofscience.com/wos/author/record/{{ site.web_of_science_id }}",
     "https://www.youtube.com/user/{{ site.youtube_username }}",
-   "https://www.cs.utexas.edu/~ai-lab/people-view.php?PID=516",
+    "https://www.cs.utexas.edu/~ai-lab/people-view.php?PID=516",
     "https://research.nvidia.com/labs/srl/authors/nick-walker/"
  ]
 }
