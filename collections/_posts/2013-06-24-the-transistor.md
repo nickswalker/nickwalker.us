@@ -1,5 +1,5 @@
 ---
-title:  "The Transistor: Humanity's Amplifier"
+title:  "_The Transistor: Humanity's Amplifier_ Documentary Reaches Finals at National History Day Fair"
 date:   2013-06-24 17:29:02 -0700
 categories: project blog
 published: true

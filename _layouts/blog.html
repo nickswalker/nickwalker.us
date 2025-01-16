@@ -17,7 +17,7 @@ restrict_width: true
     <header class="post-header">
         <a class="float-end permalink" href="{{ post.url }}" title="Permalink">*</a>
         <h2>
-            <a class="{% if post.type == 'link' %}post-link{% endif %}" href="{{ url }}">{{ post.title | escape }}</a>
+            <a class="{% if post.type == 'link' %}post-link{% endif %}" href="{{ url }}">{{ post.title | escape | markdownify | remove: '<p>' | remove: '</p>' }}</a>
         </h2>
         <p class="post-meta">
             <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d,

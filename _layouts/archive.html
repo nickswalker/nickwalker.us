@@ -20,7 +20,7 @@ layout: page
 
 <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 <h2>
-    <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+    <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape | markdownify | remove: '<p>' | remove: '</p>'  }}</a>
 </h2>
 
     {% if forloop.last %}</ul>{% endif %}

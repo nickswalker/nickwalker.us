@@ -6,9 +6,9 @@ layout: default
 
   <header class="post-header">
     {% if page.type == "link" %}
-    <a href="{{ page.link }}"><h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1></a>
+    <a href="{{ page.link }}"><h1 class="post-title" itemprop="headline">{{ page.title | escape | markdownify | remove: '<p>' | remove: '</p>' }}</h1></a>
     {% else %}
-    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <h1 class="post-title" itemprop="headline">{{ page.title | escape | markdownify | remove: '<p>' | remove: '</p>' }}</h1>
     {% endif %}
     <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
   </header>

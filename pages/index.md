@@ -35,7 +35,7 @@ _I am graduating in Spring 2025. [Contact me]({% link pages/about.md %}) if you 
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
         <h2>
-          <a class="post-link" href="{{ post.url }}">{{ post.title | escape }}</a>
+          <a class="post-link" href="{{ post.url }}">{{ post.title | escape | markdownify | remove: '<p>' | remove: '</p>' }}</a>
         </h2>
       </li>
       {% endfor %}
@@ -69,7 +69,7 @@ _I am graduating in Spring 2025. [Contact me]({% link pages/about.md %}) if you 
     <section id="blog">
         <h1 class="page-heading">Blog</h1>
         <p class="blog-line">
-            {% for post in site.categories.blog limit:3 %}<a href="{{ post.url }}">{{ post.title | escape }}</a>, {%
+            {% for post in site.categories.blog limit:3 %}<a href="{{ post.url }}">{{ post.title | escape | markdownify | remove: '<p>' | remove: '</p>'  }}</a>, {%
             endfor %} and <a href="{{ site.baseurl }}/blog/archive/"> more</a>.</p>
     </section>
 
