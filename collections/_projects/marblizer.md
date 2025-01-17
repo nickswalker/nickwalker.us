@@ -26,3 +26,7 @@ has_article: true
 [Marblizer](https://marblizer.nickwalker.us/) is an interactive paper marbling simulation that lets you create marbled images directly in the browser. It's built in Typescript and operates directly on top of the Canvas API. If you aren't much of a doodler, it includes an in-browser IDE so you can create scripted compositions in Javascript. Its principle operations are based on [the work](http://www.cad.zju.edu.cn/home/jin/cga2012/cga2012.htm) of Lu et. al, and you can see some exposition of the methods in the report and slides.
 
 Let me know if you make anything cool with it! I'd love to share your images/scripts.
+
+## See also
+
+- [Jingyi Chen's local tool mode extension](https://jingyicc.github.io/projects/watermarbling/)
