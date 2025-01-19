@@ -190,6 +190,24 @@ a.btn:visited:hover {
 }
 
 
+.anchor-link {
+  padding: 0 .175rem;
+  font-weight: 400;
+  text-decoration: none;
+  opacity: 0;
+  transition: color 0.15s ease-in-out,opacity 0.15s ease-in-out;
+}
+
+.anchor-link::after {
+  content: "#";
+}
+
+.anchor-link:focus, .anchor-link:hover, :hover > .anchor-link, :target .anchor-link {
+  text-decoration: none;
+  opacity: 1;
+}
+
+
 /**
  * Blockquotes
  */

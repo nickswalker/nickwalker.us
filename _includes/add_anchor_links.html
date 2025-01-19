@@ -1,0 +1,12 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const headings = document.querySelectorAll('h2[id],h3[id]');
+        for (const heading of headings) {
+            const linkIcon = document.createElement('a');
+            linkIcon.setAttribute('href', `#${heading.id}`);
+            linkIcon.setAttribute('class', 'anchor-link');
+            linkIcon.setAttribute('aria-label', `Link to this section. ${heading.textContent}`);
+            heading.appendChild(linkIcon);
+        }
+    });
+</script>
