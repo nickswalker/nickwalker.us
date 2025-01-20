@@ -9,4 +9,5 @@ description: >
 github_repo_url: "https://github.com/NVlabs/fast-explicit-teleop"
 layout: published_project_entry
 citation_keys: [walker2024explicit]
+redirect_to: "/projects#exp-assist-teleop"
 ---

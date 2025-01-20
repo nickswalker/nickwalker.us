@@ -5,7 +5,6 @@ layout: published_project_entry
 categories: ["research", "robotics"]
 description: |
     A compact Answer Set Programming encoding for planning in response to user commands. We break down the encoding of a hypothetical apple fetching command.
-has_article: true
 featured_image: /assets/images/projects/robot_command.jpg
 video: https://youtu.be/TLXGQDTAZvA
 citation_keys: [jiang2019icaps]

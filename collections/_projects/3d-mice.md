@@ -6,4 +6,5 @@ categories: ["research", "robotics"]
 description: |
   We explore how 3D mice can be used to control robot manipulators. We show how 3D mice can be used to control a robot manipulator in a 3D environment.
 citation_keys: [dhat2024mice]
+redirect_to: "/projects#3d-mice"
 ---
