@@ -28,7 +28,7 @@ dl, dd, ol, ul, figure {
   --bs-body-font-size: 16px;
   --bs-body-font-weight: 400;
   --bs-body-font-family: "Georgia", serif;
-  --bs-light-rgb: 235, 235, 235;
+  --bs-light-rgb: 240, 240, 240;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -262,6 +262,10 @@ pre {
 
 .badge {
   --bs-badge-font-weight: normal
+}
+
+.badge.text-bg-light {
+  color: #666 !important;
 }
 
 ion-icon {
