@@ -1,5 +1,4 @@
 ---
-layout: projects/pulsar
 title:  "Pulsar"
 date:   2015-01-17 10:48:02 -0700
 categories: ios
