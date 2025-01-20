@@ -10,14 +10,14 @@ a stub layout with the correct vars and inherit it"
         <ul class="quick-links">
             {% if page.entry.wwwurl %}
             <li>
-                <a class="btn btn-outline-primary" href="{{ page.entry.wwwurl }}" title="See project site">
+                <a class="btn btn-outline-primary" href="{{ page.entry.wwwurl }}" title="See project site" data-goatcounter-click="ext-{{entry.key}}-site">
                     <ion-icon name="link"></ion-icon>
                     Site</a>
             </li>
             {% endif %}
             {% if page.entry.wwwpdf %}
             <li>
-                <a class="btn btn-outline-primary" href="{{ page.entry.wwwpdf }}" title="Get PDF">
+                <a class="btn btn-outline-primary" href="{{ page.entry.wwwpdf }}" title="Get PDF" data-goatcounter-click="ext-{{entry.key}}-pdf">
                     <ion-icon name="document"></ion-icon>
                     PDF</a>
             </li>
@@ -25,7 +25,7 @@ a stub layout with the correct vars and inherit it"
 
             {% if page.entry.wwwcode %}
             <li>
-                <a class="btn btn-outline-primary" href="{{ page.entry.wwwcode }}" title="See code">
+                <a class="btn btn-outline-primary" href="{{ page.entry.wwwcode }}" title="See code" data-goatcounter-click="ext-{{entry.key}}-code">
                     <ion-icon name="logo-github"></ion-icon>
                     Code</a>
             </li>
@@ -33,7 +33,7 @@ a stub layout with the correct vars and inherit it"
 
             {% if page.entry.wwwslides %}
             <li>
-                <a class="btn btn-outline-primary" href="{{ page.entry.wwwslides }}" title="See slides">
+                <a class="btn btn-outline-primary" href="{{ page.entry.wwwslides }}" title="See slides" data-goatcounter-click="ext-{{entry.key}}-slides">
                     <ion-icon
                             name="albums"></ion-icon>
                     Slides</a>
@@ -41,7 +41,7 @@ a stub layout with the correct vars and inherit it"
             {% endif %}
             {% if page.entry.wwwposter %}
             <li>
-                <a class="btn btn-outline-primary" href="{{ page.entry.wwwposter }}" title="See poster">
+                <a class="btn btn-outline-primary" href="{{ page.entry.wwwposter }}" title="See poster" data-goatcounter-click="ext-{{entry.key}}-poster">
                     <ion-icon
                             name="easel"></ion-icon>
                     Poster</a>
@@ -49,7 +49,7 @@ a stub layout with the correct vars and inherit it"
             {% endif %}
             {% if page.entry.wwwvideo %}
             <li>
-                <a class="btn btn-outline-primary" href="{{ page.entry.wwwvideo }}" title="See video">
+                <a class="btn btn-outline-primary" href="{{ page.entry.wwwvideo }}" title="See video" data-goatcounter-click="ext-{{entry.key}}-video">
                     <ion-icon
                             name="film"></ion-icon>
                     Video</a>
@@ -57,14 +57,14 @@ a stub layout with the correct vars and inherit it"
             {% endif %}
             {% if page.entry.wwwextra %}
             <li>
-                <a class="btn btn-outline-primary" href="{{ page.entry.wwwextra }}" title="Access supplement">
+                <a class="btn btn-outline-primary" href="{{ page.entry.wwwextra }}" title="Access supplement" data-goatcounter-click="ext-{{entry.key}}-supplement">
                     <ion-icon name="document-attach"></ion-icon>
                     Supplement</a>
             </li>
             {% endif %}
             {% if page.entry.url %}
             <li>
-                <a class="btn btn-outline-primary" href="{{ page.entry.url }}" title="More information">
+                <a class="btn btn-outline-primary" href="{{ page.entry.url }}" title="More information" data-goatcounter-click="ext-{{entry.key}}-more">
                     <ion-icon name="link"></ion-icon>
                     More info</a>
             </li>

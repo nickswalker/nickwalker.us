@@ -24,29 +24,34 @@
 
     <ul class="quick-links">
         {% if entry.wwwurl %}
-        <li><a class="btn btn-outline-primary" href="{{ entry.wwwurl }}">Site</a></li>
+        <li><a href="{{ entry.wwwurl }}" data-goatcounter-click="ext-{{entry.key}}-site">About</a></li>
         {% endif %}
 
         {% if entry.wwwpdf %}
-        <li><a class="btn btn-outline-primary" href="{{ entry.wwwpdf }}">PDF</a></li>
+        <li><a href="{{ entry.wwwpdf }}" data-goatcounter-click="ext-{{entry.key}}-pdf">PDF</a></li>
+        {% endif %}
+
+        {% if entry.url %}
+        {% comment %}For publications where primary format is URL{% endcomment %}
+        <li><a href="{{ entry.url }}" data-goatcounter-click="ext-{{entry.key}}-url">URL</a></li>
         {% endif %}
 
         {% if entry.wwwslides %}
-        <li><a class="btn btn-outline-primary" href="{{ entry.wwwslides }}">Slides</a></li>
+        <li><a href="{{ entry.wwwslides }}" data-goatcounter-click="ext-{{entry.key}}-slides">Slides</a></li>
         {% endif %}
 
         {% if entry.wwwposter %}
-        <li><a class="btn btn-outline-primary" href="{{ entry.wwwposter }}">Poster</a></li>
+        <li><a href="{{ entry.wwwposter }}" data-goatcounter-click="ext-{{entry.key}}-poster">Poster</a></li>
         {% endif %}
 
         {% if entry.wwwvideo %}
-        <li><a class="btn btn-outline-primary" href="{{ entry.wwwvideo }}">Video</a></li>
+        <li><a href="{{ entry.wwwvideo }}" data-goatcounter-click="ext-{{entry.key}}-video">Video</a></li>
         {% endif %}
 
         {% if entry.wwwcode %}
-        <li><a class="btn btn-outline-primary" href="{{ entry.wwwcode }}">Code</a></li>
+        <li><a href="{{ entry.wwwcode }}" data-goatcounter-click="ext-{{entry.key}}-code">Code</a></li>
         {% endif %}
 
-        <li><a class="btn btn-outline-primary" href="{{ site.baseurl }}/publications/{{entry.key}}/">More</a></li>
+        <li><a href="{{ site.baseurl }}/publications/{{entry.key}}/">More</a></li>
     </ul>
 </div>
