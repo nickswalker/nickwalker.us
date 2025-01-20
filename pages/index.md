@@ -3,24 +3,23 @@ layout: default
 permalink: /
 ---
 
-<div class="container">
-<div class="home">
+<div class="container home">
 
-  <section class="bio overflow-auto">
-  <img class="avatar"
+  <section class="overflow-auto">
+  <img class="avatar float-start"
        src="{{site.gravatar_url}}?s=360"
        srcset="{{site.gravatar_url}}?s=720 2x"
   alt="Headshot of man wearing glasses and smiling"/>
 
-  <div markdown="1">
+  <p markdown="1">
 I'm a Ph.D. candidate at the University of Washington in Seattle. I work on human-robot interaction with the [Human-Centered Robotics Lab](https://hcrlab.cs.washington.edu). Most of my research deals with human-robot communication, whether it's through [visual interfaces to help teleoperators]({% details_link walker2024explicit %}) or [expressive motion]({% details_link walker2021attributions %}) or [natural language]({% details_link wang2024doing %}) for users.  Previously, I worked on service robots with the [Building Wide Intelligence](http://www.cs.utexas.edu/~larg/bwi_web/){: data-goatcounter-click="ext-bwi"} project at UT Austin. Otherwise, I'm a [photographer](https://flickr.com/photos/nickwalker-us){: data-goatcounter-click="ext-flickr.com-bio"} and [runner](https://www.strava.com/athletes/35387878){: data-goatcounter-click="ext-strava.com"}.
-</div>
-
-<p class="mt-4" markdown="1">
-
-_I am graduating in Spring 2025. [Contact me]({% link pages/about.md %}) if you have a role in robotics or user research._
-
 </p>
+
+<div class="mt-4" markdown="1">
+
+_I am graduating in Spring 2025. [Contact me]({% link pages/about.md %}#contact) if you have a role in robotics or user research._
+
+</div>
 
 
   </section>
@@ -73,7 +72,13 @@ _I am graduating in Spring 2025. [Contact me]({% link pages/about.md %}) if you 
             endfor %} and <a href="{{ site.baseurl }}/blog/archive/"> more</a>.</p>
     </section>
 
-</div>
+    <section id="notes">
+        <h1 class="page-heading">Notes</h1>
+        <p class="blog-line d-flex flex-wrap gap-2">
+            {% for page in site.pages %}{% assign categories_string = page.categories | join: ' ' %}
+{% if categories_string contains 'note' %}<a href="{{ page.url }}">{{ page.title | escape | markdownify | remove: '<p>' | remove: '</p>'  }}</a> <span>&middot;</span>{% endif %}{%
+            endfor %}</p>
+    </section>
 </div>
 
 <script type="application/ld+json">

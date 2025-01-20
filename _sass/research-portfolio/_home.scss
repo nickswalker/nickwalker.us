@@ -1,21 +1,13 @@
 /**
  * Bio
  */
-.bio p {
-  display: inline;
-  @include media-query($on-laptop) {
-    display: inline-block;
-    max-width: 600px;
-  }
-}
+
 .avatar {
   vertical-align: top;
   width: 150px;
   border-radius: 75px;
   display: inline-block;
   margin-right: 0.5rem;
-  box-sizing: padding-box;
-  float: left;
   shape-outside: border-box;
   shape-margin: 0.5rem;
 
