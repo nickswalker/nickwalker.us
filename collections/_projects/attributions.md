@@ -1,12 +1,11 @@
 ---
 title:  "Influencing Behavioral Attributions to Robot Motion"
 date:   2021-11-12 12:00:00 -0700
-categories: robotics
-short_description: "Modeling and influencing high level attributions while a robot does a task"
+featured_image: "/assets/images/posts/attributions-icra.png"
+categories: ["robotics", "research", "machine learning"]
+description: |
+  Humans make anthropomorphic attributions to robot motion. What good is optimal motion planning if it "looks drunk"? This work explores how to influence these attributions. We show how you can model observer attributions from data and incorporate this model to guide attribution-sensitive motion planning.
 redirect_to: "https://attributions.nickwalker.us"
-block_color: "rgb(169, 204, 41)"
-featured: true
 has_article: true
-published: true
 citation_keys: [walker2021attributions]
 ---

@@ -76,8 +76,8 @@ a stub layout with the correct vars and inherit it"
     {% for research_page in research_pages %}
     {% comment %}<!-- Check whether a research page links back to this paper --> {% endcomment %}
 
-    {% if research_page.published and research_page.citation_keys contains page.entry.key %}
-    <p>For background and additional information, see this page: <a class="page-link"
+    {% if research_page.has_article and research_page.citation_keys contains page.entry.key and page.content != empty %}
+    <p>For background and additional information, see this page: <a
                                                                     href="{{ research_page.url | relative_url }}">{{
         research_page.title | escape }}</a></p>
     {% comment %} <!-- TODO: Handle formatting for more than one related post--> {% endcomment %}

@@ -1,19 +1,17 @@
 ---
 title:  "Service Robot Command Understanding"
 date:   2019-07-19 12:00:00 -0700
-categories: research
-short_description: "Data and models for going from language to executable form"
+categories: ["research"]
+description: "Data and models for going from language to executable form"
 github_repo_url: "https://github.com/nickswalker/gpsr-command-understanding"
-block_color: "#4994c3"
-featured: true
 has_article: true
 published: true
 layout: published_project_entry
-featured_image: /assets/images/research/robot_command.jpg
+featured_image: /assets/images/projects/commands.webp
 citation_keys: [walker2019robocup]
 ---
 
-{% include article_image.html img="/assets/images/research/robot_command.jpg"
+{% include article_image.html img="/assets/images/projects/robot_command.jpg"
     caption="Robots like the HSR are capable of many things, but it's still hard to build language interfaces that let users provide commands naturally."%}
 
 ## The Problem

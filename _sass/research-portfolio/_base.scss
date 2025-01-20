@@ -28,6 +28,7 @@ dl, dd, ol, ul, figure {
   --bs-body-font-size: 16px;
   --bs-body-font-weight: 400;
   --bs-body-font-family: "Georgia", serif;
+  --bs-light-rgb: 235, 235, 235;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -259,8 +260,9 @@ pre {
   max-width: 900px;
 }
 
-
-
+.badge {
+  --bs-badge-font-weight: normal
+}
 
 ion-icon {
   margin-bottom: -3px;

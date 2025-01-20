@@ -1,13 +1,9 @@
 ---
-title:  "Notes for Making Project Videos"
-date:   2022-05-25 12:00:00 -0700
-categories: research design
-short_description: "Tools and advice"
-block_color: "rgb(12, 82, 13)"
-featured: false
-has_article: true
+layout: page-restrict-width-article
+title:  "Making Research Project Videos"
+categories: ["research", "design", "note"]
 permalink: making-project-videos/
----    
+---
 
 *Making videos to present research has become more common over the pandemic. These are my working notes on how to make good videos and advice on tools and workflow.*
 
@@ -49,12 +45,12 @@ A video needs to hold the viewer's attention in order to be watched. Many of the
 The ecosystem of media tools is more developed in macOS but you can probably find near substitutes with the same features in Windows.
 
 * **Keynote**: Apple's presentation software has easy-to-use animation tools that make producing engaging visuals simple. It provides only rudimentary control over timing, and doesn't make it easy to achieve coordinated motion amongst multiple elements, but still manages to handle the vast majority of what you'd want to do.
-  * Here's [what the build sequence for a slide in one of my videos looks like](/assets/projects/videos/keynote-builds.png). A typical slide is 3 to 4 "chunks" where multiple things happen at about the same time, and in each chunk there may be 2-20 individual elements that are animated. In order to look natural, it's important that elements that are animated together happen at slightly different speeds and with varying delays.
+  * Here's [what the build sequence for a slide in one of my videos looks like](/assets/images/projects/keynote-builds.png). A typical slide is 3 to 4 "chunks" where multiple things happen at about the same time, and in each chunk there may be 2-20 individual elements that are animated. In order to look natural, it's important that elements that are animated together happen at slightly different speeds and with varying delays.
   * Magic Move, a special transition which interpolates the transforms of objects that are common between two slides, is the only [keyframe](https://en.wikipedia.org/wiki/Key_frame)-like affordance, but it's pretty good.
   * `File` > `Export To` > `Movie...`. Playback: Self-Playing. Select a small range of slides that you're happy with and export them at 1080p. Whatever settings you use for the "Go to next slide/build after" options, keep a note and use them consistently so you can reexport a clip later and maintain relative timing in the editing timeline.
 * **[Keyshape](https://www.keyshapeapp.com/)**: If you **really** want to accomplish a complicated animation, I recommend this 3rd party app. It provides a keyframe timeline UI which will be familiar if you've used any other animation software. It's significantly lighter and cheaper than something like After Effects.
 * **Premiere Pro**: In order to precisely line up audio and video, you'll need to bring them into a [non-linear editor](https://en.wikipedia.org/wiki/Non-linear_editing). Premiere is neither cheap nor easy to use, but I've needed to use it to [composite](https://en.wikipedia.org/wiki/Compositing) elements for my videos.
-  * Here's [what the timeline for one of my videos looks like](/assets/projects/videos/premiere-timeline.png). This particular project didn't involve compositing, but it did involve actual video clips which were adjusted using Premiere's good color correction and video stabilization tools. Notice that there are on the order of 100 cuts. Many of these come from inserting hold frames in the exported Keynote animations to give the voiceover the time it needs to get to the next point.
+  * Here's [what the timeline for one of my videos looks like](/assets/images/projects/premiere-timeline.png). This particular project didn't involve compositing, but it did involve actual video clips which were adjusted using Premiere's good color correction and video stabilization tools. Notice that there are on the order of 100 cuts. Many of these come from inserting hold frames in the exported Keynote animations to give the voiceover the time it needs to get to the next point.
 
 
 <figure>

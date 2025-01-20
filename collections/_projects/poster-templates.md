@@ -1,14 +1,13 @@
 ---
 title:  "Poster Templates"
 date:   2019-07-23 12:00:00 -0700
-categories: research poster design
-short_description: "Research poster templates and advice"
-block_color: "rgb(75, 46, 131)"
-featured: false
+categories: ["research", "design"]
+description: |
+    Templates for making research posters, with branding for the University of Washington and the Paul G. Allen School of Computer Science & Engineering.
 has_article: true
 ---    
 
-{% include article_multiimage.html images="/assets/projects/poster-templates/influencing-poster.webp /assets/projects/poster-templates/template-poster.webp /assets/projects/poster-templates/villa2019-poster.webp" caption="Some posters I've made using these templates. Looking at them shrunken down on a screen can be a helpful reminder of what a poster looks like from a distance. "%}
+{% include article_multiimage.html images="/assets/images/projects/poster-templates/influencing-poster.webp /assets/projects/poster-templates/template-poster.webp /assets/images/projects/poster-templates/villa2019-poster.webp" caption="Some posters I've made using these templates. Looking at them shrunken down on a screen can be a helpful reminder of what a poster looks like from a distance. "%}
 
 
 ## University of Washington
@@ -52,12 +51,12 @@ Guides legend:
 * Magenta guides are for inter-column space. You can let images extend into this space, and bullets **should** hang out here.
 * Green guides are for text bounds.
 
-### How do I use them tastefully?
+### How do I make them look good?
 
 * Stick to the given font sizes.
 * Don't waste ink with dark backgrounds; it increases the odds that something goes wrong with the print (e.g. smearing, streaking).
 * Use the highest resolution assets you have access to.
   * If you have a vector figure or logo, use [this process](https://webapps.stackexchange.com/a/107705) to make sure it is inserted without loss of quality
 * Use the correct university and department branding.
-* Aim to develop your own brand, not your university's. Don't pull so heavily on the official brand guidelines that your poster looks like university communications.
-* Use branding that'll land with the audience. If people aren't likely recognize your lab logo or name, make sure the institutional branding is more prominent.
+* Use your own brand, and not just the university's. Don't pull so heavily on the official brand guidelines that your poster looks like university communications.
+* Use branding appropriate for the audience. If people aren't likely recognize your lab logo or name, make sure the institutional branding is more prominent.

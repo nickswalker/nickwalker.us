@@ -1,6 +1,7 @@
 ---
 layout: page-restrict-width-article
 title:  "Homemade Energy Gel Recipe"
+categories: ["running", "note"]
 permalink: energy-gels/
 custom_js_modules: ['/assets/js/nutritionCalculators.js']
 excerpt: "Cheap, easy, and customizable fuel"
@@ -14,7 +15,7 @@ Fortunately, it's easy to make nutrition at home. The basic idea is **to target 
 
 DIY means you can easily add caffeine and salt, or substitute a carb source. And you can use the containers of your choice. I prefer these [100ml flip-cap plastic pouches](https://www.amazon.com/s?k=100ml+plastic+flasks+concealable) which fit in most shorts' gel pockets. For workouts, I dump the ingredients in a bottle as a sports drink.
 
-{% include article_multiimage.html images="/assets/projects/energy-gels/honey-malto-filling.webp /assets/projects/energy-gels/gel-flask.webp" caption="Maltodextrin and honey gel prep for my preferred reusable gel containers. April 2023."%}
+{% include article_multiimage.html images="/assets/images/projects/honey-malto-filling.webp /assets/images/projects/gel-flask.webp" caption="Maltodextrin and honey gel prep for my preferred reusable gel containers. April 2023."%}
 
 
 ## Recipe
@@ -27,9 +28,9 @@ This calculator takes your desired [carb-type ratio](#glucosefructose-ratio), [c
     </div>
 </div>
 
-0. (Optionally) warm up the water.
-1. Add viscous ingredients (e.g. syrup, honey) to water and mix until dissolved. 
-2. Add powdered ingredients and mix until dissolved. 
+1. (Optionally) warm up the water.
+2. Add viscous ingredients (e.g. syrup, honey) to water and mix until dissolved. 
+3. Add powdered ingredients and mix until dissolved. 
 
 Keeps for 2-3 days in a refrigerator.
 
@@ -39,7 +40,7 @@ Refined ingredients are more expensive and generally have to be bought online, b
 
 If you're using dry ingredients, use [maltodextrin](#maltodextrin). If you aren't, brown rice syrup is useful because it's close to a pure glucose source. Honey and agave nectar are good fructose sources.
 
-{% include article_image.html img="/assets/projects/energy-gels/whole-foods-lay.webp" caption="Brown rice syrup, honey, salt and molasses gel prep. The hydroflask twist-cap is hard to open and close, so I don't recommend it. June 2020."%}
+{% include article_image.html img="/assets/images/projects/whole-foods-lay.webp" caption="Brown rice syrup, honey, salt and molasses gel prep. The hydroflask twist-cap is hard to open and close, so I don't recommend it. June 2020."%}
 
 
 ### How many carbs per hour?

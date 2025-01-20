@@ -1,16 +1,61 @@
-  <li style="background-color: {{project.block_color}};">
-          {% if project.has_article %}
-            {% assign project_url= project.url %}
-          {% else %}
-      {% assign project_url= project.code_url %}
-          {% endif%}
-          <a class="project-link" href="{{ project_url }}">
-            {% if project.block_image %}
-              <img src="/assets/projects/{{project.title | slugify}}/{{project.block_image}}"/>
-            {% endif %}
-            <h2>{{ project.title | escape }}</h2>
-            {% if project.short_description %}
-              <span class="project-description">{{project.short_description}}</span>
-            {% endif %}
-          </a>
-</li>
+{% if project.has_article %}
+{% assign project_url= project.url %}
+{% else %}
+{% assign project_url= nil %}
+{% endif %}
+
+<div class="row">
+  <div class="col-md-3">
+    {% if project.featured_image_rel %}
+    <img src="{{site.baseurl}}/assets/images/projects/{{project.title | slugify}}/{{project.featured_image_rel}}"/>
+    {% elsif project.featured_image %}
+    <img src="{{project.featured_image}}"/>
+    {% endif %}
+    {% if project.video %}
+    {% endif %}
+  </div>
+  <div class="col">
+  <h3 class="mb-0">{% if project_url %}<a href="{{ project.url }}">{% endif %}{{ project.title | escape }}{% if project_url %}</a>{% endif %}</h3>
+    <div>
+    <span class="mb-0 d-inline me-2">{{ project.date | date: "%Y" }}{% if project.end_date %}{% if project.end_date != blank %} - {{ project.end_date | date: "%Y" }}{% else %}—{% endif %}    {% endif %}</span>
+    {% for category in project.categories | sort %}
+    <span class="badge text-bg-light">{{ category }}</span>
+    {% endfor %}
+    </div>
+
+  {% if project.description %}
+    <p class="mb-1">{{project.description | markdownify | remove: '<p>' | remove: '</p>'}}</p>
+  {% endif %}
+
+  <ul class="list-inline d-flex gap-2">
+    {% if project.has_article %}
+    <li class="list-inline-item">
+      <a href="{{ project.url }}" title="Read more" data-goatcounter-click="ext-{{project.title | slugify }}-read-more"> <ion-icon name="link"></ion-icon> Read more</a>
+    </li>
+    {% endif %}
+    {% if project.link %}
+    <li class="list-inline-item">
+      <a href="{{ project.link }}" title="See more" data-goatcounter-click="ext-{{project.title | slugify }}-see-it"> <ion-icon name="link"></ion-icon> See it</a>
+    </li>
+    {% endif %}
+    {% if project.video %}
+    <li class="list-inline-item">
+      <a href="{{ project.video }}" title="Watch video" data-goatcounter-click="ext-{{project.title | slugify }}-video"> <ion-icon name="film"></ion-icon> Video</a>
+    </li>
+    {% endif %}
+    {% if project.code_url %}
+    <li>
+      <a href="{{ project.code_url }}" title="See code" data-goatcounter-click="ext-{{project.title | slugify }}-code"> <ion-icon name="logo-github"></ion-icon> Code</a>
+    </li>
+    {% endif %}
+    {% if project.citation_keys %}
+    {% for key in project.citation_keys %}
+    <li>
+      <a href="{{ site.baseurl }}/publications/{{ key }}/" title="See publication"> <ion-icon name="document-text"></ion-icon>  Paper</a>
+    </li>
+    {% endfor %}
+    {% endif %}
+  </ul>
+  </div>
+
+</div>

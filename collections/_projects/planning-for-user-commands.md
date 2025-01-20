@@ -1,14 +1,13 @@
 ---
-title:  "Planning for User Commands with ASP"
+title:  "Open-world Reasoning for Service Robots"
 date:   2019-07-19 12:00:00 -0700
-categories: research
-short_description: "Encoding user expectations and failing gracefully"
-block_color: "#68a46a"
-featured: true
-has_article: true
-published: true
 layout: published_project_entry
-featured_image: /assets/images/research/robot_command.jpg
+categories: ["research", "robotics"]
+description: |
+    A compact Answer Set Programming encoding for planning in response to user commands. We break down the encoding of a hypothetical apple fetching command.
+has_article: true
+featured_image: /assets/images/projects/robot_command.jpg
+video: https://youtu.be/TLXGQDTAZvA
 citation_keys: [jiang2019icaps]
 ---
 
@@ -20,7 +19,7 @@ You can download the full, ready to execute examples [here]({{"/assets/planning_
 
 ## Knowledge Representation
 
-{% include article_image.html img="/assets/images/research/knowledge.svg"
+{% include article_image.html img="/assets/images/projects/knowledge.svg"
     caption="A graphical depiction of a small knowledgebase. The label on each instance is a shorthand for an _instance of_ relation with the concept of the same name."%}
 
 Planning is the task of generating a sequence of actions to accomplish a goal. So to start with, how should we describe the state of the world?

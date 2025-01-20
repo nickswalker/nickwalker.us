@@ -5,7 +5,7 @@ type: link
 categories: news running
 published: true
 link: https://nickwalker.us/energy-gels
-featured_image: /assets/projects/energy-gels/whole-foods-lay.webp
+featured_image: /assets/images/projects/whole-foods-lay.webp
 ---
 
 {% include article_image.html img=page.featured_image caption="It was harder to check that I was using the right amounts of things before I made this calculator. June 2020." %}
