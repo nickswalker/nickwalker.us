@@ -32,7 +32,7 @@
    }
   ]
  },
- "interests": "I am an expert in developing, formalizing and evaluating new interactions. My Ph.D. focuses on human-robot communication, with topics including service robots, teleoperation, and natural language interfaces. I expect to graduate March 2025.",
+ "interests": "I am an expert in developing, formalizing and evaluating new interactions. My research focuses on human-robot communication, with topics including service robots, teleoperation, and natural language interfaces. I expect to graduate March 2025, and am searching for engineering or research roles where I can develop intelligent systems with humane interfaces.",
  "teaching_experience": [
   {
    "company": "UW CSE 478 (Robotics)",
@@ -60,9 +60,9 @@
    "website": "https://hcrlab.cs.washington.edu",
    "startDate": "2018",
    "highlights": [
-    "Making robot behaviors automatically transparent",
-    "Generating communicative actions during task execution",
-    "Perceptions of intrinsically motivated robot behaviors"
+    "Making robot behaviors automatically transparent [c8,c12]",
+    "Generating communicative actions during task execution [c8,c12]",
+    "Perceptions of intrinsically motivated robot behaviors [c6,c8]"
    ]
   },
   {
@@ -72,7 +72,7 @@
    "date": "2022 Su.",
    "highlights": [
     {
-     "description": "Designed and evaluated teleoperation assistance for manipulation in clutter",
+     "description": "Designed and evaluated teleoperation assistance for manipulation in clutter [c11]",
      "link": "https://nickwalker.us/publications/walker2024explicit/"
     }
    ]
@@ -83,7 +83,7 @@
    "website": "https://usaa.com",
    "date": "2016 Su.",
    "highlights": [
-    "Ear-worn brain-computer interface software and hardware for biometric authentication"
+    "Ear-worn brain-computer interface software and hardware for biometric authentication [c1]"
    ]
   },
   {
@@ -93,10 +93,10 @@
    "startDate": "2016",
    "endDate": "2018",
    "highlights": [
-    "Long-term autonomy for service robots",
-    "Mobile manipulation in homes and offices",
-    "Grounded natural language understanding",
-    "Automated curriculum learning for reinforcement learning agents"
+    "Long-term autonomy for service robots [w2, w4]",
+    "Mobile manipulation in homes and offices [j1,a1,w1]",
+    "Grounded natural language understanding [c5,j1]",
+    "Automated curriculum learning for reinforcement learning agents [c2]"
    ]
   },
   {
@@ -105,7 +105,7 @@
    "website": "https://usaa.com",
    "date": "2015 Su.",
    "highlights": [
-    "Evaluation of automated speech transcription vendors"
+    "Evaluation of automated speech transcription vendors [p1]"
    ]
   }
  ],
@@ -121,6 +121,14 @@
    "position": "Organizer",
    "website": "https://lightrailrelay.com",
    "startDate": "2021"
+  },
+  {
+   "organization": "ACM Transactions on Human-Robot Interaction",
+   "shortName": "THRI",
+   "website": "https://dl.acm.org/journal/thri",
+   "position": "Reviewer",
+   "number": 1,
+   "date": "2025"
   },
   {
    "organization": "IEEE International Conference on Robotics and Automation",
@@ -543,6 +551,14 @@
    "link": "https://nickwalker.us/publications/grotz2023densely/"
   },
   {
+   "type": "patent",
+   "name": "Transcription analysis platform",
+   "authors": "M.\u00a0J.\u00a0Szentes, C.\u00a0Chavez, R.\u00a0E.\u00a0Lewis, N.\u00a0S.\u00a0Walker",
+   "publisher": "US11837214",
+   "releaseDate": "Dec. 2023",
+   "link": "https://nickwalker.us/publications/szentes2023transcription/"
+  },
+  {
    "type": "feature",
    "name": "Wandering Robots in the Wild",
    "authors": "N.\u00a0Walker, A.\u00a0Nanavati",
@@ -593,6 +609,14 @@
    "publisher": "Journal of Artificial Intelligence Research",
    "releaseDate": "Feb. 2020",
    "link": "https://nickwalker.us/publications/thomason2020improving/"
+  },
+  {
+   "type": "patent",
+   "name": "Transcription analysis platform",
+   "authors": "M.\u00a0J.\u00a0Szentes, C.\u00a0Chavez, R.\u00a0E.\u00a0Lewis, N.\u00a0S.\u00a0Walker",
+   "publisher": "US10854190",
+   "releaseDate": "Dec. 2020",
+   "link": "https://nickwalker.us/publications/szentes2020transcription/"
   },
   {
    "type": "conference",

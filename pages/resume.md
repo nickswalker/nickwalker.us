@@ -1,9 +1,6 @@
 ---
-layout: default
+layout: bounce_link
 title: Resume
+link: /assets/nwalker-resume.pdf
 permalink: resume/
 ---
-
-<script>
-    window.location = "{{site.url}}/assets/nwalker-resume.pdf";
-</script>

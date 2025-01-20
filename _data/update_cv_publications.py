@@ -45,6 +45,8 @@ for key in bib_data.entries:
     elif desc["type"] == "working":
         desc["publisher"] = fields["archivePrefix"]
         desc["eprint"] = fields["eprint"]
+    elif desc["type"] == "patent":
+        desc["publisher"] = fields["number"]
     else:
         desc["publisher"] = fields["booktitle"]
     desc["publisher"] = desc["publisher"].replace("The Journal", "Journal")
