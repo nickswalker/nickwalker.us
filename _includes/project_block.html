@@ -1,13 +1,15 @@
-{% if project.has_article %}
-{% assign project_url= project.url %}
+{% assign content = project.content | strip_newlines %}
+{% if content != blank %}
+{% assign project_url = project.url %}
+{% elsif project.redirect_to contains "projects#" %}
+{% assign project_url = nil %}
 {% else %}
-{% assign project_url= nil %}
+{% assign project_url = project.redirect_to %}
 {% endif %}
-
-<div class="row">
+<div class="row" id="{{ project.slug }}">
   <div class="col-md-3">
     {% if project.featured_image_rel %}
-    <img src="{{site.baseurl}}/assets/images/projects/{{project.title | slugify}}/{{project.featured_image_rel}}"/>
+    <img src="{{site.baseurl}}/assets/images/projects/{{project.slug}}/{{project.featured_image_rel}}"/>
     {% elsif project.featured_image %}
     <img src="{{project.featured_image}}"/>
     {% endif %}
@@ -15,9 +17,10 @@
     {% endif %}
   </div>
   <div class="col">
-  <h3 class="mb-0">{% if project_url %}<a href="{{ project.url }}">{% endif %}{{ project.title | escape }}{% if project_url %}</a>{% endif %}</h3>
-    <div>
-    <span class="mb-0 d-inline me-2">{{ project.date | date: "%Y" }}{% if project.end_date %}{% if project.end_date != blank %} - {{ project.end_date | date: "%Y" }}{% else %}—{% endif %}    {% endif %}</span>
+
+  <h3 class="mb-0">{% if project_url %}<a href="{{ project_url }}">{% endif %}{{ project.title | escape }}{% if project_url %}</a>{% endif %}</h3>
+    <div class="mb-1">
+    <span class="d-inline me-2">{{ project.date | date: "%Y" }}{% if project.end_date %}{% if project.end_date != blank %} - {{ project.end_date | date: "%Y" }}{% else %}—{% endif %}    {% endif %}</span>
     {% for category in project.categories | sort %}
     <span class="badge text-bg-light">{{ category }}</span>
     {% endfor %}
@@ -28,24 +31,24 @@
   {% endif %}
 
   <ul class="list-inline d-flex gap-2">
-    {% if project.has_article %}
+    {% if project_url %}
     <li class="list-inline-item">
-      <a href="{{ project.url }}" title="Read more" data-goatcounter-click="ext-{{project.title | slugify }}-read-more"> <ion-icon name="link"></ion-icon> Read more</a>
+      <a href="{{ project.url }}" title="Read more" data-goatcounter-click="ext-{{project.slug }}-read-more"> <ion-icon name="link"></ion-icon> Read more</a>
     </li>
     {% endif %}
     {% if project.link %}
     <li class="list-inline-item">
-      <a href="{{ project.link }}" title="See more" data-goatcounter-click="ext-{{project.title | slugify }}-see-it"> <ion-icon name="link"></ion-icon> See it</a>
+      <a href="{{ project.link }}" title="See more" data-goatcounter-click="ext-{{project.slug }}-see-it"> <ion-icon name="link"></ion-icon> See it</a>
     </li>
     {% endif %}
     {% if project.video %}
     <li class="list-inline-item">
-      <a href="{{ project.video }}" title="Watch video" data-goatcounter-click="ext-{{project.title | slugify }}-video"> <ion-icon name="film"></ion-icon> Video</a>
+      <a href="{{ project.video }}" title="Watch video" data-goatcounter-click="ext-{{project.slug }}-video"> <ion-icon name="film"></ion-icon> Video</a>
     </li>
     {% endif %}
     {% if project.code_url %}
     <li>
-      <a href="{{ project.code_url }}" title="See code" data-goatcounter-click="ext-{{project.title | slugify }}-code"> <ion-icon name="logo-github"></ion-icon> Code</a>
+      <a href="{{ project.code_url }}" title="See code" data-goatcounter-click="ext-{{project.slug }}-code"> <ion-icon name="logo-github"></ion-icon> Code</a>
     </li>
     {% endif %}
     {% if project.citation_keys %}

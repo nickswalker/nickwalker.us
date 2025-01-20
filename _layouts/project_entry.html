@@ -2,9 +2,8 @@
 layout: contained-restrict-width
 ---
 <article class="project">
-
-    {% assign slug = page.title | slugify %}
-    {% assign project_assets = "/assets/images/projects/" | append: slug %}
+    
+    {% assign project_assets = "/assets/images/projects/" | append: page.slug %}
     {% if page.images.size > 0 %}
     <div class="full-width">
     <figure class="project-images almost-full-bleed">
@@ -24,22 +23,22 @@ layout: contained-restrict-width
       <ul class="quick-links">
           {% if page.link %}
           <li>
-              <a class="btn btn-outline-primary" href="{{ page.link }}" title="See more" data-goatcounter-click="ext-{{slug}}-more"> <ion-icon name="link"></ion-icon> Link</a>
+              <a class="btn btn-outline-primary" href="{{ page.link }}" title="See more" data-goatcounter-click="ext-{{page.slug}}-more"> <ion-icon name="link"></ion-icon> Link</a>
           </li>
           {% endif %}
           {% if page.code_url %}
           <li>
-              <a class="btn btn-outline-primary" href="{{ page.code_url }}" title="See code" data-goatcounter-click="ext-{{slug}}-code"> <ion-icon name="logo-github"></ion-icon> Code</a>
+              <a class="btn btn-outline-primary" href="{{ page.code_url }}" title="See code" data-goatcounter-click="ext-{{page.slug}}-code"> <ion-icon name="logo-github"></ion-icon> Code</a>
           </li>
           {% endif %}
           {% if page.report %}
           <li>
-              <a class="btn btn-outline-primary" href="{{ project_assets }}/{{slug}}-report.pdf" title="See report" data-goatcounter-click="ext-{{slug}}-report"> <ion-icon name="document"></ion-icon> Report</a>
+              <a class="btn btn-outline-primary" href="{{ project_assets }}/{{page.slug}}-report.pdf" title="See report" data-goatcounter-click="ext-{{page.slug}}-report"> <ion-icon name="document"></ion-icon> Report</a>
           </li>
           {% endif %}
           {% if page.slides %}
           <li>
-              <a class="btn btn-outline-primary" href="{{ project_assets }}/{{slug}}-slides.pdf" title="See slides" data-goatcounter-click="ext-{{slug}}-slides"> <ion-icon
+              <a class="btn btn-outline-primary" href="{{ project_assets }}/{{page.slug}}-slides.pdf" title="See slides" data-goatcounter-click="ext-{{page.slug}}-slides"> <ion-icon
                       name="easel"></ion-icon> Slides</a>
           </li>
           {% endif %}

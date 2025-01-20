@@ -7,6 +7,6 @@ description: |
 code_url: "https://github.com/nickswalker/nickwalker.us"
 link: "https://alexwalker.co"
 featured_image: "/assets/images/projects/alexwalker-co.jpg"
-
+redirect_to: "/projects#portfolio-sites"
 ---
 

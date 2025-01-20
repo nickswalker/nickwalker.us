@@ -5,10 +5,10 @@ layout: published_project_entry
 categories: ["research", "robotics"]
 description: |
     A compact Answer Set Programming encoding for planning in response to user commands. We break down the encoding of a hypothetical apple fetching command.
-has_article: true
 featured_image: /assets/images/projects/robot_command.jpg
 video: https://youtu.be/TLXGQDTAZvA
 citation_keys: [jiang2019icaps]
+redirect_to: false
 ---
 
 If a robot is asked to get an apple from the kitchen, how should it represent this command? There are plenty of possibilities, but in [a recent paper](https://www.cs.utexas.edu/%7Epstone/Papers/bib2html-links/ICAPS19-Jiang.pdf), we looked at a compact [Answer Set Programming](https://en.wikipedia.org/wiki/Answer_set_programming) encoding that handles many of the concerns that arise when actually trying to execute such a command.

@@ -7,5 +7,5 @@ link: "https://drumhellermarathon.com"
 categories: ["running", "fun"]
 description: |
   A race entirely around the historic [Drumheller fountain](https://en.wikipedia.org/wiki/Drumheller_Fountain) on the University of Washington campus. I measure the course and organize the event each year. At 190m, the loop course is the smallest in official use by a road marathon in the U.S.
-has_article: false
+redirect_to: "/projects#drumheller-marathon"
 ---

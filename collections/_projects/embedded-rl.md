@@ -6,5 +6,5 @@ categories: ["research", "machine-learning", "electronics"]
 description: |
   I implemented classical reinforcement learning algorithms on a microcontroller for a graduate class in reinforcement learning. Shrinking RL down to 8kb of RAM is a little tricky and very neat.
 code_url: "https://github.com/nickswalker/ArduinoRL"
-has_article: false
+redirect_to: "https://www.dropbox.com/scl/fi/fyst3ki6147h79flz35zr/TwoJointArduinoRL_writeup.pdf?rlkey=ndzudcjuvyfmjzjuf4qm0boy4&e=1&dl=0"
 ---

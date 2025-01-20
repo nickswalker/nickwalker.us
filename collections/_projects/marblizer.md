@@ -16,8 +16,7 @@ images:
     - "example3.png"
 
 featured_image_rel: "banner.jpg"
-has_article: true
-
+redirect_to: false
 ---
 
 [Paper marbling](https://en.wikipedia.org/wiki/Paper_marbling) is a traditional art practice in which inks are floated on a liquid surface then transferred to a sheet of paper. The resulting designs can resemble marble, but outputs range from intricate spiraling patterns to spattered, space-like images.
