@@ -4,97 +4,101 @@ comment: "The way Jekyll scholar processes this layout seems to ignore front mat
 a stub layout with the correct vars and inherit it"
 ---
 
-<article id="{{ page.entry.key}}-details">
+{% assign entry = page.entry %}
+
+<article id="{{ entry.key}}-details">
     <header class="project-header">
-        <h1>{{ page.entry.title }}</h1>
+        <h1>{{ entry.title }}</h1>
         <ul class="quick-links">
-            {% if page.entry.wwwurl %}
+            {% if entry.wwwurl %}
             <li>
-                <a class="btn btn-outline-primary" href="{{ page.entry.wwwurl }}" title="See project site" data-goatcounter-click="ext-{{entry.key}}-site">
+                <a class="btn btn-outline-primary" href="{{ entry.wwwurl }}" title="See project site" data-goatcounter-click="ext-{{entry.key}}-site">
                     <ion-icon name="link"></ion-icon>
-                    Site</a>
+                    About</a>
             </li>
             {% endif %}
-            {% if page.entry.wwwpdf %}
+            {% if entry.wwwpdf %}
             <li>
-                <a class="btn btn-outline-primary" href="{{ page.entry.wwwpdf }}" title="Get PDF" data-goatcounter-click="ext-{{entry.key}}-pdf">
+                <a class="btn btn-outline-primary" href="{{ entry.wwwpdf }}" title="Get PDF" data-goatcounter-click="ext-{{entry.key}}-pdf">
                     <ion-icon name="document"></ion-icon>
                     PDF</a>
             </li>
             {% endif %}
-
-            {% if page.entry.wwwcode %}
+            {% if entry.url %}
             <li>
-                <a class="btn btn-outline-primary" href="{{ page.entry.wwwcode }}" title="See code" data-goatcounter-click="ext-{{entry.key}}-code">
-                    <ion-icon name="logo-github"></ion-icon>
-                    Code</a>
+                <a class="btn btn-outline-primary" href="{{ entry.url }}" title="URL" data-goatcounter-click="ext-{{entry.key}}-url">
+                    <ion-icon name="link"></ion-icon>
+                    URL</a>
             </li>
             {% endif %}
-
-            {% if page.entry.wwwslides %}
+            {% if entry.wwwvideo %}
             <li>
-                <a class="btn btn-outline-primary" href="{{ page.entry.wwwslides }}" title="See slides" data-goatcounter-click="ext-{{entry.key}}-slides">
-                    <ion-icon
-                            name="albums"></ion-icon>
-                    Slides</a>
-            </li>
-            {% endif %}
-            {% if page.entry.wwwposter %}
-            <li>
-                <a class="btn btn-outline-primary" href="{{ page.entry.wwwposter }}" title="See poster" data-goatcounter-click="ext-{{entry.key}}-poster">
-                    <ion-icon
-                            name="easel"></ion-icon>
-                    Poster</a>
-            </li>
-            {% endif %}
-            {% if page.entry.wwwvideo %}
-            <li>
-                <a class="btn btn-outline-primary" href="{{ page.entry.wwwvideo }}" title="See video" data-goatcounter-click="ext-{{entry.key}}-video">
+                <a class="btn btn-outline-primary" href="{{ entry.wwwvideo }}" title="See video" data-goatcounter-click="ext-{{entry.key}}-video">
                     <ion-icon
                             name="film"></ion-icon>
                     Video</a>
             </li>
             {% endif %}
-            {% if page.entry.wwwextra %}
+            {% if entry.wwwcode %}
             <li>
-                <a class="btn btn-outline-primary" href="{{ page.entry.wwwextra }}" title="Access supplement" data-goatcounter-click="ext-{{entry.key}}-supplement">
+                <a class="btn btn-outline-primary" href="{{ entry.wwwcode }}" title="See code" data-goatcounter-click="ext-{{entry.key}}-code">
+                    <ion-icon name="logo-github"></ion-icon>
+                    Code</a>
+            </li>
+            {% endif %}
+
+            {% if entry.wwwslides %}
+            <li>
+                <a class="btn btn-outline-primary" href="{{ entry.wwwslides }}" title="See slides" data-goatcounter-click="ext-{{entry.key}}-slides">
+                    <ion-icon
+                            name="albums"></ion-icon>
+                    Slides</a>
+            </li>
+            {% endif %}
+            {% if entry.wwwposter %}
+            <li>
+                <a class="btn btn-outline-primary" href="{{ entry.wwwposter }}" title="See poster" data-goatcounter-click="ext-{{entry.key}}-poster">
+                    <ion-icon
+                            name="easel"></ion-icon>
+                    Poster</a>
+            </li>
+            {% endif %}
+
+            {% if entry.wwwextra %}
+            <li>
+                <a class="btn btn-outline-primary" href="{{ entry.wwwextra }}" title="Access supplement" data-goatcounter-click="ext-{{entry.key}}-supplement">
                     <ion-icon name="document-attach"></ion-icon>
                     Supplement</a>
             </li>
             {% endif %}
-            {% if page.entry.url %}
-            <li>
-                <a class="btn btn-outline-primary" href="{{ page.entry.url }}" title="More information" data-goatcounter-click="ext-{{entry.key}}-more">
-                    <ion-icon name="link"></ion-icon>
-                    More info</a>
-            </li>
-            {% endif %}
+
         </ul>
     </header>
 
-    {% if page.entry.wwwnewer %}
-    <p><i>See the {% cite_details page.entry.wwwnewer --text newer version of this work %}.</i></p>
+    {% if entry.wwwnewer %}
+    {% assign newer_list= entry.wwwnewer | split: "," %}
+    <p class="alert alert-info"><i>Newer version of this work: {% for entry in newer_list %}<a href="{% details_link entry %}">{{ entry }}</a>{% unless forloop.last %}, {%endunless%}{% endfor %}.</i></p>
     {% endif %}
 
-    {% if page.entry.wwwolder %}
-    {% assign older_list= page.entry.wwwolder | split: "," %}
-    <p><i>See the other references that present older versions of this work: {% for entry in older_list %}<a href="{% details_link entry %}">{{ entry }}</a>{% unless forloop.last %}, {%endunless%}{% endfor %}.</i></p>
+    {% if entry.wwwolder %}
+    {% assign older_list= entry.wwwolder | split: "," %}
+    <p class="alert alert-light"><i>Older versions of this work: {% for entry in older_list %}<a href="{% details_link entry %}">{{ entry }}</a>{% unless forloop.last %}, {%endunless%}{% endfor %}.</i></p>
     {% endif %}
 
-    {% if page.entry.wwwalso %}
-    {% assign also_list= page.entry.wwwalso | split: "," %}
-    <p><i>See other references that overlap with this work: {% for entry in also_list %}<a href="{% details_link entry %}">{{ entry }}</a>{% unless forloop.last %}, {%endunless%}{% endfor %}.</i></p>
+    {% if entry.wwwalso %}
+    {% assign also_list= entry.wwwalso | split: "," %}
+    <p class="alert alert-light"><i>Publications that overlap with this work: {% for entry in also_list %}<a href="{% details_link entry %}">{{ entry }}</a>{% unless forloop.last %}, {%endunless%}{% endfor %}.</i></p>
     {% endif %}
 
     {{ page.reference }}
 
     <div class="details">
-        {% if page.entry.abstract %}
+        {% if entry.abstract %}
         <h3>Abstract</h3>
-        <blockquote>{{ page.entry.abstract }}</blockquote>
+        <blockquote>{{ entry.abstract }}</blockquote>
         {% endif %}
 
         <h3>BibTeX Entry</h3>
-        <pre>{{ page.entry.bibtex }}</pre>
+        <pre>{{ entry.bibtex }}</pre>
     </div>
 </article>
