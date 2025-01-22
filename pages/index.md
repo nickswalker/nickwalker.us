@@ -6,11 +6,12 @@ permalink: /
 <div class="container home">
 
   <section class="overflow-auto">
-  <img class="avatar float-start"
+<a href="{% link pages/about.md %}">  
+<img class="avatar float-start"
        src="{{site.gravatar_url}}?s=360"
        srcset="{{site.gravatar_url}}?s=720 2x"
   alt="Headshot of man wearing glasses and smiling"/>
-
+</a>
   <p markdown="1">
 I'm a Ph.D. candidate at the University of Washington in Seattle. I work on human-robot interaction with the [Human-Centered Robotics Lab](https://hcrlab.cs.washington.edu). Most of my research deals with human-robot communication, whether it's through [visual interfaces to help teleoperators]({% details_link walker2024explicit %}) or [expressive motion]({% details_link walker2021attributions %}) or [natural language]({% details_link wang2024doing %}) for users.  Previously, I worked on service robots with the [Building Wide Intelligence](http://www.cs.utexas.edu/~larg/bwi_web/){: data-goatcounter-click="ext-bwi"} project at UT Austin. Otherwise, I'm a [photographer](https://flickr.com/photos/nickwalker-us){: data-goatcounter-click="ext-flickr.com-bio"} and [runner](https://www.strava.com/athletes/35387878){: data-goatcounter-click="ext-strava.com"}.
 </p>

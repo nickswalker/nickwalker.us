@@ -190,6 +190,39 @@ a.btn:visited:hover {
   color: var(--bs-btn-hover-color)
 }
 
+article li [href^="http"]:not([href*=".nickwalker.us"],a.btn)::after,
+article p [href^="http"]:not([href*=".nickwalker.us"],a.btn)::after {
+  background-image: url(/assets/images/launch.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1.75ex 1.75ex;
+  height: 1.75ex;
+  width: 1.75ex;
+  content: "";
+  display: inline;
+  margin-top: .7ex;
+  margin-left: 2px;
+  padding-left: 1.75ex;
+  vertical-align: middle;
+}
+
+
+@supports ((-webkit-mask:url()) or (mask:url())) {
+  article li [href^="http"]:not([href*="nickwalker.us"])::after,
+  article p [href^="http"]:not([href*="nickwalker.us"])::after{
+    background: 0 0;
+    background-color: rgba(0, 0, 0, 0);
+    background-color: currentColor;
+    -webkit-mask-image: url(/assets/images/launch.svg), linear-gradient(transparent, transparent);
+    mask-image: url(/assets/images/launch.svg), linear-gradient(transparent, transparent);
+    -webkit-mask-position: center center;
+    mask-position: center center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 1.75ex 1.75ex;
+    mask-size: 1.75ex 1.75ex;
+  }
+}
 
 .anchor-link {
   padding: 0 .175rem;
