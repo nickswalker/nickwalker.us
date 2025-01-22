@@ -106,16 +106,13 @@
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+  display: flex;
+  justify-content: center;
 }
 
 .almost-full-bleed {
   max-width: 900px;
   width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: calc(-50vw + 50% - 450px);
-  margin-right: calc(-50vw + 50% - 450px);
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 1.5dppx) {

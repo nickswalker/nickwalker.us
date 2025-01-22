@@ -33,7 +33,7 @@ _I am graduating in Spring 2025. [Contact me]({% link pages/about.md %}#contact)
     <ul class="post-list">
         {% for post in site.categories.news limit:4 %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <time class="post-meta" datetime="{{ post.date | date_to_xmlschema}}">{{ post.date | date: "%b %-d, %Y" }}</time>
         <h2>
           <a class="post-link" href="{{ post.url }}">{{ post.title | escape | markdownify | remove: '<p>' | remove: '</p>' }}</a>
         </h2>

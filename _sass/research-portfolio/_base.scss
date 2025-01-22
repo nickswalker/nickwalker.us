@@ -14,6 +14,7 @@ dl, dd, ol, ul, figure {
  */
 :root {
   --bs-body-color: #111;
+  --bs-light-bg-subtle: #eee;
   --light-text-color: #333;
   --lighter-text-color: #828282;
   --bs-body-bg: #fdfdfd;
@@ -190,8 +191,10 @@ a.btn:visited:hover {
   color: var(--bs-btn-hover-color)
 }
 
-article li [href^="http"]:not([href*=".nickwalker.us"],a.btn)::after,
-article p [href^="http"]:not([href*=".nickwalker.us"],a.btn)::after {
+article li [href^="http"]:not([href*="nickwalker.us"],a.btn)::after,
+article p [href^="http"]:not([href*="nickwalker.us"],a.btn)::after,
+article h1 [href^="http"]:not([href*="nickwalker.us"],a.btn)::after,
+article h2 [href^="http"]:not([href*="nickwalker.us"],a.btn)::after{
   background-image: url(/assets/images/launch.svg);
   background-repeat: no-repeat;
   background-position: center center;
@@ -208,8 +211,10 @@ article p [href^="http"]:not([href*=".nickwalker.us"],a.btn)::after {
 
 
 @supports ((-webkit-mask:url()) or (mask:url())) {
-  article li [href^="http"]:not([href*="nickwalker.us"])::after,
-  article p [href^="http"]:not([href*="nickwalker.us"])::after{
+  article li [href^="http"]:not([href*="nickwalker.us"],a.btn)::after,
+  article p [href^="http"]:not([href*="nickwalker.us"],a.btn)::after,
+  article h1 [href^="http"]:not([href*="nickwalker.us"],a.btn)::after,
+  article h2 [href^="http"]:not([href*="nickwalker.us"],a.btn)::after{
     background: 0 0;
     background-color: rgba(0, 0, 0, 0);
     background-color: currentColor;

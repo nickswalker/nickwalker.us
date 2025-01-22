@@ -144,9 +144,6 @@ article {
   }
 
   .article-image {
-    margin-bottom: 2rem;
-    margin-left: auto;
-    margin-right: auto;
 
     img {
       margin: 0 auto;
@@ -196,11 +193,7 @@ article {
     }
   }
 
-  .post-content p:first-of-type {
-    //font-size: 21px;
-  }
   .post-content, .project-content {
-    margin-bottom: 2rem;
     h2 {
       font-size: 1rem;
       font-weight: bold;

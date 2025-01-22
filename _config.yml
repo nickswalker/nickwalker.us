@@ -69,6 +69,9 @@ defaults:
       path: ""
       type: posts
     values:
+      author:
+        name: Nick Walker
+        url: https://nickwalker.us
       layout: post
       custom_js:
         - "https://code.jquery.com/jquery-3.1.1.min.js"

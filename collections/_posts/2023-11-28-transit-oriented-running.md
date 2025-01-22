@@ -7,10 +7,10 @@ published: true
 link: https://www.theurbanist.org/2023/11/28/a-guide-to-transit-oriented-running-in-seattle/
 ---
 
-
-> _Originally posted on [The Urbanist](https://www.theurbanist.org/2023/11/28/a-guide-to-transit-oriented-running-in-seattle/)._
-
 {% include article_image.html img="/assets/images/posts/transit-oriented-running-downtown.jpg" caption="Runners carving a path through downtown Seattle." %}
+
+>_Originally posted [on The Urbanist](https://www.theurbanist.org/2023/11/28/a-guide-to-transit-oriented-running-in-seattle/)._
+{: .alert .alert-light }
 
 Transit is a marginal consideration, if it’s one at all, for most runners. The median group run in the U.S. meets at a local eatery and runs a loop in a park, a format which works on many levels. Parks are beautiful, safe and spacious, removed from the noise and danger of traffic. Anchoring the whole route on a local establishment makes it easy to get food after, and there’s usually enough parking around for all who might drive in. A convenient bus stop can reduce the need for parking, and transit-spurred street improvements might make it more pleasant to venture out around the park, but these factors are rarely decisive for the casual “brunch runner” or even for larger running clubs.
 

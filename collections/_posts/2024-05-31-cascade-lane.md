@@ -9,7 +9,8 @@ excerpt: Some notes on the 2019 @Home competition, which was held in Sydney in J
 
 {% include article_image.html img="/assets/images/posts/cascade-lane-02739-05-ph287.webp" caption="\"The Cascades pour 40,000 gallons of water over a succession of ledges each minute of the day. They are brilliantly illuminated with colored electrical bulbs at night and present a gorgeous appearance (May 27, 1909).\" Courtesy of the National Park Service, Frederick Law Olmsted National Historic Site (02739-05-ph287)." %}
 
-> _[Posted originally](https://www.dailyuw.com/opinion/put-cascade-lane-on-the-map-again/article_3a3f8690-1efb-11ef-9649-0f5ac3c76623.html) as a Letter to the Editor at UW's student newspaper._
+_Originally posted as a [letter to the editor at The Daily of the University of Washington](https://www.dailyuw.com/opinion/put-cascade-lane-on-the-map-again/article_3a3f8690-1efb-11ef-9649-0f5ac3c76623.html)._
+{: .alert .alert-light }
 
 If you walk from Red Square to Drumheller Fountain you’ll pass through a brief nominative void. Down the steps, there’s a stretch of undistinguished asphalt about 150 meters long. Looking at its heaved and cracked surface, you’d never know that 115 years prior, this was where the immense and appropriately-named “Cascade Fountain” poured down the slope into the basin now known as Drumheller Fountain.
 

@@ -6,14 +6,14 @@ layout: default
 
   <header class="post-header">
     {% if page.type == "link" %}
-    <a href="{{ page.link }}"><h1 class="post-title" itemprop="headline">{{ page.title | escape | markdownify | remove: '<p>' | remove: '</p>' }}</h1></a>
+    <h1 class="mb-2" itemprop="headline"><a href="{{ page.link }}">{{ page.title | escape | markdownify | remove: '<p>' | remove: '</p>' }}</a></h1>
     {% else %}
-    <h1 class="post-title" itemprop="headline">{{ page.title | escape | markdownify | remove: '<p>' | remove: '</p>' }}</h1>
+    <h1 class="mb-2" itemprop="headline">{{ page.title | escape | markdownify | remove: '<p>' | remove: '</p>' }}</h1>
     {% endif %}
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time><span class="visually-hidden">{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author.name }}</span></span>{% endif %}</span></p>
   </header>
 
-  <div class="post-content" itemprop="articleBody">
+  <div class="post-content mb-4" itemprop="articleBody">
     {{ content }}
   </div>
 

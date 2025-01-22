@@ -13,16 +13,17 @@ layout: page
 {% assign currentDate = post.date | date: "%Y" %}
 {% if currentDate != sectionYear %}
 {% unless forloop.first %}</ul>{% endunless %}
-<h2>{{ currentDate }}</h2>
+<h2 id="{{currentDate}}">{{ currentDate }}</h2>
 <ul class="post-list">
     {% assign sectionYear = currentDate %}
     {% endif %}
 
-<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-<h2>
-    <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape | markdownify | remove: '<p>' | remove: '</p>'  }}</a>
-</h2>
-
+    <li>
+        <time class="post-meta" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        <h2>
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape | markdownify | remove: '<p>' | remove: '</p>'  }}</a>
+        </h2>
+    </li>
     {% if forloop.last %}</ul>{% endif %}
 {% endfor %}
 

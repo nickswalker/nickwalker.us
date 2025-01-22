@@ -77,17 +77,17 @@ a stub layout with the correct vars and inherit it"
 
     {% if entry.wwwnewer %}
     {% assign newer_list= entry.wwwnewer | split: "," %}
-    <p class="alert alert-info"><i>Newer version of this work: {% for entry in newer_list %}<a href="{% details_link entry %}">{{ entry }}</a>{% unless forloop.last %}, {%endunless%}{% endfor %}.</i></p>
+    <p class="alert alert-info"><i>Newer version: {% for entry in newer_list %}<a href="{% details_link entry %}">{{ entry }}</a>{% unless forloop.last %}, {%endunless%}{% endfor %}.</i></p>
     {% endif %}
 
     {% if entry.wwwolder %}
     {% assign older_list= entry.wwwolder | split: "," %}
-    <p class="alert alert-light"><i>Older versions of this work: {% for entry in older_list %}<a href="{% details_link entry %}">{{ entry }}</a>{% unless forloop.last %}, {%endunless%}{% endfor %}.</i></p>
+    <p class="alert alert-light"><i>Older version: {% for entry in older_list %}<a href="{% details_link entry %}">{{ entry }}</a>{% unless forloop.last %}, {%endunless%}{% endfor %}.</i></p>
     {% endif %}
 
     {% if entry.wwwalso %}
     {% assign also_list= entry.wwwalso | split: "," %}
-    <p class="alert alert-light"><i>Publications that overlap with this work: {% for entry in also_list %}<a href="{% details_link entry %}">{{ entry }}</a>{% unless forloop.last %}, {%endunless%}{% endfor %}.</i></p>
+    <p class="alert alert-light"><i>Overlaps with: {% for entry in also_list %}<a href="{% details_link entry %}">{{ entry }}</a>{% unless forloop.last %}, {%endunless%}{% endfor %}.</i></p>
     {% endif %}
 
     {{ page.reference }}

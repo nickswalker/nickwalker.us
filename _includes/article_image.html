@@ -6,7 +6,7 @@
 {% assign lightbox = false %}
 {% endif %}
 <div class="full-width">
-<figure class="article-image {% if include.restrict_width == nil and include.restrict_width != false %}limit-width{% else %}restrict-width{% endif %}">
+<figure class="mb-4 {% if include.restrict_width == nil and include.restrict_width != false %}limit-width{% else %}restrict-width{% endif %}">
     {% if include.url %}
     <a href="{{ include.url }}" title="{{ include.title }}" target="_blank">
         <img src="{{ include.img }}" alt="{{ include.title }}"/>

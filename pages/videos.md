@@ -5,7 +5,7 @@ categories: ["research", "design", "note"]
 permalink: making-project-videos/
 ---
 
-*Making videos to present research has become more common over the pandemic. These are my working notes on how to make good videos and advice on tools and workflow.*
+Making videos to present research became more common after 2020. These are my working notes on how to make good videos and advice on tools and workflow.
 
 
 <div class="full-width">

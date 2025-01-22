@@ -21,7 +21,7 @@
 
     <span class="fw-semibold">{{ entry.title }}</span><br/>
     <i>{{ venue }}, {{ entry.year }}</i>{% if entry.wwwtype %}<span class="ms-2 badge text-bg-light badge-{{entry.wwwtype}}">{{entry.wwwtype}}</span>{% endif %}<br/>
-    <span class="mb-1">{%for author in entry.author_array%}{%if forloop.last and forloop.first != true %} and {%elsif forloop.first%}{%else%}, {%endif%}{%if (author.first == "Nick" or author.first == "Nicholas" or author.first == "Nicholas S.") and author.last == "Walker"%}<u>{{author.first}} {{author.last}}{% if forloop.index0 < cofirst %}*{% endif %}</u>{%else%} {{author.first}} {{author.last}}{% if forloop.index0 < cofirst %}*{% endif %}{%endif%}{%endfor%}{% if entry.assignee %}<br/>{{entry.assignee}}{% endif %}</span>
+    <span class="mb-1">{%for author in entry.author_array%}{%if forloop.last and forloop.first != true %} and {%elsif forloop.first%}{%else%}, {%endif%}{%if (author.first == "Nick" or author.first == "Nicholas" or author.first == "Nicholas S.") and author.last == "Walker"%}<u>{{author.first}}&nbsp;{{author.last}}{% if forloop.index0 < cofirst %}*{% endif %}</u>{%else%} {{author.first}}&nbsp;{{author.last}}{% if forloop.index0 < cofirst %}*{% endif %}{%endif%}{%endfor%}{% if entry.assignee %}<br/>{{entry.assignee}}{% endif %}{% if entry.note %}{{entry.note}}<br/>{% endif %}</span>
 
     <ul class="quick-links">
         {% if entry.wwwurl %}
