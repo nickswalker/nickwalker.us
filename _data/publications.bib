@@ -187,6 +187,7 @@ While these models balance goal- and exploration-oriented actions in a mathemati
       month = feb,
        year = {2020},
     wwwtype = {journal},
+    wwwalso = {thomason2019icra},
      wwwpdf = {https://www.cs.utexas.edu/users/ml/papers/thomason.jair20.pdf},
    abstract = {In this work, we present methods for using human-robot dialog to improve language understanding for a mobile robot agent. The agent parses natural language to underlying semantic meanings and uses robotic sensors to create multi-modal models of perceptual concepts like red and heavy. The agent can be used for showing navigation routes, delivering objects to people, and relocating objects from one location to another. We use dialog clarification questions both to understand commands and to generate additional parsing training data. The agent employs opportunistic active learning to select questions about how words relate to objects, improving its understanding of perceptual concepts. We evaluated this agent on Amazon Mechanical Turk. After training on data induced from conversations, the agent reduced the number of dialog questions it asked while receiving higher usability ratings. Additionally, we demonstrated the agent on a robotic platform, where it learned new perceptual concepts on the fly while completing a real-world task.}
 }
@@ -248,7 +249,8 @@ While these models balance goal- and exploration-oriented actions in a mathemati
         location = {Montreal},
          wwwtype = {conference},
           wwwpdf = {https://www.cs.utexas.edu/users/ml/papers/thomason.icra19.pdf},
-         wwwalso = {thomason2018robodial,thomason2018mrhrc},
+         wwwalso = {thomason2020improving},
+        wwwolder = {thomason2018robodial,thomason2018mrhrc},
         wwwvideo = {https://youtu.be/PbOfteZ_CJc?t=5},
         abstract = {Natural language understanding for robotics can require substantial domain- and platform-specific engineering. For example, for mobile robots to pick-and-place objects in an environment to satisfy human commands, we can specify the language humans use to issue such commands, and connect concept words like red can to physical object properties. One way to alleviate this engineering for a new domain is to enable robots in human environments to adapt dynamically—continually learning new language constructions and perceptual concepts. In this work, we present an end-to-end pipeline for translating natural language commands to discrete robot actions, and use clarification dialogs to jointly improve language parsing and concept grounding. We train and evaluate this agent in a virtual setting on Amazon Mechanical Turk, and we transfer the learned agent to a physical robot platform to demonstrate it in the real world.}
 }
@@ -310,7 +312,8 @@ While these models balance goal- and exploration-oriented actions in a mathemati
           year = {2021},
        wwwtype = {workshop},
         wwwpdf = {https://hcrlab.cs.washington.edu/assets/pdfs/2021/walker2021influencing.pdf},
-        wwwnewer = {walker2021attributions},
+      wwwnewer = {walker2021attributions},
+     wwwhidden = {true},
       abstract = {Recent literature has proposed algorithms for autonomous generation of robot motion that communicates functional attributes of a robot's state such as intent or incapability. However, less is known about how to automate the generation of motion for communicating higher-level behavioral attributes such as curiosity or competence. In this work, we consider a coverage task resembling robot vacuum cleaning in a household. Through a virtual interface, we collect a dataset of human attributions to robot trajectories during task execution and extract a probabilistic model that maps robot trajectories to human attributions. We then incorporate this model into an trajectory generation mechanism that balances between task completion and communication of a desired behavioral attribution. Through an online user study on a different household layout, we find that our prediction model accurately captures human attribution for coverage tasks. Further, our generation mechanism produces trajectories that are thematically consistent, but more research is required to understand how to balance attribution and task performance.
   }
 }
@@ -385,6 +388,7 @@ While these models balance goal- and exploration-oriented actions in a mathemati
          month = jun,
           year = {2018},
        wwwtype = {workshop},
+      wwwnewer = {thomason2020improving},
      wwwhidden = {true},
         wwwpdf = {http://www.cs.utexas.edu/%7Epstone/Papers/bib2html-links/MRHRC18-thomason.pdf},
      wwwposter = {https://jessethomason.com/publication_supplements/RSS18_MRHRC_poster.pdf},
@@ -399,6 +403,7 @@ While these models balance goal- and exploration-oriented actions in a mathemati
          month = jul,
           year = {2018},
        wwwtype = {lbr},
+      wwwnewer = {thomason2020improving},
      wwwhidden = {true},
      wwwvideo = {https://www.superlectures.com/sigdial2018/jointly-improving-parsing-and-perception-for-natural-language-commands-through-human-robot-dialog},
      wwwpdf = {https://jessethomason.com/publication_supplements/SIGDIAL18_late_breaking.pdf},
