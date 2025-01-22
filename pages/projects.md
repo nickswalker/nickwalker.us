@@ -16,9 +16,8 @@ permalink: projects/
 
 <ul class="list-unstyled">
     {% for project in projects %}
-    <li class="mb-4">
+    <li class="mb-4" id="{{ project.slug }}">
     {% include project_block.html project=project %}
     </li>
     {% endfor %}
-
 </ul>

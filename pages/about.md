@@ -15,7 +15,7 @@ Nick earned a Bachelor in Computer Science at the University of Texas at Austin 
 [Building Wide Intelligence](http://www.cs.utexas.edu/~larg/bwi_web/){: data-goatcounter-click="ext-bwi"} project. He was part of the [Austin Villa@Home RoboCup team](https://www.cs.utexas.edu/~AustinVilla/) that [placed 3rd]({% post_url 2017-08-28-robocup-2017-success %}) in 2017 and [won best-poster in 2018]({% post_url 2018-06-21-dspl-best-poster-award %}). He was recognized as a [Dean's Honored Graduate]({% post_url 2018-3-27-deans-honored-graduate %}) and selected to [speak at commencement]({% post_url 2018-5-19-commencement-address %}).
 
 Nick is also a [photographer](https://flickr.com/photos/nickwalker-us){: data-goatcounter-click="ext-flickr.com-bio"} and 
-    [runner](https://www.strava.com/athletes/35387878){: data-goatcounter-click="ext-strava.com"}. He directs the annual [Drumheller Marathon](https://drumhellermarathon.com) and [Light Rail Relay](https://lightrailrelay.com) endurance running events in Seattle as part of [Race Condition Running](https://raceconditionrunning.com).
+    [runner](https://www.strava.com/athletes/35387878){: data-goatcounter-click="ext-strava.com"}. He directs the annual [Drumheller Marathon]({% link _projects/drumheller-marathon.md %}) and [Light Rail Relay]({% link _projects/light-rail-relay.md %}) endurance running events in Seattle as part of [Race Condition Running](https://raceconditionrunning.com).
 
 [<ion-icon name="school"></ion-icon> Google Scholar](https://scholar.google.com/citations?user={{ site.google_scholar_id }}&hl=en)<br />
 [<ion-icon name="list-circle"></ion-icon> dblp](https://dblp.org/pid/{{ site.dblp_id }})<br/>

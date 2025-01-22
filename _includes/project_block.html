@@ -18,7 +18,7 @@
   </div>
   <div class="col">
 
-  <h3 class="mb-0">{% if project_url %}<a href="{{ project_url }}">{% endif %}{{ project.title | escape }}{% if project_url %}</a>{% endif %}</h3>
+  <h3 class="mb-0">{% if project_url %}<a href="{{ project_url }}">{% endif %}{{ project.title | escape }}{% if project_url %}</a>{% endif %}<a class="anchor-link" href="#{{ project.slug }}"></a></h3>
     <div class="mb-1">
     <span class="d-inline me-2">{{ project.date | date: "%Y" }}{% if project.end_date %}{% if project.end_date != blank %} - {{ project.end_date | date: "%Y" }}{% else %}—{% endif %}    {% endif %}</span>
     {% for category in project.categories | sort %}
