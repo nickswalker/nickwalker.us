@@ -1,10 +1,10 @@
 ---
 title:  "Put Cascade (Lane) on the Map Again"
 date:   2024-05-31 12:00:00 -0600
-categories: blog uw
+categories: ["blog", "uw"]
 published: true
 type: blog
-excerpt: Some notes on the 2019 @Home competition, which was held in Sydney in July.
+excerpt: "Let’s cherish the brightest point in the path’s life, even if it was 115 years ago."
 ---
 
 {% include article_image.html img="/assets/images/posts/cascade-lane-02739-05-ph287.webp" caption="\"The Cascades pour 40,000 gallons of water over a succession of ledges each minute of the day. They are brilliantly illuminated with colored electrical bulbs at night and present a gorgeous appearance (May 27, 1909).\" Courtesy of the National Park Service, Frederick Law Olmsted National Historic Site (02739-05-ph287)." %}
@@ -18,7 +18,7 @@ When the Alaska-Yukon-Pacific Exposition ended, the “Cascades” and many buil
 
 {% include article_image.html img="/assets/images/posts/cascade-lane-map-comparison.jpg" caption="The void on the present map and the naming at the time of the Exposition. Left: UW Campus Map. Right: Fire Insurance Map, Sanborn Map Co., Mar. 1909" %}
 
-The university should name the stretch “Cascade Lane NE” for the long-gone fountain. It’ll be a simple, likely cost-free affair. The path is unsigned, and it can remain so. But on the web and for the next printings of campus maps, a small new label should appear.
+The university should name the stretch “Cascade Lane NE” for the long-gone fountain. It’ll be a simple and likely free affair. The path is unsigned, and it can remain so. But on the web and for the next printings of campus maps, a small new label should appear.
 
 [Board of Regents, say the words](https://www.washington.edu/admin/rules/policies/BRG/RP50.html): “Cascade Lane.”
 
