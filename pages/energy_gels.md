@@ -4,7 +4,7 @@ title:  "Homemade Energy Gel Recipe"
 categories: ["running", "note"]
 permalink: energy-gels/
 custom_js_modules: ['/assets/js/nutritionCalculators.js']
-excerpt: "Cheap, easy, and customizable fuel"
+excerpt: "Calculator and recipe for DIY energy gels and energy drinks. Pick from ingredients like maltodexterin, table sugar, honey and more."
 ---
 
 Endurance athletes consume highly concentrated carbohydrate solutions because it maintains blood glucose levels and spares [limited accessible energy sources](https://doi.org/10.1093/nutrit/nuy001). There are [many "energy gel" sports nutrition products](https://www.researchgate.net/profile/Xuguang-Zhang-2/publication/277081684_Extreme_Variation_of_Nutritional_Composition_and_Osmolality_of_Commercially_Available_Carbohydrate_Energy_Gel/links/557971f508aeb6d8c020255c/Extreme-Variation-of-Nutritional-Composition-and-Osmolality-of-Commercially-Available-Carbohydrate-Energy-Gel.pdf) to choose from.

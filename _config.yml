@@ -47,7 +47,8 @@ collections:
 # Archive listings for blog
 jekyll-archives:
   enabled: ['year']
-  layout: 'archive'
+  layouts:
+    year: 'bounce_link'
   permalinks:
     year: '/blog/:year/'
 

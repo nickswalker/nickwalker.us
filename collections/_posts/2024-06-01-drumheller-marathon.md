@@ -6,12 +6,13 @@ categories: news running
 published: true
 link: https://raceconditionrunning.com/drumheller-marathon-24/
 featured_image: /assets/images/posts/dm24-banner.jpg
+excerpt: "Four runners became the first Drumheller Marathoners at this year's race, joined by a record 21 half marathoners."
 ---
 
 {% include article_image.html img=page.featured_image caption="" %}
 
 Four runners became the first Drumheller Marathoners at [this year's race](https://raceconditionrunning.com/drumheller-marathon-24/), joined by a record 21 half marathoners. The race, which [I have organized annually over the last four years]({% link _projects/drumheller-marathon.md %}), occurs entirely around a fountain at the University of Washington. Officially, 42 people ran 4382 laps, and that doesn't include laps from the many who didn't register.
 
-The [course](https://certifiedroadraces.com/certificate/?type=m&id=3255), which I measured again this year, becomes one of only three recognized marathons in Seattle, and the smallest footprint road marathon in the United States.
+The [course](https://certifiedroadraces.com/certificate/?type=m&id=3255), which I measured again this year, is the smallest footprint road marathon in the United States. It becomes Seattle's flattest marathon (3 meters net downhill, actually) and one of only three courses in the city.
 
 

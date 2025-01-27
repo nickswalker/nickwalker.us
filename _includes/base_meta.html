@@ -2,7 +2,28 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {% capture title %}{% if page.title %}{{ page.title | escape }} || {{ site.title | escape}}{% else %}{{ site.title | escape }}{% endif %}{% endcapture %}
+{% if page.entry %}
+{% assign entry = page.entry %}
+{% assign venue = "" %}
+{% if entry.booktitle %}
+{% capture venue %}{{ entry.booktitle | remove: "Proceedings of the " | remove: "Proceedings of " | replace: "International Conference on", "Int. Conf."}}{% endcapture %}
+{% elsif entry.archiveprefix %}
+{% capture venue %}{{ entry.archiveprefix }}{% if entry.primaryclass %} ({{ entry.primaryclass }}){% endif %} preprint{% endcapture %}
+{% elsif entry.journal %}
+{% capture venue %}{{ entry.journal }}{% endcapture %}
+{% elsif entry.number %}
+{% capture venue %}{{ entry.number }}{% endcapture %}
+{% endif %}
+{% assign cofirst = -1 %}
+{% if entry.cofirst %}
+{%comment%}plus 0 to cast to int{%endcomment%}
+{% assign cofirst = entry.cofirst | plus: 0%}
+{% endif %}
+
+  {% capture description %}{%for author in entry.author_array%}{%if forloop.last and forloop.first != true %} and {%elsif forloop.first%}{%else%}, {%endif%}{{author.first}} {{author.last}}{% if forloop.index0 < cofirst %}*{%endif%}{%endfor%}. {{venue}} {{page.entry.year}}{% endcapture %}
+{% else %}
 {% capture description %}{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}{% endcapture %}
+{% endif %}
 {% capture url %}{{ page.url | absolute_url }}{% endcapture %}
 <title>{{ title }}</title>
 <meta name="description" content="{{ description }}">

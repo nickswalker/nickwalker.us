@@ -1,8 +1,17 @@
 ---
 layout: contained-restrict-width
 ---
-<i class="text-secondary">Redirecting to <a href="{{page.link}}">{{page.title}}</a>...</i>
+{% comment %} Special handling for blog archive pages{% endcomment %}
+{% if page.type == "year" %}
+{% capture link %}{% link pages/archive.md %}#{{ page.date | date: "%Y" }}{% endcapture %}
+{% capture title %}Blog Archive {{ page.date | date: "%Y" }}{% endcapture %}
+{{ link }}
+{% else %}
+{% assign link = page.link %}
+{% assign title = page.title %}
+{% endif %}
+<i class="text-secondary">Redirecting to <a href="{{link}}">{{title}}</a>...</i>
 
 <script>
-    window.location.href = "{{ page.link }}";
+    window.location.href = "{{ link }}";
 </script>
