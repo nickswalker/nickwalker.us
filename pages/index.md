@@ -28,7 +28,7 @@ _I am graduating in Spring 2025. [Contact me]({% link pages/about.md %}#contact)
 {% assign post_count = site.posts | size %}
 {% if post_count > 0 %}
   <section id="posts">
-    <a class="rss-note" href="{{ '/feed.xml' | relative_url }}">RSS</a>
+    <a class="rss-note" href="{{ '/feed.xml' | relative_url }}"><ion-icon name="logo-rss"></ion-icon> RSS</a>
     <h2 class="page-heading">News</h2>
     <ul class="post-list">
         {% for post in site.categories.news limit:4 %}

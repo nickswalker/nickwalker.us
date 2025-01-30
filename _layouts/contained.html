@@ -2,6 +2,7 @@
 layout: default
 restrict_width: false
 ---
-<div class="container {% if layout.restrict_width %}restrict-width{% endif %}">
+{% if page.restrict_width != nil %} {% assign restrict_width = page.restrict_width %} {% else %} {% assign restrict_width = layout.restrict_width %} {% endif %}
+<div class="container {% if restrict_width %}restrict-width{% endif %}">
   {{ content }}
 </div>

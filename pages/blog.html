@@ -1,7 +1,15 @@
 ---
-layout: page
+layout: contained
 restrict_width: true
+title: Blog
+permalink: blog/
 ---
+
+<section class="page {{ page.title | downcase }}-page">
+
+<header class="page-heading">
+  <a class="rss-note" href="{{ '/feed.xml' | relative_url }}"><ion-icon name="logo-rss"></ion-icon> RSS</ion-icon></a><h1 class="page-title">{{ page.title | escape }}</h1>
+</header>
 
 <div class="blog-list">
 {% for post in site.posts limit:6 %}
@@ -35,6 +43,10 @@ restrict_width: true
 
 {% endfor %}
 </div>
-<div class="d-flex justify-content-center">
-<a class="btn btn-outline-primary" href="{% link pages/archive.md %}">Archive</a>
-</div>
+    <div class="d-flex justify-content-center">
+     <a class="btn btn-outline-primary" href="{% link pages/archive.md %}">Archive</a>
+    </div>
+
+</section>
+
+{% include add_anchor_links.html %}
