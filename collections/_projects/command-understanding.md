@@ -2,7 +2,8 @@
 title:  "Service Robot Command Understanding"
 date:   2019-07-19 12:00:00 -0700
 categories: ["research", "machine learning"]
-description: "Data and models for going from language to executable form"
+description: |
+  Large pretrained language embeddings, like BERT, make it possible to use neural methods to understand robot commands without needing a lot of domain-specific data. I used the domain of RoboCup@Home commands to show how you can build a system that converts commands to logical forms with a small number of annotated templates.
 github_repo_url: "https://github.com/nickswalker/gpsr-command-understanding"
 layout: published_project_entry
 featured_image: /assets/images/projects/commands.webp

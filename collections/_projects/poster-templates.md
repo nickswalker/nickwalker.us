@@ -1,7 +1,7 @@
 ---
 title:  "Poster Templates"
 date:   2019-07-23 12:00:00 -0700
-categories: ["research", "design"]
+categories: ["design"]
 description: |
     Templates for making research posters, with branding for the University of Washington and the Paul G. Allen School of Computer Science & Engineering.
 redirect_to: false
