@@ -171,25 +171,33 @@ a {
   padding: .25rem .5rem;
 }
 
-.btn-outline-primary {
-  --bs-btn-color: var(--theme-color);
+.btn-primary, .btn:visited  {
+  --bs-btn-color: white;
+  --bs-btn-bg: var(--theme-color);
+  --bs-btn-border-color: var(--theme-color);
   --bs-btn-hover-bg: var(--theme-color-light);
-  --bs-btn-hover-color: white;
-  --bs-btn-hover-border-color: transparent;
-  --bs-btn-active-bg: var(--theme-primary-color);
-  --bs-btn-active-border-color: var(--theme-color);
-  --bs-btn-active-color: #eee;
+  --bs-btn-hover-border-color: var(--theme-color-light);
+  --bs-btn-active-border-color: var(--theme-color-dark);
+  --bs-btn-active-color: white;
+  --bs-btn-active-bg: var(--theme-color-dark);
+}
+
+.btn-outline-primary, .btn-outline-primary:visited {
+  --bs-btn-color: var(--theme-color);
   --bs-btn-border-color: var(--theme-color-light);
+
+  --bs-btn-hover-bg: var(--theme-color-faint);
+  --bs-btn-hover-color: var(--theme-color);
+  --bs-btn-hover-border-color: var(--theme-color-lighter);
+
+  --bs-btn-active-bg: var(--theme-color-dark);
+  --bs-btn-active-border-color: var(--theme-color-dark);
+  --bs-btn-active-color: white;
+  --bs-btn-active-bg: var(--theme-color-dark);
+
   --bs-btn-focus-shadow-rgb: 255, 255, 255
 }
 
-a.btn:visited {
-  color: var(--bs-btn-color)
-}
-
-a.btn:visited:hover {
-  color: var(--bs-btn-hover-color)
-}
 
 article li [href^="http"]:not([href*="nickwalker.us"],a.btn)::after,
 article p [href^="http"]:not([href*="nickwalker.us"],a.btn)::after,

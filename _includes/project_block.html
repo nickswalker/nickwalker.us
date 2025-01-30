@@ -6,7 +6,7 @@
 {% else %}
 {% assign project_url = project.redirect_to %}
 {% endif %}
-<div class="row" id="{{ project.slug }}">
+<div class="row project-block" data-categories="{{project.categories | join: ' '}}">
   <div class="col-md-3">
     {% if project.featured_image_rel %}
     <img src="{{site.baseurl}}/assets/images/projects/{{project.slug}}/{{project.featured_image_rel}}"/>
@@ -21,9 +21,12 @@
   <h3 class="mb-0">{% if project_url %}<a href="{{ project_url }}">{% endif %}{{ project.title | escape }}{% if project_url %}</a>{% endif %}<a class="anchor-link" href="#{{ project.slug }}"></a></h3>
     <div class="mb-1">
     <span class="d-inline me-2"><time datetime="{{project.date | date_to_xmlschema}}">{{ project.date | date: "%Y" }}</time>{% if project.end_date %}{% if project.end_date != blank %} - <time datetime="{{project.end_date | date_to_xmlschema }}">{{ project.end_date | date: "%Y" }}</time>{% else %}—{% endif %}    {% endif %}</span>
+      <ul class="list-unstyled d-inline">
     {% for category in project.categories | sort %}
-    <span class="badge text-bg-light">{{ category }}</span>
+
+    <li class="badge text-bg-light d-inline">{{ category }}</li>
     {% endfor %}
+      </ul>
     </div>
 
   {% if project.description %}

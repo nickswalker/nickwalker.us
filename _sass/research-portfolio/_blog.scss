@@ -84,7 +84,7 @@ article.project img {
 
 article {
 
-  p a, ul a, ol a, blockquote a, pre a {
+  p a, ul a:not(.btn), ol a:not(.btn), blockquote a, pre a {
     color: var(--light-text-color);
     text-decoration-color: var(--light-text-color);
 
