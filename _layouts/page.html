@@ -3,7 +3,7 @@ layout: contained
 wrapper_type: 'section'
 restrict_width: false
 ---
-<{{ layout.wrapper_type }} class="page {{ page.title | downcase }}-page">
+<{{ layout.wrapper_type }} class="page {{ page.title | slugify | downcase }}-page">
 
 <header class="page-heading">
   <h1 class="page-title">{{ page.title | escape }}</h1>
