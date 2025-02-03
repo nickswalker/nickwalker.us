@@ -80,7 +80,7 @@ dl, dd, ol, ul, figure {
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
+h1, h2, h3,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
@@ -137,20 +137,39 @@ li {
 h1, h2, h3, h4, h5, h6 {
 }
 
-h1, h2 {
-  font-size: 1.25rem;
+h1 {
+  font-size: 1.5rem;
   font-weight: 700;
+}
 
+
+h2, .h2 {
+  font-size: 1.25rem;
+  font-weight: 650;
 }
 p {
   margin: 0 auto 1rem auto;
 }
 
-h3, h4 {
-  font-size: 1rem;
-  font-weight: bold;
+h3, .h3 {
+  font-size: 1.1rem;
+  line-height: 2rem;
+  font-weight: 700;
 }
 
+h4, h5, h6 {
+  font-size: 1rem;
+  margin-bottom: .5rem;
+  font-weight: 700;
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+.text-secondary {
+  color: var(--lighter-text-color) !important;
+}
 
 
 /**
@@ -159,7 +178,7 @@ h3, h4 {
 a {
   color: var(--link-color);
   text-decoration-color: var(--link-decoration-color);
-  text-underline-offset: 2px;
+  text-underline-offset: 1.5px;
 
   &:hover {
     text-decoration: none;

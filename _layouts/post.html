@@ -10,7 +10,7 @@ layout: default
     {% else %}
     <h1 class="mb-2" itemprop="headline">{{ page.title | escape | markdownify | remove: '<p>' | remove: '</p>' }}</h1>
     {% endif %}
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time><span class="visually-hidden">{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author.name }}</span></span>{% endif %}</span></p>
+    <p class="post-meta text-secondary"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time><span class="visually-hidden">{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author.name }}</span></span>{% endif %}</span></p>
   </header>
 
   <div class="post-content mb-4" itemprop="articleBody">

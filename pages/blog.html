@@ -24,10 +24,10 @@ permalink: blog/
     <article class="post {{ post-type-class }}">
     <header class="post-header">
         <a class="float-end permalink" href="{{ post.url }}" title="Permalink">*</a>
-        <h2 class="mb-2">
+        <h2 class="mb-1">
             <a class="{% if post.type == 'link' %}post-link{% endif %}" href="{{ url }}">{{ post.title | escape | markdownify | remove: '<p>' | remove: '</p>' }}</a>
         </h2>
-        <p class="post-meta">
+        <p class="post-meta text-secondary">
             <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d,
                 %Y" }}
             </time>

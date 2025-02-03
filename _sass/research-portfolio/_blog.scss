@@ -1,6 +1,5 @@
 .post-meta {
   font-size: var(--small-font-size);
-  color: var(--lighter-text-color);
   letter-spacing: 2px;
   text-transform: uppercase;
   @include media-query($on-laptop) {
@@ -128,7 +127,6 @@ article {
     margin-bottom: 1rem;
     .post-meta {
       font-size: var(--small-font-size);
-      color: var(--light-text-color);
       font-weight: normal;
       letter-spacing: 2px;
       text-transform: uppercase;
@@ -193,18 +191,17 @@ article {
     }
   }
 
-  .post-content, .project-content {
-    h2 {
-      font-size: 1rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      line-height: 2rem;
-    }
-
-  }
 
 }
+
+.post-content h2,
+.project-content h2,
+article.page h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+
 
 /**
  * Post list

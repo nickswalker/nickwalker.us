@@ -18,11 +18,11 @@ layout: page
     {% assign sectionYear = currentDate %}
     {% endif %}
 
-    <li>
-        <time class="post-meta" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-        <h2>
+    <li class="mb-3 row">
+        <time class="post-meta col-sm-1 text-secondary" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m/%d" }}</time>
+        <h3 class="h2 col-sm">
             <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape | markdownify | remove: '<p>' | remove: '</p>'  }}</a>
-        </h2>
+        </h3>
     </li>
     {% if forloop.last %}</ul>{% endif %}
 {% endfor %}

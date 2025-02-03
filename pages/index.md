@@ -29,11 +29,11 @@ _I am graduating in Spring 2025. [Contact me]({% link pages/about.md %}#contact)
 {% if post_count > 0 %}
   <section id="posts">
     <a class="rss-note" href="{{ '/feed.xml' | relative_url }}"><ion-icon name="logo-rss"></ion-icon> RSS</a>
-    <h2 class="page-heading">News</h2>
+    <h2>News</h2>
     <ul class="post-list">
         {% for post in site.categories.news limit:4 %}
       <li>
-        <time class="post-meta" datetime="{{ post.date | date_to_xmlschema}}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        <time class="post-meta text-secondary" datetime="{{ post.date | date_to_xmlschema}}">{{ post.date | date: "%b %-d, %Y" }}</time>
         <h3 class="h2 mb-3">
           <a class="post-link" href="{{ post.url }}">{{ post.title | escape | markdownify | remove: '<p>' | remove: '</p>' }}</a>
         </h3>
@@ -51,7 +51,7 @@ _I am graduating in Spring 2025. [Contact me]({% link pages/about.md %}#contact)
 {% comment %}
 {% if featured_projects.size > 0 %}
   <section id="projects">
-    <h2 class="page-heading">Projects</h2>
+    <h2>Projects</h2>
       <ul class="project-block-list">
       {% for project in featured_projects %}
         {% include project_block.html project=project %}
@@ -67,14 +67,14 @@ _I am graduating in Spring 2025. [Contact me]({% link pages/about.md %}#contact)
   {% endcomment %}
 
     <section id="blog">
-        <h2 class="page-heading">Blog</h2>
+        <h2>Blog</h2>
         <p class="blog-line">
             {% for post in site.categories.blog limit:3 %}<a href="{{ post.url }}">{{ post.title | escape | markdownify | remove: '<p>' | remove: '</p>'  }}</a>, {%
             endfor %} and <a href="{{ site.baseurl }}/blog/archive/"> more</a>.</p>
     </section>
 
     <section id="notes">
-        <h2 class="page-heading">Notes</h2>
+        <h2>Notes</h2>
         <p class="blog-line d-flex flex-wrap gap-2">
             {% for page in site.pages %}{% assign categories_string = page.categories | join: ' ' %}
 {% if categories_string contains 'note' %}<a href="{{ page.url }}">{{ page.title | escape | markdownify | remove: '<p>' | remove: '</p>'  }}</a> <span>&middot;</span>{% endif %}{%
