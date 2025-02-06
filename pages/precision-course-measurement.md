@@ -28,6 +28,10 @@ Standard GPS devices like phones are precise to about 1m in ideal conditions. So
 
 ### Equipment
 
+**Note**: SWMaps on iOS has many small, annoying bugs. The Android version may be better.
+{: .alert .alert-info }
+
+
 * [SparkFun RTK Torch](https://www.sparkfun.com/sparkfun-rtk-torch.html), [documentation](https://docs.sparkfun.com/SparkFun_RTK_Everywhere_Firmware/), [overview video](https://www.youtube.com/watch?v=gJyWOUiZ-bg)
 * Survey pole
 * Bosch GLM-40, laser distance meter for checking antenna height
@@ -42,8 +46,6 @@ Standard GPS devices like phones are precise to about 1m in ideal conditions. So
 * Mount Point: Check the map (open [list](http://monitor.use-snip.com/?hostUrl=rtk2go.com&port=2101) > View All), use the name of the closest base. Pittsburgh: `PIT_TEST_TRACK`, `cmuairlab01`. Seattle: `LFPWD_HV`
 * Username: `<your email address>` (no registration required)
 * Password: empty
-
-
 
 Some [states have free networks](https://e38surveysolutions.com/pages/ntrip-rtk-network-access-by-state).
 
