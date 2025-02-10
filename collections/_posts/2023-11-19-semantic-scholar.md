@@ -37,4 +37,4 @@ As Google Scholar has long demonstrated, it's simpler to create profile pages on
 
 [^3]: [dblp](https://dblp.org/) disambiguated my profile in 2019 within a day of my asking. There haven't been any mistakes since, perhaps because they defer to standard [ORCID](https://orcid.org/) identifiers wherever possible.
 
-[^4]: See the White House's ["Blueprint for an AI Bill of Rights"](https://www.whitehouse.gov/wp-content/uploads/2022/10/Blueprint-for-an-AI-Bill-of-Rights.pdf) for a more expansive expression of the same view, or the [CCPA](https://oag.ca.gov/privacy/ccpa) for a state's implementation. 
+[^4]: See the White House's ["Blueprint for an AI Bill of Rights"](https://web.archive.org/web/20250118015329/https://www.whitehouse.gov/wp-content/uploads/2022/10/Blueprint-for-an-AI-Bill-of-Rights.pdf) for a more expansive expression of the same view, or the [CCPA](https://oag.ca.gov/privacy/ccpa) for a state's implementation. 
