@@ -1,7 +1,7 @@
 ---
 title:  "Put Cascade (Lane) on the Map Again"
 date:   2024-05-31 12:00:00 -0600
-categories: ["blog", "uw"]
+categories: ["uw", "history"]
 published: true
 type: blog
 excerpt: "Let’s cherish the brightest point in the path’s life, even if it was 115 years ago."

@@ -68,9 +68,17 @@ _I am graduating in Spring 2025. [Contact me]({% link pages/about.md %}#contact)
 
     <section id="blog">
         <h2>Blog</h2>
-        <p class="blog-line">
-            {% for post in site.categories.blog limit:3 %}<a href="{{ post.url }}">{{ post.title | escape | markdownify | remove: '<p>' | remove: '</p>'  }}</a>, {%
-            endfor %} and <a href="{{ site.baseurl }}/blog/archive/"> more</a>.</p>
+<p>
+        {% assign count = 0 %}
+{% for post in site.posts %}
+{% unless post.categories contains "news" %}
+{% if count < 3 %}
+<a href="{{ post.url }}">{{ post.title | escape | markdownify | remove: '<p>' | remove: '</p>' }}</a>{% if count < 2 %}, {% endif %}
+{% assign count = count | plus: 1 %}
+{% endif %}
+{% endunless %}
+{% endfor %}
+{% if count == 3 %} and{% endif %} <a href="{{ site.baseurl }}/blog/archive/">more</a>.</p>
     </section>
 
     <section id="notes">

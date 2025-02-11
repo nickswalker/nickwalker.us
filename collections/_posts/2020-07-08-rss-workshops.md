@@ -2,7 +2,7 @@
 title: "RSS Workshops Organizing: Practical Service Robotics and Imitation Learning"
 date: 2020-07-08 12:00 -0600
 type: blog
-categories: news uw
+categories: ["news", "uw", "research"]
 published: true
 ---
 

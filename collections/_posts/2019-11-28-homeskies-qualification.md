@@ -1,7 +1,7 @@
 ---
 title:  "Homeskies, Our RoboCup@Home Team, Qualifies for RoboCup 2020"
 date:   2019-11-28 12:00:00 -0600
-categories: robocup news
+categories: ["news"]
 published: true
 type: link
 link: https://athome.robocup.org/2020-qualification-announcement/

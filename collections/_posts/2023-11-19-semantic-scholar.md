@@ -2,7 +2,7 @@
 title: "Any AI that writes about people needs an opt-out button"
 date: 2023-11-19 12:00 -0600
 type: blog
-categories: blog
+categories: ["opinion"]
 published: true
 ---
 
@@ -17,7 +17,7 @@ The latest issue is more pernicious. In recent years I've had two profiles, [a "
 
 My emails to support over the past couple months haven't led to the issue being fixed, and there is no other means of recourse. What happens when you send the email? I'm not sure, but based on my observation, support staff approve the request, then file a polite suggestion to some machine learning pipeline which proceeds to do jack all with it.
 
-> Update 2023-12-20: The two profiles have been merged, likely as a result of internal escalation after emailing this post to the team. There remains no way to opt out of having a profile.
+**Update Decumber 20th, 2023**: The two profiles have been merged, likely as a result of internal escalation after emailing this post to the team. There remains no way to opt out of having a profile.
 
 -------------
 

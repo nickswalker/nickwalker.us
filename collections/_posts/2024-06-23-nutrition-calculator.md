@@ -2,7 +2,7 @@
 title: "Calculator for DIY Energy Gels and Sports Nutrition"
 date: 2024-06-23 12:00 -0600
 type: link
-categories: news running
+categories: ["news", "running"]
 published: true
 link: https://nickwalker.us/energy-gels
 featured_image: /assets/images/projects/whole-foods-lay.webp

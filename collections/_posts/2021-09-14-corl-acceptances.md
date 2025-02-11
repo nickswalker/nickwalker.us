@@ -2,7 +2,7 @@
 title: "Papers on Influencing Behavioral Attributions and Generating Backchannels to Appear at CoRL"
 date: 2021-09-14 12:00 -0600
 type: blog
-categories: news uw
+categories: ["news", "uw", "research"]
 published: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: We Won Best DSPL Poster at RoboCup@Home 2018!
 date: 2018-06-21 18:35 -0500
-categories: news recognition ut
+categories: ["news", "recognition", "ut"]
 type: blog
 published: true
 featured_image: /assets/images/posts/robocup-poster-presentation.jpg

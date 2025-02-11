@@ -3,7 +3,7 @@ title: "A New Kind of Teleoperation Assistance Interface to Appear at IROS 2024"
 date: 2024-07-26 12:00 -0600
 type: blog
 featured: true
-categories: news uw research
+categories: ["news", "uw", "research"]
 published: true
 ---
 

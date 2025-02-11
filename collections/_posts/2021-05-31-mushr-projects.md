@@ -2,7 +2,7 @@
 title: "New Robotics Course Materials"
 date: 2021-05-31 12:00 -0600
 type: link
-categories: news uw
+categories: ["news", "uw"]
 published: true
 link: https://courses.cs.washington.edu/courses/cse478/21sp/projects/
 featured_image: /assets/images/posts/mushr-projects.png

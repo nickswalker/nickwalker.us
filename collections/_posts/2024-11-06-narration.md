@@ -3,7 +3,7 @@ title: "Paper on Narrating Robot Experience at CoRL 2024"
 date: 2024-11-06 12:00 -0600
 type: blog
 featured: true
-categories: news research
+categories: ["news", "research", "uw"]
 published: true
 ---
 

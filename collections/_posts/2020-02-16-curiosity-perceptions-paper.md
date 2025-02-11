@@ -2,7 +2,7 @@
 title: What Do People Think of an Intrinsically Motivated Robot? HRI Paper Available
 date: 2020-02-16 12:00 -0500
 type: blog
-categories: news uw
+categories: ["news", "uw", "research"]
 published: true
 featured_image: /assets/images/posts/curiosity-perceptions-setup.jpg
 ---

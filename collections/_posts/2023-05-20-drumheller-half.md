@@ -1,8 +1,8 @@
 ---
-title: "A New Certified Half Marathon Course for UW and Seattle"
+title: "The Drumheller Half Marathon: A New Certified Course for UW and Seattle"
 date: 2023-05-20 12:00 -0600
 type: link
-categories: news running
+categories: ["news", "running"]
 published: true
 link: https://raceconditionrunning.com/drumheller-half-23/
 featured_image: /assets/images/posts/dhm23-banner.png

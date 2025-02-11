@@ -1,7 +1,7 @@
 ---
 title:  "Northside Students Achieve National Recognition"
 date:   2014-01-15 21:29:02 -0700
-categories: news media blog
+categories: ["recognition", "news", "media"]
 published: true
 type: link
 link: https://web.archive.org/web/20150325195622/http://nisd.net/news/articles/53697

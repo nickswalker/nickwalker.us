@@ -2,7 +2,7 @@
 title: "The Drumheller Marathon: Seattle's Newest and USA's Smallest"
 date: 2024-06-01 12:00 -0600
 type: link
-categories: news running
+categories: ["news", "running"]
 published: true
 link: https://raceconditionrunning.com/drumheller-marathon-24/
 featured_image: /assets/images/posts/dm24-banner.jpg

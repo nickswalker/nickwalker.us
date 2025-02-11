@@ -1,8 +1,7 @@
 ---
-layout: post
 title:  "Scientific Poster Design Pitfalls"
 date:   2018-01-01 10:48:02 -0700
-categories: ["posters", "opinion", "communication", "design"]
+categories: ["communication", "design", "research"]
 published: true
 type: blog
 ---

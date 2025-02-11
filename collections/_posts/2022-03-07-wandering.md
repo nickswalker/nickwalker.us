@@ -2,7 +2,7 @@
 title: "Paper on a 'Wandering' Kuri Deployment to Appear at HRI 2022"
 date: 2022-03-07 12:00 -0600
 type: blog
-categories: news uw
+categories: ["news", "uw", "research"]
 published: true
 link: https://wandering.nickwalker.us
 

@@ -1,8 +1,7 @@
 ---
-layout: post
 title: Keep Untracked Files Handy with a Global .gitignore Pattern
 type: blog
-categories: [tip]
+categories: ["tip"]
 date: 2025-01-11 20:58 -0800
 ---
 

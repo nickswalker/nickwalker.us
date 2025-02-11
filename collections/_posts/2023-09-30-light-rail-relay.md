@@ -2,7 +2,7 @@
 title: "Light Rail Relay Welcomes New Teams for its Third Run"
 date: 2023-09-30 12:00 -0600
 type: link
-categories: news running
+categories: ["news", "running"]
 published: true
 link: https://raceconditionrunning.com/light-rail-relay-23/
 featured_image: /assets/images/posts/lrr23-banner.png

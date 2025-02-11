@@ -1,7 +1,7 @@
 ---
 title:  "Chosen as UT CNS Commencement Student Speaker"
 date:   2018-05-19 11:25:00 -0600
-categories: ut recognition news
+categories: ["ut", "recognition", "news"]
 published: true
 type: link
 link: https://www.youtube.com/watch?v=DodZguvCda8

@@ -2,7 +2,7 @@
 title: "Influencing Behavioral Attributions Paper at ICRA Workshop"
 date: 2021-06-04 12:00 -0600
 type: link
-categories: news uw
+categories: ["news", "uw", "research"]
 published: true
 link: https://hcrlab.cs.washington.edu/assets/pdfs/2021/walker2021influencing.pdf
 featured_image: /assets/images/posts/attributions-icra.png

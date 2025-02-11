@@ -1,10 +1,10 @@
 ---
 title:  "Austin Villa@Home takes 3rd at RoboCup 2017"
 date:   2017-08-28 18:49:02 -0600
-categories: hsr robocup research news
-published: true
+categories: ["recognition", "research", "news"]
 type: link
 link: http://www.ece.utexas.edu/news/ut-austin-takes-3rd-place-robocuphome-2017-competition-japan
+published: true
 ---
 
 >RoboCup is an international scientific initiative with the goal to advance the state of the art of

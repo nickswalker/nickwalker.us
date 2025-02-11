@@ -2,7 +2,7 @@
 title: "I Organized the First Light Rail Relay"
 date: 2021-10-02 12:00 -0600
 type: link
-categories: news uw
+categories: ["news", "uw"]
 published: true
 link: https://raceconditionrunning.com/light-rail-relay-21/
 featured_image: /assets/images/posts/light-rail-relay-2021-banner.png

@@ -1,7 +1,7 @@
 ---
 title:  "Named a Dean's Honored Graduate"
 date:   2018-03-27 11:25:00 -0600
-categories: ut recognition news
+categories: ["ut", "recognition", "news"]
 published: true
 type: link
 link: https://flic.kr/p/24p3ezA
