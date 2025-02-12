@@ -31,14 +31,22 @@ _I am graduating in Spring 2025. [Contact me]({% link pages/about.md %}#contact)
     <a class="rss-note" href="{{ '/feed.xml' | relative_url }}"><ion-icon name="logo-rss"></ion-icon> RSS</a>
     <h2>News</h2>
     <ul class="post-list">
-        {% for post in site.categories.news limit:4 %}
-      <li>
-        <time class="post-meta text-secondary" datetime="{{ post.date | date_to_xmlschema}}">{{ post.date | date: "%b %-d, %Y" }}</time>
-        <h3 class="h2 mb-3">
-          <a class="post-link" href="{{ post.url }}">{{ post.title | escape | markdownify | remove: '<p>' | remove: '</p>' }}</a>
-        </h3>
-      </li>
-      {% endfor %}
+        {% assign count = 0 %}
+        {% for post in site.categories.news %}
+          {% if post.featured != false %}
+             <li>
+                <time class="post-meta text-secondary" datetime="{{ post.date | date_to_xmlschema}}">{{ post.date | date: "%b %-d, %Y" }}</time>
+                <h3 class="h2 mb-3">
+                  <a class="post-link" href="{{ post.url }}">{{ post.title | escape | markdownify | remove: '<p>' | remove: '</p>' }}</a>
+                </h3>
+              </li>
+            {% assign count = count | plus: 1 %}
+          {% endif %}
+          {% if count == 4 %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
     </ul>
 
      <a class="btn btn-outline-primary" href="{% link pages/archive.md %}">More</a>
@@ -71,7 +79,7 @@ _I am graduating in Spring 2025. [Contact me]({% link pages/about.md %}#contact)
 <p>
         {% assign count = 0 %}
 {% for post in site.posts %}
-{% unless post.categories contains "news" %}
+{% unless post.categories contains "news" or post.featured != False %}
 {% if count < 3 %}
 <a href="{{ post.url }}">{{ post.title | escape | markdownify | remove: '<p>' | remove: '</p>' }}</a>{% if count < 2 %}, {% endif %}
 {% assign count = count | plus: 1 %}
