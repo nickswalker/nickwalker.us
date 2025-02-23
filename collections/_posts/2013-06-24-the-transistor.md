@@ -1,7 +1,7 @@
 ---
 title:  "_The Transistor: Humanity's Amplifier_ Documentary Reaches Finals at National History Day Fair"
 date:   2013-06-24 17:29:02 -0700
-categories: ["recognition", "project", "history"]
+categories: ["news", "recognition", "history"]
 published: true
 type: link
 link: https://web.archive.org/web/20200926150503/https://notevenpast.org/transistor-humanitys-amplifier/

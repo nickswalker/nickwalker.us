@@ -2,7 +2,7 @@
 title: Papers Accepted at ICAPS and ICRA
 date: 2019-02-15 12:00 -0500
 type: blog
-categories: ["news", "uw"]
+categories: ["news", "uw", "research"]
 published: true
 ---
 

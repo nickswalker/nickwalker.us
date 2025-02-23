@@ -2,7 +2,7 @@
 title: Two Short Papers from AAAI Fall Symposia Series Now Available
 date: 2018-10-07 18:35 -0500
 type: blog
-categories: ["news", "ut"]
+categories: ["news", "ut", "research"]
 published: true
 ---
 

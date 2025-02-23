@@ -18,7 +18,7 @@ I'm a Ph.D. candidate at the University of Washington in Seattle. I work on huma
 
 <div class="mt-4" markdown="1">
 
-_I am graduating in Spring 2025. [Contact me]({% link pages/about.md %}#contact) if you have a role in robotics or user research._
+_I am graduating in Spring 2025. [Contact me]({% link pages/about.md %}#contact) if you have a research or product-oriented robotics role._
 
 </div>
 
@@ -49,7 +49,7 @@ _I am graduating in Spring 2025. [Contact me]({% link pages/about.md %}#contact)
 
     </ul>
 
-     <a class="btn btn-outline-primary" href="{% link pages/archive.md %}">More</a>
+     <a class="btn btn-outline-primary" href="{% link pages/archive.md %}?filter=news">More</a>
 
 
   </section>
@@ -86,7 +86,7 @@ _I am graduating in Spring 2025. [Contact me]({% link pages/about.md %}#contact)
 {% endif %}
 {% endunless %}
 {% endfor %}
-{% if count == 3 %} and{% endif %} <a href="{{ site.baseurl }}/blog/archive/">more</a>.</p>
+{% if count == 3 %} and{% endif %} <a href="{% link pages/archive.md %}?filter=post">more</a>.</p>
     </section>
 
     <section id="notes">

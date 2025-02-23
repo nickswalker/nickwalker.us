@@ -8,6 +8,14 @@ layout: page
 {% assign posts = page.posts %}
 {% endif %}
 
+<ul class="list-unstyled filter">
+    <li class="d-inline"><a href="#" class="btn btn-primary lh-sm">all</a></li>
+    <li class="d-inline"><a href="#" class="btn btn-outline-primary filter-option lh-sm">news</a></li>
+    <li class="d-inline"><a href="#" class="btn btn-outline-primary filter-option lh-sm">post</a></li>
+    <li class="d-inline"><a href="#" class="btn btn-outline-primary filter-option lh-sm">research</a></li>
+    <li class="d-inline"><a href="#" class="btn btn-outline-primary filter-option lh-sm" data-categories="fun project running">fun</a></li>
+</ul>
+
 {% assign sectionYear = "" %}
 {% for post in posts %}
 {% assign currentDate = post.date | date: "%Y" %}
@@ -18,7 +26,7 @@ layout: page
     {% assign sectionYear = currentDate %}
     {% endif %}
 
-    <li class="mb-3 row">
+    <li class="mb-3 row post-block" data-categories="{{post.categories | join: ' '}}">
         <time class="post-meta col-sm-1 text-secondary" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m/%d" }}</time>
         <h3 class="h2 col-sm">
             <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape | markdownify | remove: '<p>' | remove: '</p>'  }}</a>
@@ -27,4 +35,105 @@ layout: page
     {% if forloop.last %}</ul>{% endif %}
 {% endfor %}
 
+
+<script>
+    function filterPosts() {
+        const filter = document.querySelector('.filter');
+        const filterButtons = filter.querySelectorAll('a');
+        const posts = document.querySelectorAll('.post-block');
+
+        filter.addEventListener('click', function (e) {
+            const target = e.target;
+            if (target.tagName !== 'A') return;
+            e.preventDefault();
+
+            // Parse filter categories (supporting multiple values).
+            let filterCategories = (target.dataset.categories || target.textContent.toLowerCase())
+                    .split(' ')
+                    .map(s => s.trim())
+                    .filter(Boolean);
+
+            // If clicking an active non-"all" filter, toggle back to "all".
+            if (target.classList.contains('btn-primary') && !filterCategories.includes('all')) {
+                filterButtons[0].dispatchEvent(new Event('click', { bubbles: true }));
+                return;
+            }
+
+            // Activate clicked button; deactivate others.
+            filterButtons.forEach(btn => {
+                if (btn === target) {
+                    btn.classList.remove('btn-outline-primary');
+                    btn.classList.add('btn-primary');
+                } else {
+                    btn.classList.remove('btn-primary');
+                    btn.classList.add('btn-outline-primary');
+                }
+            });
+
+            posts.forEach(post => {
+                if (filterCategories.includes('all')) {
+                    post.classList.remove('opacity-25');
+                } else {
+                    const postCategories = post.dataset.categories.split(' ')
+                            .map(s => s.trim())
+                            .filter(Boolean);
+                    let show = false;
+                    for (let fc of filterCategories) {
+                        if (fc === 'post') {
+                            if (!postCategories.includes('news')) {
+                                show = true;
+                                break;
+                            }
+                        } else if (postCategories.includes(fc)) {
+                            show = true;
+                            break;
+                        }
+                    }
+                    if (show) {
+                        post.classList.remove('opacity-25');
+                    } else {
+                        post.classList.add('opacity-25');
+                    }
+                }
+            });
+
+            // Update the URL: remove parameter for "all", otherwise join multiple categories.
+            const newUrl = new URL(window.location);
+            const filterString = filterCategories.join(' ');
+            if (filterCategories.includes('all')) {
+                newUrl.searchParams.delete('filter');
+            } else {
+                newUrl.searchParams.set('filter', filterString);
+            }
+            history.replaceState(null, '', newUrl);
+        });
+
+        // Auto-select filter based on URL parameter.
+        const params = new URLSearchParams(window.location.search);
+        const filterParam = params.get('filter');
+        if (filterParam) {
+            let found = false;
+            filterButtons.forEach(btn => {
+                const btnCategory = btn.dataset.categories || btn.textContent.toLowerCase();
+                if (btnCategory.toLowerCase() === filterParam.toLowerCase()) {
+                    btn.dispatchEvent(new Event('click', { bubbles: true }));
+                    found = true;
+                }
+            });
+            if (!found) {
+                filterButtons[0].dispatchEvent(new Event('click', { bubbles: true }));
+            }
+        } else {
+            filterButtons[0].dispatchEvent(new Event('click', { bubbles: true }));
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function () {
+            filterPosts();
+        });
+    } else {
+        filterPosts();
+    }
+</script>
 

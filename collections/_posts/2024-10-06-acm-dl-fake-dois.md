@@ -2,7 +2,7 @@
 title: "The ACM Digital Library Has a Fake DOI Problem"
 date: 2024-10-06 12:00 -0600
 type: blog
-categories: ["research"]
+categories: ["science"]
 published: true
 ---
 

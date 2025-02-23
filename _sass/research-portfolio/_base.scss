@@ -341,3 +341,6 @@ ion-icon {
   text-decoration-color: #999;
 }
 
+.filter-option::before {
+  content: '#'
+}

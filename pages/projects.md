@@ -16,11 +16,11 @@ permalink: projects/
 
 <ul class="list-unstyled filter">
     <li class="d-inline"><a href="#" class="btn btn-primary lh-sm">all</a></li>
-    <li class="d-inline"><a href="#" class="btn btn-outline-primary lh-sm">research</a></li>
-    <li class="d-inline"><a href="#" class="btn btn-outline-primary lh-sm">running</a></li>
-    <li class="d-inline"><a href="#" class="btn btn-outline-primary lh-sm">fun</a></li>
-    <li class="d-inline"><a href="#" class="btn btn-outline-primary lh-sm">ios</a></li>
-    <li class="d-inline"><a href="#" class="btn btn-outline-primary lh-sm">web</a></li>
+    <li class="d-inline"><a href="#" class="btn btn-outline-primary filter-option lh-sm">research</a></li>
+    <li class="d-inline"><a href="#" class="btn btn-outline-primary filter-option lh-sm">running</a></li>
+    <li class="d-inline"><a href="#" class="btn btn-outline-primary filter-option lh-sm">fun</a></li>
+    <li class="d-inline"><a href="#" class="btn btn-outline-primary filter-option lh-sm">ios</a></li>
+    <li class="d-inline"><a href="#" class="btn btn-outline-primary filter-option lh-sm">web</a></li>
 </ul>
 
 <ul class="list-unstyled">
@@ -33,42 +33,44 @@ permalink: projects/
 
 <script>
 function filterProjects() {
-    const filter = document.querySelector('.filter');
-    const filterButtons = filter.querySelectorAll('a');
-    const projects = document.querySelectorAll('.project-block');
+  const filter = document.querySelector('.filter');
+  const filterButtons = filter.querySelectorAll('a');
+  const projects = document.querySelectorAll('.project-block');
 
-    filter.addEventListener('click', function(e) {
-        const target = e.target;
-        if (target.tagName === 'A') {
-            target.classList.toggle('btn-outline-primary');
-            target.classList.toggle('btn-primary');
-            for (let i = 0; i < filterButtons.length; i++) {
-                if (filterButtons[i] !== target) {
-                    filterButtons[i].classList.remove('btn-primary');
-                    filterButtons[i].classList.add('btn-outline-primary');
-                }
-            }
-            const isActive = target.classList.contains('btn-primary');
-            if (!isActive) {
-                filterButtons[0].dispatchEvent(new Event('click'));
-            }
+  filter.addEventListener('click', function (e) {
+    const target = e.target;
+    if (target.tagName !== 'A') return;
+    e.preventDefault();
 
-            
-            const category = target.textContent.toLowerCase();
-            projects.forEach(project => {
-                if (category === 'all') {
-                    project.style.display = '';
-                } else {
-                    const projectCategories = project.dataset.categories.split(' ');
-                    if (projectCategories.includes(category)) {
-                        project.style.display = '';
-                    } else {
-                        project.style.display = 'none';
-                    }
-                }
-            });
-        }
+    // Activate clicked button, deactivate others.
+    filterButtons.forEach(btn => {
+      if (btn === target) {
+        btn.classList.remove('btn-outline-primary');
+        btn.classList.add('btn-primary');
+      } else {
+        btn.classList.remove('btn-primary');
+        btn.classList.add('btn-outline-primary');
+      }
     });
+
+    // If the button was deactivated, reselect "All".
+    if (!target.classList.contains('btn-primary')) {
+      filterButtons[0].dispatchEvent(new Event('click', { bubbles: true }));
+      return;
+    }
+
+    // Use data attribute if available, fallback to text content.
+    const category = target.dataset.category || target.textContent.toLowerCase();
+
+    projects.forEach(project => {
+      if (category === 'all') {
+        project.style.display = '';
+      } else {
+        const projectCategories = project.dataset.categories.split(' ');
+        project.style.display = projectCategories.includes(category) ? '' : 'none';
+      }
+    });
+  });
 }
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() {

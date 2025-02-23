@@ -2,7 +2,7 @@
 title: RoboCup Symposium and PlanRob Papers Available
 date: 2019-07-07 12:00 -0500
 type: blog
-categories: ["news", "uw"]
+categories: ["news", "uw", "research"]
 published: true
 ---
 
