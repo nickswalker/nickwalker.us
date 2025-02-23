@@ -27,8 +27,8 @@ _I am graduating in Spring 2025. [Contact me]({% link pages/about.md %}#contact)
 
 {% assign post_count = site.posts | size %}
 {% if post_count > 0 %}
-  <section id="posts">
-    <a class="rss-note" href="{{ '/feed.xml' | relative_url }}"><ion-icon name="logo-rss"></ion-icon> RSS</a>
+  <section id="posts" class="mb-3">
+    <a class="float-end link-secondary" href="{{ '/feed.xml' | relative_url }}"><ion-icon name="logo-rss"></ion-icon> RSS</a>
     <h2>News</h2>
     <ul class="post-list">
         {% assign count = 0 %}
@@ -49,7 +49,7 @@ _I am graduating in Spring 2025. [Contact me]({% link pages/about.md %}#contact)
 
     </ul>
 
-     <a class="btn btn-outline-primary" href="{% link pages/archive.md %}?filter=news">More</a>
+     <p>and <a class="" href="{% link pages/archive.md %}?filter=news">more</a>.</p>
 
 
   </section>
@@ -58,7 +58,7 @@ _I am graduating in Spring 2025. [Contact me]({% link pages/about.md %}#contact)
     {% assign featured_projects = site.projects | where:"featured", true %}
 {% comment %}
 {% if featured_projects.size > 0 %}
-  <section id="projects">
+  <section id="projects" class="mb-4">
     <h2>Projects</h2>
       <ul class="project-block-list">
       {% for project in featured_projects %}
@@ -74,7 +74,7 @@ _I am graduating in Spring 2025. [Contact me]({% link pages/about.md %}#contact)
     {% endif %}
   {% endcomment %}
 
-    <section id="blog">
+    <section id="blog" class="mb-4">
         <h2>Blog</h2>
 <p>
         {% assign count = 0 %}
@@ -89,7 +89,7 @@ _I am graduating in Spring 2025. [Contact me]({% link pages/about.md %}#contact)
 {% if count == 3 %} and{% endif %} <a href="{% link pages/archive.md %}?filter=post">more</a>.</p>
     </section>
 
-    <section id="notes">
+    <section id="notes" class="mb-4">
         <h2>Notes</h2>
         <p class="blog-line d-flex flex-wrap gap-2">
             {% for page in site.pages %}{% assign categories_string = page.categories | join: ' ' %}

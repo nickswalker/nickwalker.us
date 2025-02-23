@@ -7,35 +7,30 @@
   }
 }
 
-.post-link {
-  display: block;
-  font-weight: normal;
-}
-
 .permalink, .permalink:visited {
   text-decoration: none;
-  color: $grey-color-light;
+  color: var(--bs-secondary-color);
   border-bottom: none;
   display: inline-block;
   padding: 0px 5px 0 5px;
 }
 
 header:hover .permalink {
-  color: $grey-color-dark;
+
   text-decoration: none;
 }
 
 .permalink:hover {
-  background-color: $grey-color-light;
+
 }
 
 article.full-post {
+  h2 {
+    font-size: 1.5rem;
+  }
   header a {
     text-decoration: none;
     letter-spacing: .4px;
-  }
-  header a:hover {
-    text-decoration: underline;
   }
   .permalink {
     display: none;
@@ -50,12 +45,11 @@ sup a:link {
 }
 
 .blog-list article {
-  margin-bottom: 3 * $spacing-unit;
+  margin-bottom: 3rem;
 }
 
 article.link-post {
   header h2 {
-    font-weight: normal;
   }
 }
 
@@ -81,17 +75,9 @@ article.project img {
   margin-bottom: 1rem;
 }
 
+
+
 article {
-
-  p a, ul a:not(.btn), ol a:not(.btn), blockquote a, pre a {
-    color: var(--light-text-color);
-    text-decoration-color: var(--light-text-color);
-
-    &:visited {
-      color: var(--text-color);
-    }
-  }
-
   ol, ul {
     padding-left: .75rem;
   }

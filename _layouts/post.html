@@ -26,13 +26,17 @@ layout: default
   </div>
   {% endif %}
 
-  <div class="clearfix mt-4 small">
+  <div class="mt-4 small">
   {% if page.previous %}
-    <a href="{{ page.previous.url }}" class="col link-secondary fw-lighter d-block mb-1"><ion-icon name="arrow-back-outline"></ion-icon> <i>Previous</i>: {{ page.previous.title }}</a>
+    <div class="mb-1">
+    <a href="{{ page.previous.url }}" class="col link-secondary fw-lighter mb-1"><ion-icon name="arrow-back-outline"></ion-icon> <i>Previous</i>: {{ page.previous.title }}</a>
+    </div>
 
   {% endif %}
   {% if page.next %}
-  <a href="{{ page.next.url }}" class="col link-secondary fw-lighter d-block mb-1"><ion-icon name="arrow-forward-outline"></ion-icon> <i>Next</i>: {{ page.next.title }}</a>
+    <div class="mb-1">
+  <a href="{{ page.next.url }}" class="col link-secondary fw-lighter mb-1"><ion-icon name="arrow-forward-outline"></ion-icon> <i>Next</i>: {{ page.next.title }}</a>
+    </div>
   {% endif %}
   </div>
 </div>

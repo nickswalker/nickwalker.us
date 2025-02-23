@@ -19,15 +19,8 @@
 }
 
 
-/**
- * Projects
- */
-
-.rss-note {
-  float: right;
-  color: $grey-color-mid-light;
-}
-
-.home .post-link {
+.home .post-link,
+.archive-page .post-link {
   font-size: 1.125rem;
+  font-weight: normal;
 }

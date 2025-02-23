@@ -20,7 +20,15 @@
     }
   }
   .nav-link {
+    color: var(--bs-nav-link-color);
     transition: none;
+    border-color: transparent;
+    &:hover {
+      background-color: var(--theme-color-dark);
+    }
+    &:visited {
+      color: var(--bs-nav-link-color)
+    }
   }
 }
 
@@ -139,16 +147,14 @@ footer p {
 }
 
 footer {
-  a,
-  a:visited {
+  a:not(.btn),
+  a:not(.btn):visited {
     color: $grey-color-mid-light;
-    -webkit-text-decoration-color: lighten($grey-color-mid-light, 10%);
-    text-decoration-color: lighten($grey-color-mid-light, 10%);
+    border-color: lighten($grey-color-mid-light, 10%);
   }
-  a:hover {
+  a:not(.btn):hover {
     color: $grey-color-dark;
-    -webkit-text-decoration-color: lighten($grey-color-dark, 25%);
-    text-decoration-color: lighten($grey-color-dark, 25%);
+    border-color: lighten($grey-color-dark, 25%);
   }
 }
 
