@@ -15,4 +15,6 @@ Four runners became the first Drumheller Marathoners at [this year's race](https
 
 The [course](https://certifiedroadraces.com/certificate/?type=m&id=3255), which I measured again this year, is the smallest footprint road marathon in the United States. It becomes Seattle's flattest marathon (3 meters net downhill, actually) and one of only three courses in the city.
 
-
+{% include article_image.html img='/assets/images/posts/drumheller-24.avif' caption="Yours-truly and Joe running with the Drumheller ducklings. (Photo: Hannah Lee)"
+alt="Two runners in athletic gear running past a circular fountain with ducks perched on the edge, in front of a large brick building on the University of Washington campus"
+%}

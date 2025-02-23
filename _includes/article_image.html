@@ -9,12 +9,12 @@
 <figure class="mb-4 {% if include.restrict_width == nil and include.restrict_width != false %}limit-width{% else %}restrict-width{% endif %}">
     {% if include.url %}
     <a href="{{ include.url }}" title="{{ include.title }}" target="_blank">
-        <img src="{{ include.img }}" alt="{{ include.title }}"/>
+        <img src="{{ include.img }}" {% if include.alt %} alt="{{ include.alt }}"{% endif %}/>
     </a>
     {% elsif lightbox %}
-    <a href="{{ include.img }}" data-fancybox="gallery"><img src="{{ include.img }}" alt="{{ include.title }}"/></a>
+    <a href="{{ include.img }}" data-fancybox="gallery"><img src="{{ include.img }}" {% if include.alt %} alt="{{ include.alt }}"{% endif %}/></a>
     {% else %}
-    <img src="{{ include.img }}" alt="{{ include.title }}"/>
+    <img src="{{ include.img }}" {% if include.alt %} alt="{{ include.alt }}"{% endif %}/>
     {% endif %}
     {% if include.caption %}
     <figcaption>{{ include.caption | markdownify }}</figcaption>

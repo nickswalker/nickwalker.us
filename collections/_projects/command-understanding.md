@@ -12,7 +12,9 @@ redirect_to: false
 ---
 
 {% include article_image.html img="/assets/images/projects/robot_command.jpg"
-    caption="Robots like the HSR are capable of many things, but it's still hard to build language interfaces that let users provide commands naturally."%}
+    caption="Robots like the HSR are capable of many things, but it's still hard to build language interfaces that let users provide commands naturally."
+    alt="A woman sitting on a couch, turning to face a home robot"
+%}
 
 ## The Problem
 

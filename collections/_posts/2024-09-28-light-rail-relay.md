@@ -8,7 +8,7 @@ link: https://raceconditionrunning.com/light-rail-relay-24
 featured_image: /assets/images/posts/lrr24-batons.avif
 ---
 
-{% include article_image.html img=page.featured_image caption="More teams, more batons."%}
+{% include article_image.html img=page.featured_image caption="More teams, more batons." alt="A row of green batons emblazoned with the Light Rail Relay logo."%}
 
 Light Rail Relay---the marathon relay along Seattle's Link Light Rail [that I organize]({% link _projects/light-rail-relay.md %})---had its biggest year yet: more than 120 runners across 11 teams and 2 solo participants. Thank you team captains and runners for making it a success.
 

@@ -7,7 +7,9 @@ type: blog
 excerpt: "Let’s cherish the brightest point in the path’s life, even if it was 115 years ago."
 ---
 
-{% include article_image.html img="/assets/images/posts/cascade-lane-02739-05-ph287.webp" caption="\"The Cascades pour 40,000 gallons of water over a succession of ledges each minute of the day. They are brilliantly illuminated with colored electrical bulbs at night and present a gorgeous appearance (May 27, 1909).\" Courtesy of the National Park Service, Frederick Law Olmsted National Historic Site (02739-05-ph287)." %}
+{% include article_image.html img="/assets/images/posts/cascade-lane-02739-05-ph287.webp" caption="\"The Cascades pour 40,000 gallons of water over a succession of ledges each minute of the day. They are brilliantly illuminated with colored electrical bulbs at night and present a gorgeous appearance (May 27, 1909).\" Courtesy of the National Park Service, Frederick Law Olmsted National Historic Site (02739-05-ph287)."
+alt="Black-and-white photograph from the Alaska-Yukon-Pacific Exposition showing men and women in formal Edwardian attire walking around a cascading fountain and ornate, flag-topped buildings."
+%}
 
 _Originally posted as a [letter to the editor at The Daily of the University of Washington](https://www.dailyuw.com/opinion/put-cascade-lane-on-the-map-again/article_3a3f8690-1efb-11ef-9649-0f5ac3c76623.html)._
 {: .alert .alert-light }
@@ -16,7 +18,9 @@ If you walk from Red Square to Drumheller Fountain you’ll pass through a brief
 
 When the Alaska-Yukon-Pacific Exposition ended, the “Cascades” and many buildings were dismantled. The beautiful formal gardens of Rainier Vista were [maintained for several years by the Seattle Parks Department](https://www.seattle.gov/cityarchives/exhibits-and-education/online-exhibits/alaska-yukon-pacific-exposition) before returning to the University to become today’s open lawn. Save for its most important elements, Drumheller (née Geyser Basin) and the borrowed landscape of Rainier itself, the grandeur of the science quad is much diminished from [its exhibition roots](https://www.historylink.org/File/8873).
 
-{% include article_image.html img="/assets/images/posts/cascade-lane-map-comparison.jpg" caption="The void on the present map and the naming at the time of the Exposition. Left: UW Campus Map. Right: Fire Insurance Map, Sanborn Map Co., Mar. 1909" %}
+{% include article_image.html img="/assets/images/posts/cascade-lane-map-comparison.jpg" caption="The void on the present map and the naming at the time of the Exposition. Left: UW Campus Map. Right: Fire Insurance Map, Sanborn Map Co., Mar. 1909" 
+alt="Side-by-side comparison of a modern University of Washington campus map with Mary Gates Hall and Drumheller Fountain on the left, and an Alaska-Yukon-Exposition era-map with labels for ‘Arctic Circle Geyser Basin Reservoir’, as well as 'Cascade Court' and exposition buildings on the right."
+%}
 
 The university should name the stretch “Cascade Lane NE” for the long-gone fountain. It’ll be a simple and likely free affair. The path is unsigned, and it can remain so. But on the web and for the next printings of campus maps, a small new label should appear.
 
@@ -29,4 +33,4 @@ We’ll all celebrate if a new name displaces Cascade. It can sidle up against t
 Tell a friend. Tell ASUW. Write a letter to The Daily. Cascade Lane.
 
 
-{% include article_image.html img="/assets/images/posts/cascade-lane-02739-05-ph328.webp" caption="\"The Cascades and Geyser Basin appeal to all classes and ages.\" Courtesy of the National Park Service, Frederick Law Olmsted National Historic Site (02739-05-ph328)." %}
+{% include article_image.html img="/assets/images/posts/cascade-lane-02739-05-ph328.webp" caption="\"The Cascades and Geyser Basin appeal to all classes and ages.\" Courtesy of the National Park Service, Frederick Law Olmsted National Historic Site (02739-05-ph328)." alt="Black-and-white photograph from the Alaska-Yukon-Pacific Exposition showing a large crowd in Edwardian attire gathered around a central fountain, flanked by ornate buildings with flags and surrounded by tall trees" %}
