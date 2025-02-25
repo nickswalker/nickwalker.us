@@ -22,7 +22,7 @@
 
   {% capture description %}{%for author in entry.author_array%}{%if forloop.last and forloop.first != true %} and {%elsif forloop.first%}{%else%}, {%endif%}{{author.first}} {{author.last}}{% if forloop.index0 < cofirst %}*{%endif%}{%endfor%}. {{venue}} {{page.entry.year}}{% endcapture %}
 {% else %}
-{% capture description %}{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}{% endcapture %}
+{% capture description %}{{ page.excerpt | default: page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}{% endcapture %}
 {% endif %}
 {% capture url %}{{ page.url | absolute_url }}{% endcapture %}
 <title>{{ title }}</title>
