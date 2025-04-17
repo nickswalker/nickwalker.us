@@ -13,12 +13,12 @@ permalink: /
   alt="Headshot of man wearing glasses and smiling"/>
 </a>
   <p markdown="1">
-I'm a Ph.D. candidate at the University of Washington in Seattle. I work on human-robot interaction with the [Human-Centered Robotics Lab](https://hcrlab.cs.washington.edu). Most of my research deals with human-robot communication, whether it's through [visual interfaces to help teleoperators]({% details_link walker2024explicit %}) or [expressive motion]({% details_link walker2021attributions %}) or [natural language]({% details_link wang2024doing %}) for users.  Previously, I worked on service robots with the [Building Wide Intelligence](http://www.cs.utexas.edu/~larg/bwi_web/){: data-goatcounter-click="ext-bwi"} project at UT Austin. Otherwise, I'm a [photographer](https://flickr.com/photos/nickwalker-us){: data-goatcounter-click="ext-flickr.com-bio"} and [runner](https://www.strava.com/athletes/35387878){: data-goatcounter-click="ext-strava.com"}.
+I'm a human-centered roboticist. I did [my PhD]({% details_link walker2025dissertation%}) at the University of Washington, where I worked on making complex robot behaviors more understandable. Some of my projects included [GPU-accelerated assistance systems for teleoperation]({% details_link walker2024explicit %}), methods for [modeling and controlling expressive motion]({% details_link walker2021attributions %}) and [natural language narration of robot behaviors]({% details_link wang2024doing %}). Previously, I worked on service robots with the [Building Wide Intelligence](http://www.cs.utexas.edu/~larg/bwi_web/){: data-goatcounter-click="ext-bwi"} project at UT Austin. Otherwise, I'm a [photographer](https://flickr.com/photos/nickwalker-us){: data-goatcounter-click="ext-flickr.com-bio"} and [runner](https://www.strava.com/athletes/35387878){: data-goatcounter-click="ext-strava.com"}.
 </p>
 
 <div class="mt-4" markdown="1">
 
-_I am graduating in Spring 2025. [Contact me]({% link pages/about.md %}#contact) if you have a research or product-oriented robotics role._
+_I am graduating in Spring 2025. [Contact me]({% link pages/about.md %}#contact) if you have a robotics role._
 
 </div>
 
