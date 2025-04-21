@@ -6,6 +6,7 @@ redirect_from:
   - /bibliography/
 ---
 
+## 2025
 
 {% bibliography --query @*[year=2025 && wwwhidden!=true]%}
 
