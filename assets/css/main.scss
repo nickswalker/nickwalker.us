@@ -86,11 +86,21 @@ $on-laptop:        800px;
   font-style: italic;
 }
 
+/* Closest we can get to tabular nums with Rowan */
+.lining-numbers {
+  font-feature-settings: "lnum";
+}
+
+.sans {
+  font-family: var(--sans-serif-font-family);
+  font-optical-sizing: auto;
+}
 
 /* */
 
 :root {
   --bs-body-font-family: "Rowan-Variable", "Georgia", serif;
+  --sans-serif-font-family: "Lato","Avenir", sans-serif;
   --small-font-size: 0.875rem;
   --theme-color: hsl(72.88, 66.53%, 48%);
   --theme-color-light: hsl(72.88, 66.53%, 53%);

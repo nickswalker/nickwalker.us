@@ -1,5 +1,5 @@
 import { LitElement, css, html } from 'lit';
-import {solve} from "https://unpkg.com/yalps@0.5.6/lib/module/index.js";
+import {solve} from 'https://cdn.jsdelivr.net/npm/yalps@0.5.6/+esm';
 
 function camelCaseToSplitWords(camelCaseString) {
     return camelCaseString
@@ -18,8 +18,8 @@ function suffixCamelCase(prepend, camelCaseString) {
 // Solubility is g/ml
 const INGREDIENTS = {
     // We assume malto is N glucose molecules (180g/mol), and subtract water molecules lost due to glycosidic bonds
-    maltodextrin: {volume: 0.95, solubility: .5, glucose: 1.0, fructose: 0, molarMass: 1640, water: 0, cost: .0133, aka: "easier to stomach form of glucose"},
-    fructose: {volume: 0.8, solubility: .79, glucose: 0, fructose: 1.0, molarMass: 180, water: 0, cost: .02},
+    maltodextrin: {volume: 0.95, solubility: .5, glucose: 1.0, fructose: 0, molarMass: 1640, water: 0, cost: .0132, aka: "easier to stomach form of glucose"},
+    fructose: {volume: 0.8, solubility: .79, glucose: 0, fructose: 1.0, molarMass: 180, water: 0, cost: .0132},
     dextrose: {volume: 0.7, solubility: .9, glucose: 1, fructose: 0, molarMass: 180, water: 0, cost: .01, aka: "pure glucose"},
     salt: {
         volume: 0.9,
@@ -31,8 +31,8 @@ const INGREDIENTS = {
         water: 0,
         cost: 0.0015
     },
-    sugar: {volume: 0.75, solubility: 2, glucose: 0.5, fructose: 0.5, molarMass: 342, water: 0, cost: .004, aka: "sucrose"},
-    honey: {volume: 0.7, glucose: 0.35, fructose: 0.4, calories: 3.2, molarMass: 155, water: 0.2, cost: .0133},
+    sugar: {volume: 0.75, solubility: 2, glucose: 0.5, fructose: 0.5, molarMass: 342, water: 0, cost: .0024, aka: "sucrose"},
+    honey: {volume: 0.7, glucose: 0.35, fructose: 0.4, calories: 3.2, molarMass: 155, water: 0.2, cost: .0110},
     // Maltose, glucose, maltotriose, in .5, .30, .20 ratio
     brownRiceSyrup: {
         volume: 0.7,
@@ -43,9 +43,9 @@ const INGREDIENTS = {
         water: 0.05,
         cost: .013
     },
-    molasses: {volume: 0.7, glucose: 0.3, fructose: 0.2, molarMass: 196, water: 0.25, cost: .009},
-    agaveNectar: {volume: 0.7, glucose: 0.2, fructose: 0.56, molarMass: 164, water: 0.2, cost: .032},
-    mapleSyrup: {volume: 0.7, glucose: 0.33, fructose: 0.33, molarMass: 280, water: 0.25, cost: .032},
+    molasses: {volume: 0.7, glucose: 0.3, fructose: 0.2, molarMass: 196, water: 0.25, cost: .0201},
+    agaveNectar: {volume: 0.7, glucose: 0.2, fructose: 0.56, molarMass: 164, water: 0.2, cost: .033},
+    mapleSyrup: {volume: 0.7, glucose: 0.33, fructose: 0.33, molarMass: 280, water: 0.25, cost: .022},
     water: {volume: 1.0, glucose: 0, fructose: 0, water: 1, osmoles: 0, cost: 0},
 };
 for (const ingredientName of Object.keys(INGREDIENTS)) {
@@ -125,7 +125,11 @@ export class GelRecipeCalculator extends LitElement {
 
     static styles = css`
       :host {
+            font-family: var(--sans-serif-font-family);
       }
+        .cursor-help {
+            cursor: help;
+        }
     `;
 
     constructor() {
@@ -138,7 +142,7 @@ export class GelRecipeCalculator extends LitElement {
             this[suffixCamelCase("use", ingredient)] = false
             this[suffixCamelCase("amount", ingredient)] = null
         }
-        this.useFructose = true
+        this.useSugar = true
         this.useMaltodextrin = true
         this.useWater = true
         this.targetOsmolalityMOsmKg = 3400
@@ -574,8 +578,11 @@ export class GelRecipeCalculator extends LitElement {
           <div class="row mb-3 ">
             <div class="col-auto">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="fully-dissolve"         .value="${this.fullyDissolve}"
-                       @input="${this.onFullyDissolveChange}"/>
+                <input class="form-check-input cursor-help" type="checkbox" id="fully-dissolve"         
+                       .value="${this.fullyDissolve}"
+                       @input="${this.onFullyDissolveChange}"
+                       title="Automatically calculate water needed to fully dissolve the ingredients. Will be like a sports drink."
+                />
                 <label class="form-check-label" for="fully-dissolve">
                   Fully dissolve
                 </label>
@@ -597,7 +604,7 @@ export class GelRecipeCalculator extends LitElement {
                             .checked="${this[suffixCamelCase("use", ingredient)]}"
                             @change="${e => this.onIngredientChange(e, ingredient)}"
                     />
-                    <label class="form-check-label ms-2" for="${ingredient}" title="${INGREDIENTS[ingredient].aka? INGREDIENTS[ingredient].aka + ', ' : "" }glucose:fructose ${glucoseFructoseRatio(ingredient)}">${camelCaseToSplitWords(ingredient)}</label>
+                    <label class="form-check-label ms-2 cursor-help" for="${ingredient}" title="${INGREDIENTS[ingredient].aka? INGREDIENTS[ingredient].aka + ', ' : "" }glucose:fructose ${glucoseFructoseRatio(ingredient)}">${camelCaseToSplitWords(ingredient)}</label>
                   </div>
                   <input
                           id="${suffixCamelCase('amount', ingredient)}"
@@ -688,7 +695,7 @@ export class GelRecipeCalculator extends LitElement {
                   ${this[suffixCamelCase("use", ingredient)] ? html`
                     <tr>
                       <td class="${ this[`${ingredient}G`] === 0 ? 'text-secondary' : ''}">${camelCaseToSplitWords(ingredient)}</td>
-                      <td class="${ this[`${ingredient}G`] === 0 ? 'text-secondary' : ''}" title="${(INGREDIENTS[ingredient].glucose * this[`${ingredient}G`]).toFixed(1)}g:${(INGREDIENTS[ingredient].fructose * this[`${ingredient}G`]).toFixed(1)}g">${Math.ceil(this[`${ingredient}G`])}g</td>
+                      <td class="${ this[`${ingredient}G`] === 0 ? 'text-secondary' : ''} cursor-help" title="${(INGREDIENTS[ingredient].glucose * this[`${ingredient}G`]).toFixed(1)}g:${(INGREDIENTS[ingredient].fructose * this[`${ingredient}G`]).toFixed(1)}g">${Math.ceil(this[`${ingredient}G`])}g</td>
                     </tr>
                   ` : ''}
                 `)}
@@ -711,7 +718,7 @@ export class GelRecipeCalculator extends LitElement {
                 </tr>
                 <tr>
                   <td>Cost</td>
-                  <td>$${(this.cost / 100).toFixed(2)}</td>
+                  <td>$${(this.cost).toFixed(2)}</td>
                 </tr>
                 </tbody>
               </table>
@@ -733,6 +740,7 @@ export class CaffeineCalculator extends LitElement {
 
     static styles = css`
       :host {
+          font-family: var(--sans-serif-font-family);
       }
     `;
 

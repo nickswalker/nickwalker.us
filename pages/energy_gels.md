@@ -88,7 +88,7 @@ You can also use this gel/drink recipe in the lead up to a big event for an easy
 ### Ingredient prices
 
 
-<table class="table small">
+<table class="table small lining-numbers">
   <thead>
     <tr>
       <th scope="col">Name</th>
@@ -100,15 +100,15 @@ You can also use this gel/drink recipe in the lead up to a big event for an easy
   <tbody>
     <tr>
       <td>Maltodextrin</td>
-      <td>1.33</td>
+      <td>1.32</td>
       <td>4lb (1 gallon) container</td>
       <td>$6/lb</td>
     </tr>
     <tr>
       <td>Fructose</td>
-      <td>2.00</td>
+      <td>1.32</td>
       <td>3lb bag</td>
-      <td>$8/lb</td>
+      <td>$6/lb</td>
     </tr>
     <tr>
       <td>Dextrose (glucose)</td>
@@ -124,43 +124,43 @@ You can also use this gel/drink recipe in the lead up to a big event for an easy
     </tr>
     <tr>
       <td>Sugar (sucrose)</td>
-      <td>0.40</td>
+      <td>0.24</td>
       <td>4lb bag</td>
-      <td>$1/lb</td>
+      <td>$1.10/lb</td>
     </tr>
     <tr>
       <td>Honey</td>
-      <td>1.33</td>
+      <td>1.10</td>
       <td>1lb squeeze bottle</td>
-      <td>$6/lb</td>
+      <td>$5/lb</td>
     </tr>
     <tr>
       <td>Brown rice syrup</td>
-      <td>1.30</td>
+      <td>1.10</td>
       <td>21oz jar</td>
       <td>$5/lb</td>
     </tr>
     <tr>
       <td>Molasses</td>
-      <td>0.90</td>
+      <td>2.01</td>
       <td>12oz bottle</td>
-      <td>$8/lb</td>
+      <td>$9/lb</td>
     </tr>
     <tr>
       <td>Agave nectar</td>
-      <td>3.20</td>
+      <td>3.30</td>
       <td>23.5oz bottle</td>
       <td>$15/lb</td>
     </tr>
     <tr>
       <td>Maple syrup</td>
-      <td>3.20</td>
+      <td>2.20</td>
       <td>32oz bottle</td>
       <td>$10/lb</td>
     </tr>
     <tr>
       <td>Caffeine</td>
-      <td>5¢/100mg</td>
+      <td>4¢/100mg</td>
       <td>250 100mg capsules</td>
       <td>$10/250 capsules</td>
     </tr>
@@ -179,6 +179,9 @@ You can also use this gel/drink recipe in the lead up to a big event for an easy
 
 ## Changelog
 
+* **2024-05-14**:
+  * Fix cost calculation and refresh prices
+  * Appearance changes
 * **2024-09-22**:
   * Store calculator input across refreshes (open a new tab to restore defaults) 
 * **2024-06-23**: 
