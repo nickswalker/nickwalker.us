@@ -1,10 +1,10 @@
 {
  "basics": {
   "name": "Nick Walker",
-  "label": "Ph.D. Candidate in Computer Science",
+  "label": "",
   "email": "nswalker@cs.uw.edu",
   "website": "https://nickwalker.us",
-  "summary": "Nick Walker is a Ph.D. candidate in Computer Science at the University of Washington in Seattle.",
+  "summary": "Nick Walker is a roboticist with a Ph.D. in Computer Science from the University of Washington in Seattle.",
   "profiles": [
    {
     "network": "Mastodon",
@@ -40,7 +40,7 @@
    "website": "https://courses.cs.washington.edu/courses/cse478/21sp/",
    "date": "2021 Sp.",
    "highlights": [
-    "Ported assignments to Python 3, developed unit tests and CI-based autograder used in 5+ offerings"
+    "Updated assignments, developed unit tests and CI-based autograder used in 5+ offerings"
    ]
   },
   {
@@ -59,9 +59,10 @@
    "position": "Graduate Research Assistant",
    "website": "https://hcrlab.cs.washington.edu",
    "startDate": "2018",
+   "endDate": "2025",
    "highlights": [
-    "Making robot behaviors automatically transparent [c8,c12]",
-    "Generating communicative actions during task execution [c8,c12]",
+    "Learning models that help robot supervisors diagnose failures [t1]",
+    "Generating communicative motion and language during task execution [c8,c12,t1]",
     "Perceptions of intrinsically motivated robot behaviors [c6,c8]"
    ]
   },
@@ -88,7 +89,7 @@
   },
   {
    "company": "University of Texas",
-   "position": "Peer Mentor",
+   "position": "Undergraduate Research Assistant",
    "website": "https://www.cs.utexas.edu/~larg/bwi_web/",
    "startDate": "2016",
    "endDate": "2018",
@@ -112,15 +113,23 @@
  "volunteer": [
   {
    "organization": "Drumheller Marathon & Half Marathon",
-   "position": "Organizer",
+   "position": "Director",
    "website": "https://drumhellermarathon.com",
    "startDate": "2022"
   },
   {
    "organization": "Light Rail Relay",
-   "position": "Organizer",
+   "position": "Director",
    "website": "https://lightrailrelay.com",
    "startDate": "2021"
+  },
+  {
+   "organization": "Conference on Robot Learning",
+   "shortName": "CoRL",
+   "website": "https://corl.org/",
+   "position": "Reviewer",
+   "number": 4,
+   "date": "2025"
   },
   {
    "organization": "ACM Transactions on Human-Robot Interaction",
@@ -398,13 +407,13 @@
    "area": "Computer Science",
    "studyType": "Ph.D.",
    "startDate": "2018",
+   "endDate": "2025",
    "_gpa": "3.84/4.00",
    "highlights": [
     {
      "description": "Advised by Maya Cakmak",
      "link": "http://www.mayacakmak.io"
-    },
-    "Thesis: Making Robot Behaviors Automatically Transparent"
+    }
    ],
    "courses": []
   },
@@ -440,7 +449,7 @@
  ],
  "awards": [
   {
-   "title": "Best Short Paper",
+   "title": "Best Paper: Short Contributions",
    "date": "2024",
    "awarder": "ACM/IEEE International Conference on Human-Robot Interaction",
    "link": "https://dl.acm.org/doi/10.1145/3610977.3637486"
@@ -448,6 +457,7 @@
   {
    "title": "Graduate Research Fellowship",
    "startDate": "2020",
+   "endDate": "2025",
    "awarder": "National Science Foundation",
    "link": "https://news.cs.washington.edu/2020/06/23/allen-school-students-recognized-for-excellence-in-research-by-the-national-science-foundation/"
   },
@@ -498,11 +508,19 @@
  ],
  "publications": [
   {
+   "type": "thesis",
+   "name": "Making Robot Behaviors Automatically Transparent",
+   "authors": "N.\u00a0Walker",
+   "publisher": "The University of Washington",
+   "releaseDate": "Mar. 2025",
+   "link": "https://nickwalker.us/publications/walker2025dissertation/"
+  },
+  {
    "type": "conference",
    "name": "I Can Tell What I Am Doing: Toward Real-World Natural Language Grounding of Robot Experiences",
    "authors": "Z.\u00a0Wang, B.\u00a0Liang, V.\u00a0Dhat, Z.\u00a0Brumbaugh, N.\u00a0Walker, R.\u00a0Krishna, M.\u00a0Cakmak",
    "location": "Munich, Germany",
-   "publisher": "Conf. Robot Learning",
+   "publisher": "Proc. of The 8th Conf. Robot Learning",
    "releaseDate": "Nov. 2024",
    "link": "https://nickwalker.us/publications/wang2024doing/"
   },
@@ -580,7 +598,7 @@
    "name": "Influencing Behavioral Attributions to Robot Motion During Task Execution",
    "authors": "N.\u00a0Walker, C.\u00a0Mavrogiannis, S.\u00a0Srinivasa, M.\u00a0Cakmak",
    "location": "London, UK",
-   "publisher": "Conf. Robot Learning",
+   "publisher": "Proc. 5th Conf. Robot Learning",
    "releaseDate": "Nov. 2021",
    "link": "https://nickwalker.us/publications/walker2021attributions/"
   },
@@ -589,7 +607,7 @@
    "name": "Learning Backchanneling Behaviors for a Social Robot via Data Augmentation from Human-Human Conversations",
    "authors": "M.\u00a0Murray, N.\u00a0Walker, A.\u00a0Nanavati, P.\u00a0Alves-Oliveira, N.\u00a0Filippov, A.\u00a0Sauppe, B.\u00a0Mutlu, M.\u00a0Cakmak",
    "location": "London, UK",
-   "publisher": "Conf. Robot Learning",
+   "publisher": "Proc. 5th Conf. Robot Learning",
    "releaseDate": "Nov. 2021",
    "link": "https://nickwalker.us/publications/murray2021learning/"
   },
@@ -609,14 +627,6 @@
    "publisher": "Journal of Artificial Intelligence Research",
    "releaseDate": "Feb. 2020",
    "link": "https://nickwalker.us/publications/thomason2020improving/"
-  },
-  {
-   "type": "patent",
-   "name": "Transcription analysis platform",
-   "authors": "M.\u00a0J.\u00a0Szentes, C.\u00a0Chavez, R.\u00a0E.\u00a0Lewis, N.\u00a0S.\u00a0Walker",
-   "publisher": "US10854190",
-   "releaseDate": "Dec. 2020",
-   "link": "https://nickwalker.us/publications/szentes2020transcription/"
   },
   {
    "type": "conference",
@@ -662,15 +672,6 @@
    "publisher": "Proc. of SPIE 10051, Neural Imaging Sensing",
    "releaseDate": "Feb. 2017",
    "link": "https://nickwalker.us/publications/schroeder2017/"
-  },
-  {
-   "type": "workshop",
-   "name": "Influencing Behavioral Attributions to Robot Motion During Task Execution",
-   "authors": "N.\u00a0Walker, C.\u00a0Mavrogiannis, S.\u00a0Srinivasa, M.\u00a0Cakmak",
-   "location": "Xi'an, China",
-   "publisher": "Proc. 2021 ICRA Workshop Modern Approaches for Intrinsically-Motivated Intelligent Behavior",
-   "releaseDate": "Jun. 2021",
-   "link": "https://nickwalker.us/publications/walker2021influencing/"
   },
   {
    "type": "workshop",
@@ -724,10 +725,7 @@
    "keywords": [
     "Python",
     "C++",
-    "Javascript",
-    "Typescript",
-    "HTML",
-    "CSS",
+    "Javascript/HTML/CSS",
     "Answer Set Programming"
    ]
   },
@@ -735,26 +733,9 @@
    "name": "Frameworks & Tools",
    "keywords": [
     "PyTorch",
-    "Numpy",
-    "Scipy",
-    "OpenCV",
-    "Pandas",
-    "ROS 1 & 2",
+    "ROS",
     "Docker",
-    "Isaac Sim",
-    "Arduino",
-    "D3.js",
-    "three.js",
-    "p5.js",
-    "MapLibre GL.js"
-   ]
-  },
-  {
-   "name": "User research",
-   "keywords": [
-    "Mixed methods",
-    "Study design",
-    "Hypothesis testing"
+    "Isaac Sim"
    ]
   },
   {
@@ -840,10 +821,35 @@
  ],
  "grants": [
   {
-   "name": "A Speech and Language Dataset of GPSR Commands (League Development Grant)",
+   "name": "Documenting Geyser Basin on the University of Washington Campus",
+   "fullName": "Documenting Geyser Basin/Drumheller Fountain on the University of Washington Campus",
+   "awarder": "4Culture",
+   "type": "Preservation Special Projects Grant",
+   "date": "2025",
+   "amount": "$9,500",
+   "role": "PI",
+   "link": "https://www.4culture.org/grants/preservation-projects/"
+  },
+  {
+   "name": "A Speech and Language Dataset of GPSR Commands",
    "awarder": "RoboCup Federation",
-   "date": "2020"
+   "type": "League Development Grant",
+   "date": "2020",
+   "amount": "$2,200",
+    "role": "PI",
+   "link": "https://www.robocup.org/"
   }
+ ],
+ "mentoring": [
+  { "name": "Aidan Alchin", "role": "Highschool Intern", "startDate": "2019", "endDate": "2019" },
+  { "name": "Kavi Dey", "role":  "Highschool Intern", "startDate": "2021", "endDate": "2022"},
+  { "name": "Zachary Brumbaugh", "role": "Undergraduate Researcher", "startDate": "2022", "endDate": "2023" },
+  { "name": "Zihan Wang", "role": "Graduate Researcher", "startDate": "2023", "endDate": "2025" },
+  { "name": "Joe Sluis", "role": "Undergraduate Researcher", "startDate": "2022", "endDate": "2025" },
+  { "name": "Brian Yao", "role": "Undergraduate Researcher", "startDate": "2022", "endDate": "2025" },
+  { "name": "Xiangyu Gan", "role": "Undergraduate Researcher", "startDate": "2023", "endDate": "2024" },
+  { "name": "Yuxin Ray Song", "role": "Undergraduate Researcher", "startDate": "2023", "endDate": "2024" },
+  { "name": "Varad Dhat", "role": "Graduate Researcher", "startDate": "2023", "endDate": "2025" }
  ],
  "presentations": [
   {
