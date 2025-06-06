@@ -69,7 +69,7 @@ export class LapCalculator extends LitElement {
         /* Set a fixed scrollable wrapper */
 
         .table-wrap {
-            max-height: 100vh;
+            max-height: 60vh;
             overflow: auto;
             position: relative;
         }
@@ -343,24 +343,21 @@ export class LapCalculator extends LitElement {
 
     firstUpdated() {
         const tableWrap = this.shadowRoot.querySelector('.table-wrap');
-        if (tableWrap) {
-            tableWrap.addEventListener('scroll', this.handleScroll.bind(this));
-            this.contentHidden = tableWrap.scrollHeight > tableWrap.clientHeight && tableWrap.scrollTop < tableWrap.scrollHeight - tableWrap.clientHeight;
-
-        }
+        tableWrap.addEventListener('scroll', this.updateContentHidden.bind(this));
+        // Also run handler when element changes size
+        const resizeObserver = new ResizeObserver(this.updateContentHidden.bind(this));
+        resizeObserver.observe(tableWrap);
+        this.contentHidden = tableWrap.scrollHeight > tableWrap.clientHeight && tableWrap.scrollTop < tableWrap.scrollHeight - tableWrap.clientHeight;
     }
 
-    // Handle scroll events
-    handleScroll(event) {
+    updateContentHidden(event) {
         const element = event.target;
         const scrollTop = element.scrollTop;
         this.isScrolled = scrollTop > 0;
         // Check whether the element can be scrolled any further
         this.contentHidden = element.scrollHeight > element.clientHeight && element.scrollTop < element.scrollHeight - element.clientHeight;
-
     }
 
-    // Store the current state to session storage
     storeState() {
         const state = {
             eventDistance: this.eventDistance,
@@ -371,7 +368,6 @@ export class LapCalculator extends LitElement {
         sessionStorage.setItem('lapCalculatorState', JSON.stringify(state));
     }
 
-    // Restore the state from session storage
     restoreState() {
         const savedState = sessionStorage.getItem('lapCalculatorState');
         if (savedState) {
@@ -710,7 +706,7 @@ export class LapCalculator extends LitElement {
                         min="0"
                         step="1"
                         class="form-control form-control-sm sans"
-                        formnovalidate
+                        novalidate
                         .value="${this.eventDistance}"
                         @input="${(e) => this.eventDistance = parseFloat(e.target.value)}"
                 />
@@ -727,6 +723,7 @@ export class LapCalculator extends LitElement {
                         min="0"
                         step="0.01"
                         class="form-control form-control-sm sans"
+                        novalidate
                         .value="${this.trackLength}"
                         @input="${(e) => this.trackLength = parseFloat(e.target.value)}"
                 />
