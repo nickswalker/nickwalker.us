@@ -51,7 +51,8 @@ GEM
     ethon (0.16.0)
       ffi (>= 1.15.0)
     eventmachine (1.2.7)
-    ffi (1.17.2)
+    ffi (1.17.2-arm64-darwin)
+    ffi (1.17.2-x86_64-linux-gnu)
     fiber-annotation (0.2.0)
     fiber-local (1.1.0)
       fiber-storage
@@ -128,11 +129,11 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
     metrics (0.12.2)
-    mini_portile2 (2.8.8)
     namae (1.2.0)
       racc (~> 1.7)
-    nokogiri (1.18.7)
-      mini_portile2 (~> 2.8.2)
+    nokogiri (1.18.7-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.18.7-x86_64-linux-gnu)
       racc (~> 1.4)
     observer (0.1.2)
     open-uri (0.5.0)
@@ -181,6 +182,7 @@ GEM
 PLATFORMS
   arm64-darwin-21
   arm64-darwin-22
+  arm64-darwin-23
   x86_64-linux
 
 DEPENDENCIES
@@ -197,7 +199,7 @@ DEPENDENCIES
   unicode
 
 RUBY VERSION
-   ruby 3.1.2p20
+   ruby 3.2.3p157
 
 BUNDLED WITH
    2.4.6
