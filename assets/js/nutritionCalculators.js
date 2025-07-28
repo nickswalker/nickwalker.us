@@ -21,6 +21,41 @@ const INGREDIENTS = {
     maltodextrin: {volume: 0.95, solubility: .5, glucose: 1.0, fructose: 0, molarMass: 1640, water: 0, cost: .0132, aka: "easier to stomach form of glucose"},
     fructose: {volume: 0.8, solubility: .79, glucose: 0, fructose: 1.0, molarMass: 180, water: 0, cost: .0132},
     dextrose: {volume: 0.7, solubility: .9, glucose: 1, fructose: 0, molarMass: 180, water: 0, cost: .01, aka: "pure glucose"},
+    sugar: {volume: 0.75, solubility: 2, glucose: 0.5, fructose: 0.5, molarMass: 342, water: 0, cost: .0024, aka: "sucrose"},
+    honey: {
+        volume: 0.7,
+        solubility: 2.2,
+        glucose: 0.35,
+        fructose: 0.4,
+        calories: 3.2,
+        molarMass: 155,
+        water: 0.2,
+        cost: .0110
+    },
+    // Maltose, glucose, maltotriose, in .5, .30, .20 ratio
+    brownRiceSyrup: {
+        volume: 0.7,
+        solubility: 2,
+        glucose: 0.75,
+        fructose: 0.05,
+        calories: 3.2,
+        molarMass: 334,
+        water: 0.20,
+        cost: .013
+    },
+    molasses: {volume: 0.7, solubility: 4, glucose: 0.3, fructose: 0.2, molarMass: 196, water: 0.25, cost: .0201},
+    agaveNectar: {volume: 0.7, solubility: 2, glucose: 0.2, fructose: 0.56, molarMass: 164, water: 0.2, cost: .033},
+    mapleSyrup: {volume: 0.7, solubility: 3, glucose: 0.33, fructose: 0.33, molarMass: 280, water: 0.25, cost: .022},
+    cornSyrup: {
+        volume: 0.71,           // Based on density of ~1.4 g/mL vs water at 1.0 g/mL (1/1.4 ≈ 0.71)
+        solubility: 6,
+        glucose: 0.33,          // ~1/3 glucose by weight per research
+        fructose: 0,            // Regular corn syrup has minimal fructose (unlike HFCS)
+        molarMass: 200,         // Estimated average - mix of glucose (180), maltose (342), higher oligosaccharides
+        water: 0.24,            // ~24% water content typical for liquid corn syrup
+        cost: 0.008,            // ~$0.35/lb bulk = $0.008/g (35 cents per 453g)
+        aka: "liquid glucose syrup, prevents crystallization"
+    },
     salt: {
         volume: 0.9,
         solubility: .36,
@@ -31,21 +66,17 @@ const INGREDIENTS = {
         water: 0,
         cost: 0.0015
     },
-    sugar: {volume: 0.75, solubility: 2, glucose: 0.5, fructose: 0.5, molarMass: 342, water: 0, cost: .0024, aka: "sucrose"},
-    honey: {volume: 0.7, glucose: 0.35, fructose: 0.4, calories: 3.2, molarMass: 155, water: 0.2, cost: .0110},
-    // Maltose, glucose, maltotriose, in .5, .30, .20 ratio
-    brownRiceSyrup: {
-        volume: 0.7,
-        glucose: 0.75,
-        fructose: 0.05,
-        calories: 3.2,
-        molarMass: 334,
-        water: 0.05,
-        cost: .013
+    citricAcid: {
+        volume: 0.6,
+        solubility: 1.33,      // Very high solubility: ~133g/100mL water at room temp
+        glucose: 0,
+        fructose: 0,
+        molarMass: 192,        // C6H8O7 molecular weight
+        osmoles: 0.0156,       // Triprotic acid, so 3 osmoles per mole
+        water: 0,
+        cost: 0.011,
+        aka: "sour salt, preservative and pH adjuster"
     },
-    molasses: {volume: 0.7, glucose: 0.3, fructose: 0.2, molarMass: 196, water: 0.25, cost: .0201},
-    agaveNectar: {volume: 0.7, glucose: 0.2, fructose: 0.56, molarMass: 164, water: 0.2, cost: .033},
-    mapleSyrup: {volume: 0.7, glucose: 0.33, fructose: 0.33, molarMass: 280, water: 0.25, cost: .022},
     water: {volume: 1.0, glucose: 0, fructose: 0, water: 1, osmoles: 0, cost: 0},
 };
 for (const ingredientName of Object.keys(INGREDIENTS)) {
@@ -253,7 +284,8 @@ export class GelRecipeCalculator extends LitElement {
                 water: ingredient.water,
                 cost: ingredient.cost,
                 netOsmolality: 1000 * ingredient.osmoles  - this.targetOsmolalityMOsmKg / 1000 * ingredient.water,
-                netSolubility: ingredient.solubility > 0 ? 1 / ingredient.solubility : -ingredient.water,
+                // Net additional water needed per gram (accounting for water already in ingredient) to reach 100% saturation
+                netSolubility: ingredient.solubility > 0 ? (1 / ingredient.solubility) - ingredient.water : -ingredient.water,
                 netCarbSourceRatio: ingredient.glucose * this.fructoseRatio  - ingredient.fructose * this.glucoseRatio,
                 mass: 1,
             };
