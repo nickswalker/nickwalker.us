@@ -22,10 +22,12 @@ DIY means you can easily add caffeine and salt, or substitute a carb source. And
 
 This calculator takes your desired [carb-type ratio](#glucosefructose-ratio), [concentration](#osmotic-concentration-osmolality-and-tonicity) and any [particular ingredient](#which-ingredients-should-i-use) amounts, then optimizes for low volume. Checked ingredients will be considered in the calculation, but they may be ignored if not needed to reach the desired characteristics. Specify amounts manually to force the calculator to include an ingredient. A warning will appear if the ingredients or amounts can't meet the target ratio. Hover over ingredient names to see their glucose/fructose ratio, and hover over ml to see oz.
 
-<div class="card mb-3">
-    <div class="card-body">
-        <gel-recipe-calculator><div class="alert alert-warning">The calculator requires Javascript to be enabled and only works on recent browsers. Sorry!</div></gel-recipe-calculator>
-    </div>
+<div class="full-width">
+  <div class="card mb-3 container-xl p-0">
+      <div class="card-body">
+          <gel-recipe-calculator><div class="alert alert-warning">The calculator requires Javascript to be enabled and only works on recent browsers. Sorry!</div></gel-recipe-calculator>
+      </div>
+  </div>
 </div>
 
 1. (Optionally) warm up the water.
@@ -179,7 +181,12 @@ You can also use this gel/drink recipe in the lead up to a big event for an easy
 
 ## Changelog
 
-* **2024-05-14**:
+* **2025-07-28**:
+  * Add presets
+  * Default recipe to a single 25g gel. Click preset again to easily scale
+  * Organize controls into sections and add more "Amount" controls
+  * Fix "Fully Dissolve" for liquid ingredients
+* **2025-05-14**:
   * Fix cost calculation and refresh prices
   * Appearance changes
 * **2024-09-22**:
