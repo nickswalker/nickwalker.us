@@ -277,8 +277,8 @@ export class GelRecipeCalculator extends LitElement {
                         "fructoseRatio": null,
                         "glucoseRatio": null,
                         "amountWater": 450,
-                        "amountSugar": 30,
-                        "amountCitricAcid": 1.0,
+                        "amountSugar": 50,
+                        "amountCitricAcid": 2.0,
                         "amountSalt": 1.0,
                     }
             },
