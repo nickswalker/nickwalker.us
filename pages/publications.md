@@ -4,6 +4,8 @@ title: Publications
 permalink: publications/
 redirect_from:
   - /bibliography/
+custom_js:
+  - /assets/js/bibtex-copy.js
 ---
 
 ## 2025
