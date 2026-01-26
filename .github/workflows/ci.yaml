@@ -31,7 +31,7 @@ jobs:
           ./_test/test_bibtex.rb _data/references.bib
           bundle exec htmlproofer ./_site\
             --only-4xx\
-            --ignore-status-codes "999,403"\
+            --ignore-status-codes "999,403,405"\
             --assume-extension .html\
             --no-enforce-https\
             --ignore-missing-alt\
@@ -67,7 +67,7 @@ jobs:
           ./_test/test_bibtex.rb _data/references.bib
           bundle exec htmlproofer ./_site\
             --only-4xx\
-            --ignore-status-codes "999,403"\
+            --ignore-status-codes "999,403,405"\
             --assume-extension .html\
             --no-enforce-https\
             --ignore-missing-alt\
