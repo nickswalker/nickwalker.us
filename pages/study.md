@@ -31,13 +31,17 @@ Book a 1 hour appointment below, or <a href="https://outlook.office.com/book/Rob
 <!-- end Google Calendar Appointment Scheduling -->
 
 
-</div>
-
 <h2 class="mt-2">Finding the study room</h2>
 
 <p>The study will be in MIT Building 32 (the Stata Center). To find the room, enter from the Dreyfoos entrance on Vassar. Use the small set of stairs across from the large radar dish to enter the laboratory. Just inside, you will see a door on your right marked 32-226 or CLEAR Lab. Study staff will let you in at your appointment time.</p>
 
+
+</div>
+
+
 <meta name="robots" content="noindex">
+
+
 
 
 {% include footer.html %}
