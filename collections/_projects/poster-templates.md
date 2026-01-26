@@ -5,6 +5,7 @@ categories: ["design"]
 description: |
     Templates for making research posters, with branding for the University of Washington and the Paul G. Allen School of Computer Science & Engineering.
 redirect_to: false
+published: false
 ---    
 
 {% include article_multiimage.html images="/assets/images/projects/poster-templates/influencing-poster.webp /assets/images/projects/poster-templates/template-poster.webp /assets/images/projects/poster-templates/villa2019-poster.webp" caption="Some posters I've made using these templates. Looking at them shrunken down on a screen can be a helpful reminder of what a poster looks like from a distance. "%}

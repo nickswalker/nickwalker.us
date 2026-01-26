@@ -11,7 +11,7 @@ excerpt: "Let’s cherish the brightest point in the path’s life, even if it w
 alt="Black-and-white photograph from the Alaska-Yukon-Pacific Exposition showing men and women in formal Edwardian attire walking around a cascading fountain and ornate, flag-topped buildings."
 %}
 
-_Originally posted as a [letter to the editor at The Daily of the University of Washington](https://www.dailyuw.com/opinion/put-cascade-lane-on-the-map-again/article_3a3f8690-1efb-11ef-9649-0f5ac3c76623.html)._
+_Originally posted as a [letter to the editor at The Daily of the University of Washington](https://www.dailyuw.com/opinion/put-cascade-lane-on-the-map-again/article_3a3f8690-1efb-11ef-9649-0f5ac3c76623.html){: data-proofer-ignore}._
 {: .alert .alert-light }
 
 If you walk from Red Square to Drumheller Fountain you’ll pass through a brief nominative void. Down the steps, there’s a stretch of undistinguished asphalt about 150 meters long. Looking at its heaved and cracked surface, you’d never know that 115 years prior, this was where the immense and appropriately-named “Cascade Fountain” poured down the slope into the basin now known as Drumheller Fountain.

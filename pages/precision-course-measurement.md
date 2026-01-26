@@ -49,7 +49,7 @@ Standard GPS devices like phones are precise to about 1m in ideal conditions. So
 
 Some [states have free networks](https://e38surveysolutions.com/pages/ntrip-rtk-network-access-by-state).
 
-Alternatively, you can sign up for [thingstream](https://www.u-blox.com/en/product/thingstream) and use their [PointPerfect](https://developer.thingstream.io/guides/location-services/pointperfect-getting-started#h.bnxb00jfm4sd) service and enable NTRIP.
+Alternatively, you can sign up for [thingstream](https://www.u-blox.com/en/product/thingstream) and use their [PointPerfect](https://www.u-blox.com/en/product/pointperfectflex) service and enable NTRIP.
 
 ### Setup
 

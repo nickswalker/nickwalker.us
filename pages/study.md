@@ -22,7 +22,7 @@ description: We're running a study to understand how people teach robots. No pri
 
 <h2 class="mt-2">Schedule a time</h2>
 
-Book a 1 hour appointment below, or <a href="https://outlook.office.com/book/RobotTeachingStudy@mitprod.onmicrosoft.com/?ismsaljsauthenabled">through this link</a>.
+Book a 1 hour appointment below, or <a href="https://outlook.office.com/book/RobotTeachingStudy@mitprod.onmicrosoft.com/?ismsaljsauthenabled" data-proofer-ignore>through this link</a>.
 
 
 
