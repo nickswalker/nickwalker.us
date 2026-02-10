@@ -1,8 +1,8 @@
 {
  "basics": {
   "name": "Nick Walker",
-  "label": "",
-  "email": "nswalker@cs.uw.edu",
+  "label": "Robotics Researcher",
+  "email": "nswalker@mit.edu",
   "website": "https://nickwalker.us",
   "summary": "Nick Walker is a roboticist with a Ph.D. in Computer Science from the University of Washington in Seattle.",
   "profiles": [
@@ -32,7 +32,15 @@
    }
   ]
  },
- "interests": "I am an expert in developing, formalizing and evaluating new interactions. My research focuses on human-robot communication, with topics including service robots, teleoperation, and natural language interfaces. I expect to graduate March 2025, and am searching for engineering or research roles where I can develop intelligent systems with humane interfaces.",
+ "appointments": [
+  {
+   "position": "Postdoctoral Research Associate",
+   "company": "Massachusetts Institute of Technology",
+   "website": "https://clear.csail.mit.edu",
+   "startDate": "2025"
+  }
+ ],
+ "interests": "I am an expert in developing, formalizing and evaluating new interactions. My research focuses on human-robot communication, with topics including service robots, teleoperation, and natural language interfaces.",
  "teaching_experience": [
   {
    "company": "UW CSE 478 (Robotics)",
@@ -54,6 +62,15 @@
   }
  ],
  "research_experience": [
+  {
+   "company": "Massachusetts Institute of Technology",
+   "position": "Postdoctoral Research Associate",
+   "website": "https://clear.csail.mit.edu",
+   "startDate": "2025",
+   "highlights": [
+    "Improving methods for reinforcement and imitation learners to communicate their uncertainty"
+   ]
+  },
   {
    "company": "University of Washington",
    "position": "Graduate Research Assistant",
@@ -122,6 +139,38 @@
    "position": "Director",
    "website": "https://lightrailrelay.com",
    "startDate": "2021"
+  },
+  {
+   "organization": "IEEE Robotics and Automation Letters",
+   "shortName": "RA-L",
+   "website": "https://www.ieee-ras.org/publications/ra-l",
+   "position": "Reviewer",
+   "number": 1,
+   "date": "2025"
+  },
+  {
+   "organization": "International Journal of Social Robotics",
+   "shortName": "IJSR",
+   "website": "https://www.springer.com/journal/12369",
+   "position": "Reviewer",
+   "number": 1,
+   "date": "2025"
+  },
+  {
+   "organization": "IEEE International Conference on Robotics and Automation",
+   "shortName": "ICRA",
+   "website": "https://www.ieee-ras.org/conferences-workshops/financially-co-sponsored/icra",
+   "position": "Reviewer",
+   "number": 1,
+   "date": "2026"
+  },
+  {
+   "organization": "ACM/IEEE International Conference on Human-Robot Interaction",
+   "shortName": "HRI",
+   "website": "https://humanrobotinteraction.org/",
+   "position": "Reviewer",
+   "number": 3,
+   "date": "2026"
   },
   {
    "organization": "Conference on Robot Learning",
@@ -836,20 +885,85 @@
    "type": "League Development Grant",
    "date": "2020",
    "amount": "$2,200",
-    "role": "PI",
+   "role": "PI",
    "link": "https://www.robocup.org/"
   }
  ],
  "mentoring": [
-  { "name": "Aidan Alchin", "role": "Highschool Intern", "startDate": "2019", "endDate": "2019" },
-  { "name": "Kavi Dey", "role":  "Highschool Intern", "startDate": "2021", "endDate": "2022"},
-  { "name": "Zachary Brumbaugh", "role": "Undergraduate Researcher", "startDate": "2022", "endDate": "2023" },
-  { "name": "Zihan Wang", "role": "Graduate Researcher", "startDate": "2023", "endDate": "2025" },
-  { "name": "Joe Sluis", "role": "Undergraduate Researcher", "startDate": "2022", "endDate": "2025" },
-  { "name": "Brian Yao", "role": "Undergraduate Researcher", "startDate": "2022", "endDate": "2025" },
-  { "name": "Xiangyu Gan", "role": "Undergraduate Researcher", "startDate": "2023", "endDate": "2024" },
-  { "name": "Yuxin Ray Song", "role": "Undergraduate Researcher", "startDate": "2023", "endDate": "2024" },
-  { "name": "Varad Dhat", "role": "Graduate Researcher", "startDate": "2023", "endDate": "2025" }
+  {
+   "name": "Aidan Alchin",
+   "role": "Highschool Intern",
+   "startDate": "2019",
+   "endDate": "2019"
+  },
+  {
+   "name": "Kavi Dey",
+   "role": "Highschool Intern",
+   "next": "Harvey Mudd",
+   "startDate": "2021",
+   "endDate": "2022"
+  },
+  {
+   "name": "Zachary Brumbaugh",
+   "role": "Undergraduate Researcher",
+   "next": "startup",
+   "startDate": "2022",
+   "endDate": "2023"
+  },
+  {
+   "name": "Zihan Wang",
+   "role": "Graduate Researcher",
+   "startDate": "2023",
+   "endDate": "2025"
+  },
+  {
+   "name": "Joe Sluis",
+   "role": "Undergraduate Researcher",
+   "next": "startup",
+   "startDate": "2022",
+   "endDate": "2025"
+  },
+  {
+   "name": "Brian Yao",
+   "role": "Undergraduate Researcher",
+   "next": "Amazon",
+   "startDate": "2022",
+   "endDate": "2025"
+  },
+  {
+   "name": "Xiangyu Gan",
+   "role": "Undergraduate Researcher",
+   "startDate": "2023",
+   "endDate": "2024"
+  },
+  {
+   "name": "Yuxin Ray Song",
+   "role": "Undergraduate Researcher",
+   "next": "Researcher, MIT",
+   "startDate": "2023",
+   "endDate": "2024",
+   "url": "https://rayxsong.com/"
+  },
+  {
+   "name": "Varad Dhat",
+   "role": "Graduate Researcher",
+   "next": "Torc Robotics",
+   "startDate": "2023",
+   "endDate": "2025"
+  },
+  {
+   "name": "Helena Merker",
+   "role": "Graduate Researcher",
+   "next": null,
+   "startDate": "2025",
+   "endDate": null
+  },
+  {
+   "name": "Daphne Chen",
+   "role": "Graduate Researcher",
+   "startDate": "2025",
+   "endDate": null
+  }
  ],
  "presentations": [
   {
