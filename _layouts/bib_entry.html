@@ -55,5 +55,14 @@
         {% endif %}
 
         <li><a href="{{ site.baseurl }}/publications/{{entry.key}}/">More</a></li>
+
+        <li><a href="#" onclick="toggleBibtex('{{ entry.key }}'); return false;">BibTeX</a></li>
     </ul>
+
+    <div id="bibtex-{{ entry.key }}" style="display:none;" class="card mb-3">
+        <div class="card-body position-relative">
+            <button id="copy-btn-{{ entry.key }}" onclick="copyBibtex('{{ entry.key }}')" class="btn btn-sm btn-outline-secondary position-absolute top-0 end-0 m-2">Copy</button>
+            <pre id="bibtex-content-{{ entry.key }}" class="mb-0"><code>{{ entry.bibtex }}</code></pre>
+        </div>
+    </div>
 </div>
