@@ -145,11 +145,7 @@ export class LapCalculator extends LitElement {
             color: var(--bs-primary-text);
             border-color: var(--bs-secondary-border);
         }
-
-        .preset-label {
-            font-weight: 600;
-            font-size: 0.875rem;
-        }
+        
 
         /* Carousel dots for multi-variant presets */
 
@@ -234,6 +230,10 @@ export class LapCalculator extends LitElement {
                     {label: 'Drumheller (Ramp)', value: 192.37},
                     {label: 'Drumheller', value: 191.47}
                 ]
+            },
+            {
+                label: 'North Point',
+                value: 177.20
             },
             {label: '200m', value: 200},
             {label: '400m', value: 400},
@@ -735,7 +735,7 @@ export class LapCalculator extends LitElement {
           <h4>Presets</h4>
           <div class="preset-section mb-2">
 
-            <div class="preset-label mb-1">Event Distance</div>
+            <div class="small fw-semibold mb-1">Event Distance</div>
             <div class="preset-buttons gap-2">
               ${map(this.eventDistancePresets, (preset) => html`
                 <button
@@ -753,7 +753,7 @@ export class LapCalculator extends LitElement {
           </div>
           
           <div class="preset-section mb-2">
-            <div class="preset-label mb-1">Track Length</div>
+            <div class="small fw-semibold mb-1">Track Length</div>
             <div class="preset-buttons gap-2">
               ${map(this.trackLengthPresets, (preset) => html`
                 <button
