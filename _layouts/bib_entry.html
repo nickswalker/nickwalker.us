@@ -15,6 +15,7 @@
     {% elsif type == "phdthesis" %}
     {% capture venue %}Doctoral dissertation{% endcapture %}
     {% endif %}
+    {% if entry.wwwshortvenue and venue != "" %}{% capture venue %}{{ venue }} ({{ entry.wwwshortvenue }}){% endcapture %}{% endif %}
     {% assign cofirst = -1 %}
     {% if entry.cofirst %}
     {%comment%}plus 0 to cast to int{%endcomment%}
@@ -54,6 +55,13 @@
         <li><a href="{{ entry.wwwcode }}" data-goatcounter-click="ext-{{entry.key}}-code">Code</a></li>
         {% endif %}
 
+
+        <li class="cite-toggle-item" hidden><a href="#" class="cite-toggle" data-target="cite-{{entry.key}}" aria-controls="cite-{{entry.key}}">Cite</a></li>
+
         <li><a href="{{ site.baseurl }}/publications/{{entry.key}}/">More</a></li>
     </ul>
+    <div id="cite-{{entry.key}}" class="position-relative mt-2" hidden>
+        <pre id="cite-{{entry.key}}-pre" class="bg-light p-3 pe-5 mb-0">{{ entry.bibtex }}</pre>
+        <button type="button" class="cite-copy btn btn-sm btn-outline-secondary position-absolute top-0 end-0 m-2" data-target="cite-{{entry.key}}-pre" data-goatcounter-click="cite-copy-{{entry.key}}">Copy</button>
+    </div>
 </div>

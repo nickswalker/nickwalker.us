@@ -99,6 +99,10 @@ a stub layout with the correct vars and inherit it"
         {% endif %}
 
         <h3>BibTeX Entry</h3>
-        <pre>{{ entry.bibtex }}</pre>
+        <div class="position-relative">
+            <pre id="cite-{{entry.key}}-pre" class="bg-light p-3 pe-5">{{ entry.bibtex }}</pre>
+            <button type="button" class="cite-copy btn btn-sm btn-outline-secondary position-absolute top-0 end-0 m-2" data-target="cite-{{entry.key}}-pre" data-goatcounter-click="cite-copy-{{entry.key}}">Copy</button>
+        </div>
     </div>
 </article>
+<script src="{{ site.baseurl }}/assets/js/bibCite.js"></script>
