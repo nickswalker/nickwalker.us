@@ -68,7 +68,7 @@
    "website": "https://clear.csail.mit.edu",
    "startDate": "2025",
    "highlights": [
-    "Improving methods for reinforcement and imitation learners to communicate their uncertainty"
+    "Improving methods for reinforcement and imitation learners to communicate their uncertainty [c13]"
    ]
   },
   {
@@ -584,6 +584,7 @@
    "type": "conference",
    "name": "Robots That Know What to Ask: Recovering Misaligned Rewards through Targeted Explanations",
    "authors": "H.\u00a0Merker, N.\u00a0Walker, A.\u00a0Bobu",
+   "location": "Sydney, Australia",
    "publisher": "Robotics: Science Systems",
    "releaseDate": "Jul. 2026",
    "link": "https://nickwalker.us/publications/merker2026/"
