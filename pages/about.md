@@ -7,7 +7,7 @@ redirect_from:
 permalink: about/
 ---
 
-Nick Walker is a postdoctoral researcher at the Massachusetts Institute of Technology working in  [Andreea Bobu](https://www.mit.edu/~abobu/)'s [CLEAR Lab](https://clear.mit.edu/).  His research seeks to reduce the difficulty of making robots that people can understand by augmenting existing behaviors to express and expose otherwise hidden information.
+Nick Walker is a postdoctoral researcher at the Massachusetts Institute of Technology working in  [Andreea Bobu](https://www.mit.edu/~abobu/)'s [CLEAR Lab](https://clear.mit.edu/). His research seeks to reduce the difficulty of making robots that people can understand by augmenting existing behaviors to express and expose otherwise hidden information.
 
 Nick earned [his PhD]({% details_link walker2025dissertation %}) at the University of Washington in Seattle, where he worked in Maya Cakmak's 
     [Human-Centered Robotics Lab](https://hcrlab.cs.washington.edu). While a student, he studied problems like
