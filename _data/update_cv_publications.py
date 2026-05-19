@@ -1,4 +1,10 @@
 # -*- coding: UTF-8 -*-
+# /// script
+# requires-python = ">=3.9"
+# dependencies = [
+#     "pybtex",
+# ]
+# ///
 import re
 
 from pybtex.database.input import bibtex
@@ -43,8 +49,11 @@ for key in bib_data.entries:
     if desc["type"] == "journal":
         desc["publisher"] = fields["journal"]
     elif desc["type"] == "working":
-        desc["publisher"] = fields["archivePrefix"]
-        desc["eprint"] = fields["eprint"]
+        if "archivePrefix" in fields:
+            desc["publisher"] = fields["archivePrefix"]
+            desc["eprint"] = fields["eprint"]
+        else:
+            desc["publisher"] = "Preprint"
     elif desc["type"] == "patent":
         desc["publisher"] = fields["number"]
     elif desc["type"] == "thesis":

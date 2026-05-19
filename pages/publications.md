@@ -8,6 +8,14 @@ custom_js:
   - /assets/js/bibCite.js
 ---
 
+## 2026
+
+{% bibliography --query @*[year=2026 && wwwhidden!=true]%}
+
+<!--
+{% bibliography --query @*[year=2026 && wwwhidden=true]%}
+-->
+
 ## 2025
 
 {% bibliography --query @*[year=2025 && wwwhidden!=true]%}

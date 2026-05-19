@@ -146,6 +146,30 @@
    "website": "https://www.ieee-ras.org/publications/ra-l",
    "position": "Reviewer",
    "number": 1,
+   "date": "2026"
+  },
+  {
+   "organization": "Robotics: Science and Systems",
+   "shortName": "RSS",
+   "website": "https://roboticsconference.org",
+   "position": "Reviewer",
+   "number": 1,
+   "date": "2026"
+  },
+  {
+   "organization": "IEEE International Conference on Robot and Human Interactive Communication",
+   "shortName": "RO-MAN",
+   "website": "https://www.ieee-ras.org/conferences-workshops/financially-co-sponsored/",
+   "position": "Reviewer",
+   "number": 2,
+   "date": "2026"
+  },
+  {
+   "organization": "IEEE Robotics and Automation Letters",
+   "shortName": "RA-L",
+   "website": "https://www.ieee-ras.org/publications/ra-l",
+   "position": "Reviewer",
+   "number": 1,
    "date": "2025"
   },
   {
@@ -557,6 +581,22 @@
  ],
  "publications": [
   {
+   "type": "conference",
+   "name": "Robots That Know What to Ask: Recovering Misaligned Rewards through Targeted Explanations",
+   "authors": "H.\u00a0Merker, N.\u00a0Walker, A.\u00a0Bobu",
+   "publisher": "Robotics: Science Systems",
+   "releaseDate": "Jul. 2026",
+   "link": "https://nickwalker.us/publications/merker2026/"
+  },
+  {
+   "type": "workshop",
+   "name": "Towards Personalizing Shared Autonomy with Human-in-the-Loop Robot Programs",
+   "authors": "D.\u00a0Chen, S.\u00a0Vuddagiri, C.\u00a0Yang, N.\u00a0Walker, M.\u00a0Cakmak",
+   "publisher": "CoRL 2025 Workshop Human-to-Robot",
+   "releaseDate": "Sept. 2025",
+   "link": "https://nickwalker.us/publications/chen2025towards/"
+  },
+  {
    "type": "thesis",
    "name": "Making Robot Behaviors Automatically Transparent",
    "authors": "N.\u00a0Walker",
@@ -894,14 +934,16 @@
    "name": "Aidan Alchin",
    "role": "Highschool Intern",
    "startDate": "2019",
-   "endDate": "2019"
+   "endDate": "2019",
+   "next": "Stanford"
   },
   {
    "name": "Kavi Dey",
    "role": "Highschool Intern",
    "next": "Harvey Mudd",
    "startDate": "2021",
-   "endDate": "2022"
+   "endDate": "2022",
+   "url": "https://kavidey.com/"
   },
   {
    "name": "Zachary Brumbaugh",
@@ -914,7 +956,8 @@
    "name": "Zihan Wang",
    "role": "Graduate Researcher",
    "startDate": "2023",
-   "endDate": "2025"
+   "endDate": "2025",
+   "next": "Meta"
   },
   {
    "name": "Joe Sluis",
@@ -933,6 +976,7 @@
   {
    "name": "Xiangyu Gan",
    "role": "Undergraduate Researcher",
+   "next": "startup",
    "startDate": "2023",
    "endDate": "2024"
   },
@@ -949,7 +993,8 @@
    "role": "Graduate Researcher",
    "next": "Torc Robotics",
    "startDate": "2023",
-   "endDate": "2025"
+   "endDate": "2025",
+   "url": "https://varad2607.github.io/"
   },
   {
    "name": "Helena Merker",
@@ -962,6 +1007,18 @@
    "name": "Daphne Chen",
    "role": "Graduate Researcher",
    "startDate": "2025",
+   "endDate": null
+  },
+  {
+   "name": "Michelle Wang",
+   "role": "Undergraduate Researcher",
+   "startDate": "2026",
+   "endDate": null
+  },
+  {
+   "name": "Jocelyn Zhao",
+   "role": "Undergraduate Researcher",
+   "startDate": "2026",
    "endDate": null
   }
  ],
