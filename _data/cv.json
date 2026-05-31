@@ -8,7 +8,8 @@
   "profiles": [
    {
     "network": "Mastodon",
-    "url": "https://sigmoid.social/@nickwalker"
+    "url": "https://sigmoid.social/@nickwalker",
+    "hidden": true
    },
    {
     "network": "GitHub",
@@ -23,12 +24,14 @@
    {
     "network": "flickr",
     "username": "nickwalker-us",
-    "url": "https://flickr.com/photos/nickwalker-us"
+    "url": "https://flickr.com/photos/nickwalker-us",
+    "hidden": true
    },
    {
     "network": "strava",
     "username": "35387878",
-    "url": "https://strava.com/athletes/35387878"
+    "url": "https://strava.com/athletes/35387878",
+    "hidden": true
    }
   ]
  },
@@ -79,8 +82,8 @@
    "endDate": "2025",
    "highlights": [
     "Learning models that help robot supervisors diagnose failures [t1]",
-    "Generating communicative motion and language during task execution [c8,c12,t1]",
-    "Perceptions of intrinsically motivated robot behaviors [c6,c8]"
+    "Generating communicative motion and language during task execution [c8, c12, t1]",
+    "Perceptions of intrinsically motivated robot behaviors [c6, c8]"
    ]
   },
   {
@@ -112,8 +115,8 @@
    "endDate": "2018",
    "highlights": [
     "Long-term autonomy for service robots [w2, w4]",
-    "Mobile manipulation in homes and offices [j1,a1,w1]",
-    "Grounded natural language understanding [c5,j1]",
+    "Mobile manipulation in homes and offices [j1, a1, w1]",
+    "Grounded natural language understanding [c5, j1]",
     "Automated curriculum learning for reinforcement learning agents [c2]"
    ]
   },
@@ -189,7 +192,7 @@
    "date": "2026"
   },
   {
-   "organization": "ACM/IEEE International Conference on Human-Robot Interaction",
+   "organization": "ACM/IEEE Intl Conference on Human-Robot Interaction",
    "shortName": "HRI",
    "website": "https://humanrobotinteraction.org/",
    "position": "Reviewer",
@@ -524,7 +527,7 @@
   {
    "title": "Best Paper: Short Contributions",
    "date": "2024",
-   "awarder": "ACM/IEEE International Conference on Human-Robot Interaction",
+   "awarder": "ACM/IEEE Intl. Conf. Human-Robot Interaction",
    "link": "https://dl.acm.org/doi/10.1145/3610977.3637486"
   },
   {
@@ -585,16 +588,21 @@
    "name": "Robots That Know What to Ask: Recovering Misaligned Rewards through Targeted Explanations",
    "authors": "H.\u00a0Merker, N.\u00a0Walker, A.\u00a0Bobu",
    "location": "Sydney, Australia",
+   "shortName": "RSS",
    "publisher": "Robotics: Science Systems",
    "releaseDate": "Jul. 2026",
+   "year": "2026",
    "link": "https://nickwalker.us/publications/merker2026/"
   },
   {
    "type": "workshop",
    "name": "Towards Personalizing Shared Autonomy with Human-in-the-Loop Robot Programs",
    "authors": "D.\u00a0Chen, S.\u00a0Vuddagiri, C.\u00a0Yang, N.\u00a0Walker, M.\u00a0Cakmak",
+   "location": "Seoul, Korea",
+   "shortName": "CoRL H2R",
    "publisher": "CoRL 2025 Workshop Human-to-Robot",
    "releaseDate": "Sept. 2025",
+   "year": "2025",
    "link": "https://nickwalker.us/publications/chen2025towards/"
   },
   {
@@ -603,6 +611,7 @@
    "authors": "N.\u00a0Walker",
    "publisher": "The University of Washington",
    "releaseDate": "Mar. 2025",
+   "year": "2025",
    "link": "https://nickwalker.us/publications/walker2025dissertation/"
   },
   {
@@ -610,8 +619,10 @@
    "name": "I Can Tell What I Am Doing: Toward Real-World Natural Language Grounding of Robot Experiences",
    "authors": "Z.\u00a0Wang, B.\u00a0Liang, V.\u00a0Dhat, Z.\u00a0Brumbaugh, N.\u00a0Walker, R.\u00a0Krishna, M.\u00a0Cakmak",
    "location": "Munich, Germany",
+   "shortName": "CoRL",
    "publisher": "Proc. of The 8th Conf. Robot Learning",
    "releaseDate": "Nov. 2024",
+   "year": "2024",
    "link": "https://nickwalker.us/publications/wang2024doing/"
   },
   {
@@ -619,8 +630,10 @@
    "name": "Can Large Language Models Help Developers with Robotic Finite State Machine Modification?",
    "authors": "X.\u00a0Gan*, Y.\u00a0R.\u00a0Song*, N.\u00a0Walker, M.\u00a0Cakmak",
    "location": "Munich, Germany",
+   "shortName": "CoRL",
    "publisher": "LangRob Workshop at Conf. Robot Learning",
    "releaseDate": "Nov. 2024",
+   "year": "2024",
    "link": "https://nickwalker.us/publications/gan2024can/"
   },
   {
@@ -628,8 +641,10 @@
    "name": "Fast Explicit-Input Assistance for Teleoperation in Clutter",
    "authors": "N.\u00a0Walker, X.\u00a0Yang, A.\u00a0Garg, M.\u00a0Cakmak, D.\u00a0Fox, C.\u00a0P\u00e9rez-D'Arpino",
    "location": "Abu Dhabi, UAE",
+   "shortName": "IROS",
    "publisher": "2024 IEEE/RSJ Int. Conf. Intelligent Robots Systems",
    "releaseDate": "Oct. 2024",
+   "year": "2024",
    "link": "https://nickwalker.us/publications/walker2024explicit/"
   },
   {
@@ -637,8 +652,10 @@
    "name": "Using 3D Mice to Control Robot Manipulators",
    "authors": "V.\u00a0Dhat, N.\u00a0Walker, M.\u00a0Cakmak",
    "location": "Boulder, CO, USA",
+   "shortName": "HRI",
    "publisher": "ACM/IEEE Int. Conf. Human-Robot Interaction",
    "releaseDate": "Mar. 2024",
+   "year": "2024",
    "link": "https://nickwalker.us/publications/dhat2024mice/"
   },
   {
@@ -647,6 +664,7 @@
    "authors": "N.\u00a0Walker",
    "publisher": "The Urbanist",
    "releaseDate": "Nov. 2023",
+   "year": "2023",
    "link": "https://nickwalker.us/publications/walker2023transitrunning/"
   },
   {
@@ -656,6 +674,7 @@
    "location": "Daegu, Republic of Korea",
    "publisher": "Proc. RSS Workshop Perception Manipulation Challenges for Warehouse Automation",
    "releaseDate": "Jul. 2023",
+   "year": "2023",
    "link": "https://nickwalker.us/publications/grotz2023densely/"
   },
   {
@@ -664,6 +683,7 @@
    "authors": "M.\u00a0J.\u00a0Szentes, C.\u00a0Chavez, R.\u00a0E.\u00a0Lewis, N.\u00a0S.\u00a0Walker",
    "publisher": "US11837214",
    "releaseDate": "Dec. 2023",
+   "year": "2023",
    "link": "https://nickwalker.us/publications/szentes2023transcription/"
   },
   {
@@ -672,6 +692,7 @@
    "authors": "N.\u00a0Walker, A.\u00a0Nanavati",
    "publisher": "IEEE Spectrum",
    "releaseDate": "Jul. 2022",
+   "year": "2022",
    "link": "https://nickwalker.us/publications/walker2022wandering/"
   },
   {
@@ -679,8 +700,10 @@
    "name": "Not All Who Wander Are Lost: A Localization-Free System for In-the-Wild Mobile Robot Deployments",
    "authors": "A.\u00a0Nanavati*, N.\u00a0Walker*, L.\u00a0Taber, C.\u00a0Mavrogiannis, L.\u00a0Takayama, M.\u00a0Cakmak, S.\u00a0Srinivasa",
    "location": "Sapporo, Hokkaido, Japan",
+   "shortName": "HRI",
    "publisher": "Proc. 2022 ACM/IEEE Int. Conf. Human-Robot Interaction",
    "releaseDate": "Mar. 2022",
+   "year": "2022",
    "link": "https://nickwalker.us/publications/nanavati2022wandering/"
   },
   {
@@ -688,8 +711,10 @@
    "name": "Influencing Behavioral Attributions to Robot Motion During Task Execution",
    "authors": "N.\u00a0Walker, C.\u00a0Mavrogiannis, S.\u00a0Srinivasa, M.\u00a0Cakmak",
    "location": "London, UK",
+   "shortName": "CoRL",
    "publisher": "Proc. 5th Conf. Robot Learning",
    "releaseDate": "Nov. 2021",
+   "year": "2021",
    "link": "https://nickwalker.us/publications/walker2021attributions/"
   },
   {
@@ -697,8 +722,10 @@
    "name": "Learning Backchanneling Behaviors for a Social Robot via Data Augmentation from Human-Human Conversations",
    "authors": "M.\u00a0Murray, N.\u00a0Walker, A.\u00a0Nanavati, P.\u00a0Alves-Oliveira, N.\u00a0Filippov, A.\u00a0Sauppe, B.\u00a0Mutlu, M.\u00a0Cakmak",
    "location": "London, UK",
+   "shortName": "CoRL",
    "publisher": "Proc. 5th Conf. Robot Learning",
    "releaseDate": "Nov. 2021",
+   "year": "2021",
    "link": "https://nickwalker.us/publications/murray2021learning/"
   },
   {
@@ -706,16 +733,20 @@
    "name": "Human Perceptions of a Curious Robot that Performs Off-Task Actions",
    "authors": "N.\u00a0Walker, K.\u00a0Weatherwax, J.\u00a0Alchin, L.\u00a0Takayama, M.\u00a0Cakmak",
    "location": "Oxford, UK",
+   "shortName": "HRI",
    "publisher": "Proc. 2020 ACM/IEEE Int. Conf. Human-Robot Interaction",
    "releaseDate": "Mar. 2020",
+   "year": "2020",
    "link": "https://nickwalker.us/publications/walker2020perceptions/"
   },
   {
    "type": "journal",
    "name": "Jointly Improving Parsing and Perception for Natural Language Commands through Human-Robot Dialog",
    "authors": "J.\u00a0Thomason, A.\u00a0Padmakumar, J.\u00a0Sinapov, N.\u00a0Walker, Y.\u00a0Jiang, H.\u00a0Yedidsion, J.\u00a0Hart, P.\u00a0Stone, R.\u00a0J.\u00a0Mooney",
+   "shortName": "JAIR",
    "publisher": "Journal of Artificial Intelligence Research",
    "releaseDate": "Feb. 2020",
+   "year": "2020",
    "link": "https://nickwalker.us/publications/thomason2020improving/"
   },
   {
@@ -723,8 +754,10 @@
    "name": "Open-World Reasoning for Service Robots",
    "authors": "Y.\u00a0Jiang*, N.\u00a0Walker*, J.\u00a0Hart, P.\u00a0Stone",
    "location": "Berkeley",
+   "shortName": "ICAPS",
    "publisher": "Proc. 29th Int. Conf. Automated Planning Scheduling",
    "releaseDate": "Jul. 2019",
+   "year": "2019",
    "link": "https://nickwalker.us/publications/jiang2019icaps/"
   },
   {
@@ -732,8 +765,10 @@
    "name": "Improving Grounded Natural Language Understanding through Human-Robot Dialog",
    "authors": "J.\u00a0Thomason, A.\u00a0Padmakumar, J.\u00a0Sinapov, N.\u00a0Walker, Y.\u00a0Jiang, H.\u00a0Yedidsion, J.\u00a0Hart, P.\u00a0Stone, R.\u00a0J.\u00a0Mooney",
    "location": "Montreal",
+   "shortName": "ICRA",
    "publisher": "Int. Conf. Robotics Automation",
    "releaseDate": "May 2019",
+   "year": "2019",
    "link": "https://nickwalker.us/publications/thomason2019icra/"
   },
   {
@@ -741,8 +776,10 @@
    "name": "PRISM: Pose Registration for Integrated Semantic Mapping",
    "authors": "J.\u00a0W.\u00a0Hart, R.\u00a0Shah, S.\u00a0Kirmani, N.\u00a0Walker, K.\u00a0Baldauf, N.\u00a0John, P.\u00a0Stone",
    "location": "Madrid, Spain",
+   "shortName": "IROS",
    "publisher": "2018 IEEE/RSJ Int. Conf. Intelligent Robots Systems",
    "releaseDate": "Oct. 2018",
+   "year": "2018",
    "link": "https://nickwalker.us/publications/hart2018iros/"
   },
   {
@@ -750,8 +787,10 @@
    "name": "Automatic Curriculum Graph Generation for Reinforcement Learning Agents",
    "authors": "M.\u00a0Svetlik, M.\u00a0Leonetti, J.\u00a0Sinapov, R.\u00a0Shah, N.\u00a0Walker, P.\u00a0Stone",
    "location": "San Francisco",
+   "shortName": "AAAI",
    "publisher": "Proc. Thirty-First AAAI Conf. Artificial Intelligence",
    "releaseDate": "Feb. 2017",
+   "year": "2017",
    "link": "https://nickwalker.us/publications/svetlik2017aaai/"
   },
   {
@@ -761,6 +800,7 @@
    "location": "San Francisco",
    "publisher": "Proc. of SPIE 10051, Neural Imaging Sensing",
    "releaseDate": "Feb. 2017",
+   "year": "2017",
    "link": "https://nickwalker.us/publications/schroeder2017/"
   },
   {
@@ -770,6 +810,7 @@
    "location": "Berkeley",
    "publisher": "Proc. of 2019 ICAPS Workshop Planning Robotics",
    "releaseDate": "Jul. 2019",
+   "year": "2019",
    "link": "https://nickwalker.us/publications/walker2019planrob/"
   },
   {
@@ -779,6 +820,7 @@
    "location": "Sydney",
    "publisher": "RoboCup 2019: Robot Soccer World Cup XXIII",
    "releaseDate": "Jul. 2019",
+   "year": "2019",
    "link": "https://nickwalker.us/publications/walker2019robocup/"
   },
   {
@@ -788,6 +830,7 @@
    "location": "Arlington",
    "publisher": "AAAI Fall Symp. Reasoning Learning in Real-World Systems for Long-Term Autonomy",
    "releaseDate": "Oct. 2018",
+   "year": "2018",
    "link": "https://nickwalker.us/publications/jiang2018fss/"
   },
   {
@@ -797,6 +840,7 @@
    "location": "Arlington",
    "publisher": "AAAI Fall Symp. Artificial Intelligence Human-Robot Interaction",
    "releaseDate": "Oct. 2018",
+   "year": "2018",
    "link": "https://nickwalker.us/publications/hart2018fss/"
   },
   {
@@ -806,6 +850,7 @@
    "publisher": "arXiv",
    "eprint": "1809.08793",
    "releaseDate": "Sept. 2019",
+   "year": "2019",
    "link": "https://nickwalker.us/publications/kim2019/"
   }
  ],

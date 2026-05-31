@@ -46,6 +46,8 @@ for key in bib_data.entries:
     desc["authors"] = desc["authors"][:-2]
     if "location" in fields:
         desc["location"] = fields["location"]
+    if "wwwshortvenue" in fields:
+        desc["shortName"] = fields["wwwshortvenue"]
     if desc["type"] == "journal":
         desc["publisher"] = fields["journal"]
     elif desc["type"] == "working":
@@ -71,6 +73,7 @@ for key in bib_data.entries:
     desc["publisher"] = re.sub(r' \([^)]*\)', '', desc["publisher"])
     month_string = month_abbreviations[fields["month"]]
     desc["releaseDate"] = month_string + " " + fields["year"]
+    desc["year"] = fields["year"]
     desc["link"] = "https://nickwalker.us/publications/" + key + "/"
     pubs.append(desc)
 
