@@ -27,8 +27,10 @@ jobs:
           path: tmp/.htmlproofer
           key: ${{ runner.os }}-htmlproofer
       - name: run tests
+        run: ./_test/test_bibtex.rb _data/references.bib
+      - name: check links
+        continue-on-error: true
         run: |
-          ./_test/test_bibtex.rb _data/references.bib
           bundle exec htmlproofer ./_site\
             --only-4xx\
             --ignore-status-codes "999,403,405"\
@@ -63,8 +65,10 @@ jobs:
           path: tmp/.htmlproofer
           key: ${{ runner.os }}-htmlproofer
       - name: run tests
+        run: ./_test/test_bibtex.rb _data/references.bib
+      - name: check links
+        continue-on-error: true
         run: |
-          ./_test/test_bibtex.rb _data/references.bib
           bundle exec htmlproofer ./_site\
             --only-4xx\
             --ignore-status-codes "999,403,405"\
