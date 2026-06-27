@@ -1,7 +1,7 @@
 import { LitElement, css, html } from 'lit';
 import {map} from 'lit-html/directives/map.js';
 
-import {solve} from 'https://cdn.jsdelivr.net/npm/yalps@0.5.6/+esm';
+import {solve} from 'https://cdn.jsdelivr.net/npm/yalps@0.6.4/+esm';
 
 function camelCaseToSplitWords(camelCaseString) {
     return camelCaseString
