@@ -1,5 +1,6 @@
 import {LitElement, css, html} from 'lit';
 import {map} from 'lit-html/directives/map.js';
+import './laneViz.js';
 
 
 export function formatDuration(seconds, includeHours = true, includeMilliseconds = false, trimLeadingZeros = false) {
@@ -223,35 +224,80 @@ export class LapCalculator extends LitElement {
             {label: 'Marathon', value: 42195},
         ];
 
+        // Geometry needed to draw an accurate lane viz and compute per-lane
+        // effective lap distance. `straight` is the length of one straight
+        // section (0 for a pure circle); radius/laneWidth/laneCount are derived
+        // or chosen per track below. Tracks without geometry (e.g. 200m, whose
+        // physical dimensions vary too much to assume) skip the lane viz.
         this.trackLengthPresets = [
             {
                 label: 'Drumheller',
                 variants: [
-                    {label: 'Drumheller (Ramp)', value: 192.37},
-                    {label: 'Drumheller', value: 191.47}
+                    {label: 'Drumheller (Ramp)', value: 192.37, geometry: {shape: 'circle', laneWidth: 1.22, laneCount: 4}},
+                    {label: 'Drumheller', value: 191.47, geometry: {shape: 'circle', laneWidth: 1.22, laneCount: 4}}
                 ]
             },
             {
                 label: 'North Point',
-                value: 177.20
+                value: 177.20,
+                geometry: {shape: 'circle', laneWidth: 1.22, laneCount: 4}
             },
             {label: '200m', value: 200},
-            {label: '400m', value: 400},
+            {
+                label: '400m',
+                value: 400,
+                // Standard World Athletics track: two 84.39m straights and two
+                // semicircular bends, radius derived so lane 1 totals 400m.
+                geometry: {shape: 'oval', straight: 84.39, laneWidth: 1.22, laneCount: 8}
+            },
         ];
 
         this.restoreState();
         this.initializeFromQueryParams();
     }
 
+    // Find the known geometry (if any) matching the current track length, so
+    // we can derive a per-lane distance and draw the lane viz. Returns null
+    // for custom lengths or tracks without known geometry (e.g. 200m).
+    get activeGeometry() {
+        for (const preset of this.trackLengthPresets) {
+            const candidates = preset.variants || [preset];
+            for (const candidate of candidates) {
+                if (!candidate.geometry) continue;
+                if (Math.abs(candidate.value - this.trackLength) < 0.01) {
+                    const {shape, straight = 0, laneWidth, laneCount} = candidate.geometry;
+                    const radius = shape === 'oval'
+                        ? (this.trackLength - 2 * straight) / (2 * Math.PI)
+                        : this.trackLength / (2 * Math.PI);
+                    return {straight, radius, laneWidth, laneCount};
+                }
+            }
+        }
+        return null;
+    }
+
+    // The lap distance actually run, accounting for lane number when the
+    // track's geometry is known. Falls back to the raw (lane one) track
+    // length otherwise.
+    get effectiveTrackLength() {
+        const geometry = this.activeGeometry;
+        if (!geometry) {
+            return this.trackLength;
+        }
+        const lane = Math.min(Math.max(1, this.laneNumber || 1), geometry.laneCount);
+        const offset = (lane - 1) * geometry.laneWidth;
+        return 2 * geometry.straight + 2 * Math.PI * (geometry.radius + offset);
+    }
+
     // Get the current number of laps for the event distance
     getCurrentLapCount() {
-        return Math.round(this.eventDistance / this.trackLength);
+        return Math.round(this.eventDistance / this.effectiveTrackLength);
     }
 
     // Check if the event distance is an even multiple of track length
     isEvenMultipleOfTrack() {
         const lapCount = this.getCurrentLapCount();
-        return Math.abs(this.eventDistance - (lapCount * this.trackLength)) < 0.01;
+        return Math.abs(this.eventDistance - (lapCount * this.effectiveTrackLength)) < 0.01;
     }
 
     getEventDistanceTooltip(preset) {
@@ -261,7 +307,7 @@ export class LapCalculator extends LitElement {
                 const nextLapCount = lapCount + 1;
                 return `${lapCount} lap${lapCount !== 1 ? 's' : ''} (${this.eventDistance}m) • Click to cycle to ${nextLapCount} lap${nextLapCount !== 1 ? 's' : ''}`;
             }
-            return `${this.trackLength}m`;
+            return `${this.effectiveTrackLength.toFixed(2)}m`;
         }
         return `${preset.value}m`;
     }
@@ -400,26 +446,34 @@ export class LapCalculator extends LitElement {
         if (this.isEvenlyDivisible && this.naturalMode === 'firstLap') {
             this.naturalMode = 'paceKm';
         }
+
+        // Clamp lane number to the known geometry's lane count, if any
+        const geometry = this.activeGeometry;
+        if (geometry && this.laneNumber > geometry.laneCount) {
+            this.laneNumber = geometry.laneCount;
+        }
     }
 
     get isOneLapMode() {
-        return Math.abs(this.eventDistance - this.trackLength) < 0.01; // Allow for small floating point differences
+        return Math.abs(this.eventDistance - this.effectiveTrackLength) < 0.01; // Allow for small floating point differences
     }
 
     get isEvenlyDivisible() {
         // Check if event distance is evenly divisible by track length
-        const remainder = this.eventDistance % this.trackLength;
-        return Math.abs(remainder) < 0.01 || Math.abs(remainder) > (this.trackLength - 0.01); // Allow for small floating point differences
+        const trackLength = this.effectiveTrackLength;
+        const remainder = this.eventDistance % trackLength;
+        return Math.abs(remainder) < 0.01 || Math.abs(remainder) > (trackLength - 0.01); // Allow for small floating point differences
     }
 
     get startLength() {
-        return ((this.eventDistance / this.trackLength) % 1.0) * this.trackLength;
+        const trackLength = this.effectiveTrackLength;
+        return ((this.eventDistance / trackLength) % 1.0) * trackLength;
     }
 
     // Primary calculation: pace (seconds per km) -> all other values
     calculateFromPace(paceSecondsPerKm) {
         const duration = (paceSecondsPerKm / 1000) * this.eventDistance;
-        const lapTime = this.trackLength * paceSecondsPerKm / 1000;
+        const lapTime = this.effectiveTrackLength * paceSecondsPerKm / 1000;
         const firstLapTime = (this.startLength + this.trackLength) * paceSecondsPerKm / 1000;
         const pacePerMile = paceSecondsPerKm * 1.60934;
 
@@ -587,10 +641,10 @@ export class LapCalculator extends LitElement {
             // If already an even multiple of track length, increment by one lap
             if (this.isEvenMultipleOfTrack()) {
                 // It doesn't take long for us to get small floating point issues. Evidence: 7 * 192.37
-                this.eventDistance = Math.round((this.getCurrentLapCount() + 1) * this.trackLength * 100) / 100;
+                this.eventDistance = Math.round((this.getCurrentLapCount() + 1) * this.effectiveTrackLength * 100) / 100;
             } else {
                 // Otherwise, set to exactly one lap
-                this.eventDistance = this.trackLength;
+                this.eventDistance = this.effectiveTrackLength;
             }
         } else {
             this.eventDistance = value;
@@ -732,6 +786,45 @@ export class LapCalculator extends LitElement {
             </div>
           </div>
 
+          <div class="row mb-2">
+            <div class="col-sm-3 col-12 mb-2">
+              <div class="input-group">
+                <label for="laneNumber" class="input-group-text">Lane</label>
+                <input
+                        id="laneNumber"
+                        type="number"
+                        min="1"
+                        max="${this.activeGeometry ? this.activeGeometry.laneCount : 1}"
+                        step="1"
+                        class="form-control form-control-sm sans"
+                        novalidate
+                        ?disabled="${!this.activeGeometry}"
+                        title="${this.activeGeometry ? '' : "Lane geometry isn't known for this track length"}"
+                        .value="${this.laneNumber}"
+                        @input="${(e) => {
+                          const geometry = this.activeGeometry;
+                          const max = geometry ? geometry.laneCount : 1;
+                          this.laneNumber = Math.min(Math.max(1, parseInt(e.target.value) || 1), max);
+                        }}"
+                />
+              </div>
+            </div>
+
+            <div class="col-sm-9 col-12">
+              ${this.activeGeometry ? html`
+                <lane-viz
+                        .straight="${this.activeGeometry.straight}"
+                        .radius="${this.activeGeometry.radius}"
+                        .laneWidth="${this.activeGeometry.laneWidth}"
+                        .laneCount="${this.activeGeometry.laneCount}"
+                        .laneNumber="${this.laneNumber}"
+                ></lane-viz>
+              ` : html`
+                <div class="small text-muted">Lane geometry isn't known for this track length, so lane number has no effect.</div>
+              `}
+            </div>
+          </div>
+
           <h4>Presets</h4>
           <div class="preset-section mb-2">
 
@@ -780,8 +873,16 @@ export class LapCalculator extends LitElement {
             <tbody>
             <tr>
               <td><b>Laps</b></td>
-              <td class="sans">${Math.round(this.eventDistance / this.trackLength)}</td>
+              <td class="sans">${Math.round(this.eventDistance / this.effectiveTrackLength)}</td>
             </tr>
+            ${this.activeGeometry && this.laneNumber > 1 ? html`
+              <tr>
+                <td title="Lap distance for lane ${this.laneNumber}, accounting for the wider radius.">
+                  <b>Lane ${this.laneNumber} distance</b>
+                </td>
+                <td class="sans">${this.effectiveTrackLength.toFixed(2)}m</td>
+              </tr>
+            ` : ''}
             ${!this.isEvenlyDivisible ? html`
               <tr>
                 <td title="The event distance isn't evenly divided into laps, so the first lap will need to be longer by this distance.">
