@@ -48,7 +48,8 @@ export class LapCalculator extends LitElement {
         eventDistance: {type: Number},
         trackLength: {type: Number},
         laneNumber: {type: Number},
-        naturalMode: {type: String}, // 'paceKm', 'paceMi', 'duration', 'lap', 'firstLap'
+        naturalMode: {type: String}, // 'pace', 'duration', 'lap', 'firstLap'
+        paceUnit: {type: String}, // 'mi', 'km'
         isScrolled: {type: Boolean},
         contentHidden: {type: Boolean},
     };
@@ -210,7 +211,8 @@ export class LapCalculator extends LitElement {
         this.eventDistance = 5000;
         this.trackLength = 400;
         this.laneNumber = 1;
-        this.naturalMode = 'paceMi';
+        this.naturalMode = 'pace';
+        this.paceUnit = 'mi';
         this.isScrolled = false;
         this.contentHidden = false;
 
@@ -294,6 +296,7 @@ export class LapCalculator extends LitElement {
         const trackLength = urlParams.get('trackLength') || urlParams.get('track_length') || urlParams.get('track');
         const laneNumber = urlParams.get('laneNumber') || urlParams.get('lane_number') || urlParams.get('lane') || urlParams.get('ln');
         const naturalMode = urlParams.get('naturalMode') || urlParams.get('natural_mode') || urlParams.get('mode') || urlParams.get('m');
+        const paceUnit = urlParams.get('paceUnit') || urlParams.get('pace_unit') || urlParams.get('unit');
 
         if (eventDistance && !isNaN(parseFloat(eventDistance))) {
             this.eventDistance = parseFloat(eventDistance);
@@ -307,8 +310,12 @@ export class LapCalculator extends LitElement {
             this.laneNumber = parseInt(laneNumber);
         }
 
-        if (naturalMode && ['paceKm', 'paceMi', 'duration', 'lap', 'firstLap'].includes(naturalMode)) {
+        if (naturalMode && ['pace', 'duration', 'lap', 'firstLap'].includes(naturalMode)) {
             this.naturalMode = naturalMode;
+        }
+
+        if (paceUnit && ['mi', 'km'].includes(paceUnit)) {
+            this.paceUnit = paceUnit;
         }
     }
 
@@ -329,8 +336,12 @@ export class LapCalculator extends LitElement {
             params.set('ln', this.laneNumber.toString());
         }
 
-        if (this.naturalMode !== 'paceMi') {
+        if (this.naturalMode !== 'pace') {
             params.set('m', this.naturalMode);
+        }
+
+        if (this.paceUnit !== 'mi') {
+            params.set('unit', this.paceUnit);
         }
 
         // Update the URL without triggering a page reload
@@ -364,6 +375,7 @@ export class LapCalculator extends LitElement {
             trackLength: this.trackLength,
             laneNumber: this.laneNumber,
             naturalMode: this.naturalMode,
+            paceUnit: this.paceUnit,
         };
         sessionStorage.setItem('lapCalculatorState', JSON.stringify(state));
     }
@@ -376,6 +388,7 @@ export class LapCalculator extends LitElement {
             this.trackLength = state.trackLength || this.trackLength;
             this.laneNumber = state.laneNumber || this.laneNumber;
             this.naturalMode = state.naturalMode || this.naturalMode;
+            this.paceUnit = state.paceUnit || this.paceUnit;
         }
     }
 
@@ -385,7 +398,8 @@ export class LapCalculator extends LitElement {
             changedProperties.has('laneNumber') ||
             changedProperties.has('eventDistance') ||
             changedProperties.has('trackLength') ||
-            changedProperties.has('naturalMode')
+            changedProperties.has('naturalMode') ||
+            changedProperties.has('paceUnit')
         ) {
             this.storeState();
             this.updateQueryParams(); // Update URL whenever state changes
@@ -393,12 +407,12 @@ export class LapCalculator extends LitElement {
 
         // If we're in "1 Lap" mode and naturalMode is lap or firstLap, switch to a valid mode
         if (this.isOneLapMode && (this.naturalMode === 'lap' || this.naturalMode === 'firstLap')) {
-            this.naturalMode = 'paceKm';
+            this.naturalMode = 'pace';
         }
 
         // If event divides evenly and naturalMode is firstLap, switch to a valid mode
         if (this.isEvenlyDivisible && this.naturalMode === 'firstLap') {
-            this.naturalMode = 'paceKm';
+            this.naturalMode = 'pace';
         }
     }
 
@@ -452,21 +466,22 @@ export class LapCalculator extends LitElement {
     // Generate natural ticks based on current mode
     generateNaturalTicks() {
         switch (this.naturalMode) {
-            case 'paceKm':
-                // 5 second ticks from 8:30/km to 3:00/km
-                const ticks = [];
-                for (let seconds = 510; seconds >= 180; seconds -= 5) {
-                    ticks.push(seconds);
+            case 'pace':
+                if (this.paceUnit === 'km') {
+                    // 5 second ticks from 8:30/km to 3:00/km
+                    const ticks = [];
+                    for (let seconds = 510; seconds >= 180; seconds -= 5) {
+                        ticks.push(seconds);
+                    }
+                    return ticks;
+                } else {
+                    // 5 second ticks from 14:00/mi to 4:30/mi
+                    const miTicks = [];
+                    for (let seconds = 840; seconds >= 270; seconds -= 5) {
+                        miTicks.push(seconds);
+                    }
+                    return miTicks;
                 }
-                return ticks;
-
-            case 'paceMi':
-                // 5 second ticks from 14:00/mi to 4:30/mi
-                const miTicks = [];
-                for (let seconds = 840; seconds >= 270; seconds -= 5) {
-                    miTicks.push(seconds);
-                }
-                return miTicks;
 
             case 'duration': {
                 // Find duration range based on pace extremes
@@ -547,11 +562,8 @@ export class LapCalculator extends LitElement {
         return ticks.map(tick => {
             let pace;
             switch (this.naturalMode) {
-                case 'paceKm':
-                    pace = tick;
-                    break;
-                case 'paceMi':
-                    pace = this.solvePaceFromMilePace(tick);
+                case 'pace':
+                    pace = this.paceUnit === 'km' ? tick : this.solvePaceFromMilePace(tick);
                     break;
                 case 'duration':
                     pace = this.solvePaceFromDuration(tick);
@@ -576,6 +588,11 @@ export class LapCalculator extends LitElement {
         }
         // Don't allow clicking on firstLap column if evenly divisible
         if (this.isEvenlyDivisible && columnType === 'firstLap') {
+            return;
+        }
+        // Clicking the pace column again, once it's already selected, cycles the unit
+        if (columnType === 'pace' && this.naturalMode === 'pace') {
+            this.paceUnit = this.paceUnit === 'mi' ? 'km' : 'mi';
             return;
         }
         this.naturalMode = columnType;
@@ -798,19 +815,10 @@ export class LapCalculator extends LitElement {
               <thead class="sticky ${this.isScrolled ? 'scrolled' : ''}">
               <tr>
                 <th scope="col"
-                    class="${this.naturalMode === 'paceKm' ? 'natural' : ''}"
-                    @click="${() => this.handleColumnClick('paceKm')}"
-                    title="Pace in minutes per kilometer ${this.naturalMode !== 'paceKm' ? '(click to set as basis)' : ''}">
-                
-                  
-                  min/km
-                </th>
-                <th scope="col"
-                    class="${this.naturalMode === 'paceMi' ? 'natural' : ''}"
-                    @click="${() => this.handleColumnClick('paceMi')}"
-                    title="Pace in minutes per mile ${this.naturalMode !== 'paceMi' ? '(click to set as basis)' : ''}"
-                >
-                  min/mi
+                    class="${this.naturalMode === 'pace' ? 'natural' : ''}"
+                    @click="${() => this.handleColumnClick('pace')}"
+                    title="Pace in minutes per ${this.paceUnit === 'km' ? 'kilometer' : 'mile'} ${this.naturalMode === 'pace' ? '(click to switch units)' : '(click to set as basis)'}">
+                  min/${this.paceUnit}
                 </th>
                 <th scope="col"
                     class="${this.naturalMode === 'duration' ? 'natural' : ''}"
@@ -841,8 +849,7 @@ export class LapCalculator extends LitElement {
               <tbody>
               ${map(tableData, (row) => html`
                 <tr class="sans">
-                  <td>${this.formatPace(row.paceSecondsPerKm, this.naturalMode !== "paceKm")}</td>
-                  <td>${this.formatPace(row.pacePerMile, this.naturalMode !== "paceMi")}</td>
+                  <td>${this.formatPace(this.paceUnit === 'km' ? row.paceSecondsPerKm : row.pacePerMile, this.naturalMode !== "pace")}</td>
                   <td>${formatDuration(row.duration)}</td>
                   ${!this.isOneLapMode ? html`
                     <td>${row.lapTime.toFixed(this.naturalMode === "lap" ? 0 : 1)}</td>
