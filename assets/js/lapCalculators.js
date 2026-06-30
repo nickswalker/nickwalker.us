@@ -50,6 +50,7 @@ export class LapCalculator extends LitElement {
         laneNumber: {type: Number},
         naturalMode: {type: String}, // 'pace', 'duration', 'lap', 'firstLap'
         paceUnit: {type: String}, // 'mi', 'km'
+        distanceUnit: {type: String}, // 'm', 'mi'
         isScrolled: {type: Boolean},
         contentHidden: {type: Boolean},
     };
@@ -202,6 +203,15 @@ export class LapCalculator extends LitElement {
         .preset-btn.active .preset-chevron {
             border-bottom-color: currentColor;
         }
+
+        .unit-toggle {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .unit-toggle:hover {
+            background-color: var(--bs-tertiary-bg);
+        }
     `;
 
     constructor() {
@@ -213,6 +223,7 @@ export class LapCalculator extends LitElement {
         this.laneNumber = 1;
         this.naturalMode = 'pace';
         this.paceUnit = 'mi';
+        this.distanceUnit = 'm';
         this.isScrolled = false;
         this.contentHidden = false;
 
@@ -677,6 +688,25 @@ export class LapCalculator extends LitElement {
         return preset.label;
     }
 
+    toggleDistanceUnit() {
+        this.distanceUnit = this.distanceUnit === 'm' ? 'mi' : 'm';
+    }
+
+    metersToDisplay(meters) {
+        return this.distanceUnit === 'mi' ? meters / 1609.344 : meters;
+    }
+
+    displayToMeters(display) {
+        return this.distanceUnit === 'mi' ? display * 1609.344 : display;
+    }
+
+    formatDisplayDistance(meters, mDecimalPlaces = 2) {
+        if (this.distanceUnit === 'mi') {
+            return (meters / 1609.344).toFixed(4);
+        }
+        return meters.toFixed(mDecimalPlaces);
+    }
+
     formatPace(seconds, includeMilliseconds = true) {
         let minutes = Math.floor(seconds / 60);
         let secs = Math.round(seconds % 60);
@@ -721,13 +751,13 @@ export class LapCalculator extends LitElement {
                         id="eventDistance"
                         type="number"
                         min="0"
-                        step="1"
+                        step="${this.distanceUnit === 'mi' ? 'any' : '1'}"
                         class="form-control form-control-sm sans"
                         novalidate
-                        .value="${this.eventDistance}"
-                        @input="${(e) => this.eventDistance = parseFloat(e.target.value)}"
+                        .value="${this.metersToDisplay(this.eventDistance).toFixed(this.distanceUnit === 'mi' ? 4 : 0)}"
+                        @input="${(e) => this.eventDistance = this.displayToMeters(parseFloat(e.target.value))}"
                 />
-                <span class="input-group-text">m</span>
+                <span class="input-group-text unit-toggle" title="Click to switch units" @click="${() => this.toggleDistanceUnit()}">${this.distanceUnit}</span>
               </div>
             </div>
 
@@ -738,13 +768,13 @@ export class LapCalculator extends LitElement {
                         id="trackLength"
                         type="number"
                         min="0"
-                        step="0.01"
+                        step="${this.distanceUnit === 'mi' ? 'any' : '0.01'}"
                         class="form-control form-control-sm sans"
                         novalidate
-                        .value="${this.trackLength}"
-                        @input="${(e) => this.trackLength = parseFloat(e.target.value)}"
+                        .value="${this.metersToDisplay(this.trackLength).toFixed(this.distanceUnit === 'mi' ? 4 : 2)}"
+                        @input="${(e) => this.trackLength = this.displayToMeters(parseFloat(e.target.value))}"
                 />
-                <span class="input-group-text">m</span>
+                <span class="input-group-text unit-toggle" title="Click to switch units" @click="${() => this.toggleDistanceUnit()}">${this.distanceUnit}</span>
               </div>
             </div>
           </div>
@@ -804,7 +834,7 @@ export class LapCalculator extends LitElement {
                 <td title="The event distance isn't evenly divided into laps, so the first lap will need to be longer by this distance.">
                   <b>Start offset</b>
                 </td>
-                <td class="sans">${this.startLength.toFixed(2)}m</td>
+                <td class="sans">${this.formatDisplayDistance(this.startLength)}${this.distanceUnit}</td>
               </tr>
             ` : ''}
             </tbody>
