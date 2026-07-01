@@ -54,6 +54,34 @@
   }
 }
 
+/**
+ * Minimal header for standalone tool pages
+ */
+.site-header-minimal {
+  margin-bottom: 1rem;
+  @include media-query($on-tablet) {
+    margin-bottom: 2rem;
+  }
+}
+
+.site-title-minimal {
+  display: inline-block;
+  margin: 1rem 0 0 1rem;
+  font-size: 16px;
+  font-weight: 700;
+  color: $grey-color;
+  text-decoration: none;
+
+  &:visited {
+    color: $grey-color;
+  }
+
+  &:hover {
+    color: var(--theme-color);
+    text-decoration: none;
+  }
+}
+
 .site-nav {
   line-height: 2rem;
   margin: 0 auto;
