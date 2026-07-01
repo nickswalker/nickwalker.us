@@ -1,5 +1,5 @@
 ---
-layout: page-restrict-width-article
+layout: minimal-nav
 title:  "Homemade Energy Gel Recipe"
 categories: ["running", "note"]
 permalink: energy-gels/

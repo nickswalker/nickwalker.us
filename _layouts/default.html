@@ -9,7 +9,11 @@
       This is a development copy of {{page.url}} <pre>{{layout | jsonify}}</pre>
     </div>
     {% endif %}
+    {% if page.layout == 'minimal-nav' %}
+    {% include minimal-navigation.html %}
+    {% else %}
     {% include navigation.html %}
+    {% endif %}
     <main class="page-content" aria-label="Content">
         {{ content }}
     </main>

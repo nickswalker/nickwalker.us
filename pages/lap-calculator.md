@@ -1,5 +1,5 @@
 ---
-layout: page-restrict-width-article
+layout: minimal-nav
 title:  "Lap Calculator"
 categories: ["running", "note"]
 permalink: lap-calculator/
