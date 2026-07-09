@@ -99,6 +99,7 @@ I'm a postdoctoral researcher at the Massachusetts Institute of Technology advis
             {% endfor %}
             <li class="mb-2"><a href="https://marblizer.nickwalker.us/">Marblizer</a><span class="text-secondary"> &mdash; Interactive paper marbling</span></li>
             <li class="mb-2"><a href="https://runber.nickwalker.us/">Runber</a><span class="text-secondary"> &mdash; Print race bib/hip numbers</span></li>
+            <li class="mb-2"><a href="https://stigme.nickwalker.us/">Stigme</a><span class="text-secondary"> &mdash; Tally counter with timestamping</span></li>
         </ul>
     </section>
 </div>
