@@ -397,8 +397,12 @@ export class LapCalculator extends LitElement {
             this.eventDistance = state.eventDistance || this.eventDistance;
             this.trackLength = state.trackLength || this.trackLength;
             this.laneNumber = state.laneNumber || this.laneNumber;
-            this.naturalMode = state.naturalMode || this.naturalMode;
-            this.paceUnit = state.paceUnit || this.paceUnit;
+            if (state.naturalMode && ['pace', 'duration', 'lap', 'firstLap'].includes(state.naturalMode)) {
+                this.naturalMode = state.naturalMode;
+            }
+            if (state.paceUnit && ['mi', 'km'].includes(state.paceUnit)) {
+                this.paceUnit = state.paceUnit;
+            }
         }
     }
 
