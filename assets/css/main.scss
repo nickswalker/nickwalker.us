@@ -123,7 +123,6 @@ i, em {
   font-weight: 900;
   letter-spacing: 0;
   @include media-query($on-laptop) {
-    margin-left: 0;
     font-size: 24px;
     line-height: $spacing-unit * 2;
   }
