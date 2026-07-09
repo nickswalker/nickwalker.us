@@ -365,15 +365,14 @@ export class LapCalculator extends LitElement {
 
     firstUpdated() {
         const tableWrap = this.shadowRoot.querySelector('.table-wrap');
-        tableWrap.addEventListener('scroll', this.updateContentHidden.bind(this));
+        tableWrap.addEventListener('scroll', () => this.updateContentHidden(tableWrap));
         // Also run handler when element changes size
-        const resizeObserver = new ResizeObserver(this.updateContentHidden.bind(this));
+        const resizeObserver = new ResizeObserver(() => this.updateContentHidden(tableWrap));
         resizeObserver.observe(tableWrap);
         this.contentHidden = tableWrap.scrollHeight > tableWrap.clientHeight && tableWrap.scrollTop < tableWrap.scrollHeight - tableWrap.clientHeight;
     }
 
-    updateContentHidden(event) {
-        const element = event.target;
+    updateContentHidden(element) {
         const scrollTop = element.scrollTop;
         this.isScrolled = scrollTop > 0;
         // Check whether the element can be scrolled any further
