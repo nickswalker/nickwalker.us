@@ -1,11 +1,30 @@
 ---
 layout: minimal-nav
 title:  "Homemade Energy Gel Recipe"
-categories: ["running", "note"]
+categories: ["running", "note", "tool"]
 permalink: energy-gels/
 custom_js_modules: ['/assets/js/nutritionCalculators.js']
+tagline: "DIY energy gel recipes"
 excerpt: "Calculator and recipe for DIY energy gels and energy drinks. Pick from ingredients like maltodexterin, table sugar, honey and more."
 ---
+
+<div class="full-width">
+  <div class="card mb-3 container-xl p-0">
+      <div class="card-body">
+          <gel-recipe-calculator><div class="alert alert-warning">The calculator requires Javascript to be enabled and only works on recent browsers. Sorry!</div></gel-recipe-calculator>
+      </div>
+  </div>
+</div>
+
+This calculator takes your desired [carb-type ratio](#glucosefructose-ratio), [concentration](#osmotic-concentration-osmolality-and-tonicity) and any [particular ingredient](#which-ingredients-should-i-use) amounts, then optimizes for low volume. Checked ingredients will be considered in the calculation, but they may be ignored if not needed to reach the desired characteristics. Specify amounts manually to force the calculator to include an ingredient. A warning will appear if the ingredients or amounts can't meet the target ratio. Hover over ingredient names to see their glucose/fructose ratio, and hover over ml to see oz.
+
+1. (Optionally) warm up the water.
+2. Add viscous ingredients (e.g. syrup, honey) to water and mix until dissolved. 
+3. Add powdered ingredients and mix until dissolved. 
+
+Keeps for 2-3 days in a refrigerator.
+
+## Why make your own?
 
 Endurance athletes consume highly concentrated carbohydrate solutions because it maintains blood glucose levels and spares [limited accessible energy sources](https://doi.org/10.1093/nutrit/nuy001). There are [many "energy gel" sports nutrition products](https://www.researchgate.net/profile/Xuguang-Zhang-2/publication/277081684_Extreme_Variation_of_Nutritional_Composition_and_Osmolality_of_Commercially_Available_Carbohydrate_Energy_Gel/links/557971f508aeb6d8c020255c/Extreme-Variation-of-Nutritional-Composition-and-Osmolality-of-Commercially-Available-Carbohydrate-Energy-Gel.pdf) to choose from.
 
@@ -16,25 +35,6 @@ Fortunately, it's easy to make nutrition at home. The basic idea is **to target 
 DIY means you can easily add caffeine and salt, or substitute a carb source. And you can use the containers of your choice. I prefer these [100ml flip-cap plastic pouches](https://www.amazon.com/s?k=100ml+plastic+flasks+concealable) which fit in most shorts' gel pockets. For workouts, I dump the ingredients in a bottle as a sports drink.
 
 {% include article_multiimage.html images="/assets/images/projects/honey-malto-filling.webp /assets/images/projects/gel-flask.webp" caption="Maltodextrin and honey gel prep for my preferred reusable gel containers. April 2023."%}
-
-
-## Recipe
-
-This calculator takes your desired [carb-type ratio](#glucosefructose-ratio), [concentration](#osmotic-concentration-osmolality-and-tonicity) and any [particular ingredient](#which-ingredients-should-i-use) amounts, then optimizes for low volume. Checked ingredients will be considered in the calculation, but they may be ignored if not needed to reach the desired characteristics. Specify amounts manually to force the calculator to include an ingredient. A warning will appear if the ingredients or amounts can't meet the target ratio. Hover over ingredient names to see their glucose/fructose ratio, and hover over ml to see oz.
-
-<div class="full-width">
-  <div class="card mb-3 container-xl p-0">
-      <div class="card-body">
-          <gel-recipe-calculator><div class="alert alert-warning">The calculator requires Javascript to be enabled and only works on recent browsers. Sorry!</div></gel-recipe-calculator>
-      </div>
-  </div>
-</div>
-
-1. (Optionally) warm up the water.
-2. Add viscous ingredients (e.g. syrup, honey) to water and mix until dissolved. 
-3. Add powdered ingredients and mix until dissolved. 
-
-Keeps for 2-3 days in a refrigerator.
 
 ### Which ingredients should I use?
 

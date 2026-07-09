@@ -86,8 +86,20 @@ I'm a postdoctoral researcher at the Massachusetts Institute of Technology advis
         <h2>Notes</h2>
         <p class="blog-line d-flex flex-wrap gap-2">
             {% for page in site.pages %}{% assign categories_string = page.categories | join: ' ' %}
-{% if categories_string contains 'note' %}<a href="{{ page.url }}">{{ page.title | escape | markdownify | remove: '<p>' | remove: '</p>'  }}</a> <span>&middot;</span>{% endif %}{%
+{% if categories_string contains 'note' %}{% unless categories_string contains 'tool' %}<a href="{{ page.url }}">{{ page.title | escape | markdownify | remove: '<p>' | remove: '</p>'  }}</a> <span>&middot;</span>{% endunless %}{% endif %}{%
             endfor %}</p>
+    </section>
+
+    <section id="tools" class="mb-4">
+        <h2>Tools</h2>
+        <ul class="tool-list list-unstyled">
+            {% assign tool_pages = site.pages | where: "categories", "tool" | sort: "title" %}
+            {% for tool in tool_pages %}
+            <li class="mb-2"><a href="{{ tool.url | relative_url }}">{{ tool.title }}</a><span class="text-secondary"> &mdash; {{ tool.tagline }}</span></li>
+            {% endfor %}
+            <li class="mb-2"><a href="https://marblizer.nickwalker.us/">Marblizer</a><span class="text-secondary"> &mdash; Interactive paper marbling</span></li>
+            <li class="mb-2"><a href="https://runber.nickwalker.us/">Runber</a><span class="text-secondary"> &mdash; Print race bib/hip numbers</span></li>
+        </ul>
     </section>
 </div>
 

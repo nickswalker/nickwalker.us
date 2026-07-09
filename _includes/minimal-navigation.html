@@ -1,3 +1,36 @@
 <header class="site-header-minimal">
+  <div class="container restrict-width site-header-minimal-row">
     <a class="site-title-minimal" href="{{ '/' | relative_url}}">{{ site.title }}</a>
+    {% assign tool_pages = site.pages | where: "categories", "tool" | sort: "title" %}
+    <div class="tools-tray">
+      <button type="button" class="tools-tray-toggle" aria-expanded="false">Tools</button>
+      <div class="tools-tray-collapse">
+        <div class="tools-tray-inner">
+          <nav class="tools-tray-panel">
+            {% for tool in tool_pages %}
+              {% if tool.url == page.url %}
+              <span class="current">{{ tool.title }}</span>
+              {% else %}
+              <a href="{{ tool.url | relative_url }}">{{ tool.title }}</a>
+              {% endif %}
+            {% endfor %}
+            <a href="https://marblizer.nickwalker.us/">Marblizer</a>
+            <a href="https://runber.nickwalker.us/">Runber</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <script>
+      (function () {
+        document.querySelectorAll('.tools-tray').forEach(function (tray) {
+          var toggle = tray.querySelector('.tools-tray-toggle');
+          var collapse = tray.querySelector('.tools-tray-collapse');
+          toggle.addEventListener('click', function () {
+            var isOpen = collapse.classList.toggle('is-open');
+            toggle.setAttribute('aria-expanded', String(isOpen));
+          });
+        });
+      })();
+    </script>
+  </div>
 </header>

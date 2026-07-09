@@ -1,9 +1,10 @@
 ---
 layout: minimal-nav
 title:  "Lap Calculator"
-categories: ["running", "note"]
+categories: ["running", "note", "tool"]
 permalink: lap-calculator/
 custom_js_modules: ['/assets/js/lapCalculators.js']
+tagline: "Paces, splits and lap times"
 excerpt: "Determine lap times, paces and counts for given distances and track lengths. Supports arbitrary event/interval distances and track lengths."
 ---
 
