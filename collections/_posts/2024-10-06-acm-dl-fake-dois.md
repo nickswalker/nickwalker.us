@@ -22,4 +22,4 @@ It seems likely that this is happening because the Digital Library uses DOIs as 
 
 ### See Also
 
-https://toranm.me/post/2025-09-12-doi-beyond-the-basics/
+[DOI: Beyond the Basics](https://toranm.me/post/2025-09-12-doi-beyond-the-basics/) -- Markus Toran 
