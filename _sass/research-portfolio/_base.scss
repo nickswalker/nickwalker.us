@@ -36,10 +36,12 @@ dl, dd, ol, ul, figure {
        -o-font-feature-settings: "kern" 1;
           font-feature-settings: "kern" 1;
   font-kerning: normal;
+  font-size: var(--bs-body-font-size);
 
   @include media-query($on-laptop) {
     --bs-body-font-size: 17px;
   }
+  --baseline: calc(1rem * var(--bs-body-line-height));
 }
 
 .navbar {
@@ -50,6 +52,20 @@ dl, dd, ol, ul, figure {
 .navbar-nav {
   --bs-nav-link-color: white;
   --bs-nav-link-hover-color: #eaeaea;
+}
+
+html.show-baseline-grid body {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 99999;
+    background-image: linear-gradient(to bottom, rgba(255, 0, 0, .35) 1px, transparent 1px);
+    background-size: 100% var(--baseline);
+  }
 }
 
 .navbar a:hover {
@@ -78,18 +94,17 @@ dl, dd, ol, ul, figure {
 
 
 /**
- * Set `margin-bottom` to maintain vertical rhythm
+ * Set `margin-bottom` to maintain vertical rhythm (multiples of --baseline)
  */
-h1, h2, h3,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-  margin-bottom: 1rem;
+  margin-bottom: var(--baseline);
 }
 
 
 section {
-  margin-bottom: 1rem;
+  margin-bottom: var(--baseline);
   /* This ends up hiding hanging bullets
   overflow: auto;*/
 }
@@ -138,29 +153,56 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
+  line-height: calc(var(--baseline) * 1.5);
   font-weight: 700;
+  margin-bottom: calc(var(--baseline) * 0.5);
 }
-
 
 h2, .h2 {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
+  line-height: calc(var(--baseline) * 1.25);
   font-weight: 650;
+  margin-bottom: calc(var(--baseline) * .75);
 }
+
 p {
-  margin: 0 auto 1rem auto;
+  margin: 0 auto var(--baseline) auto;
 }
 
 h3, .h3 {
-  font-size: 1.1rem;
-  line-height: 2rem;
+  font-size: 1.125rem;
+  line-height: var(--baseline);
+  font-weight: 650;
+  margin-bottom: calc(var(--baseline) * .5);
+}
+h3 {
+  margin-top: var(--baseline);
+}
+
+h4 {
+  font-size: 1rem;
+  margin-bottom: calc(var(--baseline) * 0.25);
   font-weight: 700;
 }
 
-h4, h5, h6 {
+h5 {
   font-size: 1rem;
-  margin-bottom: .5rem;
+  margin-bottom: calc(var(--baseline) * 0.25);
   font-weight: 700;
+  font-style: italic;
+}
+
+h6 {
+  font-size: .875rem;
+  margin-bottom: calc(var(--baseline) * 0.25);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+:is(h1, h2, h3, h4, h5, h6):first-child {
+  margin-top: 0;
 }
 
 b, strong {
@@ -243,10 +285,8 @@ article h2 [href^="http"]:not([href*="nickwalker.us"],a.btn)::after{
   width: 1.75ex;
   content: "";
   display: inline;
-  margin-top: .7ex;
-  margin-left: 2px;
   padding-left: 1.75ex;
-  vertical-align: middle;
+  //vertical-align: middle; // This breaks the baseline for some reason
 }
 
 
@@ -310,24 +350,25 @@ blockquote {
 pre,
 code {
   font-size: 14px;
-  border: 1px solid var(--light-background-color);
   border-radius: 3px;
-  line-height: 1.3rem;
+  line-height: var(--baseline);
   font-family: "IBM Plex Mono", monospace;
 }
 
 code {
   padding: 1px 5px;
+  box-shadow: inset 0 0 0 1px var(--light-background-color);
   background-color: var(--light-background-color);
 }
 
 pre {
-  padding: 8px 12px;
+  padding: calc(var(--baseline) * 0.5) 12px;
+  box-shadow: inset 0 0 0 1px var(--light-background-color);
   overflow-x: auto;
   background-color: var(--light-background-color);
 
   > code {
-    border: 0;
+    box-shadow: none;
     padding-right: 0;
     padding-left: 0;
     background-color: transparent;
@@ -342,6 +383,17 @@ pre {
   --bs-badge-font-weight: normal
 }
 
+.alert {
+  --bs-alert-padding-y: calc(var(--baseline) * 0.5);
+  --bs-alert-margin-bottom: var(--baseline);
+  --bs-alert-border: none; // border adds to box height; box-shadow doesn't
+  box-shadow: inset 0 0 0 var(--bs-border-width) var(--bs-alert-border-color);
+
+  pre {
+    margin-bottom: 0;
+  }
+}
+
 .badge.text-bg-light {
   color: #666 !important;
 }
@@ -354,6 +406,23 @@ ion-icon {
   text-decoration-color: #999;
 }
 
+.pub-authors {
+  margin-bottom: calc(var(--baseline) * 0.25);
+}
+
+.pub-cite {
+  margin-top: calc(var(--baseline) * 0.5);
+}
+
 .filter-option::before {
   content: '#'
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 0.25rem;
+  row-gap: calc(var(--baseline) * 0.25);
+  margin-bottom: calc(var(--baseline) * 0.75);
 }

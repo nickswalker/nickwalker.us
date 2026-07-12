@@ -5,9 +5,29 @@
 
   <body>
     {% if jekyll.environment == "development" %}
-    <div class="alert alert-warning w-100" role="alert">
-      This is a development copy of {{page.url}} <pre>{{layout | jsonify}}</pre>
+    <div class="alert alert-warning w-100 mb-0 position-relative" role="alert">
+      <button type="button" class="btn-close position-absolute top-0 end-0 m-2" aria-label="Close" id="dev-alert-close"></button>
+      This is a development copy of {{page.url}}
+      <label class="ms-2">
+        <input type="checkbox" id="baseline-grid-toggle"> Show baseline grid
+      </label>
+      <pre>{{layout | jsonify}}</pre>
     </div>
+    <script>
+      (function () {
+        var toggle = document.getElementById('baseline-grid-toggle');
+        var on = localStorage.getItem('showBaselineGrid') === 'true';
+        document.documentElement.classList.toggle('show-baseline-grid', on);
+        toggle.checked = on;
+        toggle.addEventListener('change', function () {
+          document.documentElement.classList.toggle('show-baseline-grid', toggle.checked);
+          localStorage.setItem('showBaselineGrid', toggle.checked);
+        });
+        document.getElementById('dev-alert-close').addEventListener('click', function () {
+          this.closest('.alert').style.display = 'none';
+        });
+      })();
+    </script>
     {% endif %}
     {% if page.layout == 'minimal-nav' %}
     {% include minimal-navigation.html %}

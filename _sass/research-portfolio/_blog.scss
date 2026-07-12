@@ -7,6 +7,17 @@
   }
 }
 
+.news-item {
+  display: flex;
+  flex-direction: column;
+
+  @include media-query($on-laptop) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
 .permalink, .permalink:visited {
   text-decoration: none;
   color: var(--bs-secondary-color);
@@ -25,9 +36,6 @@ header:hover .permalink {
 }
 
 article.full-post {
-  h2 {
-    font-size: 1.5rem;
-  }
   header a {
     text-decoration: none;
     letter-spacing: .4px;
@@ -110,7 +118,6 @@ article {
   }
 
   header {
-    margin-bottom: 1rem;
     .post-meta {
       font-size: var(--small-font-size);
       font-weight: normal;
@@ -198,7 +205,7 @@ article.page h2 {
   list-style: none;
 
   > li {
-    margin-bottom: 0.5rem;
+    margin-bottom: calc(var(--baseline) * 0.5);
   }
 }
 

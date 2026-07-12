@@ -7,9 +7,9 @@
   color: white;
   // Positioning context for the mobile navigation icon
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: var(--baseline);
   @include media-query($on-tablet) {
-    margin-bottom: 2rem;
+    margin-bottom: calc(var(--baseline) * 1);
   }
   .wrapper {
     display: flex;
@@ -20,9 +20,16 @@
     }
   }
   .nav-link {
+    // widen to make the (tallest, below $on-laptop) nav item's own height
+    // a clean multiple of --baseline; site-title is taller above that
+    // breakpoint so the default Bootstrap padding is fine there
+    --bs-nav-link-padding-y: 11.5px;
     color: var(--bs-nav-link-color);
     transition: none;
     border-color: transparent;
+    @include media-query($on-laptop) {
+      --bs-nav-link-padding-y: 0.5rem;
+    }
     &:hover {
       background-color: var(--theme-color-dark);
     }
@@ -57,9 +64,10 @@
  * Minimal header for standalone tool pages
  */
 .site-header-minimal {
-  margin-bottom: 1rem;
+  padding-top: var(--baseline);
+  margin-bottom: var(--baseline);
   @include media-query($on-tablet) {
-    margin-bottom: 2rem;
+    margin-bottom: calc(var(--baseline) * 1);
   }
 }
 
@@ -67,18 +75,23 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
 .site-title-minimal {
   display: inline-block;
-  margin: 1rem 0 0;
+  // -1px cancels the a:not(.btn) underline border so the title (which can
+  // wrap to 2 lines on narrow viewports) stays a clean multiple of the
+  // baseline instead of running 1px over.
+  margin: 0 0 -1px;
   font-size: 16px;
   font-weight: 700;
   color: $grey-color !important;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
+  white-space: nowrap;
 
   &:visited {
     color: $grey-color !important;
@@ -93,8 +106,14 @@
 .tools-tray {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  margin: 1rem 0 0;
+  align-items: stretch;
+  flex: 1 1 auto;
+  margin: 0;
+
+  @include media-query($on-tablet) {
+    align-items: flex-end;
+    flex: 0 0 auto;
+  }
 }
 
 .tools-tray-toggle {
@@ -107,6 +126,7 @@
   font-size: 14px;
   font-weight: 700;
   color: $grey-color;
+  align-self: flex-end;
 
   &::after {
     content: "▾";
@@ -132,10 +152,12 @@
 .tools-tray-collapse {
   display: grid;
   grid-template-rows: 0fr;
+  width: 0;
   transition: grid-template-rows 0.2s ease;
 
   &.is-open {
     grid-template-rows: 1fr;
+    width: auto;
   }
 }
 
@@ -146,10 +168,19 @@
 .tools-tray-panel {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: 0.4rem;
+  align-items: stretch;
+  gap: 0.5rem;
   padding-top: 0.6rem;
   font-size: 14px;
+
+  @include media-query($on-tablet) {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    justify-items: end;
+    align-items: baseline;
+    column-gap: 0.6rem;
+    row-gap: 0.4rem;
+  }
 
   a,
   .current {
@@ -163,6 +194,40 @@
 
   .current {
     font-weight: 700;
+  }
+}
+
+.tools-tray-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.4rem;
+  
+  a,
+  .current {
+    order: -1;
+  }
+
+  @include media-query($on-tablet) {
+    display: contents;
+
+    a,
+    .current {
+      order: 0;
+    }
+  }
+}
+
+.tools-tray-tagline {
+  color: var(--lighter-text-color);
+
+  @include media-query($on-tablet) {
+    text-align: right;
+    white-space: nowrap;
+
+    &::after {
+      content: "";
+    }
   }
 }
 
@@ -203,12 +268,12 @@
  * Page content
  */
 .page-content {
-  margin: 1rem 0;
+  margin: var(--baseline) 0;
   overflow-x: clip;
   /* Our full bleed hack can cause overflow: https://css-tricks.com/full-bleed/ */
 
   @include media-query($on-tablet) {
-    margin: 2rem 0;
+    margin: var(--baseline) 0;
   }
 }
 
@@ -254,7 +319,7 @@ footer p {
 
 .site-footer {
   border-top: 1px solid var(--light-background-color);
-  padding: 2rem 0;
+  padding: calc(1* var(--baseline)) 0;
 }
 
 .branded-title,

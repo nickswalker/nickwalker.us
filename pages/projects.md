@@ -15,12 +15,12 @@ permalink: projects/
 {% assign projects = ongoing_sorted | concat: completed_sorted %}
 
 <ul class="list-unstyled filter">
-    <li class="d-inline"><a href="#" class="btn btn-primary lh-sm">all</a></li>
-    <li class="d-inline"><a href="#" class="btn btn-outline-primary filter-option lh-sm">research</a></li>
-    <li class="d-inline"><a href="#" class="btn btn-outline-primary filter-option lh-sm">running</a></li>
-    <li class="d-inline"><a href="#" class="btn btn-outline-primary filter-option lh-sm">fun</a></li>
-    <li class="d-inline"><a href="#" class="btn btn-outline-primary filter-option lh-sm">ios</a></li>
-    <li class="d-inline"><a href="#" class="btn btn-outline-primary filter-option lh-sm">web</a></li>
+    <li><a href="#" class="btn btn-primary lh-sm">all</a></li>
+    <li><a href="#" class="btn btn-outline-primary filter-option lh-sm">research</a></li>
+    <li><a href="#" class="btn btn-outline-primary filter-option lh-sm">running</a></li>
+    <li><a href="#" class="btn btn-outline-primary filter-option lh-sm">fun</a></li>
+    <li><a href="#" class="btn btn-outline-primary filter-option lh-sm">ios</a></li>
+    <li><a href="#" class="btn btn-outline-primary filter-option lh-sm">web</a></li>
 </ul>
 
 <ul class="list-unstyled">

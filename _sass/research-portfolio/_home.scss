@@ -21,6 +21,30 @@
 
 .home .post-link,
 .archive-page .post-link {
-  font-size: 1.125rem;
   font-weight: normal;
+}
+
+.tool-list {
+  li {
+    margin-bottom: 0.25rem;
+  }
+
+  @include media-query($on-tablet) {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    justify-items: start;
+    column-gap: 1rem;
+    row-gap: 0.0rem;
+
+    li {
+      display: contents;
+    }
+
+    a {
+      // As a grid item, the link is blockified, so its 1px underline
+      // border adds to its box height instead of just decorating the
+      // line. Trim it back off so each row stays exactly one baseline.
+      line-height: calc(var(--baseline) - 1px);
+    }
+  }
 }

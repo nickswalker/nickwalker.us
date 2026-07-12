@@ -124,7 +124,7 @@ i, em {
   letter-spacing: 0;
   @include media-query($on-laptop) {
     font-size: 24px;
-    line-height: $spacing-unit * 2;
+    line-height: calc(var(--baseline) * 2 - 1px); // -1px offsets the link-underline border
   }
 
 

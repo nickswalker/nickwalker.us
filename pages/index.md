@@ -22,14 +22,14 @@ I'm a postdoctoral researcher at the Massachusetts Institute of Technology advis
 {% if post_count > 0 %}
   <section id="posts" class="mb-3">
     <a class="float-end link-secondary" href="{{ '/feed.xml' | relative_url }}"><ion-icon name="logo-rss"></ion-icon> RSS</a>
-    <h2>News</h2>
-    <ul class="post-list">
+    <h2 class="h3">News</h2>
+    <ul class="post-list mb-0">
         {% assign count = 0 %}
         {% for post in site.categories.news %}
           {% if post.featured != false %}
-             <li>
+             <li class="news-item">
                 <time class="post-meta text-secondary" datetime="{{ post.date | date_to_xmlschema}}">{{ post.date | date: "%b %-d, %Y" }}</time>
-                <h3 class="h2 mb-3">
+                <h3 class="my-0">
                   <a class="post-link" href="{{ post.url }}">{{ post.title | escape | markdownify | remove: '<p>' | remove: '</p>' }}</a>
                 </h3>
               </li>
@@ -52,7 +52,7 @@ I'm a postdoctoral researcher at the Massachusetts Institute of Technology advis
 {% comment %}
 {% if featured_projects.size > 0 %}
   <section id="projects" class="mb-4">
-    <h2>Projects</h2>
+    <h2 class="h3">Projects</h2>
       <ul class="project-block-list">
       {% for project in featured_projects %}
         {% include project_block.html project=project %}
@@ -68,7 +68,7 @@ I'm a postdoctoral researcher at the Massachusetts Institute of Technology advis
   {% endcomment %}
 
     <section id="blog" class="mb-4">
-        <h2>Blog</h2>
+        <h2 class="h3">Blog</h2>
 <p>
         {% assign count = 0 %}
 {% for post in site.posts %}
@@ -83,7 +83,7 @@ I'm a postdoctoral researcher at the Massachusetts Institute of Technology advis
     </section>
 
     <section id="notes" class="mb-4">
-        <h2>Notes</h2>
+        <h2 class="h3">Notes</h2>
         <p class="blog-line d-flex flex-wrap gap-2">
             {% for page in site.pages %}{% assign categories_string = page.categories | join: ' ' %}
 {% if categories_string contains 'note' %}{% unless categories_string contains 'tool' %}<a href="{{ page.url }}">{{ page.title | escape | markdownify | remove: '<p>' | remove: '</p>'  }}</a> <span>&middot;</span>{% endunless %}{% endif %}{%
@@ -91,15 +91,15 @@ I'm a postdoctoral researcher at the Massachusetts Institute of Technology advis
     </section>
 
     <section id="tools" class="mb-4">
-        <h2>Tools</h2>
+        <h2 class="h3">Tools</h2>
         <ul class="tool-list list-unstyled">
             {% assign tool_pages = site.pages | where: "categories", "tool" | sort: "title" %}
             {% for tool in tool_pages %}
-            <li class="mb-2"><a href="{{ tool.url | relative_url }}">{{ tool.title }}</a><span class="text-secondary"> &mdash; {{ tool.tagline }}</span></li>
+            <li><a href="{{ tool.url | relative_url }}">{{ tool.title }}</a><span class="text-secondary">{{ tool.tagline }}</span></li>
             {% endfor %}
-            <li class="mb-2"><a href="https://marblizer.nickwalker.us/">Marblizer</a><span class="text-secondary"> &mdash; Interactive paper marbling</span></li>
-            <li class="mb-2"><a href="https://runber.nickwalker.us/">Runber</a><span class="text-secondary"> &mdash; Print race bib/hip numbers</span></li>
-            <li class="mb-2"><a href="https://stigme.nickwalker.us/">Stigme</a><span class="text-secondary"> &mdash; Tally counter with timestamping</span></li>
+            <li><a href="https://marblizer.nickwalker.us/">Marblizer</a><span class="text-secondary">Interactive paper marbling</span></li>
+            <li><a href="https://runber.nickwalker.us/">Runber</a><span class="text-secondary">Print race bib/hip numbers</span></li>
+            <li><a href="https://stigme.nickwalker.us/">Stigme</a><span class="text-secondary">Tally counter with timestamping</span></li>
         </ul>
     </section>
 </div>

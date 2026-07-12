@@ -9,11 +9,11 @@ layout: page
 {% endif %}
 
 <ul class="list-unstyled filter">
-    <li class="d-inline"><a href="#" class="btn btn-primary lh-sm">all</a></li>
-    <li class="d-inline"><a href="#" class="btn btn-outline-primary filter-option lh-sm">news</a></li>
-    <li class="d-inline"><a href="#" class="btn btn-outline-primary filter-option lh-sm">post</a></li>
-    <li class="d-inline"><a href="#" class="btn btn-outline-primary filter-option lh-sm">research</a></li>
-    <li class="d-inline"><a href="#" class="btn btn-outline-primary filter-option lh-sm" data-categories="fun project running">fun</a></li>
+    <li><a href="#" class="btn btn-primary lh-sm">all</a></li>
+    <li><a href="#" class="btn btn-outline-primary filter-option lh-sm">news</a></li>
+    <li><a href="#" class="btn btn-outline-primary filter-option lh-sm">post</a></li>
+    <li><a href="#" class="btn btn-outline-primary filter-option lh-sm">research</a></li>
+    <li><a href="#" class="btn btn-outline-primary filter-option lh-sm" data-categories="fun project running">fun</a></li>
 </ul>
 
 {% assign sectionYear = "" %}
@@ -22,13 +22,13 @@ layout: page
 {% if currentDate != sectionYear %}
 {% unless forloop.first %}</ul>{% endunless %}
 <h2 id="{{currentDate}}">{{ currentDate }}</h2>
-<ul class="post-list">
+<ul class="post-list my-0">
     {% assign sectionYear = currentDate %}
     {% endif %}
 
-    <li class="mb-3 row post-block" data-categories="{{post.categories | join: ' '}}">
+    <li class="row post-block" data-categories="{{post.categories | join: ' '}}">
         <time class="post-meta col-sm-1 text-secondary" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m/%d" }}</time>
-        <h3 class="h2 col-sm">
+        <h3 class="col-sm">
             <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape | markdownify | remove: '<p>' | remove: '</p>'  }}</a>
         </h3>
     </li>
@@ -38,6 +38,7 @@ layout: page
 
 <style>
 .post-block {
+  align-items: baseline;
   transition: opacity 0.2s ease;
 }
 </style>

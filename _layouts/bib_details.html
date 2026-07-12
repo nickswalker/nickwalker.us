@@ -8,8 +8,8 @@ a stub layout with the correct vars and inherit it"
 
 <article id="{{ entry.key}}-details">
     <header class="project-header">
-        <h1>{{ entry.title }}</h1>
-        <ul class="quick-links">
+        <h1 class="h2">{{ entry.title }}</h1>
+        <ul class="quick-links mb-4">
             {% if entry.wwwurl %}
             <li>
                 <a class="btn btn-outline-primary" href="{{ entry.wwwurl }}" title="See project site" data-goatcounter-click="ext-{{entry.key}}-site">

@@ -8,15 +8,27 @@
         <div class="tools-tray-inner">
           <nav class="tools-tray-panel">
             {% for tool in tool_pages %}
+            <div class="tools-tray-row">
+              <i class="tools-tray-tagline">{{ tool.tagline }}</i>
               {% if tool.url == page.url %}
               <span class="current">{{ tool.title }}</span>
               {% else %}
               <a href="{{ tool.url | relative_url }}">{{ tool.title }}</a>
               {% endif %}
+            </div>
             {% endfor %}
-            <a href="https://marblizer.nickwalker.us/">Marblizer</a>
-            <a href="https://runber.nickwalker.us/">Runber</a>
-            <a href="https://stigme.nickwalker.us/">Stigme</a>
+            <div class="tools-tray-row">
+              <i class="tools-tray-tagline">Interactive paper marbling</i>
+              <a href="https://marblizer.nickwalker.us/">Marblizer</a>
+            </div>
+            <div class="tools-tray-row">
+              <i class="tools-tray-tagline">Print race bib/hip numbers</i>
+              <a href="https://runber.nickwalker.us/">Runber</a>
+            </div>
+            <div class="tools-tray-row">
+              <i class="tools-tray-tagline">Tally counter with timestamping</i>
+              <a href="https://stigme.nickwalker.us/">Stigme</a>
+            </div>
           </nav>
         </div>
       </div>

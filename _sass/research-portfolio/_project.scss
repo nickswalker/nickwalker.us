@@ -68,6 +68,17 @@
     justify-content: left;
   }
 
+  .btn {
+    box-sizing: border-box;
+    height: calc(var(--baseline) * 1.5);
+    display: inline-flex;
+    align-items: center;
+    line-height: normal;
+  }
+}
+
+.details blockquote {
+  padding-top: calc(var(--baseline) * 0.5);
 }
 
 a.cite-toggle {

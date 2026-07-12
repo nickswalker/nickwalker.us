@@ -9,11 +9,11 @@ custom_js:
 ---
 
 <ul class="list-unstyled filter">
-    <li class="d-inline"><a href="#" class="btn btn-primary lh-sm">all</a></li>
-    <li class="d-inline"><a href="#" class="btn btn-outline-primary filter-option lh-sm">conference</a></li>
-    <li class="d-inline"><a href="#" class="btn btn-outline-primary filter-option lh-sm">journal</a></li>
-    <li class="d-inline"><a href="#" class="btn btn-outline-primary filter-option lh-sm">workshop</a></li>
-    <li class="d-inline"><a href="#" class="btn btn-outline-primary filter-option lh-sm">periodical</a></li>
+    <li><a href="#" class="btn btn-primary lh-sm">all</a></li>
+    <li><a href="#" class="btn btn-outline-primary filter-option lh-sm">conference</a></li>
+    <li><a href="#" class="btn btn-outline-primary filter-option lh-sm">journal</a></li>
+    <li><a href="#" class="btn btn-outline-primary filter-option lh-sm">workshop</a></li>
+    <li><a href="#" class="btn btn-outline-primary filter-option lh-sm">periodical</a></li>
 </ul>
 
 ## 2026

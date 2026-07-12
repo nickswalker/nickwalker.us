@@ -2,14 +2,24 @@
 
     <div class="container">
 
-        <div class="row">
+        <div class="row align-items-top">
             <div class="col-sm-4">
                 <a href="{{ '/' | relative_url}}" class="branded-title">
                     {{ site.title }}
                 </a>
             </div>
+
+            <div class="col-sm-4">
+                <ul class="footer-nav-list list-unstyled">
+                    <li><a href="{% link pages/blog.html %}">Blog</a></li>
+                    <li><a href="{% link pages/publications.md %}">Publications</a></li>
+                    <li><a href="{% link pages/cv.md %}">CV</a></li>
+                    <li><a href="{% link pages/about.md %}">About</a></li>
+                </ul>
+            </div>
+
             <!-- @formatter:off -->
-            <div class="col-sm-3">
+            <div class="col-sm-4 text-sm">
                 <ul class="social-media-list">
 
                 {% comment %}
@@ -42,22 +52,17 @@
                           <ion-icon name="logo-github"></ion-icon>{{site.github_username}} </a>
                   </li>
                 {% endif %}
-
+                {% comment %}
                 {% if site.flickr_username %}
                 <li>
                     <a href="https://flickr.com/photos/{{site.flickr_username}}" title="See photos" data-goatcounter-click="ext-flickr.com">
                         <ion-icon name="images"></ion-icon>{{site.flickr_username}} </a>
                 </li>
                 {% endif %}
+                    {% endcomment %}
                 </ul>
             </div>
             <!-- @formatter:on -->
-
-            <div class="col-sm-5">
-                {% if site.description %}
-                <p>{{ site.description }}</p>
-                {% endif %}
-            </div>
 
         </div>
 
