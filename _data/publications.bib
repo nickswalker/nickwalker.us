@@ -1,7 +1,44 @@
 ---
 ---
 
-@inproceedings{merker2026,
+@inproceedings{merker2026asking,
+      author = {Helena Merker and Nick Walker and Andreea Bobu},
+       title = {Asking Smarter Questions: Targeted Active Preference Learning for Underspecified Rewards},
+        year = {2026},
+       month = nov,
+    location = {Austin, TX, USA},
+   booktitle = {Proceedings of The 10th Conference on Robot Learning},
+   wwwshortvenue = {CoRL},
+  abstract = {Reward learning typically assumes the human's input covers everything that matters for the task. In practice, humans can only attend to so much at once, so their teaching naturally attends to some features---or aspects of the task---better than others. Prior work has shown how the robot can identify which features were poorly supervised directly from its teaching data. But the current solution is to ask the human to try again, putting the burden on someone who already struggled to convey those features. We propose shifting this burden to the robot. Our key insight is that the same information that tells the robot what it doesn't know can help it ask better questions about it. Preference queries offer a low-effort channel for resolving this uncertainty, but only if the robot knows where to direct them and the human knows what to attend to when answering. We act on this insight in two ways: we build an informed prior that targets preference queries at the features that need resolving, and we accompany each query with an explanation that focuses the human's attention on exactly those features. In simulation, the informed prior beats the standard active preference learning baseline by up to 30.8\% in the low-query regime, where reducing human effort matters most. In a user study, the informed prior and explanations each significantly improve reward recovery and amplify each other.},
+   wwwtype = {conference}
+}
+
+@inproceedings{walker2026interpretable,
+      author = {Nick Walker and Zihan Wang and Markus Grotz and Maya Cakmak},
+       title = {Interpretable Robot Failure Attribution for Remote Robot Supervisors},
+        year = {2026},
+       month = aug,
+    location = {Kitakyushu, Japan},
+   booktitle = {IEEE International Conference on Robot and Human Interactive Communication},
+   wwwshortvenue = {RO-MAN},
+  abstract = {Robot failures are inevitable and often require human review so that underlying issues can be resolved. This is a challenging task for human supervisors, who must interpret data split across multiple modalities, with limited context for the situation at hand. Performing accurate and efficient failure attribution typically requires purpose-designed interfaces and procedures. We propose an approach that integrates models learned from limited data with feature-level interpretability tools to accelerate the review of multimodal data, highlighting relevant times and modalities in a review interface. We implement this method in a warehouse shelf-picking workcell setting using community-standard visualization tools. In user study with twelve participants, we observe that the assistance improves overall labeling recall and shows a trend toward reducing cognitive workload. We discuss participants' strategies for using the assistance, and suggest future directions for developing context-aware robotics visualization tools.},
+   wwwtype = {conference}
+}
+
+@misc{chen2026few,
+      author = {Daphne Chen and Archit Ritesh Jain and Eric Goossen and Emma Romig and Michael Murray and Nick Walker and Maya Cakmak},
+       title = {A Few Words Go a Long Way: Language Guided Robot Policy Synthesis},
+        year = {2026},
+       month = jul,
+      eprint = {2607.23784},
+   archiveprefix = {arXiv},
+   primaryclass = {cs.RO},
+  abstract = {While vision-language-action models have demonstrated impressive zero-shot manipulation capabilities, they remain fundamentally black box policies that are difficult to interpret, adapt, or correct when they inevitably fail. In this work, we propose ARCHITECT, a framework that treats robot policy acquisition as an interactive program synthesis task. ARCHITECT leverages the reasoning capabilities of LLM coding agents to synthesize modular robot programs that utilize a suite of perception and control tools. Unlike end-to-end models where distribution shift leads to unpredictable, cascading failures, our modular architecture allows users to isolate failures and localize feedback at the level of abstraction required. We introduce an iterative process where a human supervisor provides natural language corrections to steer the policy. These corrections are grounded in the policy code by program execution traces and distilled into a persistent skill library, a form of long-term in-context learning which enables the agent to accumulate a repertoire of reusable, interpretable behaviors. In a benchmark evaluation on a Franka Panda robot, ARCHITECT outperforms state-of-the-art VLA models and program synthesis baselines on complex, long-horizon tasks, including articulated object manipulation and cloth folding. Our results demonstrate that the synthesized skill library enables the system to transfer to novel tasks with decreasing human intervention, providing a steerable and data-efficient alternative to black-box robot learning.},
+   wwwtype = {working},
+   wwwpdf = {https://arxiv.org/pdf/2607.23784}
+}
+
+@inproceedings{merker2026ask,
       author = {Helena Merker and Nick Walker and Andreea Bobu},
        title = {Robots That Know What to Ask: Recovering Misaligned Rewards through Targeted Explanations},
         year = {2026},
@@ -11,6 +48,7 @@
    wwwshortvenue = {RSS},
   abstract = {Learning reward functions from demonstrations assumes that demonstrations provide adequate supervision over all features---or task-relevant aspects of behavior. In practice, demonstrations are often imperfect: humans may under-emphasize certain features due to cognitive load or physical difficulty, or the training regime may fail to sufficiently cover all relevant situations. In either case, important features may be underspecified, leading to ambiguity in the learned reward function and misaligned behavior at deployment. We propose a framework that detects such underspecified features and actively solicits targeted corrective demonstrations. Our key insight is that demonstrations implicitly reveal which features are well specified: features that are consistently optimized show little variation across demonstrations, while features that are underspecified vary widely. We leverage this statistical signal to infer which features may have been insufficiently demonstrated. The robot then explains which features it is uncertain about in natural language and queries for demonstrations that explicitly address the identified gaps. We evaluate our approach in a simulated tabletop manipulation domain and in a user study with a real Franka robot. Targeted, explanation-guided queries significantly improve reward recovery compared to random querying and passive data collection, reducing ambiguity that would otherwise persist in learning from imperfect demonstrations.},
    wwwtype = {conference},
+   wwwpdf = {https://www.roboticsproceedings.org/rss22/p116.pdf}
 }
 
 @inproceedings{chen2025towards,
@@ -23,8 +61,9 @@
    wwwshortvenue = {CoRL H2R},
   abstract = {We introduce a toolkit enabling users to specify intervention points in robot programs for customized task execution. Our user study with eight participants of varying expertise examined how people choose to insert themselves into control loops during complex manipulation tasks. Key findings indicate that integrating users into the loop in shared autonomy improves task success rates, perceived sense of control, and user experience, while generating intervention data that supports robot adaptation across different user preferences.},
    wwwtype = {workshop},
+   wwwpdf = {https://openreview.net/pdf?id=3ms6BnhOQh}
+
 }
-%  wwwpdf = {https://openreview.net/pdf?id=3ms6BnhOQh}
 
 
 @phdthesis{walker2025dissertation,
