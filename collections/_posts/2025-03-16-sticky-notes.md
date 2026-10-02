@@ -3,6 +3,7 @@ layout: post
 title: A Sticky Note Hack for Finishing Things
 date: 2025-03-16 22:32 -0700
 featured_image: /assets/images/posts/sticky-notes.avif
+categories: ["tip"]
 ---
 
 {% include article_image.html img=page.featured_image caption="My end-of-PhD sticky note pile." alt="A pad of sticky notes with a pen on top in front of the corner of a desk with a pile of mail and sticky notes"%}
