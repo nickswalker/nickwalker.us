@@ -20,6 +20,8 @@ Nothing here is technically incorrect, but it's misleading. You can find [dozens
 
 It seems likely that this is happening because the Digital Library uses DOIs as natural keys for its entries. This is another good example of [why you shouldn't use natural keys](https://blog.ploeh.dk/2024/06/03/youll-regret-using-natural-keys/), even supposedly unique and identifying ones like DOIs. If placeholder values are used (tsk-tsk), they can mislead users into treating them as genuine identifiers. Users wouldn't make the same mistake if every page were keyed with a [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
 
+**Update October 6th, 2026**: Newer papers in the ACM DL no longer use the DOI-like string as the citation key. For example, an entry like [Benford et al. at HRI 2025](https://dl.acm.org/doi/10.5555/3721488.3721543) still lives under a `10.5555/...` URL, but its exported BibTeX now keys with just the latter part (`@inproceedings{3721488.3721543, ...}`). Dropping the `10.5555/` prefix means the citation key at least no longer implies DOI-ness. Older entries still have misleading DOI-like keys.
+
 ### See Also
 
 [DOI: Beyond the Basics](https://toranm.me/post/2025-09-12-doi-beyond-the-basics/) -- Markus Toran 
