@@ -7,14 +7,11 @@ redirect_from:
 permalink: about/
 ---
 
-Nick Walker is a postdoctoral researcher at the Massachusetts Institute of Technology working in  [Andreea Bobu](https://www.mit.edu/~abobu/)'s [CLEAR Lab](https://clear.csail.mit.edu/). His research seeks to reduce the difficulty of making robots that people can understand by augmenting existing behaviors to express and expose otherwise hidden information.
+Nick Walker makes robots easier for people to operate, teach and understand. He is a postdoctoral researcher at the Massachusetts Institute of Technology in [Andreea Bobu](https://www.mit.edu/~abobu/)'s [CLEAR Lab](https://clear.csail.mit.edu/).
 
-Nick earned [his PhD]({% details_link walker2025dissertation %}) at the University of Washington in Seattle, where he worked in Maya Cakmak's 
-    [Human-Centered Robotics Lab](https://hcrlab.cs.washington.edu). While a student, he studied problems like
-   [balancing the tradeoff between task performance and expressivity]({% details_link walker2021attributions %}) and [automatically narrating complex robot behaviors]({% details_link wang2024doing %}), and published results in numerous IEEE and ACM scholarly conferences. In 2022, Nick interned with Claudia Pérez D'Arpino at [Nvidia's Seattle Robotics Lab](https://research.nvidia.com/labs/srl/) to work on [intuitive interfaces for telemanipulation]({% details_link walker2024explicit %}). A part of this project [won an HRI Best Paper award in 2024]({% post_url 2024-03-15-3d-mice-best-paper %}). His research was supported by an NSF Graduate Research Fellowship. While a student, Nick led the organization of the first [Northwest Robotics Symposium](https://nwrsymposium.github.io).
+Nick earned [his PhD]({% details_link walker2025dissertation %}) at the University of Washington in Seattle, where he worked in Maya Cakmak's [Human-Centered Robotics Lab](https://hcrlab.cs.washington.edu) on making complex robot behaviors understandable. His projects there included [balancing task performance against expressivity]({% details_link walker2021attributions %}), [automatically narrating what a robot is doing]({% details_link wang2024doing %}) and [helping remote supervisors see why a robot failed]({% details_link walker2026interpretable %}). In 2022, Nick interned with Claudia Pérez D'Arpino at [Nvidia's Seattle Robotics Lab](https://research.nvidia.com/labs/srl/) to work on [intuitive interfaces for telemanipulation]({% details_link walker2024explicit %}). A part of this project [won an HRI Best Paper award in 2024]({% post_url 2024-03-15-3d-mice-best-paper %}). His research was supported by an NSF Graduate Research Fellowship, and he led the organization of the first [Northwest Robotics Symposium](https://nwrsymposium.github.io).
 
-Before grad school, Nick studied Computer Science at the University of Texas at Austin where he worked on service and domestic robots in Peter Stone's
-[Building Wide Intelligence](http://www.cs.utexas.edu/~larg/bwi_web/){: data-goatcounter-click="ext-bwi"} project. He was part of the [Austin Villa@Home RoboCup team](https://www.cs.utexas.edu/~AustinVilla/) that [placed 3rd]({% post_url 2017-08-28-robocup-2017-success %}) in 2017 and [won best-poster in 2018]({% post_url 2018-06-21-dspl-best-poster-award %}). Nick earned honors as a [Polymath in the College of Natural Sciences]({% post_url 2014-08-25-polymathic-scholar %}), was recognized as a [Dean's Honored Graduate]({% post_url 2018-03-27-deans-honored-graduate %}) and was selected to [speak at commencement]({% post_url 2018-05-19-commencement-address %}).
+Before grad school, Nick studied Computer Science at the University of Texas at Austin, where he worked on service and domestic robots in Peter Stone's [Building Wide Intelligence](http://www.cs.utexas.edu/~larg/bwi_web/){: data-goatcounter-click="ext-bwi"} project and competed with the [Austin Villa@Home RoboCup team](https://www.cs.utexas.edu/~AustinVilla/), which [placed 3rd]({% post_url 2017-08-28-robocup-2017-success %}) in 2017. He was recognized as a [Dean's Honored Graduate]({% post_url 2018-03-27-deans-honored-graduate %}).
 
 Nick is also a [photographer](https://flickr.com/photos/nickwalker-us){: data-goatcounter-click="ext-flickr.com-bio"} and 
     [runner](https://www.strava.com/athletes/35387878){: data-goatcounter-click="ext-strava.com"}. He directs the annual [Drumheller Marathon]({% link _projects/drumheller-marathon.md %}) and [Light Rail Relay]({% link _projects/light-rail-relay.md %}) endurance running events in Seattle organized under [Race Condition Running](https://raceconditionrunning.com). His experiences with urban running have led him to contribute writing to The Urbanist.
@@ -38,7 +35,7 @@ For bug reports or suggestions on projects, please open an issue on the GitHub r
   "gender" : "male",
   "jobTitle": "Postdoctoral Researcher",
   "email": "{{ site.email }}",
-  "knowsAbout": "robotics, user research",
+  "knowsAbout": "robotics, human-robot interaction, teleoperation, robot learning",
   "url": "{{ site.url }}",
   "image": "{{ site.gravatar_url }}",
   "affiliation": {

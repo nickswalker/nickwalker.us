@@ -13,7 +13,7 @@ permalink: /
   alt="Headshot of man wearing glasses and smiling"/>
 </a>
   <p markdown="1">
-I'm a postdoctoral researcher at the Massachusetts Institute of Technology advised by [Andreea Bobu](https://www.mit.edu/~abobu/). I did [my PhD]({% details_link walker2025dissertation%}) at the University of Washington, where I worked on making complex robot behaviors more understandable. Previously, I worked on service robots with the [Building Wide Intelligence](http://www.cs.utexas.edu/~larg/bwi_web/){: data-goatcounter-click="ext-bwi"} project at UT Austin. Otherwise, I'm a [photographer](https://flickr.com/photos/nickwalker-us){: data-goatcounter-click="ext-flickr.com-bio"} and [runner](https://www.strava.com/athletes/35387878){: data-goatcounter-click="ext-strava.com"}.
+I make robots easier for people to operate, teach and understand. My recent work covers robots that [ask better questions]({% details_link merker2026asking %}) as they learn what people want, ways for remote supervisors to [see why a robot failed]({% details_link walker2026interpretable %}), and interfaces for [teleoperating robot arms]({% details_link walker2024explicit %}). I'm a postdoctoral researcher at MIT advised by [Andreea Bobu](https://www.mit.edu/~abobu/), and I did [my PhD]({% details_link walker2025dissertation %}) at the University of Washington. Otherwise, I'm a [photographer](https://flickr.com/photos/nickwalker-us){: data-goatcounter-click="ext-flickr.com-bio"} and [runner](https://www.strava.com/athletes/35387878){: data-goatcounter-click="ext-strava.com"}.
 </p>
 
   </section>
