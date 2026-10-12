@@ -1,9 +1,0 @@
-{% capture content %}
-<ul>
-    {% for item in include.items %}
-    <li title="{{item.description}}"><span>{{item.title}}</span><a class="icon-link" href="{{item.link}}"></a> <time>{{item.date}}</time></li>
-    {% endfor %}
-</ul>
-{% endcapture %}
-
-{% include cv/section.html title=include.title content=content section_type="detail-list" %}
