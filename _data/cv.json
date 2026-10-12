@@ -5,6 +5,12 @@
   "email": "nswalker@mit.edu",
   "website": "https://nickwalker.us",
   "summary": "Nick Walker is a roboticist with a Ph.D. in Computer Science from the University of Washington in Seattle.",
+  "keywords": [
+   "robotics",
+   "human-robot interaction",
+   "teleoperation",
+   "service robots"
+  ],
   "profiles": [
    {
     "network": "Mastodon",
@@ -57,7 +63,7 @@
   {
    "company": "UW CSE 481C (Robotics Capstone)",
    "position": "Teaching Assistant",
-   "website": "https://courses.cs.washington.edu/courses/cse481c/19wi/",
+   "website": "https://sites.google.com/view/cse481wi19",
    "date": "2019 Wi.",
    "highlights": [
     "Developed assignments, supported undergraduates using the Kuri robot"
@@ -144,11 +150,19 @@
    "startDate": "2021"
   },
   {
+   "organization": "IEEE International Conference on Robotics and Automation",
+   "shortName": "ICRA",
+   "website": "https://www.ieee-ras.org/conferences-workshops/financially-co-sponsored/icra",
+   "position": "Reviewer",
+   "number": 1,
+   "date": "2027"
+  },
+  {
    "organization": "ACM/IEEE Intl Conference on Human-Robot Interaction",
    "shortName": "HRI",
    "website": "https://humanrobotinteraction.org/",
    "position": "Reviewer",
-   "number": 3,
+   "number": 4,
    "date": "2027"
   },
   {
@@ -157,14 +171,6 @@
    "website": "https://dl.acm.org/journal/thri",
    "position": "Reviewer",
    "number": 1,
-   "date": "2026"
-  },
-  {
-   "organization": "IEEE International Conference on Robot and Human Interactive Communication",
-   "shortName": "RO-MAN",
-   "website": "https://",
-   "position": "Reviewer",
-   "number": 2,
    "date": "2026"
   },
   {
@@ -386,7 +392,8 @@
    "shortName": "TAFFC",
    "position": "Reviewer",
    "website": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5165369",
-   "date": "2022"
+   "date": "2022",
+   "hidden": true
   },
   {
    "organization": "International Journal of Social Robotics",
@@ -418,7 +425,8 @@
    "website": "https://www.ieee-ras.org/conferences-workshops/fully-sponsored/ssrr",
    "position": "Reviewer",
    "number": 1,
-   "date": "2021"
+   "date": "2021",
+   "hidden": true
   },
   {
    "organization": "IEEE International Conference on Intelligent Robots and Systems",
@@ -449,7 +457,8 @@
    "shortName": "TAFFC",
    "position": "Reviewer",
    "website": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5165369",
-   "date": "2021"
+   "date": "2021",
+   "hidden": true
   },
   {
    "organization": "ACM Transactions on Human-Robot Interaction",
@@ -463,17 +472,18 @@
    "shortName": "TCDS",
    "position": "Reviewer",
    "website": "https://cis.ieee.org/publications/t-cognitive-and-developmental-systems",
-   "date": "2020"
+   "date": "2020",
+   "hidden": true
   },
   {
-   "organization": "Allen School Graduate Student Committee, UW",
-   "position": "NSF GRFP Seminar Coordinator",
+   "organization": "NSF GRFP Seminar, Allen School, UW",
+   "position": "Organizer",
    "date": "2020"
   },
   {
    "organization": "Practical Service Robots Workshop, RSS",
    "position": "Organizer",
-   "website": "https://sites.google.com/cs.washington.edu/rss-2020-service-robots/home",
+   "website": "https://web.archive.org/web/20221127014633/https://sites.google.com/cs.washington.edu/rss-2020-service-robots/home",
    "date": "2020"
   },
   {
@@ -594,7 +604,7 @@
    "title": "Dean's Honored Graduate",
    "date": "2018",
    "awarder": "College of Natural Sciences, UT",
-   "link": "https://cns.utexas.edu/honors/academic-distinction/dean-s-honored-graduates"
+   "link": "https://cns.utexas.edu/info-undergraduate-students/events-recognition/deans-honored-graduates"
   },
   {
    "title": "Outstanding Undergraduate Researcher Award Honorable Mention",
@@ -1111,7 +1121,7 @@
    "role": "Graduate Researcher",
    "next": null,
    "startDate": "2025",
-   "endDate": null
+   "endDate": "2026"
   },
   {
    "name": "Daphne Chen",

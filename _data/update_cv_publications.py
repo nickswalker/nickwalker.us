@@ -78,9 +78,14 @@ for key in bib_data.entries:
     pubs.append(desc)
 
 with open("cv.json", 'r') as f:
-    all_data = json.load(f)
+    existing = f.read()
 
+all_data = json.loads(existing)
 all_data["publications"] = pubs
+updated = json.dumps(all_data, indent=True)
 
-with open("cv.json", 'w') as f:
-    json.dump(all_data, f, indent=True)
+# Leave the file alone when nothing changed: the CV build dates the PDF by
+# when cv.json was last modified
+if updated != existing:
+    with open("cv.json", 'w') as f:
+        f.write(updated)
