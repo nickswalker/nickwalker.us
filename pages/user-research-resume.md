@@ -1,6 +1,6 @@
 ---
 layout: bounce_link
-title: User Research Resume
-link: /assets/nwalker-user-research-resume.pdf
+title: CV
+link: /cv/
 permalink: user-research-resume/
 ---

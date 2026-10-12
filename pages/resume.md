@@ -1,6 +1,6 @@
 ---
 layout: bounce_link
-title: Resume
-link: /assets/nwalker-resume.pdf
+title: CV
+link: /cv/
 permalink: resume/
 ---
