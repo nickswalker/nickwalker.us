@@ -10,7 +10,8 @@
    booktitle = {Proceedings of The 10th Conference on Robot Learning},
    wwwshortvenue = {CoRL},
   abstract = {Reward learning typically assumes the human's input covers everything that matters for the task. In practice, humans can only attend to so much at once, so their teaching naturally attends to some features---or aspects of the task---better than others. Prior work has shown how the robot can identify which features were poorly supervised directly from its teaching data. But the current solution is to ask the human to try again, putting the burden on someone who already struggled to convey those features. We propose shifting this burden to the robot. Our key insight is that the same information that tells the robot what it doesn't know can help it ask better questions about it. Preference queries offer a low-effort channel for resolving this uncertainty, but only if the robot knows where to direct them and the human knows what to attend to when answering. We act on this insight in two ways: we build an informed prior that targets preference queries at the features that need resolving, and we accompany each query with an explanation that focuses the human's attention on exactly those features. In simulation, the informed prior beats the standard active preference learning baseline by up to 30.8\% in the low-query regime, where reducing human effort matters most. In a user study, the informed prior and explanations each significantly improve reward recovery and amplify each other.},
-   wwwtype = {conference}
+   wwwtype = {conference},
+    wwwpdf = {https://arxiv.org/pdf/2610.22285}
 }
 
 @inproceedings{walker2026interpretable,
@@ -20,6 +21,7 @@
        month = aug,
     location = {Kitakyushu, Japan},
    booktitle = {IEEE International Conference on Robot and Human Interactive Communication},
+         doi = {10.1109/RO-MAN72286.2026.11714556},
    wwwshortvenue = {RO-MAN},
   abstract = {Robot failures are inevitable and often require human review so that underlying issues can be resolved. This is a challenging task for human supervisors, who must interpret data split across multiple modalities, with limited context for the situation at hand. Performing accurate and efficient failure attribution typically requires purpose-designed interfaces and procedures. We propose an approach that integrates models learned from limited data with feature-level interpretability tools to accelerate the review of multimodal data, highlighting relevant times and modalities in a review interface. We implement this method in a warehouse shelf-picking workcell setting using community-standard visualization tools. In user study with twelve participants, we observe that the assistance improves overall labeling recall and shows a trend toward reducing cognitive workload. We discuss participants' strategies for using the assistance, and suggest future directions for developing context-aware robotics visualization tools.},
    wwwtype = {conference}
