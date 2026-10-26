@@ -4,7 +4,11 @@ date: 2026-10-20 12:00 -0400
 type: blog
 categories: ["opinion"]
 published: true
+link: https://csailmit.substack.com/p/your-robots-should-outlive-you
 ---
+
+>_Originally posted [on the MIT CSAIL Substack](https://csailmit.substack.com/p/your-robots-should-outlive-you)._
+{: .alert .alert-light }
 
 A humanoid robotics company recently earned some press coverage by having their old models [backflip](https://www.the-independent.com/tech/robot-suicide-humanoid-death-figure-b3060486.html) to their molten demise. On the one hand, effective marketing. Marketing is valuable. On the other, *what a waste*. Of materials, but also of the entire embodied effort to build and maintain those robots. It was multiple people’s jobs to design and program those things. What does it feel like for the most valuable use of your robot to be creating slag for internet points?
 
