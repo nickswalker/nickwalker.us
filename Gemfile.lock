@@ -189,6 +189,7 @@ PLATFORMS
   arm64-darwin-21
   arm64-darwin-22
   arm64-darwin-23
+  arm64-darwin-27
   x86_64-linux
 
 DEPENDENCIES
@@ -205,7 +206,7 @@ DEPENDENCIES
   unicode
 
 RUBY VERSION
-   ruby 3.2.3p157
+   ruby 3.2.11p268
 
 BUNDLED WITH
    2.4.6
