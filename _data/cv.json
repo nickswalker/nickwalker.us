@@ -77,7 +77,9 @@
    "website": "https://clear.csail.mit.edu",
    "startDate": "2025",
    "highlights": [
-    "Improving methods for reinforcement and imitation learners to communicate their uncertainty [c13, c15]"
+    "Recovering misaligned robot rewards through targeted questions and explanations [c13, c15]",
+    "Deciding when robots should query human supervisors, using the value of information [s2]",
+    "Building tools for learning robot rewards from human input [s3]"
    ]
   },
   {
@@ -133,6 +135,44 @@
    "date": "2015 Su.",
    "highlights": [
     "Evaluation of automated speech transcription vendors [p1]"
+   ]
+  }
+ ],
+ "open_source": [
+  {
+   "name": "franky",
+   "description": "Control library for Franka robots",
+   "website": "https://github.com/TimSchneider42/franky",
+   "startDate": "2026",
+   "highlights": [
+    "Co-maintainer: extended impedance control and added support for the arm\u2019s buttons",
+    {
+     "description": "Wrote zero-franky for controlling a robot from another process or machine",
+     "link": "https://github.com/nickswalker/zero-franky"
+    }
+   ]
+  },
+  {
+   "name": "robot_descriptions.py",
+   "description": "Robot models for Python robotics libraries",
+   "website": "https://github.com/robot-descriptions/robot_descriptions.py",
+   "startDate": "2026",
+   "highlights": [
+    "Second most active contributor: added support for Xacro and SRDF descriptions",
+    "Added or updated models for Universal Robots, Kinova, Flexiv, Hello Robot, Toyota HSR, and more"
+   ]
+  },
+  {
+   "name": "3dmouse-hid",
+   "description": "3D mouse input for robot control in the browser",
+   "website": "https://github.com/hcrlab/3dmouse-hid",
+   "startDate": "2023",
+   "highlights": [
+    "Lead author; released with the study of 3D mouse teleoperation [c10]",
+    {
+     "description": "Contributed axis remapping and a new device backend to PySpaceMouse, its Python counterpart",
+     "link": "https://github.com/JakubAndrysek/PySpaceMouse"
+    }
    ]
   }
  ],
@@ -567,6 +607,12 @@
  ],
  "awards": [
   {
+   "title": "Outstanding Reviewer",
+   "date": "2026",
+   "awarder": "Conf. Robot Learning",
+   "link": "https://www.corl.org/program/outstanding-reviewers-and-acs"
+  },
+  {
    "title": "Best Paper: Short Contributions",
    "date": "2024",
    "awarder": "ACM/IEEE Intl. Conf. Human-Robot Interaction",
@@ -626,6 +672,49 @@
  ],
  "publications": [
   {
+   "type": "submitted",
+   "name": "LangSteer: Inference-Time Steering of Generative Policies with Language-Derived Value Maps",
+   "authors": "M.\u00a0Lewkowicz, A.\u00a0Naveen, N.\u00a0Walker, N.\u00a0Roy, A.\u00a0Bobu",
+   "publisher": "Under review",
+   "releaseDate": "2026",
+   "year": "2026"
+  },
+  {
+   "type": "submitted",
+   "name": "Brew: A Toolkit for Learning Robot Rewards from Human Input",
+   "authors": "N.\u00a0Walker, A.\u00a0Bobu",
+   "publisher": "Under review",
+   "releaseDate": "2026",
+   "year": "2026"
+  },
+  {
+   "type": "submitted",
+   "name": "Ask When It Changes the Plan: Policy Value of Information for Querying Human Supervisors",
+   "authors": "N.\u00a0Walker, A.\u00a0Bobu",
+   "publisher": "Under review",
+   "releaseDate": "2026",
+   "year": "2026"
+  },
+  {
+   "type": "submitted",
+   "name": "I Want It That Way: Towards Understanding User Preferences for Adjustable Autonomy",
+   "authors": "D.\u00a0Chen, S.\u00a0Vuddagiri, C.\u00a0Yang, N.\u00a0Walker, M.\u00a0Cakmak",
+   "publisher": "Under review",
+   "releaseDate": "2026",
+   "year": "2026"
+  },
+  {
+   "type": "workshop",
+   "name": "ALERT: Anticipating Learner Errors for Robot Teaching",
+   "authors": "A.\u00a0S.\u00a0Cheng, J.\u00a0Lin, X.\u00a0Sun, N.\u00a0Walker, J.\u00a0X.\u00a0Liu, A.\u00a0Bobu",
+   "location": "Austin, TX, USA",
+   "shortName": "CoRL HumanRLI",
+   "publisher": "CoRL 2026 Workshop Human-Centered Robot Learning Interaction",
+   "releaseDate": "Nov. 2026",
+   "year": "2026",
+   "link": "https://nickwalker.us/publications/cheng2026alert/"
+  },
+  {
    "type": "conference",
    "name": "Asking Smarter Questions: Targeted Active Preference Learning for Underspecified Rewards",
    "authors": "H.\u00a0Merker, N.\u00a0Walker, A.\u00a0Bobu",
@@ -648,12 +737,13 @@
    "link": "https://nickwalker.us/publications/walker2026interpretable/"
   },
   {
-   "type": "working",
+   "type": "workshop",
    "name": "A Few Words Go a Long Way: Language Guided Robot Policy Synthesis",
    "authors": "D.\u00a0Chen, A.\u00a0R.\u00a0Jain, E.\u00a0Goossen, E.\u00a0Romig, M.\u00a0Murray, N.\u00a0Walker, M.\u00a0Cakmak",
-   "publisher": "arXiv",
-   "eprint": "2607.23784",
-   "releaseDate": "Jul. 2026",
+   "location": "Austin, TX, USA",
+   "shortName": "CoRL Agentic Robotics",
+   "publisher": "CoRL 2026 Workshop Agentic Robotics",
+   "releaseDate": "Nov. 2026",
    "year": "2026",
    "link": "https://nickwalker.us/publications/chen2026few/"
   },
@@ -1127,17 +1217,43 @@
    "name": "Daphne Chen",
    "role": "Graduate Researcher",
    "startDate": "2025",
-   "endDate": null
+   "endDate": null,
+   "url": "https://daphnechen.github.io/"
   },
   {
    "name": "Michelle Wang",
    "role": "Undergraduate Researcher",
    "startDate": "2026",
-   "endDate": null
+   "endDate": null,
+   "url": "https://mwangjoy.github.io/"
   },
   {
    "name": "Jocelyn Zhao",
    "role": "Undergraduate Researcher",
+   "startDate": "2026",
+   "endDate": null
+  },
+  {
+   "name": "Amanda Cheng",
+   "role": "Undergraduate Researcher",
+   "startDate": "2026",
+   "endDate": null
+  },
+  {
+   "name": "Xiangzhou Sun",
+   "role": "Undergraduate Researcher",
+   "startDate": "2026",
+   "endDate": null
+  },
+  {
+   "name": "Jeff Lin",
+   "role": "Undergraduate Researcher",
+   "startDate": "2026",
+   "endDate": null
+  },
+  {
+   "name": "Tanmay Patel",
+   "role": "Graduate Researcher",
    "startDate": "2026",
    "endDate": null
   }

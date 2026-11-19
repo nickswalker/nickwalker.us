@@ -11,8 +11,15 @@ from pybtex.database.input import bibtex
 from pybtex.style.formatting import BaseStyle
 import json
 
-parser = bibtex.Parser()
-bib_data = parser.parse_file("publications.bib")
+import os
+
+# publications.bib is also the site's bibliography. submitted.bib holds papers
+# under review, which belong on the CV but not the site.
+def entries(path, submitted):
+    if not os.path.exists(path):
+        return []
+    data = bibtex.Parser().parse_file(path)
+    return [(key, data.entries[key], submitted) for key in data.entries]
 
 pubs = []
 
@@ -23,13 +30,12 @@ from pybtex.style.sorting import BaseSortingStyle
 
 month_abbreviations = {"January": "Jan.", "February": "Feb.", "March": "Mar.", "April": "Apr.", "May": "May", "June": "Jun.", "July": "Jul.", "August": "Aug.", "September": "Sept.", "October": "Oct.", "November": "Nov.", "December": "Dec."}
 
-for key in bib_data.entries:
-    entry = bib_data.entries[key]
+for key, entry, submitted in entries("submitted.bib", True) + entries("publications.bib", False):
     fields = entry.fields
     desc = {}
     if "wwwhidden" in fields and fields["wwwhidden"]:
         continue
-    desc["type"] = fields["wwwtype"]
+    desc["type"] = "submitted" if submitted else fields["wwwtype"]
     desc["name"] = fields["title"]
     desc["authors"] = ""
     cofirst = -1
@@ -48,7 +54,9 @@ for key in bib_data.entries:
         desc["location"] = fields["location"]
     if "wwwshortvenue" in fields:
         desc["shortName"] = fields["wwwshortvenue"]
-    if desc["type"] == "journal":
+    if submitted:
+        desc["publisher"] = "Under review"
+    elif desc["type"] == "journal":
         desc["publisher"] = fields["journal"]
     elif desc["type"] == "working":
         if "archivePrefix" in fields:
@@ -71,10 +79,14 @@ for key in bib_data.entries:
     desc["publisher"] = desc["publisher"].replace(" on ", " ")
     desc["publisher"] = desc["publisher"].replace(" of the ", " ")
     desc["publisher"] = re.sub(r' \([^)]*\)', '', desc["publisher"])
-    month_string = month_abbreviations[fields["month"]]
-    desc["releaseDate"] = month_string + " " + fields["year"]
+    if "month" in fields:
+        desc["releaseDate"] = month_abbreviations[fields["month"]] + " " + fields["year"]
+    else:
+        desc["releaseDate"] = fields["year"]
     desc["year"] = fields["year"]
-    desc["link"] = "https://nickwalker.us/publications/" + key + "/"
+    # Only publications.bib entries get a page on the site
+    if not submitted:
+        desc["link"] = "https://nickwalker.us/publications/" + key + "/"
     pubs.append(desc)
 
 with open("cv.json", 'r') as f:

@@ -1,6 +1,18 @@
 ---
 ---
 
+@inproceedings{cheng2026alert,
+      author = {Amanda Sijia Cheng and Jeff Lin and Xiangzhou Sun and Nick Walker and Jason Xinyu Liu and Andreea Bobu},
+       title = {ALERT: Anticipating Learner Errors for Robot Teaching},
+        year = {2026},
+       month = nov,
+    location = {Austin, TX, USA},
+   booktitle = {CoRL 2026 Workshop on Human-Centered Robot Learning and Interaction},
+   wwwshortvenue = {CoRL HumanRLI},
+  abstract = {Training generalist robot policies takes vast amounts of demonstration data, and existing teleoperation systems demand continuous human attention and control to collect it. To reduce the cognitive and physical load on operators, we propose ALERT, a data collection system that combines the base policy being fine-tuned, a proactive intervention detector, and an augmented-reality (AR) visualization. While the base policy drives the robot, the detector anticipates the policy's mistakes before they occur and asks the operator to intervene only when needed. The AR view overlays the policy's next actions onto the robot, allowing the impending failure to be visible so the operator can intervene correctly. Trained across diverse tasks, the detector generalizes to held-out ones with 68\% accuracy and 0.69 F1 in simulation and 60\% accuracy and 0.68 F1 on a real robot. In a user study, operators performed better on a secondary task and reported lower cognitive and physical load with ALERT than with the baselines. By prompting operators to intervene only when needed instead of asking them for full demonstrations, ALERT opens the way to multi-robot data collection with a single operator, easing the data bottleneck that limits generalist policies.},
+   wwwtype = {workshop}
+}
+
 @inproceedings{merker2026asking,
       author = {Helena Merker and Nick Walker and Andreea Bobu},
        title = {Asking Smarter Questions: Targeted Active Preference Learning for Underspecified Rewards},
@@ -27,16 +39,20 @@
    wwwtype = {conference}
 }
 
-@misc{chen2026few,
+@inproceedings{chen2026few,
       author = {Daphne Chen and Archit Ritesh Jain and Eric Goossen and Emma Romig and Michael Murray and Nick Walker and Maya Cakmak},
        title = {A Few Words Go a Long Way: Language Guided Robot Policy Synthesis},
         year = {2026},
-       month = jul,
+       month = nov,
+    location = {Austin, TX, USA},
+   booktitle = {CoRL 2026 Workshop on Agentic Robotics},
+   wwwshortvenue = {CoRL Agentic Robotics},
       eprint = {2607.23784},
    archiveprefix = {arXiv},
    primaryclass = {cs.RO},
   abstract = {While vision-language-action models have demonstrated impressive zero-shot manipulation capabilities, they remain fundamentally black box policies that are difficult to interpret, adapt, or correct when they inevitably fail. In this work, we propose ARCHITECT, a framework that treats robot policy acquisition as an interactive program synthesis task. ARCHITECT leverages the reasoning capabilities of LLM coding agents to synthesize modular robot programs that utilize a suite of perception and control tools. Unlike end-to-end models where distribution shift leads to unpredictable, cascading failures, our modular architecture allows users to isolate failures and localize feedback at the level of abstraction required. We introduce an iterative process where a human supervisor provides natural language corrections to steer the policy. These corrections are grounded in the policy code by program execution traces and distilled into a persistent skill library, a form of long-term in-context learning which enables the agent to accumulate a repertoire of reusable, interpretable behaviors. In a benchmark evaluation on a Franka Panda robot, ARCHITECT outperforms state-of-the-art VLA models and program synthesis baselines on complex, long-horizon tasks, including articulated object manipulation and cloth folding. Our results demonstrate that the synthesized skill library enables the system to transfer to novel tasks with decreasing human intervention, providing a steerable and data-efficient alternative to black-box robot learning.},
-   wwwtype = {working},
+   wwwtype = {workshop},
+   wwwurl = {https://robo-architect.github.io/},
    wwwpdf = {https://arxiv.org/pdf/2607.23784}
 }
 
